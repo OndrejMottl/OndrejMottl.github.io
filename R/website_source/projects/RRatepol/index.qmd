@@ -1,0 +1,7 @@
+---
+title: "RRatepol"
+categories: [news, code, analysis]
+image: "RRatepol_logo.png"
+---
+
+This package does this. 

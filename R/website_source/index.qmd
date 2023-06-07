@@ -1,0 +1,30 @@
+---
+title: "Ondřej Mottl"
+image: profile_mottl_zoom.jpg
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/OndrejMottl
+    - icon: ORCID
+      text: ORCID
+      href: https://orcid.org/0000-0002-9796-5081
+    - icon: github
+      text: Github
+      href: https://github.com/OndrejMottl
+---
+
+::: {#hero-heading}
+
+Hello, I am Ondřej Mottl.
+
+I am ressearcher with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.
+
+🔭 I’m currently working on developing state-of-the-art tools for to study global biodiversity patterns and lowering the barriers of science exploration.
+
+💬 Ask me about R, GitHub, biodiversity, ...
+
+:::

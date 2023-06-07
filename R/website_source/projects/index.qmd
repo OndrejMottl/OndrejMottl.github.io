@@ -1,0 +1,39 @@
+---
+title: "Projects"
+description: |
+  Projects, in which I am personally participating.
+listing:
+  - id: ehr
+    max-description-length: 500
+    image-height: 150px
+    fields: [image, title, description]
+    contents: 
+      - BIODYNAMICS
+    type: grid
+    grid-item-border: false
+    
+  - id: packages
+    max-description-length: 500
+    image-height: 150px
+    fields: [image, title, description]
+    contents: 
+      - RRatepol
+      - FOSSILPOL
+    type: grid
+    grid-item-border: false
+---
+
+## Projects
+
+::: {#ehr}
+:::
+
+## Packages 
+
+::: {#packages}
+:::
+
+
+
+
+

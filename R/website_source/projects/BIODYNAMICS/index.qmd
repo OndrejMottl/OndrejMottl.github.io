@@ -1,0 +1,7 @@
+---
+title: "BIODYNAMICS"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+Project description

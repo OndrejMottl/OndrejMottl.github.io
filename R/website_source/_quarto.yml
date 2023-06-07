@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "Ondřej Mottl"
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
+  sidebar:
+    pinned: true
+    align: center
+    style: "docked"
+    collapse-level: 1
+    contents:
+
+      - text: "Projects"
+        href: projects/index.qmd
+
+      - section: "About me"
+        contents:
+          - text: "CV"
+            href: cv.qmd
+          - text: "List of publications"
+            href: list_of_publications.qmd
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+

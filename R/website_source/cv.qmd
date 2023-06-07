@@ -1,0 +1,140 @@
+---
+title: "Ondřej Mottl"
+image: profile_mottl_zoom.jpg
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/OndrejMottl
+    - icon: ORCID
+      text: ORCID
+      href: https://orcid.org/0000-0002-9796-5081
+    - icon: github
+      text: Github
+      href: https://github.com/OndrejMottl
+---
+
+::: {#hero-heading}
+
+I am a researcher at Charles University in Prague, Czech Republic, with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.
+
+## Education 
+
+PhD in Entomology  | 11/2019
+
+University of South Bohemia | České Budějovice, Czech Republic
+
+Thesis awarded by dean's prize entitled "*Spatial structure and community dynamics of arboreal ants in a tropical rainforest*"
+
+-------------------------------------
+
+MSc in Zoology   | 6/2015
+
+University of South Bohemia | České Budějovice, Czech Republic
+
+Thesis awarded dean's price entitled "*Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea*"
+
+-------------------------------------
+
+BSc in Biology   | 6/2013
+
+University of South Bohemia | České Budějovice, Czech Republic
+
+Thesis entitled "*Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment*"
+
+## Professional experience
+
+6/2023 - present 
+
+Center for Theoretical Sciences, Charles University, Prague, Czech Republic
+
+Awardet a personal GACR grand for my *BIODYNAMICS* project.
+
+-------------------------------------
+
+9/2022 - 6/2023 
+
+Parental leave
+
+-------------------------------------
+
+2/2020 - 6/2022 
+
+Department of Biological Sciences, University of Bergen, Norway
+
+Postdoc at ERC project (PI: Prof. H.J.B. Birks) entitled "*Humans on planet Earth (HOPE)*"
+
+-------------------------------------
+
+2019 (6 weeks) 
+
+Nditam, Cameroon, Africa
+
+Leading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled "*Ecological determinants of tropical-temperate trends in insect diversity*"
+
+-------------------------------------
+
+2017 - 2019 (6 weeks)	
+
+Brussels, Belgium
+
+Main data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)
+
+-------------------------------------
+
+2018 (2 months)
+
+EuCFACE - WSU, Australia
+
+Field experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled "W*hy is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants*"
+
+-------------------------------------
+
+2017 (2 months)
+
+Virginia, USA
+
+Fellowship at Smithsonian Institution Conservation and Research Center
+
+-------------------------------------
+
+2016 (6 months)
+
+Binatang research centre, Papua New Guinea
+
+Leading field project focused on arboreal ant ecology 
+
+## Software development
+
+I have developed 4 R packages:
+
+* RRatepol 
+* RFossilpol
+* REcopol
+* RUtilpol
+
+## Teaching
+2021 - 2023	
+
+University of Bergen
+
+Open Science Workshop: Reproducibility in science
+
+-------------------------------------
+
+2021 - 2023
+
+University of Bergen
+
+Practical course on community ecology 
+
+## Funding received	
+
+* POSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR) 
+* IBERA grant (Czech Academy of Science)  
+
+:::
+

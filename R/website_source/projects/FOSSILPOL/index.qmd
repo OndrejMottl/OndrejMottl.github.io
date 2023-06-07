@@ -1,0 +1,7 @@
+---
+title: "FOSSILPOL"
+categories: [news, code, analysis]
+image: "RFossilpol_logo.png"
+---
+
+This package does this.

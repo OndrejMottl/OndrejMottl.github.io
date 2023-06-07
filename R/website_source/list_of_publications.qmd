@@ -1,0 +1,39 @@
+---
+title: "List of publications publised in peer-review journals"
+format: 
+  html:
+    code-fold: false
+    code-tools: false
+editor: visual
+---
+
+* Flantua S.G. & **Mottl, O.** & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. *A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen*. **Global Ecology and Biogeography**. 
+[![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
+
+* Bhatta, K.P., **Mottl, O.**, Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. *Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene*. **Frontiers in Ecology and Evolution**. [![Badge](https://img.shields.io/badge/DOI-10.3389%2Ffevo.2023.1115784-yellow)](https://doi.org/10.3389/fevo.2023.1115784)
+
+* Houska Tahadlova, M., **Mottl, O.**, Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), *Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea*. **Biotropica**. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fbtp.13160-yellow)](https://doi.org/10.1111/btp.13160)
+
+* **Mottl, O.** & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), *Global acceleration in rates of vegetation change over the past 18,000 years*. **Science** 372: 860-864. [![Badge](https://img.shields.io/badge/DOI-10.1126%2Fscience.abg1685-yellow)](https://doi.org/10.1126/science.abg1685)
+
+* **Mottl, O.**, Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), *Rate-of-change analysis in paleoecology revisited: A new approach*. **Review of Palaeobotany and Palynology** 293. [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpalbo.2021.104483-yellow)](https://doi.org/10.1016/j.revpalbo.2021.104483)
+
+* **Mottl, O.**, Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), *Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest*. **Oikos** 130:1087. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Foik.08069-yellow)](https://doi.org/10.1111/oik.08069)
+
+* Leponce, M., Dejean, A., **Mottl, O.**, Klimes, P. (2021), *Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests*. **Insect Conserv. Divers**. 14: 426-438. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Ficad.12486-yellow)](https://doi.org/10.1111/icad.12486) 
+
+* Yombai, J., Klimeš, P., Dargusch, P., Posman, A., **Mottl, O.**, Mani A., Novotny V. (2021), *Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea*. **Case Studies in the Environment** 5: 1342727. [![Badge](https://img.shields.io/badge/DOI-10.1525%2Fcse.2021.1342727-yellow)](https://doi.org/10.1525/cse.2021.1342727)
+
+* **Mottl, O.**, Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), *Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient*. **Ecol. Lett**. 23: 1499-1510. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fele.13579-yellow)](https://doi.org/10.1111/ele.13579)
+
+* **Mottl, O.**, Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), *Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest*. **Biotropica** 52: 277– 287. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fbtp.12684-yellow)](https://doi.org/10.1111/btp.12684)
+
+* Plowman, N.S., **Mottl, O.**, Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), *Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies*. **Ecography** 43: 431-442. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fecog.04730-yellow)](https://doi.org/10.1111/ecog.04730)
+
+* **Mottl, O.**, Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), *Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest*. **Ecosphere** 10: e02848. [![Badge](https://img.shields.io/badge/DOI-10.1002%2Fecs2.2848-yellow)](https://doi.org/10.1002/ecs2.2848)
+
+* Volf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., **Mottl, O.**, Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), *Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach*. **PLOS ONE** 14: e0222119. [![Badge](https://img.shields.io/badge/DOI-10.1371%2Fjournal.pone.0222119-yellow)](https://doi.org/10.1371/journal.pone.0222119)
+
+
+
+

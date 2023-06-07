@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am ressearcher with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools for to study global biodiversity patterns and lowering the barriers of science exploration.\n💬 Ask me about R, GitHub, biodiversity, …\nIn this template you can find examples of using listing (grid, table, default) in Projects, Talks, Blog. Read more about lists here."
+  },
+  {
+    "objectID": "blog/post-with-code/index.html",
+    "href": "blog/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2022\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2017 (2 months)\nVirginia, USA\nFellowship at Smithsonian Institution Conservation and Research Center\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\nI have developed 4 R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\n\n\n\n\n2021 - 2023\nUniversity of Bergen\nOpen Science Workshop: Reproducibility in science\n\n2021 - 2023\nUniversity of Bergen\nPractical course on community ecology\n\n\n\n\nPOSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
+  },
+  {
+    "objectID": "list_of_publications.html",
+    "href": "list_of_publications.html",
+    "title": "List of publications publised in peer-review journals",
+    "section": "",
+    "text": "Flantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography. \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution. \nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica. \nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864. \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293. \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130:1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438. \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727. \nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecol. Lett. 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277– 287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442. \nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html",
+    "href": "projects/BIODYNAMICS/index.html",
+    "title": "BIODYNAMICS",
+    "section": "",
+    "text": "Project description"
+  },
+  {
+    "objectID": "projects/FOSSILPOL/index.html",
+    "href": "projects/FOSSILPOL/index.html",
+    "title": "FOSSILPOL",
+    "section": "",
+    "text": "This package does this."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "projects/index.html#packages",
+    "href": "projects/index.html#packages",
+    "title": "Projects",
+    "section": "Packages",
+    "text": "Packages\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/RRatepol/index.html",
+    "href": "projects/RRatepol/index.html",
+    "title": "RRatepol",
+    "section": "",
+    "text": "This package does this."
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Talk at Oslo UseR meetup\n\n\n\n\n\n\nApr 2, 2019\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#electronic-health-records",
+    "href": "talks/index.html#electronic-health-records",
+    "title": "Talks",
+    "section": "Electronic Health Records",
+    "text": "Electronic Health Records\n\n\n\n\n  \n\n\n\n\nLearning from Hospital EHR data with R\n\n\n\n\n\nA 15 minutes introduction to hospital EHR data\n\n\n\n\n\n\nOct 28, 2019\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/talk_1/index.html",
+    "href": "talks/talk_1/index.html",
+    "title": "Building Website in R: Step by Step Introduction to blogdown",
+    "section": "",
+    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]

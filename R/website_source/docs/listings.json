@@ -1,0 +1,17 @@
+[
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/BIODYNAMICS/index.html",
+      "/projects/FOSSILPOL/index.html",
+      "/projects/RRatepol/index.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/talk_1/index.html",
+      "/talks/talk_2/index.html"
+    ]
+  }
+]

@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "cv.html",
+    "href": "cv.html",
     "title": "Ondřej Mottl",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am ressearcher with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools for to study global biodiversity patterns and lowering the barriers of science exploration.\n💬 Ask me about R, GitHub, biodiversity, …\nIn this template you can find examples of using listing (grid, table, default) in Projects, Talks, Blog. Read more about lists here."
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2022\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2017 (2 months)\nVirginia, USA\nFellowship at Smithsonian Institution Conservation and Research Center\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\nI have developed 4 R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\n\n\n\n\n2021 - 2023\nUniversity of Bergen\nOpen Science Workshop: Reproducibility in science\n\n2021 - 2023\nUniversity of Bergen\nPractical course on community ecology\n\n\n\n\nPOSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
   },
   {
     "objectID": "blog/post-with-code/index.html",
@@ -19,13 +19,6 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2022\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2017 (2 months)\nVirginia, USA\nFellowship at Smithsonian Institution Conservation and Research Center\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\nI have developed 4 R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\n\n\n\n\n2021 - 2023\nUniversity of Bergen\nOpen Science Workshop: Reproducibility in science\n\n2021 - 2023\nUniversity of Bergen\nPractical course on community ecology\n\n\n\n\nPOSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
   },
   {
     "objectID": "list_of_publications.html",
@@ -89,5 +82,12 @@
     "title": "Building Website in R: Step by Step Introduction to blogdown",
     "section": "",
     "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am ressearcher with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools for to study global biodiversity patterns and lowering the barriers of science exploration.\n💬 Ask me about R, GitHub, biodiversity, …"
   }
 ]

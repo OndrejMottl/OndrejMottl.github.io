@@ -19,7 +19,7 @@ about:
 
 ::: {#hero-heading}
 
-I am a researcher at Charles University in Prague, Czech Republic, with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.
+I am a researcher at Charles University in Prague, Czech Republic, with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.
 
 ## Education 
 

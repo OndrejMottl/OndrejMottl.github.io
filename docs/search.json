@@ -32,7 +32,7 @@
     "href": "projects/BIODYNAMICS/index.html",
     "title": "BIODYNAMICS",
     "section": "",
-    "text": "Project description"
+    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023."
   },
   {
     "objectID": "projects/FOSSILPOL/index.html",
@@ -89,5 +89,19 @@
     "title": "Ondřej Mottl",
     "section": "",
     "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am ressearcher with the main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools for to study global biodiversity patterns and lowering the barriers of science exploration.\n💬 Ask me about R, GitHub, biodiversity, …"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html#project-description",
+    "href": "projects/BIODYNAMICS/index.html#project-description",
+    "title": "BIODYNAMICS",
+    "section": "Project description",
+    "text": "Project description\nLife scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. The here proposed project – BIODYNAMICS – will use biotic interactions of vegetation to improve the capacity of predicting global biodiversity patterns. BIODYNAMICS will provide crucial insights into how local processes of species interactions shape continental and global biodiversity patterns during the last 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present. It will do so using a newly assembled publicly available multidisciplinary database integrating present and past global vegetation records with their functional traits and climate.\nA key aspect of BIODYNAMICS is to pursue future global biodiversity patterns, affected by anthropogenic climate change, with the understanding of the past, and to advance interdisciplinary cooperation between the scientific disciplines of eco-informatics, community ecology, climatology, and palaeo- and neo-ecology As a result, BIODYNAMICS will provide crucial insights into understanding and quantifying biotic interactions in the past and present, which would inform predictions about future ecological responses to global change. This is important to maintaining ecosystem services, which are key for our society."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html#project-goals",
+    "href": "projects/BIODYNAMICS/index.html#project-goals",
+    "title": "BIODYNAMICS",
+    "section": "Project goals",
+    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
   }
 ]

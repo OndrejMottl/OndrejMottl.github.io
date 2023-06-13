@@ -1,0 +1,41 @@
+---
+title: "Utilpol"
+categories: [package, R]
+image: "wip_logo.png"
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/HOPE-UIB-BIO/R-Ecopol-package
+---
+
+::: {#hero-heading}
+
+<!-- badges: start -->
+[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Ecopol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Ecopol-package/releases)
+<!-- badges: end -->
+
+## Description
+
+R-Utilpol is an R package proving utility functions for package development.
+
+## WARNING
+
+:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:
+
+## Installation
+
+You can install the development version of RUtilpol from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("HOPE-UIB-BIO/R-Utilpol-package")
+```
+
+## More information
+The package currently does not have a website. Please check the [Github repository](https://github.com/HOPE-UIB-BIO/R-Utilpol-package) for updates.
+
+:::

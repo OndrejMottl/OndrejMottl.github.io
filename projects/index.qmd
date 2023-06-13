@@ -5,7 +5,7 @@ description: |
 listing:
   - id: ehr
     max-description-length: 500
-    image-height: 150px
+    image-height: 200px
     fields: [image, title, description]
     contents: 
       - BIODYNAMICS
@@ -14,11 +14,13 @@ listing:
     
   - id: packages
     max-description-length: 500
-    image-height: 150px
+    image-height: 250px
     fields: [image, title, description]
     contents: 
       - RRatepol
       - FOSSILPOL
+      - REcopol
+      - RUtilpol
     type: grid
     grid-item-border: false
 ---
@@ -28,7 +30,7 @@ listing:
 ::: {#ehr}
 :::
 
-## Packages 
+## Software and R-packages 
 
 ::: {#packages}
 :::

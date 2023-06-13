@@ -53,7 +53,7 @@
     "href": "projects/index.html#packages",
     "title": "Projects",
     "section": "Packages",
-    "text": "Packages\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Packages\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/RRatepol/index.html",
@@ -103,5 +103,26 @@
     "title": "BIODYNAMICS",
     "section": "Project goals",
     "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
+  },
+  {
+    "objectID": "projects/REcopol/index.html",
+    "href": "projects/REcopol/index.html",
+    "title": "REcopol",
+    "section": "",
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nR-Utilpol is an R package proving utility functions for package development.\n\n\n\n:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")\n\n\n\nMore detailed information can be found on REcopol package website"
+  },
+  {
+    "objectID": "projects/index.html#software-and-r-packages",
+    "href": "projects/index.html#software-and-r-packages",
+    "title": "Projects",
+    "section": "Software and R-packages",
+    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/RUtilpol/index.html",
+    "href": "projects/RUtilpol/index.html",
+    "title": "Utilpol",
+    "section": "",
+    "text": "Github\n  \n\n  \n  \n\n \n\n\nR-Utilpol is an R package proving utility functions for package development.\n\n\n\n:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")\n\n\n\nThe package currently does not have a website. Please check the Github repository for updates."
   }
 ]

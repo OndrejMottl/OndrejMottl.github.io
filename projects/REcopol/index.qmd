@@ -1,0 +1,41 @@
+---
+title: "REcopol"
+categories: [package, R]
+image: "REcopol_logo.png"
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: link
+      text: website
+      href: https://hope-uib-bio.github.io/R-Ecopol-package
+    - icon: github
+      text: Github
+      href: https://github.com/HOPE-UIB-BIO/R-Ecopol-package
+---
+
+::: {#hero-heading}
+
+<!-- badges: start -->
+[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Ecopol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Ecopol-package/releases)
+<!-- badges: end -->
+
+## Description
+
+The goal of {`REcopol`} is to make an easy-to-use function to analyse fossil pollen data
+
+## Installation
+
+You can install the development version of REcopol:package: from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("HOPE-UIB-BIO/R-Ecopol-package")
+```
+
+## Package website
+
+More detailed information can be found on [REcopol package website](https://hope-uib-bio.github.io/R-Ecopol-package/)
+
+:::

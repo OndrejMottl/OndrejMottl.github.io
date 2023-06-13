@@ -2,6 +2,35 @@
 title: "FOSSILPOL"
 categories: [package, R]
 image: "RFossilpol_logo.png"
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: link
+      text: website
+      href: https://hope-uib-bio.github.io/FOSSILPOL-website/
+    - icon: github
+      text: Github
+      href: https://github.com/HOPE-UIB-BIO/R-Fossilpol-package
 ---
 
-This package does this.
+::: {#hero-heading}
+<!-- badges: start -->
+[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Fossilpol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Fossilpol-package/releases)
+<!-- badges: end -->
+
+RFossilpol R-package is a part of the **FOSSILPOL** project. Learn more about the project on the [project websites](https://hope-uib-bio.github.io/FOSSILPOL-website/)
+
+The goal of the {`RFossilpol`}:package: is to provide functions for [FOSSILPOL workflow](https://github.com/HOPE-UIB-BIO/FOSSILPOL-workflow).
+
+## Installation
+
+You can install the development version of RFossilpol:package: from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("HOPE-UIB-BIO/R-Fossilpol-package")
+```
+
+:::

@@ -2,6 +2,48 @@
 title: "RRatepol"
 categories: [package, R]
 image: "RRatepol_logo.png"
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: link
+      text: website
+      href: https://hope-uib-bio.github.io/R-Ratepol-package
+    - icon: github
+      text: Github
+      href: https://github.com/HOPE-UIB-BIO/R-Ratepol-package
 ---
 
-This package does this. 
+::: {#hero-heading}
+
+<!-- badges: start -->
+[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Ratepol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Ratepol-package/releases)
+<!-- badges: end -->
+
+## Description
+
+RRatepol is an R package for estimating rate of change (RoC) from community data in time series.
+
+RRatepol is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, RRatepol can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e. numerous rapid changes in composition or sedimentation rates).
+
+## Installing package
+
+``` r
+devtools::install_github("HOPE-UIB-BIO/R-Ratepol-package")
+```
+
+## Cite as
+
+``` r
+citation(package = "RRatepol")
+```
+
+Ondřej Mottl, John-Arvid Grytnes, Alistair W.R. Seddon, Manuel J. Steinbauer, Kuber P. Bhatta, Vivian A. Felde, Suzette G.A. Flantua, H. John B. Birks. Rate-of-change analysis in palaeoecology revisited: a new approach Review of Palaeobotany and Palynology 293, doi: [![](https://img.shields.io/badge/doi-10.1016/j.revpalbo.2021.104483-yellow.svg)](https://doi.org/10.1016/j.revpalbo.2021.104483)
+
+## Package website
+
+More detailed information can be found on [RRatepol package website](https://hope-uib-bio.github.io/R-Ratepol-package/)
+
+This include description of the individual steps for RoC estimation [Package Description](https://hope-uib-bio.github.io/R-Ratepol-package/articles/package-description.html)
+:::

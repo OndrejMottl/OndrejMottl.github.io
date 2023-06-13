@@ -1,6 +1,6 @@
 ---
 title: "RRatepol"
-categories: [news, code, analysis]
+categories: [package, R]
 image: "RRatepol_logo.png"
 ---
 

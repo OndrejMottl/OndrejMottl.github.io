@@ -1,6 +1,6 @@
 ---
 title: "FOSSILPOL"
-categories: [news, code, analysis]
+categories: [package, R]
 image: "RFossilpol_logo.png"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "BIODYNAMICS"
-categories: [news, code, analysis]
+categories: [project]
 image: "image.jpg"
 ---
 

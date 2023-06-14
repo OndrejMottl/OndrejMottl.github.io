@@ -22,9 +22,9 @@ website:
       - section: "About me"
         contents:
           - text: "CV"
-            href: cv.qmd
+            href: about_me/cv.qmd
           - text: "List of publications"
-            href: list_of_publications.qmd
+            href: about_me/list_of_publications.qmd
 
 
 format:

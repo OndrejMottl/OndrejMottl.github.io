@@ -88,7 +88,7 @@
     "href": "index.html",
     "title": "Ondřej Mottl",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am a researcher with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools to study global biodiversity patterns and lowering the barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\n\n\nProjects, on which I am currently working\nMy CV\nList of my publications"
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am a researcher with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools to study global biodiversity patterns and lowering the barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\n\n\nProjects, on which I am currently working🚀\nMy CV📄\nGet in touch📬\nMy publications📚"
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-description",
@@ -145,5 +145,166 @@
     "title": "List of publications publised in peer-review journals",
     "section": "",
     "text": "Flantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography. \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution. \nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica. \nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864. \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293. \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130:1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438. \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727. \nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecol. Lett. 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277– 287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442. \nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119."
+  },
+  {
+    "objectID": "collaboration/code_convention.html",
+    "href": "collaboration/code_convention.html",
+    "title": "Code Convention",
+    "section": "",
+    "text": "last updated: 14.06.2023"
+  },
+  {
+    "objectID": "collaboration/code_convention.html#reasoning",
+    "href": "collaboration/code_convention.html#reasoning",
+    "title": "Code Convention",
+    "section": "Reasoning",
+    "text": "Reasoning\nCreating a project and code that follows established conventions and guidelines in natural sciences, specifically in the field of ecology, ensures that your work is comprehensible to others who review it. Whether it’s your collaborators, fellow researchers, or even future self several months down the line, adhering to these best practices has numerous benefits. Implementing code that aligns with these conventions simplifies the task of identifying and rectifying errors, comparing replicated code, and making significant modifications without disrupting the overall functionality."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#r-specific",
+    "href": "collaboration/code_convention.html#r-specific",
+    "title": "Code Convention",
+    "section": "R-specific",
+    "text": "R-specific\nI am generally working with R programming language, so most of the specifics are related to that."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#files-folders",
+    "href": "collaboration/code_convention.html#files-folders",
+    "title": "Code Convention",
+    "section": "Files & folders",
+    "text": "Files & folders\nFolders and files can have numbering to guide a user to the sequences of analyses. However, this can be added later in the project as it causes various issues with version control.\n\nFolders names\n\nUnderscore with only the first letter capitalized (Capital_snake_style)\n\n\n\nFile naming\n\nUnderscore with only the first letter capitalized (Capital_snake_style)\nFile name should contain dates\n\ndates should be in YYYY-MM-DD\nsee RUtilpol for easy handling of “version control of files”\n\n\n\nTemporary file\n\ntemporary data files should not hold any important information\nNo links between Temp files and scripts on GitHub\nData/Temp should Include in .gitignore\n\n\n\n\nSafe path\nAll paths should be using the here package to make sure that they work on all machines."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#package-dependencies",
+    "href": "collaboration/code_convention.html#package-dependencies",
+    "title": "Code Convention",
+    "section": "Package dependencies",
+    "text": "Package dependencies\nThe {r, eval=falseenv} package, is an R-packages dependency management, which is set up for reproducibility.\nThe ___Init_project___.R script is used for the preparation of all R-packages. Mainly it will install {r, eval=falseUtilpol} and all dependencies, which is used through the project as version control of files."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#cascade-of-r-scripts",
+    "href": "collaboration/code_convention.html#cascade-of-r-scripts",
+    "title": "Code Convention",
+    "section": "Cascade of R scripts",
+    "text": "Cascade of R scripts\nThis project is constructed using a script cascade. This means that the 00_Master.R, located within R folder, executes all scripts within sub-folders of the R folder, which in turn, executes all their sub-folders (e.g., R/01_Data_processing/Run_01.R executes R/01_Data_processing/01_full_data_process.R, R/01_Data_processing/02_data_overview.R, R/01_Data_processing/03_data_ant_counts.R, …)."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#configuration-file",
+    "href": "collaboration/code_convention.html#configuration-file",
+    "title": "Code Convention",
+    "section": "Configuration file",
+    "text": "Configuration file\nThe configuration file (00_Config_file) holds the utmost importance in a project. It serves a multitude of essential purposes, such as defining global variables, loading functions, specifying file paths, and more. Every other file within a project should initiate with a reference to the configuration file (e.g., source(\"00_Config_file\")), as it aims to minimize repetition and establish an abstraction layer that allows for centralized changes. By declaring paths in the configuration file that are utilized across multiple scripts, the user can simply refer to them by their variable name in the scripts. This approach enables seamless modifications, including renaming variables or transitioning from down-sampled to full data. All you need to do is update the relevant path in one place, and the change will automatically propagate throughout your project."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#one-script-per-one-task",
+    "href": "collaboration/code_convention.html#one-script-per-one-task",
+    "title": "Code Convention",
+    "section": "One script per one task",
+    "text": "One script per one task\nEach script should be also self-contained. It means that it should start with loading data and finish with saving results. Therefore, each script should be able to be run without having any other data in memory (with the exception of data from 00_Config_file).\nEach script should do just one task (see also file name). If it is hard to describe the one task, it is better to split script into several."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#coding-style",
+    "href": "collaboration/code_convention.html#coding-style",
+    "title": "Code Convention",
+    "section": "Coding style",
+    "text": "Coding style\nMy coding style is a combination of various sources (Tidyverse and Google, and others). I am adopting it, as I am progressing in my career. However, style should be consistent at least within a single project."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#code-script-structure",
+    "href": "collaboration/code_convention.html#code-script-structure",
+    "title": "Code Convention",
+    "section": "Code (script) structure",
+    "text": "Code (script) structure\nOne script should serve one purpose and that should be obvious from its name. The script is always partitioned into clearly readable chunks (see below).\n\nScript annotation (comments)\n\nScript header\nThe script header should contain the name of the project, objectives (purpose) of that script, authors, and rough date (year of the project).\nExample of a header:\n\n#----------------------------------------------------------#\n#\n#\n#                     Project name \n#\n#                      Script name\n#                      - continue\n#\n#                       Authors \n#                        Year\n#\n#----------------------------------------------------------#\n\n\n\nSection header\nEach section of a script should begin with a header which consists of a name wrapped by two lines. The name of a header should start with a capital letter. Each header name should be followed by ----- so that it is automatically picked by IDE as a section header.\nEmpty lines should be placed before each header to separate chunks.\nHeadings can have various hierarchies:\n\n#----------------------------------------------------------#\n#--------------------------------------------------#\n#----------------------------------------#\n\nExample of a header:\n\n#----------------------------------------------------------#\n# Load data -----\n#----------------------------------------------------------#\n\nHeader names can be denoted by numbers, with subsections separated by *.*\nExample of a numbered header:\n\n#----------------------------------------------------------#\n# 1. Estimate diversity -----\n#----------------------------------------------------------#\n\n\n#--------------------------------------------------#\n# 1.1. Fit model -----\n#--------------------------------------------------#\n\n\n\nSingle-line comments\nAdding comments to code plays a pivotal role in ensuring reproducibility and preserving code knowledge for future reference. When things change or break, the user will be thankful for comments. There’s no need to comment excessively or unnecessarily, but a comment describing what a large or complex chunk of code does is always helpful. The first letter of a comment is capitalized and spaced away from the pound sign (#).\nExample of a single-line comment:\n\n# This is a comment.\n\n\n\nMulti-line comment\nMulti-line comments should start with a capital letter and the new line should start with one tab.\nExample of a multi-line comment:\n\n# This is a very long comment, where I need to describe\n#    what this code is doing\n\n\n\nInline comment\nInline comments should always start with a space.\nExample of inline comment:\n\nfunction(\n    agr = 1 # This is an example of an inline comment\n)\n\n\n\nCommenting functions\nFunction decoration should be placed before each function. See functions for details.\n\n\n\nCode width\nNo line of code should be longer than 80 characters (including comments). Users can visualise the 80 characters line in selected IDER"
+  },
+  {
+    "objectID": "collaboration/code_convention.html#names-of-object-and-function",
+    "href": "collaboration/code_convention.html#names-of-object-and-function",
+    "title": "Code Convention",
+    "section": "Names of object and function",
+    "text": "Names of object and function\n\n\"There are only two hard things in Computer Science: cache invalidation and naming things.\"\n\n\nObject names\nObject and function should be using snake_style. The . in names is somewhat popular but it causes issues with names of method and should be therefore avoided. The names are preferred to be very descriptive, more expressive and more explicit (note that the default linter setting of long names can be disabled).\nThe names should be nouns and start with the type of object: - data_* - for data - special subcategory is table_* for tables (mainly as object for reference). Note that all tables can be data but now vice versa. - list_ - for lists - vec_ - for vectors - mod_* - for statistical model - res_ - special category, which can be used within function to name a object to be returned (return(res_*)).\nExamples of good names:\n\n# data\ndata_diversity_survey\n\n# list\nlist_diversity_individual_plots\n\n# vector\nvec_region_names\n\n# model\nmod_diversity_linear\n\n# result\nres_estimated_weight\n\n\n\nFunction names\nNames of functions should be verbs and describe the expected functionality.\nExamples of good function names\n\nestimate_alpha_diversity()\n\nget_first_value()\n\ntranform_into_character()\n\n\nInternal function\nNote that is is possible to start function with a \".\" (e.g., .get_reound_value()) flag internal functions.\n\n\n\nColumn (variable) names in data.frames\nsnake_style is preferred for column names in both data.frames and tibbles. Note that janitor package can be used to edit this automatically."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#syntax",
+    "href": "collaboration/code_convention.html#syntax",
+    "title": "Code Convention",
+    "section": "Syntax",
+    "text": "Syntax\nMany of the syntax issues can be checked/fixed by lintr and styler packages, which can be used to automate lots of the tedious aspects.\n\nSpaces (empty character)\nSpace (\" \") should be always placed: - after a comma - before and after infix operators (==, +, -, <-, ~, etc.`)\nExceptions: - No spaces inside or outside parentheses for regular function calls - Operators with high precedence should not be surounced by space :, ::, :::, $, @, [, [[, ^, unary -\n\n\nNew line (↵)\nI prefer to have code more vertical than horizontal. Therefore, there are quite a lot of new lines.\nUsage of a semicolon (;) to indicate a new line is not preferred.\nA new line should be:\n\n1. After an object assignment (<-)\n\ndata_diversity <-\n  read_data(...)\n\nAn exception is an assignment of function.\n\nget_data <- function(...){\n    ...\n}\n\n\n\n2. After a pipe operator (%>%)\nNote that there should be a space before a pipe\n\ndata_diversity <-\n  get_data() %>%\n  transform_to_percentages()\n\n\n\n3. After a function argument\nThis should be true for both function declaration and usage. The exception is a single argument.\n\nget_data <- function(arg1 = foo,\n                     arg2 = here::here()) {\n  ...\n}\n\ndata_diversity <-\n  get_data(\n    arg1 = foo,\n    arg2 = here::here()\n  )\n\nvec_selected_regions <-\n  get_regions(arg1 = foo)\n\n\n\n4. Parentheses\nEach type of parentheses (brackets) has its own rules:\n\nround ( )\n\nshould not be placed on separate first and last line\nalways space before the bracket (unless it’s a function)\nnew line after start if it is a multi-argument function\n\nExamples:\n\n1 + ( a + b ) \n\nget_data(arg = foo)\n\nget_data(\n    agr1 = foo,\n    agr2 = here::here()\n)\n\n\n\nSquare [ ]\n\nNever space before the bracket\nalways space instead of missing value\n\nExamples:\n\nlist_diversity_for_each_plot[[1]]\n\ndata_cars[, 2]\n\n\n\nCurly { }\n\nUse only for functions and expressions\n{ should be the last character on a line and should never be on its own\n} should be the first character on a line\nAlways new brackets after else unless followed by if\nNot used for chunks of code\n\nExamples:\n\nget_data <- function(agr1){\n    ...\n}\n\nif(\n    logical_test\n) {\n ...\n} else {\n    ...\n}\n\ntry(\n    expr = {\n    ...\n    }\n)\n\n\n\n\n\nAssignment\nAlways use the left assignment <-.\nDo NOT use: - right assignment (->) - equals (=)\nThere should be a new line after the assignment. Note that rarely singe-line assignment can be used:\n\ndata_diversity <-\n  get_data()\n\nprefered_shape <- \"triangle\"\n\n\n\nLogical evaluation\nAlways use TRUE and FALSE, instead of T and F"
+  },
+  {
+    "objectID": "collaboration/code_convention.html#functions",
+    "href": "collaboration/code_convention.html#functions",
+    "title": "Code Convention",
+    "section": "Functions",
+    "text": "Functions\nFor function calls, always state the arguments even though R can have anonymous arguments. The only exception is for functions, where arguments are not known (i.e. ... argument).\n\nTidyverse\nIt is preferred to use the Tidyverse version of functions over base ones:\n\n\n\nBase R\nBetter Style, Performance, and Utility\n\n\n\n\nread.csv()\nreadr::read_csv()\n\n\ndf$some_column\ndf %>% dplyr::pull(some_column)\n\n\ndf$some_column = ...\ndf %>% dplyr::mutate(some_column = ...)\n\n\n…\n…\n\n\n\n\n\nNamespace\nAlways use the full package namespace with a function call. This helps to track the source of function in a script:\n\ndata_diversity %>%\n  dplyr::mutate(\n    beta_diverisity = 0\n  )\n\n\n\nCreating functions\nSpecific rules apply for making custom functions: - For naming of functions see function names - Each function (declaration) should be placed in a separate script named the function. Therefore, there should be only a single function in each function script. - function should always return (return(res_value))\n\nAnonymous functions\nIn various instances, it might be better to not create a new function but to use an anonymous function (e.g. inside of purrr::map_*()).\nIn that case, the user should use tidle (~) for change in map default values in the function:\n\npurrr::map(\n    .f = ~ {\n        mean(.x)\n    }\n)\n\nFor purrr::pmap_*(), the user should use ..1, ..2, etc\n\npurrr::pmap(\n    .l = list(\n        list_1,\n        list_2,\n        list_3,\n     .f = ~ {\n         ..1 + ..2 + ..3\n     }\n    )\n)\n\n\n\nFunction documentation\nEach function should have documentation at the beginning of the function using the roxygen2 package. This can be useful also for project-specific functions (not just within the package) as it is easier to transition to a custom package."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#one-script-per-task",
+    "href": "collaboration/code_convention.html#one-script-per-task",
+    "title": "Code Convention",
+    "section": "One script per task",
+    "text": "One script per task\nEach script should be also self-contained. It means that it should start with loading data and finish with saving results. Therefore, each script should be able to be run without having any other data in memory (except for data from 00_Config_file).\nEach script should do just one task (see also file name). If it is hard to describe one task, it is better to split the script into several."
+  },
+  {
+    "objectID": "collaboration/code_convention.html#names-of-objects-and-function",
+    "href": "collaboration/code_convention.html#names-of-objects-and-function",
+    "title": "Code Convention",
+    "section": "Names of objects and function",
+    "text": "Names of objects and function\n\n\"There are only two hard things in Computer Science: cache invalidation and naming things.\"\n\n\nObject names\nObject and function should be using snake_style. The . in names is somewhat popular but it causes issues with names of methods and should be therefore avoided. The names are preferred to be very descriptive, more expressive and more explicit (note that the default linter setting of long names can be disabled).\nThe names should be nouns and start with the type of object: - data_* - for data - special subcategory is table_* for tables (mainly as an object for reference). Note that all tables can be data but now vice versa. - list_ - for lists - vec_ - for vectors - mod_* - for statistical model - res_ - special category, which can be used within the function to name an object to be returned (return(res_*)).\nExamples of good names:\n\n# data\ndata_diversity_survey\n\n# list\nlist_diversity_individual_plots\n\n# vector\nvec_region_names\n\n# model\nmod_diversity_linear\n\n# result\nres_estimated_weight\n\n\n\nFunction names\nNames of functions should be verbs and describe the expected functionality.\nExamples of good function names\n\nestimate_alpha_diversity()\n\nget_first_value()\n\ntranform_into_character()\n\n\nInternal function\nNote that it is possible to start a function with a \".\" (e.g., .get_reound_value()) flag internal functions.\n\n\n\nColumn (variable) names in data.frames\nsnake_style is preferred for column names in both data.frames and tibbles. Note that the janitor package can be used to edit this automatically."
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html",
+    "href": "collaboration/get_in_touch.html",
+    "title": "Get in touch!",
+    "section": "",
+    "text": "I like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. 🌟"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#contact-me",
+    "href": "collaboration/get_in_touch.html#contact-me",
+    "title": "Get in touch!",
+    "section": "Contact me 📬",
+    "text": "Contact me 📬\nDo you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to ondrej.mottl(at)gmail.com. Also, feel free to reach out to me via Twitter! 📧🐦"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#collaboration-guide",
+    "href": "collaboration/get_in_touch.html#collaboration-guide",
+    "title": "Get in touch!",
+    "section": "Collaboration guide 🤝",
+    "text": "Collaboration guide 🤝\nEveryone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a collaboration guide for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. 📚🌱"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#code-convention",
+    "href": "collaboration/get_in_touch.html#code-convention",
+    "title": "Get in touch!",
+    "section": "Code convention 💻",
+    "text": "Code convention 💻\nMy work is heavily focused on writing code. For this reason, I have prepared a code convention, which I am following in my projects. I am making it publically available so feel free to check it out! 💡📝\nFeel free to explore these resources, and let’s create something amazing together! 🌟🌍🔬"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#contact-me-e-mail",
+    "href": "collaboration/get_in_touch.html#contact-me-e-mail",
+    "title": "Get in touch!",
+    "section": "Contact me :e-mail:",
+    "text": "Contact me :e-mail:\nDo you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to ondrej.mottl(at)gmail.com. Also, feel free to reach out to me via Twitter! :envelope: :bird:"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#collaboration-guidehandshake",
+    "href": "collaboration/get_in_touch.html#collaboration-guidehandshake",
+    "title": "Get in touch!",
+    "section": "Collaboration guide:handshake:",
+    "text": "Collaboration guide:handshake:\nEveryone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a collaboration guide for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. :books: :seedling:"
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#code-convention-computer",
+    "href": "collaboration/get_in_touch.html#code-convention-computer",
+    "title": "Get in touch!",
+    "section": "Code convention :computer:",
+    "text": "Code convention :computer:\nMy work is heavily focused on writing code. For this reason, I have prepared a code convention, which I am following in my projects. I am making it publically available so feel free to check it out! :bulb: :pencil:\nFeel free to explore these resources, and let’s create something amazing together! :star: :earth_americas: :microscope:\nI like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. :star:"
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html",
+    "href": "collaboration/collaboration_guide.html",
+    "title": "Collaboration guide",
+    "section": "",
+    "text": "WIP"
   }
 ]

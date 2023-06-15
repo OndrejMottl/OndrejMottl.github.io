@@ -26,6 +26,14 @@ website:
           - text: "List of publications"
             href: about_me/list_of_publications.qmd
 
+      - section: "Work with me"
+        contents:
+          - text: "Get in touch!"
+            href: collaboration/get_in_touch.qmd
+          - text: "Collaboration guide"
+            href: collaboration/collaboration_guide.qmd
+          - text: "Code Convention"
+            href: collaboration/code_convention.qmd
 
 format:
   html:

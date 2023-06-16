@@ -39,7 +39,7 @@
     "href": "projects/FOSSILPOL/index.html",
     "title": "FOSSILPOL",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \nRFossilpol R-package is a part of the FOSSILPOL project. Learn more about the project on the project websites\nThe goal of the {RFossilpol}:package: is to provide functions for FOSSILPOL workflow.\n\n\nYou can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n{RFossilpol} R-package is a part of the FOSSILPOL project.\nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nYou can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
   },
   {
     "objectID": "projects/index.html",
@@ -60,7 +60,7 @@
     "href": "projects/RRatepol/index.html",
     "title": "RRatepol",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nRRatepol is an R package for estimating rate of change (RoC) from community data in time series.\nRRatepol is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, RRatepol can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e. numerous rapid changes in composition or sedimentation rates).\n\n\n\ndevtools::install_github(\"HOPE-UIB-BIO/R-Ratepol-package\")\n\n\n\ncitation(package = \"RRatepol\")\nOndřej Mottl, John-Arvid Grytnes, Alistair W.R. Seddon, Manuel J. Steinbauer, Kuber P. Bhatta, Vivian A. Felde, Suzette G.A. Flantua, H. John B. Birks. Rate-of-change analysis in palaeoecology revisited: a new approach Review of Palaeobotany and Palynology 293, doi: \n\n\n\nMore detailed information can be found on RRatepol package website\nThis include description of the individual steps for RoC estimation Package Description"
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\n{RRatepol} is an R package for estimating rate of change (RoC) from community data in time series.\n{RRatepol} is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, {RRatepol} can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e. numerous rapid changes in composition or sedimentation rates).\n\n\n\n\ndevtools::install_github(\"HOPE-UIB-BIO/R-Ratepol-package\")\n\n\n\n\n\ncitation(package = \"RRatepol\")\n\nOndřej Mottl, John-Arvid Grytnes, Alistair W.R. Seddon, Manuel J. Steinbauer, Kuber P. Bhatta, Vivian A. Felde, Suzette G.A. Flantua, H. John B. Birks. Rate-of-change analysis in palaeoecology revisited: a new approach Review of Palaeobotany and Palynology 293, doi: \n\n\n\nMore detailed information can be found on RRatepol package website\nThis include description of the individual steps for RoC estimation Package Description"
   },
   {
     "objectID": "talks/index.html",
@@ -109,21 +109,21 @@
     "href": "projects/REcopol/index.html",
     "title": "REcopol",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nThe goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data\n\n\n\nYou can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")\n\n\n\nMore detailed information can be found on REcopol package website"
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nThe goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data.\nAll functions can be grouped into 5 categories:\n\nDiversity estimations - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.\nOrdinations - Functions to fit Detrended (Canonical) Correspondence Analysis.\nGAM modeling - Functions to fit, predict, and visualise generalized additive models (GAM) models.\nChange-point analyses and regression partition - Functions for detection of change points in temporal patterns\nUtility - Functions for operation with (not only) fossil pollen data\n\n\n\n\nYou can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")\n\n\n\nMore detailed information can be found on REcopol package website"
   },
   {
     "objectID": "projects/index.html#software-and-r-packages",
     "href": "projects/index.html#software-and-r-packages",
     "title": "Projects",
     "section": "Software and R-packages",
-    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/RUtilpol/index.html",
     "href": "projects/RUtilpol/index.html",
-    "title": "Utilpol",
+    "title": "RUtilpol",
     "section": "",
-    "text": "Github\n  \n\n  \n  \n\n \n\n\nR-Utilpol is an R package proving utility functions for package development.\n\n\n\n:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")\n\n\n\nThe package currently does not have a website. Please check the Github repository for updates."
+    "text": "Github\n  \n\n  \n  \n\n \n\n\nThe main purpose of {RUtilpol} is to provide utility (helper) functions.\nAll functions can be grouped into 3 main categories:\n\nPackage development - Function used within other packages (e.g., RUtilpol::check_class() for safety check, RUtilpol::output_warning() - for console message, RUtilpol::replace_null_with_na() for data wrangling ,…).\nFile management() - Functions for saving and loading functions for better handling of files in large projects (see examples on Github repository ).\nExtraction of spatial information - Functions to assign information to points based on a raster of shapefile (see examples Github repository).\n\n\n\n\n‼️This package is under active development. Therefore, the package is subject to change.‼️\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")"
   },
   {
     "objectID": "REAMDE.html",

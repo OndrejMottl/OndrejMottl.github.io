@@ -23,8 +23,17 @@ about:
 
 ## Description
 
-The goal of {`REcopol`} is to make an easy-to-use function to analyse fossil pollen data
+The goal of {`REcopol`} is to make an easy-to-use function to analyse fossil pollen data. 
 
+All functions can be grouped into 5 categories:
+
+1. **Diversity estimations** - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.
+2. **Ordinations** - Functions to fit Detrended (Canonical)
+    Correspondence Analysis.
+3. **GAM modeling** - Functions to fit, predict, and visualise generalized additive models (GAM) models.
+4. **Change-point analyses and regression partition** - Functions for detection of change points in temporal patterns
+5. **Utility** - Functions for operation with (not only) fossil pollen data
+    
 ## Installation
 
 You can install the development version of REcopol:package: from [GitHub](https://github.com/) with:

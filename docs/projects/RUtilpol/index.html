@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ondřej Mottl - Utilpol</title>
+<title>Ondřej Mottl - RUtilpol</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,7 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Utilpol</h1>
+      <h1 class="quarto-secondary-nav-title">RUtilpol</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -163,12 +163,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../cv.html" class="sidebar-item-text sidebar-link">CV</a>
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">CV</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../list_of_publications.html" class="sidebar-item-text sidebar-link">List of publications</a>
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">List of publications</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Work with me</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">Get in touch!</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">Collaboration guide</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">Code Convention</a>
   </div>
 </li>
       </ul>
@@ -189,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   rectangle " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Utilpol</h1>
+<h1 class="title d-none d-lg-block">RUtilpol</h1>
   <div class="quarto-categories">
     <div class="quarto-category">package</div>
     <div class="quarto-category">R</div>
@@ -210,21 +235,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://github.com/HOPE-UIB-BIO/R-Ecopol-package/releases"><img src="https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Ecopol-package?label=Version&amp;logo=github.png" class="img-fluid" alt="Version"></a> <!-- badges: end --></p>
 <section id="description" class="level2">
 <h2 data-anchor-id="description">Description</h2>
-<p>R-Utilpol is an R package proving utility functions for package development.</p>
+<p>The main purpose of {<code>RUtilpol</code>} is to provide utility (helper) functions.</p>
+<p>All functions can be grouped into 3 main categories:</p>
+<ol type="1">
+<li><p><strong>Package development</strong> - Function used within other packages (e.g., <code>RUtilpol::check_class()</code> for safety check, <code>RUtilpol::output_warning()</code> - for console message, <code>RUtilpol::replace_null_with_na()</code> for data wrangling ,…).</p></li>
+<li><p><strong>File management</strong>() - Functions for saving and loading functions for better handling of files in large projects (see examples on <a href="https://github.com/HOPE-UIB-BIO/R-Utilpol-package">Github repository</a> ).</p></li>
+<li><p><strong>Extraction of spatial information</strong> - Functions to assign information to points based on a raster of shapefile (see examples <a href="https://github.com/HOPE-UIB-BIO/R-Utilpol-package">Github repository</a>).</p></li>
+</ol>
 </section>
 <section id="warning" class="level2">
 <h2 data-anchor-id="warning">WARNING</h2>
-<p>:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:</p>
+<p>‼️This package is under active development. Therefore, the package is subject to change.‼️</p>
 </section>
 <section id="installation" class="level2">
 <h2 data-anchor-id="installation">Installation</h2>
 <p>You can install the development version of RUtilpol from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("remotes")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"HOPE-UIB-BIO/R-Utilpol-package"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="more-information" class="level2">
-<h2 data-anchor-id="more-information">More information</h2>
-<p>The package currently does not have a website. Please check the <a href="https://github.com/HOPE-UIB-BIO/R-Utilpol-package">Github repository</a> for updates.</p>
 </section>
 </div></div>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Utilpol"
+title: "RUtilpol"
 categories: [package, R]
 image: "wip_logo.png"
 about:
@@ -20,11 +20,19 @@ about:
 
 ## Description
 
-R-Utilpol is an R package proving utility functions for package development.
+The main purpose of {`RUtilpol`} is to provide utility (helper) functions.
+
+All functions can be grouped into 3 main categories:
+
+1. **Package development** - Function used within other packages (e.g., `RUtilpol::check_class()` for safety check, `RUtilpol::output_warning()` - for console message, `RUtilpol::replace_null_with_na()` for data wrangling ,…).
+
+2. **File management**() - Functions for saving and loading functions for better handling of files in large projects (see examples on [Github repository](https://github.com/HOPE-UIB-BIO/R-Utilpol-package) ).
+
+3. **Extraction of spatial information** - Functions to assign information to points based on a raster of shapefile (see examples [Github repository](https://github.com/HOPE-UIB-BIO/R-Utilpol-package)).
 
 ## WARNING
 
-:bangbang: This package is under active development. Therefore, the package is subject to change. :bangbang:
+‼️This package is under active development. Therefore, the package is subject to change.‼️
 
 ## Installation
 
@@ -35,7 +43,5 @@ You can install the development version of RUtilpol from [GitHub](https://github
 remotes::install_github("HOPE-UIB-BIO/R-Utilpol-package")
 ```
 
-## More information
-The package currently does not have a website. Please check the [Github repository](https://github.com/HOPE-UIB-BIO/R-Utilpol-package) for updates.
 
 :::

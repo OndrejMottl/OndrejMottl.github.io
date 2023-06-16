@@ -23,19 +23,19 @@ about:
 
 ## Description
 
-RRatepol is an R package for estimating rate of change (RoC) from community data in time series.
+{`RRatepol`} is an R package for estimating rate of change (RoC) from community data in time series.
 
-RRatepol is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, RRatepol can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e. numerous rapid changes in composition or sedimentation rates).
+{`RRatepol`} is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, {`RRatepol`} can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e. numerous rapid changes in composition or sedimentation rates).
 
 ## Installing package
 
-``` r
+```{r, eval=FALSE}
 devtools::install_github("HOPE-UIB-BIO/R-Ratepol-package")
 ```
 
 ## Cite as
 
-``` r
+```{r, eval=FALSE}
 citation(package = "RRatepol")
 ```
 

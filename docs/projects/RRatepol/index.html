@@ -163,12 +163,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../cv.html" class="sidebar-item-text sidebar-link">CV</a>
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">CV</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../list_of_publications.html" class="sidebar-item-text sidebar-link">List of publications</a>
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">List of publications</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Work with me</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">Get in touch!</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">Collaboration guide</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">Code Convention</a>
   </div>
 </li>
       </ul>
@@ -214,16 +239,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="https://github.com/HOPE-UIB-BIO/R-Ratepol-package/releases"><img src="https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Ratepol-package?label=Version&amp;logo=github.png" class="img-fluid" alt="Version"></a> <!-- badges: end --></p>
 <section id="description" class="level2">
 <h2 data-anchor-id="description">Description</h2>
-<p>RRatepol is an R package for estimating rate of change (RoC) from community data in time series.</p>
-<p>RRatepol is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, RRatepol can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e.&nbsp;numerous rapid changes in composition or sedimentation rates).</p>
+<p>{<code>RRatepol</code>} is an R package for estimating rate of change (RoC) from community data in time series.</p>
+<p>{<code>RRatepol</code>} is written as an R package and includes a range of possible settings including a novel method to evaluate RoC in a single stratigraphical sequence using assemblage data and age uncertainties for each level. There are multiple built-in dissimilarity coefficients (dissimilarity_coefficient) for different types of assemblage data, and various levels of data smoothing that can be applied depending on the type and variance of the data. In addition, {<code>RRatepol</code>} can use randomisation, accompanied by use of age uncertainties of each level and taxon standardisation to detect RoC patterns in datasets with high data noise or variability (i.e.&nbsp;numerous rapid changes in composition or sedimentation rates).</p>
 </section>
 <section id="installing-package" class="level2">
 <h2 data-anchor-id="installing-package">Installing package</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"HOPE-UIB-BIO/R-Ratepol-package"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"HOPE-UIB-BIO/R-Ratepol-package"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="cite-as" class="level2">
 <h2 data-anchor-id="cite-as">Cite as</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="at">package =</span> <span class="st">"RRatepol"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="at">package =</span> <span class="st">"RRatepol"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Ondřej Mottl, John-Arvid Grytnes, Alistair W.R. Seddon, Manuel J. Steinbauer, Kuber P. Bhatta, Vivian A. Felde, Suzette G.A. Flantua, H. John B. Birks. Rate-of-change analysis in palaeoecology revisited: a new approach Review of Palaeobotany and Palynology 293, doi: <a href="https://doi.org/10.1016/j.revpalbo.2021.104483"><img src="https://img.shields.io/badge/doi-10.1016/j.revpalbo.2021.104483-yellow.svg" class="img-fluid"></a></p>
 </section>
 <section id="package-website" class="level2">

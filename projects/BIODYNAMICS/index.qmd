@@ -1,15 +1,37 @@
 ---
 title: "BIODYNAMICS"
 categories: [project]
-image: "image.jpg"
+image: "logo_no_bg.png"
+about:
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 500px
+listing: 
+  - id: blogs
+    max-description-length: 500
+    fields: [title, description]
+    contents: "blog"
+    sort: "false"
+    type: grid
+    grid-item-border: true
 ---
 
+::: {#heading}
 BIODYNAMICS is a 3-year personal research project, for which I have received funding by the [Czech Science Foundation](https://gacr.cz/en/) (GACR), and started on 1.6.2023.
+:::
 
 ## Project description
-Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. The here proposed project – BIODYNAMICS – will use biotic interactions of vegetation to improve the capacity of predicting global biodiversity patterns. BIODYNAMICS will provide crucial insights into how local processes of species interactions shape continental and global biodiversity patterns during the last 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present. It will do so using a newly assembled publicly available multidisciplinary database integrating present and past global vegetation records with their functional traits and climate. 
+The BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.
 
-A key aspect of BIODYNAMICS is to pursue future global biodiversity patterns, affected by anthropogenic climate change, with the understanding of the past, and to advance interdisciplinary cooperation between the scientific disciplines of eco-informatics, community ecology, climatology, and palaeo- and neo-ecology As a result, BIODYNAMICS will provide crucial insights into understanding and quantifying biotic interactions in the past and present, which would inform predictions about future ecological responses to global change. This is important to maintaining ecosystem services, which are key for our society.
+It will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.
+
+A key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society.
 
 ## Project goals
 Improve the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka.
+
+## News
+::: {#blogs}
+:::
+

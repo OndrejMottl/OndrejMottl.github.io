@@ -95,7 +95,7 @@
     "href": "projects/BIODYNAMICS/index.html#project-description",
     "title": "BIODYNAMICS",
     "section": "Project description",
-    "text": "Project description\nLife scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. The here proposed project – BIODYNAMICS – will use biotic interactions of vegetation to improve the capacity of predicting global biodiversity patterns. BIODYNAMICS will provide crucial insights into how local processes of species interactions shape continental and global biodiversity patterns during the last 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present. It will do so using a newly assembled publicly available multidisciplinary database integrating present and past global vegetation records with their functional traits and climate.\nA key aspect of BIODYNAMICS is to pursue future global biodiversity patterns, affected by anthropogenic climate change, with the understanding of the past, and to advance interdisciplinary cooperation between the scientific disciplines of eco-informatics, community ecology, climatology, and palaeo- and neo-ecology As a result, BIODYNAMICS will provide crucial insights into understanding and quantifying biotic interactions in the past and present, which would inform predictions about future ecological responses to global change. This is important to maintaining ecosystem services, which are key for our society."
+    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society."
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-goals",
@@ -116,7 +116,7 @@
     "href": "projects/index.html#software-and-r-packages",
     "title": "Projects",
     "section": "Software and R-packages",
-    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/RUtilpol/index.html",
@@ -327,5 +327,26 @@
     "title": "Collaboration Guide",
     "section": "Manuscript writing",
     "text": "Manuscript writing\nWriting manuscripts is a crucial aspect of scientific collaboration. The most common tools for working on a manuscript are MS Word. However, to ensure consistency and efficient collaboration during manuscript preparation, I prefer to use Google Docs, which provides real-time collaboration, and simultaneous editing, and facilitates constructive feedback on the manuscript.\nIn any case, I prefer to make any edits via “suggestions”. However, note that I believe that it is absolutely fine to reject suggestions (or my suggestions to be rejected)."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html#news",
+    "href": "projects/BIODYNAMICS/index.html#news",
+    "title": "BIODYNAMICS",
+    "section": "News",
+    "text": "News\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/project_start.html",
+    "href": "projects/BIODYNAMICS/blog/project_start.html",
+    "title": "Project has started!",
+    "section": "",
+    "text": "I have accompanied it with a website (which you are reading right now!).\nI have created a collaboration guide🤝 and code convention💻 as a framework to invite other researchers to participate in the project."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/new_logo.html",
+    "href": "projects/BIODYNAMICS/blog/new_logo.html",
+    "title": "A new logo",
+    "section": "",
+    "text": "I habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
   }
 ]

@@ -1,0 +1,11 @@
+---
+title: "Project has started!"
+date: "2023-06-01"
+categories: [news]
+---
+
+The BIODYNAMICS project has started!🎉
+
+I have accompanied it with a website (which you are reading right now!). 
+
+I have created a [collaboration guide](/collaboration/collaboration_guide.qmd)🤝 and [code convention](/collaboration/code_convention.qmd)💻 as a framework to invite other researchers to participate in the project.

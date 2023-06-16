@@ -1,14 +1,15 @@
 ---
 title: "Projects"
 description: |
-  Projects, in which I am personally participating.
+  Projects, in which I am actively participating.
 listing:
   - id: ehr
     max-description-length: 500
     image-height: 200px
     fields: [image, title, description]
     contents: 
-      - BIODYNAMICS
+      - BIODYNAMICS/index.qmd
+    sort: "false" 
     type: grid
     grid-item-border: false
     
@@ -21,6 +22,7 @@ listing:
       - FOSSILPOL
       - REcopol
       - RUtilpol
+    sort: "false"
     type: grid
     grid-item-border: false
 ---

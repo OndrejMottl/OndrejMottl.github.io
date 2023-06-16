@@ -16,8 +16,12 @@ website:
     collapse-level: 1
     contents:
 
-      - text: "Projects"
-        href: projects/index.qmd
+      - section: "Projects"
+        contents: 
+          - text: "Overview of projects" 
+            href: projects/index.qmd
+          - text: "BIODYNAMICS"
+            href: projects/BIODYNAMICS/index.qmd
 
       - section: "About me"
         contents:

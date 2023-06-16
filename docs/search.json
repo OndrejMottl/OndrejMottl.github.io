@@ -137,7 +137,7 @@
     "href": "about_me/cv.html",
     "title": "Ondřej Mottl",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2022\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2017 (2 months)\nVirginia, USA\nFellowship at Smithsonian Institution Conservation and Research Center\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\nI have developed 4 R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\n\n\n\n\n2021 - 2023\nUniversity of Bergen\nOpen Science Workshop: Reproducibility in science\n\n2021 - 2023\nUniversity of Bergen\nPractical course on community ecology\n\n\n\n\nPOSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2023\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2017 (2 months)\nVirginia, USA\nFellowship at Smithsonian Institution Conservation and Research Center\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\nI have developed 4 R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\n\n\n\n\n2021 - 2023\nUniversity of Bergen\nOpen Science Workshop: Reproducibility in science\n\n2021 - 2023\nUniversity of Bergen\nPractical course on community ecology\n\n\n\n\nPOSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
   },
   {
     "objectID": "about_me/list_of_publications.html",
@@ -348,5 +348,40 @@
     "title": "A new logo",
     "section": "",
     "text": "I habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
+  },
+  {
+    "objectID": "projects/PPF-Alpine/index.html",
+    "href": "projects/PPF-Alpine/index.html",
+    "title": "PPF-Alpine",
+    "section": "",
+    "text": "website\n  \n\n  \n  \nThe Past, Present and Future of Alpine Biomes Worldwide (PPF-Alpine) aims to take a deep dive into the biogeographical history of alpine systems on a global scale and decipher the drivers of present-day alpine biodiversity.\n\n\nThe purpose of PPF-Alpine is to elucidate the Quaternary history (last 2.6 million years) of alpine biomes, based on the notion that their dynamic past may hold key insights for their future resilience. Hence, looking into the past can provide the empirical foundation for anticipating ecological responses to global warming and perhaps provide evidence for a more optimistic future.\nCheck out the project website for more information.\n\n\n\nI am participating as a extrernal collaborator with part expertise consultation and part mentorship of PHD student. However, mostly hanging with amazing team!❤️"
+  },
+  {
+    "objectID": "projects/PPF-Alpine/index.html#project-description",
+    "href": "projects/PPF-Alpine/index.html#project-description",
+    "title": "PPF-Alpine",
+    "section": "Project description",
+    "text": "Project description\nThe purpose of PPF-Alpine is to elucidate the Quaternary history (last 2.6 million years) of alpine biomes, based on the notion that their dynamic past may hold key insights for their future resilience. Hence, looking into the past can provide the empirical foundation for anticipating ecological responses to global warming and perhaps provide evidence for a more optimistic future.\nCheck out the project website for more information."
+  },
+  {
+    "objectID": "projects/PPF-Alpine/index.html#my-role",
+    "href": "projects/PPF-Alpine/index.html#my-role",
+    "title": "PPF-Alpine",
+    "section": "My role",
+    "text": "My role\nI am participating as a extrernal collaborator with part expertise consultation and part mentorship of PHD student. However, mostly hanging with amazing team!❤️"
+  },
+  {
+    "objectID": "projects/index.html#past-projects",
+    "href": "projects/index.html#past-projects",
+    "title": "Projects",
+    "section": "Past Projects",
+    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/HOPE/index.html",
+    "href": "projects/HOPE/index.html",
+    "title": "HOPE",
+    "section": "",
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nHumans on Planet Earth - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?\n\n\n\nTo test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past ‘natural experiments’ and of the past as an analogue to the uncertain future of Earth in the ‘Anthropocene’ is a ‘flawed strategy’ and uniformitarianism should be discarded. As much of Earth system science relies on such ‘natural experiments’ and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.\nTo test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.\n\nCheck out the project website for more information.\n\n\n\nI was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
   }
 ]

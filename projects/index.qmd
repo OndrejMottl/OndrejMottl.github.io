@@ -3,12 +3,13 @@ title: "Projects"
 description: |
   Projects, in which I am actively participating.
 listing:
-  - id: ehr
+  - id: active
     max-description-length: 500
     image-height: 200px
     fields: [image, title, description]
     contents: 
       - BIODYNAMICS/index.qmd
+      - PPF-Alpine/index.qmd
     sort: "false" 
     type: grid
     grid-item-border: false
@@ -25,17 +26,33 @@ listing:
     sort: "false"
     type: grid
     grid-item-border: false
+  
+  - id: past
+    max-description-length: 500
+    image-height: 200px
+    fields: [image, title, description]
+    contents: 
+      - HOPE/index.qmd
+    sort: "false" 
+    type: grid
+    grid-item-border: false
+
 ---
 
-## Projects
+## Active Projects
 
-::: {#ehr}
+::: {#active}
+:::
+
+## Past Projects
+::: {#past}
 :::
 
 ## Software and R-packages 
 
 ::: {#packages}
 :::
+
 
 
 

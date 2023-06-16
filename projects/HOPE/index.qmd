@@ -1,0 +1,44 @@
+---
+title: "HOPE"
+categories: [project]
+image: "hope_logo.gif"
+about:
+  id: heading
+  template: trestles
+  image-shape: round
+  image-width: 250px
+  links:
+    - icon: link
+      text: website
+      href: https://www.uib.no/en/rg/EECRG/107501/hope
+    - icon: github
+      text: Github
+      href: https://github.com/HOPE-UIB-BIO
+---
+
+::: {#heading}
+**Humans on Planet Earth** - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?
+
+## Project main objectives
+
+1. To test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past 'natural experiments' and of the past as an analogue to the uncertain future of Earth in the 'Anthropocene' is a 'flawed strategy' and uniformitarianism should be discarded. As much of Earth system science relies on such 'natural experiments' and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.
+2. To test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.
+
+Check out the [project website](https://www.uib.no/en/rg/EECRG/107501/hope) for more information.
+
+## My role
+I was a postdoc between February 2020 and May 2023 (see my [CV](/about_me/cv.qmd)). 
+
+### My outputs:
+
+- Flantua & Mottl & Felde & Bhatta, et al 2023 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
+- Bhatta, et al 2023 [![Badge](https://img.shields.io/badge/DOI-10.3389%2Ffevo.2023.1115784-yellow)](https://doi.org/10.3389/fevo.2023.1115784)
+- Mottl, et al 2021 [![Badge](https://img.shields.io/badge/DOI-10.1126%2Fscience.abg1685-yellow)](https://doi.org/10.1126/science.abg1685)
+- Mottl, et al 2021 [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpalbo.2021.104483-yellow)](https://doi.org/10.1016/j.revpalbo.2021.104483)
+
+Check [all my publications](/about_me/list_of_publications.qmd) for full refferences.
+
+:::
+
+
+

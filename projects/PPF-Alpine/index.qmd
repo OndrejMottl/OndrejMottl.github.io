@@ -1,0 +1,29 @@
+---
+title: "PPF-Alpine"
+categories: [project]
+image: "ppf_logo.jpg"
+about:
+  id: heading
+  template: trestles
+  image-shape: round
+  image-width: 250px
+  links:
+    - icon: link
+      text: website
+      href: https://mountainsinmotion.w.uib.no/
+---
+
+::: {#heading}
+**The Past, Present and Future of Alpine Biomes Worldwide** (PPF-Alpine) aims to take a deep dive into the biogeographical history of alpine systems on a global scale and decipher the drivers of present-day alpine biodiversity.
+
+## Project description
+The purpose of PPF-Alpine is to elucidate the Quaternary history (last 2.6 million years) of alpine biomes, based on the notion that their dynamic past may hold key insights for their future resilience. Hence, looking into the past can provide the empirical foundation for anticipating ecological responses to global warming and perhaps provide evidence for a more optimistic future.
+
+Check out the [project website](https://mountainsinmotion.w.uib.no/) for more information.
+
+## My role
+I am participating as a extrernal collaborator with part expertise consultation and part mentorship of PHD student. However, mostly hanging with amazing team!❤️
+:::
+
+
+

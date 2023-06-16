@@ -59,7 +59,7 @@ ul.task-list{list-style: none;}
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ehr .list');
+    const listingTargetEl = window.document.querySelector('#listing-active .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -72,7 +72,7 @@ ul.task-list{list-style: none;}
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ehr'] = new List('listing-ehr', options);
+    window['quarto-listings']['listing-active'] = new List('listing-active', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -101,6 +101,34 @@ ul.task-list{list-style: none;}
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-packages'] = new List('listing-packages', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-past .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-past'] = new List('listing-past', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -207,7 +235,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#projects" id="toc-projects" class="nav-link active" data-scroll-target="#projects">Projects</a></li>
+  <li><a href="#active-projects" id="toc-active-projects" class="nav-link active" data-scroll-target="#active-projects">Active Projects</a></li>
+  <li><a href="#past-projects" id="toc-past-projects" class="nav-link" data-scroll-target="#past-projects">Past Projects</a></li>
   <li><a href="#software-and-r-packages" id="toc-software-and-r-packages" class="nav-link" data-scroll-target="#software-and-r-packages">Software and R-packages</a></li>
   </ul>
 </nav>
@@ -236,9 +265,9 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="projects" class="level2">
-<h2 class="anchored" data-anchor-id="projects">Projects</h2>
-<div id="listing-ehr" class="quarto-listing quarto-listing-container-grid">
+<section id="active-projects" class="level2">
+<h2 class="anchored" data-anchor-id="active-projects">Active Projects</h2>
+<div id="listing-active" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-categories="project" data-listing-file-modified-sort="1686902119107" data-listing-reading-time-sort="1.605">
 <a href="../projects/BIODYNAMICS/index.html" class="quarto-grid-link">
@@ -252,6 +281,50 @@ BIODYNAMICS
 </h5>
 <div class="card-text listing-description">
 BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023.
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="project" data-listing-file-modified-sort="1686903941198" data-listing-reading-time-sort="0.625">
+<a href="../projects/PPF-Alpine/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="../projects/PPF-Alpine/ppf_logo.jpg" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+PPF-Alpine
+</h5>
+<div class="card-text listing-description">
+<strong>The Past, Present and Future of Alpine Biomes Worldwide</strong> (PPF-Alpine) aims to take a deep dive into the biogeographical history of alpine systems on a global scale and decipher the drivers of present-day alpine biodiversity.
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="past-projects" class="level2">
+<h2 class="anchored" data-anchor-id="past-projects">Past Projects</h2>
+<div id="listing-past" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="project" data-listing-file-modified-sort="1686904693209" data-listing-reading-time-sort="1.235">
+<a href="../projects/HOPE/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="../projects/HOPE/hope_logo.gif" class="thumbnail-image card-img" style="height: 200px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HOPE
+</h5>
+<div class="card-text listing-description">
+<strong>Humans on Planet Earth</strong> - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?
 </div>
 </div>
 </div>

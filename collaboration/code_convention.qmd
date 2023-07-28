@@ -27,6 +27,8 @@ For objects, which are created over computationally demanding processes (data, w
 
 Each project should be created as a self-contain unit, i.e. a project-oriented workflow. The R project consists of data and codes with individual scripts and functions. All scripts are stored in the `R/` folder, data in `Data` etc.
 
+A default project template can be found [here](https://github.com/OndrejMottl/Project_template).
+
 The default folder structure:
 
 ```

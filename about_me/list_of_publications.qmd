@@ -7,10 +7,12 @@ format:
 editor: visual
 ---
 
-* Flantua S.G. & **Mottl, O.** & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. *A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen*. **Global Ecology and Biogeography**. 
+* Brown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., **Mottl, O.**, Reitalu, T., & Svenning, J.-C. (2023), *Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems*. **Functional Ecology** 00: 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2F1365--2435.14415-yellow)](https://doi.org/10.1111/1365-2435.14415) 
+
+* Flantua S.G. & **Mottl, O.** & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. (2023), *A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen*. **Global Ecology and Biogeography**. 
 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
 
-* Bhatta, K.P., **Mottl, O.**, Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. *Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene*. **Frontiers in Ecology and Evolution**. [![Badge](https://img.shields.io/badge/DOI-10.3389%2Ffevo.2023.1115784-yellow)](https://doi.org/10.3389/fevo.2023.1115784)
+* Bhatta, K.P., **Mottl, O.**, Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. (2023), *Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene*. **Frontiers in Ecology and Evolution**. [![Badge](https://img.shields.io/badge/DOI-10.3389%2Ffevo.2023.1115784-yellow)](https://doi.org/10.3389/fevo.2023.1115784)
 
 * Houska Tahadlova, M., **Mottl, O.**, Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), *Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea*. **Biotropica**. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fbtp.13160-yellow)](https://doi.org/10.1111/btp.13160)
 

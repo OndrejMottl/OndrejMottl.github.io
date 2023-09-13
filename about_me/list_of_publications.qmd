@@ -5,7 +5,10 @@ format:
     code-fold: false
     code-tools: false
 editor: visual
+date: 2023-09-13
 ---
+
+* Moses, J., Peters, M. K., Tiede, Y., **Mottl, O.**, Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). *Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison*. **Global Ecology and Biogeography**, 00, 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13757-yellow)](https://doi.org/10.1111/geb.13757)
 
 * Brown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., **Mottl, O.**, Reitalu, T., & Svenning, J.-C. (2023), *Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems*. **Functional Ecology** 00: 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2F1365--2435.14415-yellow)](https://doi.org/10.1111/1365-2435.14415) 
 

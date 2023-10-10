@@ -5,10 +5,12 @@ format:
     code-fold: false
     code-tools: false
 editor: visual
-date: 2023-09-13
+date: 2023-10-10
 ---
 
-* Moses, J., Peters, M. K., Tiede, Y., **Mottl, O.**, Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). *Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison*. **Global Ecology and Biogeography**, 00, 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13757-yellow)](https://doi.org/10.1111/geb.13757)
+* Birks,  H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., **Mottl, O.**, Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023). *Approaches to pollen taxonomic harmonisation in Quaternary palynology*. **Palaeobotany and Palynology** 319: 104989. [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpablo.2023.104989-yellow)](https://doi.org/10.1016/j.revpalbo.2023.104989)
+
+* Moses, J., Peters, M. K., Tiede, Y., **Mottl, O.**, Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). *Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison*. **Global Ecology and Biogeography**, 00: 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13757-yellow)](https://doi.org/10.1111/geb.13757)
 
 * Brown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., **Mottl, O.**, Reitalu, T., & Svenning, J.-C. (2023), *Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems*. **Functional Ecology** 00: 1-18. [![Badge](https://img.shields.io/badge/DOI-10.1111%2F1365--2435.14415-yellow)](https://doi.org/10.1111/1365-2435.14415) 
 

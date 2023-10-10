@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/projects/BIODYNAMICS/index.html",
+    "items": [
+      "/projects/BIODYNAMICS/blog/kickoff_meering.html",
+      "/projects/BIODYNAMICS/blog/new_logo.html",
+      "/projects/BIODYNAMICS/blog/project_start.html"
+    ]
+  },
+  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/BIODYNAMICS/index.html",
@@ -9,20 +17,6 @@
       "/projects/REcopol/index.html",
       "/projects/RUtilpol/index.html",
       "/projects/HOPE/index.html"
-    ]
-  },
-  {
-    "listing": "/talks/index.html",
-    "items": [
-      "/talks/talk_1/index.html",
-      "/talks/talk_2/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/BIODYNAMICS/index.html",
-    "items": [
-      "/projects/BIODYNAMICS/blog/new_logo.html",
-      "/projects/BIODYNAMICS/blog/project_start.html"
     ]
   }
 ]

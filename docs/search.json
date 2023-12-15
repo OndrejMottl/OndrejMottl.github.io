@@ -1,5 +1,173 @@
 [
   {
+    "objectID": "projects/RUtilpol/index.html",
+    "href": "projects/RUtilpol/index.html",
+    "title": "RUtilpol",
+    "section": "",
+    "text": "Github\n  \n\n  \n  \n\n \n\n\nThe main purpose of {RUtilpol} is to provide utility (helper) functions.\nAll functions can be grouped into 3 main categories:\n\nPackage development - Function used within other packages (e.g., RUtilpol::check_class() for safety check, RUtilpol::output_warning() - for console message, RUtilpol::replace_null_with_na() for data wrangling ,…).\nFile management() - Functions for saving and loading functions for better handling of files in large projects (see examples on Github repository ).\nExtraction of spatial information - Functions to assign information to points based on a raster of shapefile (see examples Github repository).\n\n\n\n\n‼️This package is under active development. Therefore, the package is subject to change.‼️\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")"
+  },
+  {
+    "objectID": "projects/RUtilpol/index.html#description",
+    "href": "projects/RUtilpol/index.html#description",
+    "title": "RUtilpol",
+    "section": "",
+    "text": "The main purpose of {RUtilpol} is to provide utility (helper) functions.\nAll functions can be grouped into 3 main categories:\n\nPackage development - Function used within other packages (e.g., RUtilpol::check_class() for safety check, RUtilpol::output_warning() - for console message, RUtilpol::replace_null_with_na() for data wrangling ,…).\nFile management() - Functions for saving and loading functions for better handling of files in large projects (see examples on Github repository ).\nExtraction of spatial information - Functions to assign information to points based on a raster of shapefile (see examples Github repository)."
+  },
+  {
+    "objectID": "projects/RUtilpol/index.html#warning",
+    "href": "projects/RUtilpol/index.html#warning",
+    "title": "RUtilpol",
+    "section": "",
+    "text": "‼️This package is under active development. Therefore, the package is subject to change.‼️"
+  },
+  {
+    "objectID": "projects/RUtilpol/index.html#installation",
+    "href": "projects/RUtilpol/index.html#installation",
+    "title": "RUtilpol",
+    "section": "",
+    "text": "You can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")"
+  },
+  {
+    "objectID": "projects/REcopol/index.html",
+    "href": "projects/REcopol/index.html",
+    "title": "REcopol",
+    "section": "",
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nThe goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data.\nAll functions can be grouped into 5 categories:\n\nDiversity estimations - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.\nOrdinations - Functions to fit Detrended (Canonical) Correspondence Analysis.\nGAM modeling - Functions to fit, predict, and visualise generalized additive models (GAM) models.\nChange-point analyses and regression partition - Functions for detection of change points in temporal patterns\nUtility - Functions for operation with (not only) fossil pollen data\n\n\n\n\nYou can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")\n\n\n\nMore detailed information can be found on REcopol package website"
+  },
+  {
+    "objectID": "projects/REcopol/index.html#description",
+    "href": "projects/REcopol/index.html#description",
+    "title": "REcopol",
+    "section": "",
+    "text": "The goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data.\nAll functions can be grouped into 5 categories:\n\nDiversity estimations - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.\nOrdinations - Functions to fit Detrended (Canonical) Correspondence Analysis.\nGAM modeling - Functions to fit, predict, and visualise generalized additive models (GAM) models.\nChange-point analyses and regression partition - Functions for detection of change points in temporal patterns\nUtility - Functions for operation with (not only) fossil pollen data"
+  },
+  {
+    "objectID": "projects/REcopol/index.html#installation",
+    "href": "projects/REcopol/index.html#installation",
+    "title": "REcopol",
+    "section": "",
+    "text": "You can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")"
+  },
+  {
+    "objectID": "projects/REcopol/index.html#package-website",
+    "href": "projects/REcopol/index.html#package-website",
+    "title": "REcopol",
+    "section": "",
+    "text": "More detailed information can be found on REcopol package website"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "projects/index.html#active-projects",
+    "href": "projects/index.html#active-projects",
+    "title": "Projects",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "projects/index.html#past-projects",
+    "href": "projects/index.html#past-projects",
+    "title": "Projects",
+    "section": "Past Projects",
+    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/index.html#software-and-r-packages",
+    "href": "projects/index.html#software-and-r-packages",
+    "title": "Projects",
+    "section": "Software and R-packages",
+    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/FOSSILPOL/index.html",
+    "href": "projects/FOSSILPOL/index.html",
+    "title": "FOSSILPOL",
+    "section": "",
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n{RFossilpol} R-package is a part of the FOSSILPOL project.\nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nYou can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+  },
+  {
+    "objectID": "projects/FOSSILPOL/index.html#installation",
+    "href": "projects/FOSSILPOL/index.html#installation",
+    "title": "FOSSILPOL",
+    "section": "",
+    "text": "You can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
+    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
+    "title": "Unveiling VegVault",
+    "section": "",
+    "text": "Greetings, everyone! I’m excited to share an in-depth glimple into VegVault, my ambitious interdisciplinary database project."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
+    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
+    "title": "Unveiling VegVault",
+    "section": "repos",
+    "text": "repos\n\nNeo-ecological plot-based data - Mainly BIEN and sPlot data\nPalaeo-ecological plot-based data - Fossil pollen data from Neotota acessed and processed using FOSSILPOL workflow\nTrait data - 6 selected traits from TRY database\nAbiotic data - climate data form CHELSA and CHELSA-TRACE21, and soil data from WOSIS\nVegVault migration - code to migrate all data into SQLite database"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/02-new_logo.html",
+    "href": "projects/BIODYNAMICS/blog/02-new_logo.html",
+    "title": "A new logo",
+    "section": "",
+    "text": "The BIODYNAMICS project has a new logo!🖼️\nI habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am a researcher with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools to study global biodiversity patterns and lowering the barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\nWebiste navigation\n\nProjects, on which I am currently working🚀\nMy CV📄\nGet in touch📬\nMy publications📚"
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html",
+    "href": "collaboration/collaboration_guide.html",
+    "title": "Collaboration Guide",
+    "section": "",
+    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way."
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html#reasoning",
+    "href": "collaboration/collaboration_guide.html#reasoning",
+    "title": "Collaboration Guide",
+    "section": "",
+    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way."
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html#lines-of-communication",
+    "href": "collaboration/collaboration_guide.html#lines-of-communication",
+    "title": "Collaboration Guide",
+    "section": "Lines of communication",
+    "text": "Lines of communication\nOpen and effective communication is crucial for successful collaboration. My general style of communication is “ping-pong,” meaning I prefer short exchanges frequently. Here are some preferred lines of communication:\n\nEmail\nEmail serves as the primary mode of communication. Feel free to reach out to me at ondrej.mottl(at)gmail.com for any queries, updates, or discussions related to our collaboration. See ways to get in touch with me.\nIf you expect me to respond to your email, please state it clearly.\nI strive to reply to all emails as soon as possible. However, there is a chance that I may have forgotten to answer yours. If I do not respond for a significant amount of time, feel free to send me a friendly reminder. 😊⏰\n\nOther lines of communication\nIn addition to email, we can also utilize collaborative platforms such as Slack, Microsoft Teams, or any other platform that suits our needs. These platforms offer faster, real-time communication, which aligns well with the “ping-pong” style of interaction."
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html#github",
+    "href": "collaboration/collaboration_guide.html#github",
+    "title": "Collaboration Guide",
+    "section": "GitHub",
+    "text": "GitHub\nSince my primary research involves writing code, GitHub is an essential platform for any collaborative work. Check out the overview of GitHub features to get familiar with its capabilities.\nI love leveraging its features, such as Issues, Pull Requests, and Projects, to streamline our collaborative coding efforts. If you are not familiar with GitHub, don’t worry! I can provide guidance and support to help you get started. It’s worth checking out their documentation for more details.\nHere is my basic GitHub workflow:\n\n\n\n\nflowchart\n    1[\"Make an Issue\"] --&gt; 2(\"Create a new branch\")\n    2 --&gt; 351471[\"Commit code\"]\n    351471 --&gt; 257387[\"Create Pull Request\"]\n    949464{{\"Does it need a review?\"}} --&gt; 625480([\"Yes\"])\n    949464 --&gt; 564859([\"No\"])\n    625480 --&gt; 752396[\"Assign reviewer\"]\n    564859 --&gt; 715681[\"Squash merge PR\"]\n    752396 --&gt; 715681\n    257387 --&gt; 385770[\"Link the Issue\"]\n    715681 --&gt; 688855(\"Close issue (if needed)\")\n    688855 --&gt; 791180[\"Delete the branch\"]\n    385770 --&gt; 515426(\"Add to Project (if &lt;span&gt;applicable&lt;/span&gt;)\")\n    515426 --&gt; 949464\n    791180 -.-&gt;|\"repeat\"| 2\n\n\n\n\n\nHere are the individual steps in detail:\n\n1. Issues\nAn Issue represents a single task that needs to be addressed.\nEach Issue provides a platform to communicate the task with a description and the possibility to discuss details using comments. An Issue should be related to a specific problem or task. If a task is too complex or large, the Issue can be divided into several smaller ones and linked using task lists.\nFor more details about Issues, refer to the GitHub documentation.\n\n\n2. Branches\nFor any code change, a new branch should be created.\nEach branch should correspond to a specific task (Issue). Therefore, a branch should be named to describe the problem it is solving or directly as issue[Issue number]. If you find that the problem is too complex and needs to be split into multiple Issues or branches, you can create another branch from the current one. Branches are lightweight, so don’t worry about creating many of them.\nFor more details about branches, refer to the GitHub documentation.\n\n\n3. Writing code\nPlease follow the code conventions when writing code. Commit often but make sure to keep the description for each commit meaningful.\n\n\n4. Pull Request (PR)\nA Pull Request is a way to merge a branch into the main branch (or another branch). The PR name should clearly indicate the purpose of the changes.\nThe PR details should provide an explanation of the main modifications. Additionally, you can add comments to provide further context. If possible, create the PR as a “draft” until it is ready for review and merge (learn more about drafts).\nAs PRs are linked to branches, and each branch should be linked to an Issue, I prefer to use the “link” functionality explicitly. This can be achieved by mentioning the Issue with specific words (e.g., close) in the PR description (see more about linking).\nIf you want me to review your PR before merging, simply “assign” it to me (learn more about assigning).\nI prefer to merge Pull Requests using the “squash merge commit” option (learn more about it here) for a cleaner git history.\n\n\n5. Projects\nGitHub Projects offer a new way of project management. If we agree to use a Project in our collaboration, we will define how to collaborate individually within that project framework."
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html#manuscript-writing",
+    "href": "collaboration/collaboration_guide.html#manuscript-writing",
+    "title": "Collaboration Guide",
+    "section": "Manuscript writing",
+    "text": "Manuscript writing\nWriting manuscripts is a crucial aspect of scientific collaboration. The most common tools for working on a manuscript are MS Word. However, to ensure consistency and efficient collaboration during manuscript preparation, I prefer to use Google Docs, which provides real-time collaboration, and simultaneous editing, and facilitates constructive feedback on the manuscript.\nIn any case, I prefer to make any edits via “suggestions”. However, note that I believe that it is absolutely fine to reject suggestions (or my suggestions to be rejected)."
+  },
+  {
+    "objectID": "about_me/list_of_publications.html",
+    "href": "about_me/list_of_publications.html",
+    "title": "List of publications publised in peer-review journals",
+    "section": "",
+    "text": "Birks, H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., Mottl, O., Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023). Approaches to pollen taxonomic harmonisation in Quaternary palynology. Palaeobotany and Palynology 319: 104989. \nMoses, J., Peters, M. K., Tiede, Y., Mottl, O., Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison. Global Ecology and Biogeography, 00: 1-18. \nBrown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., Mottl, O., Reitalu, T., & Svenning, J.-C. (2023), Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems. Functional Ecology 00: 1-18. \nFlantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. (2023), A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography. \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. (2023), Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution. \nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica. \nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864. \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293. \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130:1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438. \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727. \nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecol. Lett. 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277– 287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442. \nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119."
+  },
+  {
     "objectID": "about_me/cv.html",
     "href": "about_me/cv.html",
     "title": "Ondřej Mottl",
@@ -40,13 +208,6 @@
     "title": "Ondřej Mottl",
     "section": "",
     "text": "POSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR)\nIBERA grant (Czech Academy of Science)"
-  },
-  {
-    "objectID": "about_me/list_of_publications.html",
-    "href": "about_me/list_of_publications.html",
-    "title": "List of publications publised in peer-review journals",
-    "section": "",
-    "text": "Birks, H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., Mottl, O., Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023). Approaches to pollen taxonomic harmonisation in Quaternary palynology. Palaeobotany and Palynology 319: 104989. \nMoses, J., Peters, M. K., Tiede, Y., Mottl, O., Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison. Global Ecology and Biogeography, 00: 1-18. \nBrown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., Mottl, O., Reitalu, T., & Svenning, J.-C. (2023), Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems. Functional Ecology 00: 1-18. \nFlantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. (2023), A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography. \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. (2023), Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution. \nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica. \nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864. \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293. \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130:1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438. \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727. \nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecol. Lett. 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277– 287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442. \nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119."
   },
   {
     "objectID": "collaboration/code_convention.html",
@@ -140,41 +301,6 @@
     "text": "Functions\nFor function calls, always state the arguments even though R can have anonymous arguments. The only exception is for functions, where arguments are not known (i.e. ... argument).\n\nTidyverse\nIt is preferred to use the Tidyverse version of functions over base ones:\n\n\n\nBase R\nBetter Style, Performance, and Utility\n\n\n\n\nread.csv()\nreadr::read_csv()\n\n\ndf$some_column\ndf %&gt;% dplyr::pull(some_column)\n\n\ndf$some_column = ...\ndf %&gt;% dplyr::mutate(some_column = ...)\n\n\n…\n…\n\n\n\n\n\nNamespace\nAlways use the full package namespace with a function call. This helps to track the source of function in a script:\n\ndata_diversity %&gt;%\n  dplyr::mutate(\n    beta_diverisity = 0\n  )\n\n\n\nCreating functions\nSpecific rules apply for making custom functions: - For naming of functions see function names - Each function (declaration) should be placed in a separate script named the function. Therefore, there should be only a single function in each function script. - function should always return (return(res_value))\n\nAnonymous functions\nIn various instances, it might be better to not create a new function but to use an anonymous function (e.g. inside of purrr::map_*()).\nIn that case, the user should use tidle (~) for change in map default values in the function:\n\npurrr::map(\n    .f = ~ {\n        mean(.x)\n    }\n)\n\nFor purrr::pmap_*(), the user should use ..1, ..2, etc\n\npurrr::pmap(\n    .l = list(\n        list_1,\n        list_2,\n        list_3,\n     .f = ~ {\n         ..1 + ..2 + ..3\n     }\n    )\n)\n\n\n\nFunction documentation\nEach function should have documentation at the beginning of the function using the roxygen2 package. This can be useful also for project-specific functions (not just within the package) as it is easier to transition to a custom package."
   },
   {
-    "objectID": "collaboration/collaboration_guide.html",
-    "href": "collaboration/collaboration_guide.html",
-    "title": "Collaboration Guide",
-    "section": "",
-    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way."
-  },
-  {
-    "objectID": "collaboration/collaboration_guide.html#reasoning",
-    "href": "collaboration/collaboration_guide.html#reasoning",
-    "title": "Collaboration Guide",
-    "section": "",
-    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way."
-  },
-  {
-    "objectID": "collaboration/collaboration_guide.html#lines-of-communication",
-    "href": "collaboration/collaboration_guide.html#lines-of-communication",
-    "title": "Collaboration Guide",
-    "section": "Lines of communication",
-    "text": "Lines of communication\nOpen and effective communication is crucial for successful collaboration. My general style of communication is “ping-pong,” meaning I prefer short exchanges frequently. Here are some preferred lines of communication:\n\nEmail\nEmail serves as the primary mode of communication. Feel free to reach out to me at ondrej.mottl(at)gmail.com for any queries, updates, or discussions related to our collaboration. See ways to get in touch with me.\nIf you expect me to respond to your email, please state it clearly.\nI strive to reply to all emails as soon as possible. However, there is a chance that I may have forgotten to answer yours. If I do not respond for a significant amount of time, feel free to send me a friendly reminder. 😊⏰\n\nOther lines of communication\nIn addition to email, we can also utilize collaborative platforms such as Slack, Microsoft Teams, or any other platform that suits our needs. These platforms offer faster, real-time communication, which aligns well with the “ping-pong” style of interaction."
-  },
-  {
-    "objectID": "collaboration/collaboration_guide.html#github",
-    "href": "collaboration/collaboration_guide.html#github",
-    "title": "Collaboration Guide",
-    "section": "GitHub",
-    "text": "GitHub\nSince my primary research involves writing code, GitHub is an essential platform for any collaborative work. Check out the overview of GitHub features to get familiar with its capabilities.\nI love leveraging its features, such as Issues, Pull Requests, and Projects, to streamline our collaborative coding efforts. If you are not familiar with GitHub, don’t worry! I can provide guidance and support to help you get started. It’s worth checking out their documentation for more details.\nHere is my basic GitHub workflow:\n\n\n\n\nflowchart\n    1[\"Make an Issue\"] --&gt; 2(\"Create a new branch\")\n    2 --&gt; 351471[\"Commit code\"]\n    351471 --&gt; 257387[\"Create Pull Request\"]\n    949464{{\"Does it need a review?\"}} --&gt; 625480([\"Yes\"])\n    949464 --&gt; 564859([\"No\"])\n    625480 --&gt; 752396[\"Assign reviewer\"]\n    564859 --&gt; 715681[\"Squash merge PR\"]\n    752396 --&gt; 715681\n    257387 --&gt; 385770[\"Link the Issue\"]\n    715681 --&gt; 688855(\"Close issue (if needed)\")\n    688855 --&gt; 791180[\"Delete the branch\"]\n    385770 --&gt; 515426(\"Add to Project (if &lt;span&gt;applicable&lt;/span&gt;)\")\n    515426 --&gt; 949464\n    791180 -.-&gt;|\"repeat\"| 2\n\n\n\n\n\nHere are the individual steps in detail:\n\n1. Issues\nAn Issue represents a single task that needs to be addressed.\nEach Issue provides a platform to communicate the task with a description and the possibility to discuss details using comments. An Issue should be related to a specific problem or task. If a task is too complex or large, the Issue can be divided into several smaller ones and linked using task lists.\nFor more details about Issues, refer to the GitHub documentation.\n\n\n2. Branches\nFor any code change, a new branch should be created.\nEach branch should correspond to a specific task (Issue). Therefore, a branch should be named to describe the problem it is solving or directly as issue[Issue number]. If you find that the problem is too complex and needs to be split into multiple Issues or branches, you can create another branch from the current one. Branches are lightweight, so don’t worry about creating many of them.\nFor more details about branches, refer to the GitHub documentation.\n\n\n3. Writing code\nPlease follow the code conventions when writing code. Commit often but make sure to keep the description for each commit meaningful.\n\n\n4. Pull Request (PR)\nA Pull Request is a way to merge a branch into the main branch (or another branch). The PR name should clearly indicate the purpose of the changes.\nThe PR details should provide an explanation of the main modifications. Additionally, you can add comments to provide further context. If possible, create the PR as a “draft” until it is ready for review and merge (learn more about drafts).\nAs PRs are linked to branches, and each branch should be linked to an Issue, I prefer to use the “link” functionality explicitly. This can be achieved by mentioning the Issue with specific words (e.g., close) in the PR description (see more about linking).\nIf you want me to review your PR before merging, simply “assign” it to me (learn more about assigning).\nI prefer to merge Pull Requests using the “squash merge commit” option (learn more about it here) for a cleaner git history.\n\n\n5. Projects\nGitHub Projects offer a new way of project management. If we agree to use a Project in our collaboration, we will define how to collaborate individually within that project framework."
-  },
-  {
-    "objectID": "collaboration/collaboration_guide.html#manuscript-writing",
-    "href": "collaboration/collaboration_guide.html#manuscript-writing",
-    "title": "Collaboration Guide",
-    "section": "Manuscript writing",
-    "text": "Manuscript writing\nWriting manuscripts is a crucial aspect of scientific collaboration. The most common tools for working on a manuscript are MS Word. However, to ensure consistency and efficient collaboration during manuscript preparation, I prefer to use Google Docs, which provides real-time collaboration, and simultaneous editing, and facilitates constructive feedback on the manuscript.\nIn any case, I prefer to make any edits via “suggestions”. However, note that I believe that it is absolutely fine to reject suggestions (or my suggestions to be rejected)."
-  },
-  {
     "objectID": "collaboration/get_in_touch.html",
     "href": "collaboration/get_in_touch.html",
     "title": "Get in touch!",
@@ -203,32 +329,18 @@
     "text": "Code convention 💻\nMy work is heavily focused on writing code. For this reason, I have prepared a code convention, which I am following in my projects. I am making it publically available so feel free to check it out! 💡📝\nFeel free to explore these resources, and let’s create something amazing together! 🌟🌍🔬"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am a researcher with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools to study global biodiversity patterns and lowering the barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\nWebiste navigation\n\nProjects, on which I am currently working🚀\nMy CV📄\nGet in touch📬\nMy publications📚"
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/blog/kickoff_meering.html",
-    "href": "projects/BIODYNAMICS/blog/kickoff_meering.html",
-    "title": "Kick-Off Meeting",
-    "section": "",
-    "text": "Introduction\nGreetings, everyone! It’s an exciting time as my project BIODYNAMICS has taken flight, and I couldn’t be more thrilled!\n\n\nKick-Off Meeting\nTo celebrate this occasion, I am hosting our very first BIODYNAMICS kick-off meeting. This gathering is a chance for people to come together, share excitement, and set the stage for the incredible work that lies ahead.\n\n\nWhat to Expect:\nI’ll provide a brief overview of the BIODYNAMICS project, its goals, and the journey we’re about to embark on. We’ll also provide a brief introduction to know everyone. Learn about our backgrounds, passions, and what motivates us to join this project. I want to emphasize that there’s no pressure to contribute any additional work. These meetings will be all about brainstorming, discussing ideas, and sharing our perspectives. It’s going to be a friendly and informal environment.\n\n\nHow to Join:\nIf you already didn’t receive an email with an invitation, please drop me a message via email expressing your interest, and I’ll make sure you receive all the information you need to join."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/blog/new_logo.html",
-    "href": "projects/BIODYNAMICS/blog/new_logo.html",
-    "title": "A new logo",
-    "section": "",
-    "text": "The BIODYNAMICS project has a new logo!🖼️\nI habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/blog/project_start.html",
-    "href": "projects/BIODYNAMICS/blog/project_start.html",
+    "objectID": "projects/BIODYNAMICS/blog/01-project_start.html",
+    "href": "projects/BIODYNAMICS/blog/01-project_start.html",
     "title": "Project has started!",
     "section": "",
     "text": "The BIODYNAMICS project has started!🎉\nI have accompanied it with a website (which you are reading right now!).\nI have created a collaboration guide🤝 and code convention💻 as a framework to invite other researchers to participate in the project."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
+    "href": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
+    "title": "Kick-Off Meeting",
+    "section": "",
+    "text": "Introduction\nGreetings, everyone! It’s an exciting time as my project BIODYNAMICS has taken flight, and I couldn’t be more thrilled!\n\n\nKick-Off Meeting\nTo celebrate this occasion, I am hosting our very first BIODYNAMICS kick-off meeting. This gathering is a chance for people to come together, share excitement, and set the stage for the incredible work that lies ahead.\n\n\nWhat to Expect:\nI’ll provide a brief overview of the BIODYNAMICS project, its goals, and the journey we’re about to embark on. We’ll also provide a brief introduction to know everyone. Learn about our backgrounds, passions, and what motivates us to join this project. I want to emphasize that there’s no pressure to contribute any additional work. These meetings will be all about brainstorming, discussing ideas, and sharing our perspectives. It’s going to be a friendly and informal environment.\n\n\nHow to Join:\nIf you already didn’t receive an email with an invitation, please drop me a message via email expressing your interest, and I’ll make sure you receive all the information you need to join."
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html",
@@ -256,21 +368,7 @@
     "href": "projects/BIODYNAMICS/index.html#news",
     "title": "BIODYNAMICS",
     "section": "News",
-    "text": "News\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/FOSSILPOL/index.html",
-    "href": "projects/FOSSILPOL/index.html",
-    "title": "FOSSILPOL",
-    "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n{RFossilpol} R-package is a part of the FOSSILPOL project.\nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nYou can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
-  },
-  {
-    "objectID": "projects/FOSSILPOL/index.html#installation",
-    "href": "projects/FOSSILPOL/index.html#installation",
-    "title": "FOSSILPOL",
-    "section": "",
-    "text": "You can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+    "text": "News\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/HOPE/index.html",
@@ -294,34 +392,6 @@
     "text": "I was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "projects/index.html#active-projects",
-    "href": "projects/index.html#active-projects",
-    "title": "Projects",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "projects/index.html#past-projects",
-    "href": "projects/index.html#past-projects",
-    "title": "Projects",
-    "section": "Past Projects",
-    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/index.html#software-and-r-packages",
-    "href": "projects/index.html#software-and-r-packages",
-    "title": "Projects",
-    "section": "Software and R-packages",
-    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "projects/PPF-Alpine/index.html",
     "href": "projects/PPF-Alpine/index.html",
     "title": "PPF-Alpine",
@@ -341,34 +411,6 @@
     "title": "PPF-Alpine",
     "section": "",
     "text": "I am participating as a extrernal collaborator with part expertise consultation and part mentorship of PHD student. However, mostly hanging with amazing team!❤️"
-  },
-  {
-    "objectID": "projects/REcopol/index.html",
-    "href": "projects/REcopol/index.html",
-    "title": "REcopol",
-    "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n\n \n\n\nThe goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data.\nAll functions can be grouped into 5 categories:\n\nDiversity estimations - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.\nOrdinations - Functions to fit Detrended (Canonical) Correspondence Analysis.\nGAM modeling - Functions to fit, predict, and visualise generalized additive models (GAM) models.\nChange-point analyses and regression partition - Functions for detection of change points in temporal patterns\nUtility - Functions for operation with (not only) fossil pollen data\n\n\n\n\nYou can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")\n\n\n\nMore detailed information can be found on REcopol package website"
-  },
-  {
-    "objectID": "projects/REcopol/index.html#description",
-    "href": "projects/REcopol/index.html#description",
-    "title": "REcopol",
-    "section": "",
-    "text": "The goal of {REcopol} is to make an easy-to-use function to analyse fossil pollen data.\nAll functions can be grouped into 5 categories:\n\nDiversity estimations - Functions to estimates diversity from community data using various methods, including taxonomic, functional. and phylogenetic diversity.\nOrdinations - Functions to fit Detrended (Canonical) Correspondence Analysis.\nGAM modeling - Functions to fit, predict, and visualise generalized additive models (GAM) models.\nChange-point analyses and regression partition - Functions for detection of change points in temporal patterns\nUtility - Functions for operation with (not only) fossil pollen data"
-  },
-  {
-    "objectID": "projects/REcopol/index.html#installation",
-    "href": "projects/REcopol/index.html#installation",
-    "title": "REcopol",
-    "section": "",
-    "text": "You can install the development version of REcopol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Ecopol-package\")"
-  },
-  {
-    "objectID": "projects/REcopol/index.html#package-website",
-    "href": "projects/REcopol/index.html#package-website",
-    "title": "REcopol",
-    "section": "",
-    "text": "More detailed information can be found on REcopol package website"
   },
   {
     "objectID": "projects/RRatepol/index.html",
@@ -404,33 +446,5 @@
     "title": "RRatepol",
     "section": "",
     "text": "More detailed information can be found on RRatepol package website\nThis include description of the individual steps for RoC estimation Package Description"
-  },
-  {
-    "objectID": "projects/RUtilpol/index.html",
-    "href": "projects/RUtilpol/index.html",
-    "title": "RUtilpol",
-    "section": "",
-    "text": "Github\n  \n\n  \n  \n\n \n\n\nThe main purpose of {RUtilpol} is to provide utility (helper) functions.\nAll functions can be grouped into 3 main categories:\n\nPackage development - Function used within other packages (e.g., RUtilpol::check_class() for safety check, RUtilpol::output_warning() - for console message, RUtilpol::replace_null_with_na() for data wrangling ,…).\nFile management() - Functions for saving and loading functions for better handling of files in large projects (see examples on Github repository ).\nExtraction of spatial information - Functions to assign information to points based on a raster of shapefile (see examples Github repository).\n\n\n\n\n‼️This package is under active development. Therefore, the package is subject to change.‼️\n\n\n\nYou can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")"
-  },
-  {
-    "objectID": "projects/RUtilpol/index.html#description",
-    "href": "projects/RUtilpol/index.html#description",
-    "title": "RUtilpol",
-    "section": "",
-    "text": "The main purpose of {RUtilpol} is to provide utility (helper) functions.\nAll functions can be grouped into 3 main categories:\n\nPackage development - Function used within other packages (e.g., RUtilpol::check_class() for safety check, RUtilpol::output_warning() - for console message, RUtilpol::replace_null_with_na() for data wrangling ,…).\nFile management() - Functions for saving and loading functions for better handling of files in large projects (see examples on Github repository ).\nExtraction of spatial information - Functions to assign information to points based on a raster of shapefile (see examples Github repository)."
-  },
-  {
-    "objectID": "projects/RUtilpol/index.html#warning",
-    "href": "projects/RUtilpol/index.html#warning",
-    "title": "RUtilpol",
-    "section": "",
-    "text": "‼️This package is under active development. Therefore, the package is subject to change.‼️"
-  },
-  {
-    "objectID": "projects/RUtilpol/index.html#installation",
-    "href": "projects/RUtilpol/index.html#installation",
-    "title": "RUtilpol",
-    "section": "",
-    "text": "You can install the development version of RUtilpol from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Utilpol-package\")"
   }
 ]

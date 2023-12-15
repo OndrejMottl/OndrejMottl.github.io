@@ -1,0 +1,30 @@
+---
+title: " Unveiling VegVault"
+date: "2023-12-15"
+categories: [news]
+---
+
+# Intoduction
+
+Greetings, everyone! I'm excited to share an in-depth glimple into **VegVault**, my ambitious interdisciplinary database project. 
+
+# VegVault
+
+The BIODYNAMICS project demands extensive data, prompting my decision to develop an interdisciplinary SQL database. This comprehensive database will host both paleo- and neo-ecological plot-based vegetation data, species traits, and crucial abiotic information such as climate data. To kick things off, I'm creating a SQLite database, intending to share it as a versioned resource for data publication. This approach ensures that VegVault can be updated in the future to accommodate evolving needs.
+
+# Resources
+
+The BIODYNAMICS project embraces an open-source philosophy, and as part of this commitment, I'm sharing individual GitHub repositories. Each repository handles the access and processing of specific data sections, while a dedicated repository manages the migration of all data into the SQLite database..
+
+## repos
+
+- [Neo-ecological plot-based data](https://github.com/OndrejMottl/BIODYNAMICS-Vegetation_data) - Mainly BIEN and sPlot data
+- [Palaeo-ecological plot-based data](https://github.com/OndrejMottl/BIODYNAMICS-FOSSILPOL) - Fossil pollen data from Neotota acessed and processed using [FOSSILPOL](https://hope-uib-bio.github.io/FOSSILPOL-website/) workflow
+- [Trait data](https://github.com/OndrejMottl/BIODYNAMICS-Trait_data) - 6 selected traits from TRY database
+- [Abiotic data](https://github.com/OndrejMottl/BIODYNAMICS-abiotic_data) - climate data form CHELSA and CHELSA-TRACE21, and soil data from WOSIS
+- [VegVault migration](https://github.com/OndrejMottl/BIODYNAMICS-VegVault) - code to migrate all data into SQLite database
+
+# Future Roadmap
+This journey is far from over; everything is currently in development and a constant "work in progress." In the coming months, I aim to create stable GitHub releases for all individual parts, complete with DOIs provided by ZENODO. Additionally, the first public version of VegVault 0.1.0 is on the horizon.
+
+Stay tuned for upcoming developments!

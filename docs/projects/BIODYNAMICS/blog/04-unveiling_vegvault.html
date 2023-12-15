@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-06-01">
+<meta name="dcterms.date" content="2023-12-15">
 
-<title>Ondřej Mottl - Project has started!</title>
+<title>Ondřej Mottl - Unveiling VegVault</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -181,14 +181,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intoduction" id="toc-intoduction" class="nav-link active" data-scroll-target="#intoduction">Intoduction</a></li>
+  <li><a href="#vegvault" id="toc-vegvault" class="nav-link" data-scroll-target="#vegvault">VegVault</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#repos" id="toc-repos" class="nav-link" data-scroll-target="#repos">repos</a></li>
+  </ul></li>
+  <li><a href="#future-roadmap" id="toc-future-roadmap" class="nav-link" data-scroll-target="#future-roadmap">Future Roadmap</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project has started!</h1>
+<h1 class="title">Unveiling VegVault</h1>
   <div class="quarto-categories">
     <div class="quarto-category">news</div>
   </div>
@@ -202,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 1, 2023</p>
+      <p class="date">December 15, 2023</p>
     </div>
   </div>
   
@@ -212,11 +224,35 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The BIODYNAMICS project has started!🎉</p>
-<p>I have accompanied it with a website (which you are reading right now!).</p>
-<p>I have created a <a href="../../../collaboration/collaboration_guide.html">collaboration guide</a>🤝 and <a href="../../../collaboration/code_convention.html">code convention</a>💻 as a framework to invite other researchers to participate in the project.</p>
+<section id="intoduction" class="level1">
+<h1>Intoduction</h1>
+<p>Greetings, everyone! I’m excited to share an in-depth glimple into <strong>VegVault</strong>, my ambitious interdisciplinary database project.</p>
+</section>
+<section id="vegvault" class="level1">
+<h1>VegVault</h1>
+<p>The BIODYNAMICS project demands extensive data, prompting my decision to develop an interdisciplinary SQL database. This comprehensive database will host both paleo- and neo-ecological plot-based vegetation data, species traits, and crucial abiotic information such as climate data. To kick things off, I’m creating a SQLite database, intending to share it as a versioned resource for data publication. This approach ensures that VegVault can be updated in the future to accommodate evolving needs.</p>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<p>The BIODYNAMICS project embraces an open-source philosophy, and as part of this commitment, I’m sharing individual GitHub repositories. Each repository handles the access and processing of specific data sections, while a dedicated repository manages the migration of all data into the SQLite database..</p>
+<section id="repos" class="level2">
+<h2 class="anchored" data-anchor-id="repos">repos</h2>
+<ul>
+<li><a href="https://github.com/OndrejMottl/BIODYNAMICS-Vegetation_data">Neo-ecological plot-based data</a> - Mainly BIEN and sPlot data</li>
+<li><a href="https://github.com/OndrejMottl/BIODYNAMICS-FOSSILPOL">Palaeo-ecological plot-based data</a> - Fossil pollen data from Neotota acessed and processed using <a href="https://hope-uib-bio.github.io/FOSSILPOL-website/">FOSSILPOL</a> workflow</li>
+<li><a href="https://github.com/OndrejMottl/BIODYNAMICS-Trait_data">Trait data</a> - 6 selected traits from TRY database</li>
+<li><a href="https://github.com/OndrejMottl/BIODYNAMICS-abiotic_data">Abiotic data</a> - climate data form CHELSA and CHELSA-TRACE21, and soil data from WOSIS</li>
+<li><a href="https://github.com/OndrejMottl/BIODYNAMICS-VegVault">VegVault migration</a> - code to migrate all data into SQLite database</li>
+</ul>
+</section>
+</section>
+<section id="future-roadmap" class="level1">
+<h1>Future Roadmap</h1>
+<p>This journey is far from over; everything is currently in development and a constant “work in progress.” In the coming months, I aim to create stable GitHub releases for all individual parts, complete with DOIs provided by ZENODO. Additionally, the first public version of VegVault 0.1.0 is on the horizon.</p>
+<p>Stay tuned for upcoming developments!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

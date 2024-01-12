@@ -4,14 +4,14 @@ date: "2024-01-10"
 categories: [news, lab, phd, position] 
 ---
 
-# Exploring the Past, Shaping the Future: Full-time PhD positions in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
+# Exploring the Past, Shaping the Future: A full-time PhD position in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
 
-Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistic? I offer fully funded, full-time PhD positions in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidates will join my newly established [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistic? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+
+![](/lab/lab_news/img/PR-iF_znak_UK_1c_pos_en.png){width=500 fig-align="center"}
 
 ## About the team 
 My lab is at the forefront of macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact.
-
-![](/lab/lab_news/img/HoloceneDiversityTrends_HD.png){width=300 fig-align="center"}
 
 # Project in detail   
 
@@ -25,15 +25,17 @@ Despite existing regional studies on taxonomic diversity changes in past vegetat
 
 The interdisciplinary nature of this work fosters a valuable resource for macroecologists, palaeoecologists, and ecoinformatics. By advancing comprehension of global biodiversity patterns and their historical drivers, this project contributes pivotal knowledge for predicting ecological responses to global change.
 
+![](/lab/lab_news/img/HoloceneDiversityTrends_HD.png){width=300 fig-align="center"}
+
 # I offer
-- Fully funded, full-time PhD positions
+- A fully funded, full-time PhD position
 - A tax-free PhD stipend of **20,500 CZK/month** (ca 830 EUR as of Jan 2024).
 - Full medical insurance and social security
-- Support for settling in a foreign language environment 
+- Support for settling in a foreign culture and language environment 
 - State-of-the-art scientific and computing equipment, software, and access to journals and scientific databases.
 - Subsidized meals at the university canteen
 - Work in an inspiring academic international environment (the working language is English)
-- Working in the hearth of Prague city center. Prague, while being culture-rich, is still one of the safest cities in the world, with excellent public transport, international accessibility, and healthcare
+- Working in the hearth of Prague city center. Prague, while being [culture-rich](https://goout.net/en/), is still one of the safest cities in the world, with excellent public transport, international accessibility, and healthcare ([read more about living in Prague](https://stars-natur.cz/practical-info))
 
 # I require
 - A master or equivalent degree/diploma in a project-related field (e.g., ecology, geography, palaeoecology, botany, bioinformatics, biostatistics, environmental sciences). However, I also encourage holders of degrees in statistics, data science, or computer science to apply

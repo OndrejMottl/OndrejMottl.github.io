@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "Ondřej Mottl",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am a researcher with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n🔭 I’m currently working on developing state-of-the-art tools to study global biodiversity patterns and lowering the barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\nWebiste navigation\n\nProjects, on which I am currently working🚀\nMy CV📄\nGet in touch📬\nMy publications📚"
+    "text": "Twitter\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I am Ondřej Mottl.\nI am the head of the newly established Laboratory of Quantitative Ecology. My research primarily focuses on quantitative ecology, macroecology, palaeoecology, and community ecology, with a keen interest in data science.\n🔭 My current efforts are dedicated to developing cutting-edge tools for studying global biodiversity patterns and breaking down barriers to scientific exploration.\n💬 Ask me about R, GitHub, biodiversity, and more…\n\nWebiste navigation\n\nLaboratory of Quantitative Ecology👩🏽‍💻\nProjects, on which I am currently working🚀\nMy CV📄\nGet in touch📬\nMy publications📚"
   },
   {
     "objectID": "collaboration/collaboration_guide.html",
@@ -446,5 +446,96 @@
     "title": "RRatepol",
     "section": "",
     "text": "More detailed information can be found on RRatepol package website\nThis include description of the individual steps for RoC estimation Package Description"
+  },
+  {
+    "objectID": "lab/about_the_lab.html",
+    "href": "lab/about_the_lab.html",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "",
+    "text": "The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research."
+  },
+  {
+    "objectID": "lab/about_the_lab.html#people",
+    "href": "lab/about_the_lab.html#people",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "People",
+    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAbout me\nList of publications\n\nPhD position\n\nCurrently looking for new PhD candidates"
+  },
+  {
+    "objectID": "lab/about_the_lab.html#group-description",
+    "href": "lab/about_the_lab.html#group-description",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "Group Description",
+    "text": "Group Description\nWelcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.\n\nResearch Focus\nDelving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.\n\nState-of-the-Art Tools and Methods\nWe actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.\n\n\nInterdisciplinary Approach\nOur work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.\n\n\nOngoing projects\n\nBIODYNAMICS\nFOSSILPOL\nPPF Alpine\nHolocene Diversity Trends -"
+  },
+  {
+    "objectID": "lab/about_the_lab.html#group-interest",
+    "href": "lab/about_the_lab.html#group-interest",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "Group interest",
+    "text": "Group interest\n…"
+  },
+  {
+    "objectID": "lab/about_the_lab.html#news",
+    "href": "lab/about_the_lab.html#news",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "News",
+    "text": "News\n\n\n\n\n\n\n\nLooking for a new PhD student!\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lab/lab_news/01-new_position.html",
+    "href": "lab/lab_news/01-new_position.html",
+    "title": "Looking for a new PhD student!",
+    "section": "",
+    "text": "I offer fully funded, full-time PhD positions in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidates will join my me at the Department of Botany at the Faculty of Sciences, Charles University in Prague, Czech Republic.\nThe research is part of a newly established Laboratory of Quantitative Ecology, which a focus on exploring the trends of vegetation biodiversity across spatio-temporal scales with a focus on human-impact and interdisciplinary research."
+  },
+  {
+    "objectID": "lab/lab_news/01-new_position.html#holocene-diversity-trends-quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
+    "href": "lab/lab_news/01-new_position.html#holocene-diversity-trends-quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
+    "title": "Looking for a new PhD student!",
+    "section": "Holocene Diversity Trends: Quantifying Global Vegetation Biodiversity Changes since the Last Glacial Maximum",
+    "text": "Holocene Diversity Trends: Quantifying Global Vegetation Biodiversity Changes since the Last Glacial Maximum\nThis project aims to unveil macroecological patterns shaping global biodiversity, emphasizing the necessity of understanding historical developments for accurate forecasting. In the face of the ongoing biodiversity crisis, comprehending drivers influencing biodiversity over time becomes crucial for mitigating human impacts on the environment.\nFocusing on long-living species, such as trees, requires a long-term perspective with data spanning millennia. Palaeoecological research, particularly fossil pollen records, serves as an exceptional source, offering detailed vegetation history over these extensive timescales. Leveraging cutting-edge advancements in quantitative palaeoecological methods, data science, and machine learning, the project will explore multiple facets of biodiversity (taxonomic, functional, and phylogenetic) spanning various spatial scales (biomes, subcontinental, continents, global), encompassing the period since the Last Glacial Maximum.\nDespite existing regional studies on taxonomic diversity changes in past vegetation, a holistic global multi-faceted synthesis is lacking, hindering a holistic understanding of vegetation dynamics. Hence, taking advantage of the increasing availability of public data, the project aims to estimate vegetation changes globally.\nThe interdisciplinary nature of this work fosters a valuable resource for macroecologists, palaeoecologists, and ecoinformatics. By advancing comprehension of global biodiversity patterns and their historical drivers, this project contributes pivotal knowledge for predicting ecological responses to global change."
+  },
+  {
+    "objectID": "lab/lab_news/01-new_position.html#desirable-but-not-required",
+    "href": "lab/lab_news/01-new_position.html#desirable-but-not-required",
+    "title": "Looking for a new PhD student!",
+    "section": "Desirable but not required:",
+    "text": "Desirable but not required:\n\nPrior experience with programming (using R, Python, C#, etc)\nSolid background in data analysis and statistical testing\nExperience from an international working environment"
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
+    "title": "Looking for a new PhD student!",
+    "section": "",
+    "text": "Are you passionate about unraveling the mysteries of our planet’s biodiversity using large data and statistic? I offer fully funded, full-time PhD positions in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidates will join my newly established Laboratory of Quantitative Ecology at the Department of Botany at the Faculty of Sciences, Charles University in Prague, Czech Republic.\n\n\nMy lab is at the forefront of macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
+    "title": "Looking for a new PhD student!",
+    "section": "Desirable but not required:",
+    "text": "Desirable but not required:\n\nPrior experience with programming (using R, Python, C#, etc)\nSolid background in data analysis and statistical testing\nExperience from an international working environment"
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
+    "title": "Looking for a new PhD student!",
+    "section": "",
+    "text": "My lab is at the forefront of macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024.",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024.",
+    "title": "Looking for a new PhD student!",
+    "section": "Application deadline is 13th of March 2024.",
+    "text": "Application deadline is 13th of March 2024.\nThe application has 2 stages:\n\nYour application needs to be submitted via STARS portal\n\nThe STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income to PhD students. More info can be found on website\n\nsend an email to ‘ondrej.mottl@natur.cunni.cz’ with “PhD application [your surename]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.\nContact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.\n\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents prior."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
+    "title": "Looking for a new PhD student!",
+    "section": "‼️ Application deadline is 13th of March 2024 ‼️",
+    "text": "‼️ Application deadline is 13th of March 2024 ‼️\nThe application has 2 stages:\n\nYour application needs to be submitted via STARS portal\n\nThe STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income to PhD students. More info can be found on website\n\nsend an email to ‘ondrej.mottl@natur.cunni.cz’ with “PhD application [your surename]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.\nContact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.\n\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents prior."
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ondřej Mottl - Get in touch!</title>
+<title>Ondřej Mottl - Laboratory of Quantitative Ecology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,12 +29,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../collaboration/collaboration_guide.html" rel="next">
-<link href="../about_me/list_of_publications.html" rel="prev">
+<link href="../projects/index.html" rel="next">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,7 +60,38 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-lab_news .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-lab_news'] = new List('listing-lab_news', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -74,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../collaboration/get_in_touch.html">Get in touch!</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/about_the_lab.html">Laboratory of Quantitative Ecology</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -101,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
+  <a href="../lab/about_the_lab.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
   </div>
 </li>
@@ -153,16 +184,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Work with me</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link active">
+  <a href="../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Get in touch!</span></a>
   </div>
 </li>
@@ -190,45 +221,98 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#contact-me" id="toc-contact-me" class="nav-link active" data-scroll-target="#contact-me">Contact me 📬</a></li>
-  <li><a href="#collaboration-guide" id="toc-collaboration-guide" class="nav-link" data-scroll-target="#collaboration-guide">Collaboration guide 🤝</a></li>
-  <li><a href="#code-convention" id="toc-code-convention" class="nav-link" data-scroll-target="#code-convention">Code convention 💻</a></li>
+  <li><a href="#people" id="toc-people" class="nav-link active" data-scroll-target="#people">People</a></li>
+  <li><a href="#group-description" id="toc-group-description" class="nav-link" data-scroll-target="#group-description">Group Description</a>
+  <ul class="collapse">
+  <li><a href="#research-focus" id="toc-research-focus" class="nav-link" data-scroll-target="#research-focus">Research Focus</a></li>
+  </ul></li>
+  <li><a href="#news" id="toc-news" class="nav-link" data-scroll-target="#news">News</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+<div class="quarto-about-jolla">
+ <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Get in touch!</h1>
+<h1 class="title">Laboratory of Quantitative Ecology</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><div id="heading">
+<p>The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research.</p>
+</div>  
+</div>
+
+<section id="people" class="level2">
+<h2 data-anchor-id="people">People</h2>
+<ul>
+<li><h3 id="ondřej-mottl"><a href="../about_me/cv.html">Ondřej Mottl</a> <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-396270-1579792833.jpg?itok=hez3oHo-" alt="Ondřej Mottl" align="right" width="120"></h3>
+<ul>
+<li><strong>Head of the Laboratory</strong></li>
+<li><a href="../index.html">About me</a></li>
+<li><a href="../about_me/list_of_publications.html">List of publications</a></li>
+</ul></li>
+<li><h3 id="phd-position"><a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html">PhD position</a></h3>
+<ul>
+<li><strong>Currently looking for new PhD candidates</strong></li>
+<li><a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html"><img src="https://img.shields.io/badge/apply-NOW-green.png" class="img-fluid" alt="Apply Now"></a></li>
+</ul></li>
+</ul>
+</section>
+<section id="group-description" class="level2">
+<h2 data-anchor-id="group-description">Group Description</h2>
+<p>Welcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.</p>
+<section id="research-focus" class="level3">
+<h3 data-anchor-id="research-focus">Research Focus</h3>
+<p>Delving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.</p>
+<section id="state-of-the-art-tools-and-methods" class="level4">
+<h4 data-anchor-id="state-of-the-art-tools-and-methods">State-of-the-Art Tools and Methods</h4>
+<p>We actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.</p>
+</section>
+<section id="interdisciplinary-approach" class="level4">
+<h4 data-anchor-id="interdisciplinary-approach">Interdisciplinary Approach</h4>
+<p>Our work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.</p>
+</section>
+<section id="ongoing-projects" class="level4">
+<h4 data-anchor-id="ongoing-projects">Ongoing projects</h4>
+<ul>
+<li><a href="../projects/BIODYNAMICS/index.html">BIODYNAMICS</a></li>
+<li><a href="../projects/FOSSILPOL/index.html">FOSSILPOL</a></li>
+<li><a href="../projects/PPF-Alpine/index.html">PPF Alpine</a></li>
+<li><a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html">Holocene Diversity Trends</a> - <a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html"><img src="https://img.shields.io/badge/apply-NOW-green.png" class="img-fluid" alt="Apply Now"></a></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="news" class="level2">
+<h2 data-anchor-id="news">News</h2>
+<div id="listing-lab_news" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="news,lab,phd,position" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1705046347100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Looking for a new PhD student!
+</h5>
+<div class="card-text listing-description">
+Are you passionate about unraveling the mysteries of our planet’s biodiversity using large data…
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p>I like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. 🌟</p>
-<section id="contact-me" class="level2">
-<h2 class="anchored" data-anchor-id="contact-me">Contact me 📬</h2>
-<p>Do you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to <strong>ondrej.mottl(at)gmail.com</strong>. Also, feel free to reach out to me via <a href="https://twitter.com/ondrejmottl">Twitter</a>! 📧🐦</p>
-</section>
-<section id="collaboration-guide" class="level2">
-<h2 class="anchored" data-anchor-id="collaboration-guide">Collaboration guide 🤝</h2>
-<p>Everyone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a <a href="../collaboration/collaboration_guide.html">collaboration guide</a> for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. 📚🌱</p>
-</section>
-<section id="code-convention" class="level2">
-<h2 class="anchored" data-anchor-id="code-convention">Code convention 💻</h2>
-<p>My work is heavily focused on writing code. For this reason, I have prepared a <a href="../collaboration/code_convention.html">code convention</a>, which I am following in my projects. I am making it publically available so feel free to check it out! 💡📝</p>
-<p>Feel free to explore these resources, and let’s create something amazing together! 🌟🌍🔬</p>
 
 
 </section>
@@ -254,13 +338,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -469,13 +546,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../about_me/list_of_publications.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">List of publications</span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../collaboration/collaboration_guide.html" class="pagination-link">
-        <span class="nav-page-text">Collaboration guide</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../projects/index.html" class="pagination-link">
+        <span class="nav-page-text">Overview of projects</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

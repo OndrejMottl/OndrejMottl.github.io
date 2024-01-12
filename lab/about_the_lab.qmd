@@ -1,0 +1,63 @@
+---
+title: "Laboratory of Quantitative Ecology"
+about:
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 500px
+listing: 
+  - id: lab_news
+    max-description-length: 100
+    fields: [title, description]
+    contents: "lab_news"
+    sort: "true"
+    type: grid
+    grid-item-border: true
+---
+
+::: {#heading}
+The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research.
+:::
+
+## People
+
+- ### [Ondřej Mottl](/about_me/cv.qmd) <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-396270-1579792833.jpg?itok=hez3oHo-" alt="Ondřej Mottl" align="right" width="120" /> 
+  - **Head of the Laboratory**
+  - [About me](/index.qmd)
+  - [List of publications](/about_me/list_of_publications.qmd)
+  
+
+- ### [PhD position](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) 
+  - **Currently looking for new PhD candidates** 
+  - [![Apply Now](https://img.shields.io/badge/apply-NOW-green)](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
+
+
+
+## Group Description
+
+Welcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.
+
+### Research Focus
+
+Delving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.
+
+#### State-of-the-Art Tools and Methods
+
+We actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.
+
+
+#### Interdisciplinary Approach
+
+Our work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.
+
+#### Ongoing projects
+
+- [BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)
+- [FOSSILPOL](/projects/FOSSILPOL/index.qmd)
+- [PPF Alpine](/projects/PPF-Alpine/index.qmd)
+- [Holocene Diversity Trends](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) - [![Apply Now](https://img.shields.io/badge/apply-NOW-green)](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
+
+## News
+::: {#lab_news}
+:::
+

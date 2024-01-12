@@ -1,0 +1,65 @@
+---
+title: "Looking for a new PhD student!"
+date: "2024-01-10"
+categories: [news, lab, phd, position] 
+---
+
+# Exploring the Past, Shaping the Future: Full-time PhD positions in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
+
+Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistic? I offer fully funded, full-time PhD positions in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidates will join my newly established [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+
+## About the team 
+My lab is at the forefront of macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact.
+
+![](/lab/lab_news/img/HoloceneDiversityTrends_HD.png){width=300 fig-align="center"}
+
+# Project in detail   
+
+**Holocene Diversity Trends: Quantifying Global Vegetation Biodiversity Changes since the Last Glacial Maximum** 
+
+This project aims to unveil macroecological patterns shaping global biodiversity, emphasizing the necessity of understanding historical developments for accurate forecasting. In the face of the ongoing biodiversity crisis, comprehending drivers influencing biodiversity over time becomes crucial for mitigating human impacts on the environment.
+
+Focusing on long-living species, such as trees, requires a long-term perspective with data spanning millennia. Palaeoecological research, particularly fossil pollen records, serves as an exceptional source, offering detailed vegetation history over these extensive timescales. Leveraging cutting-edge advancements in quantitative palaeoecological methods, data science, and machine learning, the project will explore multiple facets of biodiversity (taxonomic, functional, and phylogenetic) spanning various spatial scales (biomes, subcontinental, continents, global), encompassing the period since the Last Glacial Maximum.
+
+Despite existing regional studies on taxonomic diversity changes in past vegetation, a holistic global multi-faceted synthesis is lacking, hindering a holistic understanding of vegetation dynamics. Hence, taking advantage of the increasing availability of public data, the project aims to estimate vegetation changes globally.
+
+The interdisciplinary nature of this work fosters a valuable resource for macroecologists, palaeoecologists, and ecoinformatics. By advancing comprehension of global biodiversity patterns and their historical drivers, this project contributes pivotal knowledge for predicting ecological responses to global change.
+
+# I offer
+- Fully funded, full-time PhD positions
+- A tax-free PhD stipend of **20,500 CZK/month** (ca 830 EUR as of Jan 2024).
+- Full medical insurance and social security
+- Support for settling in a foreign language environment 
+- State-of-the-art scientific and computing equipment, software, and access to journals and scientific databases.
+- Subsidized meals at the university canteen
+- Work in an inspiring academic international environment (the working language is English)
+- Working in the hearth of Prague city center. Prague, while being culture-rich, is still one of the safest cities in the world, with excellent public transport, international accessibility, and healthcare
+
+# I require
+- A master or equivalent degree/diploma in a project-related field (e.g., ecology, geography, palaeoecology, botany, bioinformatics, biostatistics, environmental sciences). However, I also encourage holders of degrees in statistics, data science, or computer science to apply
+- Proficiency in spoken and written English
+- Motivation to learn new skills
+- Enthusiasm for team building and collaboration
+
+## Desirable but not required:
+- Prior experience with programming (using R, Python, C#, etc)
+- Solid background in data analysis and statistical testing 
+- Experience from an international working environment 
+
+# Applications
+
+## ‼️ Application deadline is 13th of March 2024 ‼️
+
+The application has 2 stages:
+
+1. Your application needs to be submitted via [STARS portal](https://stars-natur.cz/phd-positions/biology/holocene-diversity-trends-quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum?topicId=347&back=9ujx7&do=applicationModal)
+   
+The STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income to PhD students. More info can be found on [website](https://stars-natur.cz/)
+
+2. send an email to 'ondrej.mottl@natur.cunni.cz' with "PhD application [your surename]" in the email subject, containing:
+   
+   -  Motivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.
+   - Contact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.
+
+Note that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents prior.
+

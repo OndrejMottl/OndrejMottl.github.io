@@ -16,6 +16,9 @@ website:
     collapse-level: 1
     contents:
 
+      - text: "Laboratory of Quantitative Ecology"
+        href: lab/about_the_lab.qmd
+      
       - section: "Projects"
         contents: 
           - text: "Overview of projects" 

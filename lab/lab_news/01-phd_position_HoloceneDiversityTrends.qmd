@@ -6,12 +6,12 @@ categories: [news, lab, phd, position]
 
 # Exploring the Past, Shaping the Future: A full-time PhD position in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
 
-Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistic? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
 
 ![](/lab/lab_news/img/PR-iF_znak_UK_1c_pos_en.png){width=500 fig-align="center"}
 
 ## About the team 
-My lab is at the forefront of macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact.
+My lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact.
 
 # Project in detail   
 
@@ -29,9 +29,10 @@ The interdisciplinary nature of this work fosters a valuable resource for macroe
 
 # I offer
 - A fully funded, full-time PhD position
-- A tax-free PhD stipend of **20,500 CZK/month** (ca 830 EUR as of Jan 2024).
 - Full medical insurance and social security
 - Support for settling in a foreign culture and language environment 
+- A tax-free PhD stipend of 20,500 CZK/month (ca 830 EUR as of Jan 2024).
+  - I hope to be able to acquire additional funding during the PhD
 - State-of-the-art scientific and computing equipment, software, and access to journals and scientific databases.
 - Subsidized meals at the university canteen
 - Work in an inspiring academic international environment (the working language is English)
@@ -52,13 +53,13 @@ The interdisciplinary nature of this work fosters a valuable resource for macroe
 
 ## ‼️ Application deadline is 13th of March 2024 ‼️
 
-The application has 2 stages:
+The application process has 2 stages:
 
 1. Your application needs to be submitted via [STARS portal](https://stars-natur.cz/phd-positions/biology/holocene-diversity-trends-quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum?topicId=347&back=9ujx7&do=applicationModal)
    
 The STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income to PhD students. More info can be found on [website](https://stars-natur.cz/)
 
-2. send an email to 'ondrej.mottl@natur.cunni.cz' with "PhD application [your surename]" in the email subject, containing:
+2. Send an email to 'ondrej.mottl@natur.cunni.cz' with "PhD application [your surename]" in the email subject, containing:
    
    -  Motivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.
    - Contact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.

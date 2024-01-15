@@ -5,12 +5,16 @@ categories: [news, lab, phd, position]
 output:
   pdf_document:
     latex_engine: xelatex
+    fig-align: center
+    fig-width: 10
 sansfont: Calibri Light
 ---
 
 # Exploring the Past, Shaping the Future: A full-time PhD position in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
 
 Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+
+The latest news abou the position can be found on website: [https://bit.ly/PhD_HoloceneDiversityTrends](https://bit.ly/PhD_HoloceneDiversityTrends) 
 
 ![](./img/PR-iF_znak_UK_1c_pos_en.png){width=500 fig-align="center"}
 

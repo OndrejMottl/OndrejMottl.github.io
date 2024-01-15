@@ -14,7 +14,7 @@ sansfont: Calibri Light
 
 Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
 
-The latest news abou the position can be found on website: [https://bit.ly/PhD_HoloceneDiversityTrends](https://bit.ly/PhD_HoloceneDiversityTrends) 
+The latest news about the position can be found on the website: [https://bit.ly/PhD_HoloceneDiversityTrends](https://bit.ly/PhD_HoloceneDiversityTrends) 
 
 ![](./img/PR-iF_znak_UK_1c_pos_en.png){width=500 fig-align="center"}
 
@@ -66,7 +66,7 @@ The application process has 2 stages:
 
 1. Your application needs to be submitted via [STARS portal](https://stars-natur.cz/phd-positions/biology/holocene-diversity-trends-quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum?topicId=347&back=9ujx7&do=applicationModal)
    
-The STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income to PhD students. More info can be found on [website](https://stars-natur.cz/)
+The STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income for PhD students. More info can be found on [website](https://stars-natur.cz/)
 
 2. Send an email to 'ondrej.mottl@natur.cuni.cz' with "PhD application [your surename]" in the email subject, containing:
    

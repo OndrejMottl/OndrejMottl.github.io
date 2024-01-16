@@ -40,7 +40,7 @@ By advancing comprehension of global biodiversity patterns and their historical 
 - A fully funded, full-time PhD position
 - Full medical insurance and social security
 - Support for settling in a foreign culture and language environment 
-- Opportunity to skills in:
+- Opportunity to acquire skills in:
   - Data analysis and statistical testing 
   - Working with large dataset compilations from global databases 
   - Advanced coding protocols, particularly in [R](https://en.wikipedia.org/wiki/R_(programming_language))

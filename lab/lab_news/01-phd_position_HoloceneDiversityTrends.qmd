@@ -12,26 +12,27 @@ sansfont: Calibri Light
 
 # Exploring the Past, Shaping the Future: A full-time PhD position in Global Vegetation Biodiversity (Prague, 4 years, starting October 2024)
 
-Are you passionate about unraveling the mysteries of our planet's biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
+Are you passionate about unravelling the mysteries of our planet's biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established [Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html) at the [Department of Botany](https://www.natur.cuni.cz/biology/botany ) at the [Faculty of Sciences](https://www.natur.cuni.cz/eng), [Charles University](https://cuni.cz/uken-1.html) in Prague, Czech Republic.
 
 The latest news about the position can be found on the website: [https://bit.ly/PhD_HoloceneDiversityTrends](https://bit.ly/PhD_HoloceneDiversityTrends) 
 
 ![](./img/PR-iF_znak_UK_1c_pos_en.png){width=500 fig-align="center"}
 
 ## About the team 
-My lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human-impact.
+My lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human impact.
 
 # Project in detail   
 
 **Holocene Diversity Trends: Quantifying Global Vegetation Biodiversity Changes since the Last Glacial Maximum** 
 
-This project aims to unveil macroecological patterns shaping global biodiversity, emphasizing the necessity of understanding historical developments for accurate forecasting. In the face of the ongoing biodiversity crisis, comprehending drivers influencing biodiversity over time becomes crucial for mitigating human impacts on the environment.
+This project aims to unveil macroecological patterns shaping global plant biodiversity, emphasizing the necessity of understanding past ecological dynamics for accurate forecasting. In the face of the ongoing biodiversity crisis, comprehending drivers influencing plant biodiversity over time becomes crucial for estimating the effects of human impacts on the environment.
 
-Focusing on long-living species, such as trees, requires a long-term perspective with data spanning millennia. Palaeoecological research, particularly fossil pollen records, serves as an exceptional source, offering detailed vegetation history over these extensive timescales. Leveraging cutting-edge advancements in quantitative palaeoecological methods, data science, and machine learning, the project will explore multiple facets of biodiversity (taxonomic, functional, and phylogenetic) spanning various spatial scales (biomes, subcontinental, continents, global), encompassing the period since the Last Glacial Maximum.
+The long-term perspective of vegetation history relies on data spanning millennia. Palaeoecological research, particularly fossil pollen records, serves as an exceptional source, offering detailed vegetation history over these extensive timescales. Despite existing regional studies on taxonomic diversity changes in past vegetation, a global multi-faceted synthesis is lacking, hindering a holistic understanding of long-term vegetation dynamics. 
 
-Despite existing regional studies on taxonomic diversity changes in past vegetation, a holistic global multi-faceted synthesis is lacking, hindering a holistic understanding of vegetation dynamics. Hence, taking advantage of the increasing availability of public data, the project aims to estimate vegetation changes globally.
+The PhD project will target this gap by using state-of-the-art public databases and a range of advanced numerical techniques, while strategically positioned within a global network of interdisciplinary collaborators. Leveraging cutting-edge advancements in quantitative palaeoecological methods, data science, and machine learning, the project will explore multiple facets of plant biodiversity (taxonomic, functional, and phylogenetic) spanning various spatial scales (biomes, subcontinental, continents, global), encompassing the period since the Last Glacial Maximum (last 21.000 yr). 
 
-The interdisciplinary nature of this work fosters a valuable resource for macroecologists, palaeoecologists, and ecoinformatics. By advancing comprehension of global biodiversity patterns and their historical drivers, this project contributes pivotal knowledge for predicting ecological responses to global change.
+By advancing comprehension of global biodiversity patterns and their historical drivers, this project contributes pivotal knowledge for predicting ecological responses to global change. The interdisciplinary nature of this project will further foster valuable outputs for macroecologists, palaeoecologists, archaeologists, global change ecologists, and ecoinformatics, among others.
+
 
 ![](./img/HoloceneDiversityTrends_HD.png){width=300 fig-align="center"}
 
@@ -39,13 +40,19 @@ The interdisciplinary nature of this work fosters a valuable resource for macroe
 - A fully funded, full-time PhD position
 - Full medical insurance and social security
 - Support for settling in a foreign culture and language environment 
+- Opportunity to learn:
+  - data analysis and statistical testing 
+  - working with large dataset compilations from global databases 
+  - advanced coding protocols (R)
+  - tools to foster reproducibility in science (e.g, version control) 
+  - presentation and communication skills (the student will be stimulated to give presentations at congresses and workshops)
 - A tax-free PhD stipend of 20,500 CZK/month (ca 830 EUR as of Jan 2024).
   - I hope to be able to acquire additional funding during the PhD
 - State-of-the-art scientific and computing equipment, software, and access to journals and scientific databases.
-- Access to my worldwide network of collaborators
+- Access to my worldwide network of collaborators with the possibility to participate in related projects
 - Subsidized meals at the university canteen
 - Work in an inspiring academic international environment (the working language is English)
-- Working in the hearth of Prague city center. Prague, while being [culture-rich](https://goout.net/en/), is still one of the safest cities in the world, with excellent public transport, international accessibility, and healthcare ([read more about living in Prague](https://stars-natur.cz/practical-info))
+- Working in the hearth of Prague city centre. Prague, while being [culture-rich](https://goout.net/en/), is still one of the safest cities in the world, with excellent public transport, international accessibility, and healthcare ([read more about living in Prague](https://stars-natur.cz/practical-info))
 
 # I require
 - A master or equivalent degree/diploma in a project-related field (e.g., ecology, geography, palaeoecology, botany, bioinformatics, biostatistics, environmental sciences). However, I also encourage holders of degrees in statistics, data science, or computer science to apply
@@ -54,7 +61,8 @@ The interdisciplinary nature of this work fosters a valuable resource for macroe
 - Enthusiasm for team building and collaboration
 
 ## Desirable but not required:
-- Prior experience with programming (using R, Python, C#, etc)
+- Prior experience with programming in R
+  - experience with other languages (Python, C#, etc) are also welcomed
 - Solid background in data analysis and statistical testing 
 - Experience from an international working environment 
 

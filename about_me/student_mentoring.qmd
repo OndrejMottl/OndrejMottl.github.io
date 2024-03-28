@@ -1,0 +1,33 @@
+---
+title: "Ecological Data Analyses - Consultations and Mentoring"
+about:
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 500px
+---
+
+::: {#heading}
+Are you a student struggling to navigate the complexities of ecological data? Whether you're from the Department of Botany or on a different scientific journey, this offer is for you. I am here to assist you with the analysis of ecological data for your project.
+:::
+
+## What I Offer
+
+- **Personalized Consultation Sessions**: Tailored to the specific needs and challenges of your project.
+- **Mentoring in Ecological Data Analysis**: From basic concepts to advanced techniques.
+- **Help with Coding**: To resolve that persistent bug in R.
+- **A Supportive Learning Environment**: Where questions are encouraged, and discovery is facilitated.
+
+## How to Get Started
+
+1. **Contact Me**: Send an email to **ondrej.mottl(at)natur.cuni.cz** with a brief description of your project and your issue.
+2. **Wait for Your Time Slot**: You will be placed on a waiting list and invited to the closest available time slot.
+3. **Attend on the Agreed Day**: Consultations take place on **Tuesdays from 14:00-14:30** (please attend only if confirmed).
+
+## Book a time slot
+
+![](./img/student_mentoring_qr_code.png){width=300 fig-align="center"}
+
+## Disclaimer
+I am not an oracle, and I do not have all the answers. However, I hope that together, we can find the right direction for your project.
+

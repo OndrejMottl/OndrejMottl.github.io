@@ -27,10 +27,8 @@ The Laboratory of Quantitative Ecology is a dynamic and newly established workin
   - [List of publications](/about_me/list_of_publications.qmd)
   
 
-- ### [PhD position](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) 
-  - **Currently looking for new PhD candidates** 
-  - [![Apply Now](https://img.shields.io/badge/apply-NOW-green)](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
-
+- ### PhD position  
+  - to be filled 
 
 
 ## Group Description
@@ -55,7 +53,7 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
 - [BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)
 - [FOSSILPOL](/projects/FOSSILPOL/index.qmd)
 - [PPF Alpine](/projects/PPF-Alpine/index.qmd)
-- [Holocene Diversity Trends](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) - [![Apply Now](https://img.shields.io/badge/apply-NOW-green)](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
+- [Holocene Diversity Trends](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
 
 ## News
 ::: {#lab_news}

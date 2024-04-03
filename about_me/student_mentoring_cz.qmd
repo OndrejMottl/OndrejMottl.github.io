@@ -1,0 +1,38 @@
+---
+title: "Analýza Ekologických Dat - Konzultace a Mentoring"
+about:
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 500px
+---
+::: {#heading}
+### [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/student_mentoring_cz.qmd) {.heading_center}
+Jsi student, který se neví rady s komplexními ekologickými daty? Ať už jsi ze Katedry Botaniky nebo ne, tato nabídka je určena právě tobě. Jsem tu, abych ti pomohl s analýzou ekologických dat pro tvůj projekt.
+:::
+
+![](./img/student_mentoring_hook.jpeg){width=300 fig-align="center" fig-alt="Obsah vytvořen pomocí AI - 28. března 2024, v 15:22"}
+
+## Co Nabízím
+
+- **Osobní konzultační kchůzku**: Přizpůsobenou konkrétním potřebám a výzvám tvého projektu.
+- **Mentoring v analýze ekologických dat**: Od základních konceptů po pokročilé techniky.
+- **Pomoc s programováním**: Zaměřená na odstranění té otravné chyby v Rku.
+- **Příjemné prostředí**: Kde jsou otázky vítány a žádný dotaz není hloupý.
+
+## Jak Začít
+
+1. **Kontaktuj mě**: Pošli mi email na **ondrej.mottl(at)natur.cuni.cz** s krátkým popisem tvého projektu a problému.
+2. **Počkej na na volný časový slot**: Budeš zařazen na čekací listinu a pozván k nejbližšímu dostupnému termínu.
+
+## Kdy a Kde
+
+- Moje kancelář se nachází na adrese Benátská 2, první patro, **místnost 58**.
+- Konzultace se konají **v úterý od 14:00 do 14:30** (přijď prosím jen s potvrzenou schůzkou).
+
+## Rezervuj si časový slot
+
+![](./img/student_mentoring_qr_code.png){width=300 fig-align="center"}
+
+## Upozornění
+Nejsem věštec a nemám všechny odpovědi. Avšak doufám, že společně můžeme tvůj projekt nasměrovat správným směrem.

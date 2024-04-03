@@ -7,7 +7,7 @@ about:
   image-width: 500px
 ---
 ::: {#heading}
-### EN / CZ {.heading_center}
+### [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/student_mentoring_cz.qmd) {.heading_center}
 Are you a student struggling to navigate the complexities of ecological data? Whether you're from the Department of Botany or embarking on a different scientific journey, this offer is for you. I am here to assist you with the analysis of ecological data for your project.
 :::
 

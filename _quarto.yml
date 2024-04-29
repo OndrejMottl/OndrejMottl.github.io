@@ -47,5 +47,6 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-depth: 2
 
 

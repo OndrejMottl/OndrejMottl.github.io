@@ -60,28 +60,44 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "No matching items"
+    "text": "No matching items",
+    "crumbs": [
+      "Projects",
+      "Overview of projects"
+    ]
   },
   {
     "objectID": "projects/index.html#active-projects",
     "href": "projects/index.html#active-projects",
     "title": "Projects",
     "section": "",
-    "text": "No matching items"
+    "text": "No matching items",
+    "crumbs": [
+      "Projects",
+      "Overview of projects"
+    ]
   },
   {
     "objectID": "projects/index.html#past-projects",
     "href": "projects/index.html#past-projects",
     "title": "Projects",
     "section": "Past Projects",
-    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Projects",
+      "Overview of projects"
+    ]
   },
   {
     "objectID": "projects/index.html#software-and-r-packages",
     "href": "projects/index.html#software-and-r-packages",
     "title": "Projects",
     "section": "Software and R-packages",
-    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Software and R-packages\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFOSSILPOL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRUtilpol\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Projects",
+      "Overview of projects"
+    ]
   },
   {
     "objectID": "projects/FOSSILPOL/index.html",
@@ -347,28 +363,44 @@
     "href": "projects/BIODYNAMICS/index.html",
     "title": "BIODYNAMICS",
     "section": "",
-    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023."
+    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023.",
+    "crumbs": [
+      "Projects",
+      "BIODYNAMICS"
+    ]
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-description",
     "href": "projects/BIODYNAMICS/index.html#project-description",
     "title": "BIODYNAMICS",
     "section": "Project description",
-    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society."
+    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society.",
+    "crumbs": [
+      "Projects",
+      "BIODYNAMICS"
+    ]
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-goals",
     "href": "projects/BIODYNAMICS/index.html#project-goals",
     "title": "BIODYNAMICS",
     "section": "Project goals",
-    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
+    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka.",
+    "crumbs": [
+      "Projects",
+      "BIODYNAMICS"
+    ]
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#news",
     "href": "projects/BIODYNAMICS/index.html#news",
     "title": "BIODYNAMICS",
     "section": "News",
-    "text": "News\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "News\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Projects",
+      "BIODYNAMICS"
+    ]
   },
   {
     "objectID": "projects/HOPE/index.html",
@@ -452,21 +484,30 @@
     "href": "lab/about_the_lab.html",
     "title": "Laboratory of Quantitative Ecology",
     "section": "",
-    "text": "The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research."
+    "text": "The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research.",
+    "crumbs": [
+      "Laboratory of Quantitative Ecology"
+    ]
   },
   {
     "objectID": "lab/about_the_lab.html#people",
     "href": "lab/about_the_lab.html#people",
     "title": "Laboratory of Quantitative Ecology",
     "section": "People",
-    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAbout me\nList of publications\n\nPhD position\n\nto be filled"
+    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAssistant Professor for Plant Ecology\n📬email: ondrej.mottl(at)gmail.com\n\nAbout me\nList of publications\n\nBryan Novio\n\nPhD student\nHolocene Diversity Trends project\nwill start in Autumn 2024\n\nMarkéta Tumová\n\nBc student\nAlpine Biodiversity Across Continents project (linked to the PPF Alpine)\nwill start in Autumn 2024",
+    "crumbs": [
+      "Laboratory of Quantitative Ecology"
+    ]
   },
   {
     "objectID": "lab/about_the_lab.html#group-description",
     "href": "lab/about_the_lab.html#group-description",
     "title": "Laboratory of Quantitative Ecology",
     "section": "Group Description",
-    "text": "Group Description\nWelcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.\n\nResearch Focus\nDelving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.\n\nState-of-the-Art Tools and Methods\nWe actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.\n\n\nInterdisciplinary Approach\nOur work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.\n\n\nOngoing projects\n\nBIODYNAMICS\nFOSSILPOL\nPPF Alpine\nHolocene Diversity Trends"
+    "text": "Group Description\nWelcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.\n\nResearch Focus\nDelving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.\n\nState-of-the-Art Tools and Methods\nWe actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.\n\n\nInterdisciplinary Approach\nOur work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.\n\n\nOngoing projects\n\nBIODYNAMICS\nFOSSILPOL\nPPF Alpine\nHolocene Diversity Trends",
+    "crumbs": [
+      "Laboratory of Quantitative Ecology"
+    ]
   },
   {
     "objectID": "lab/about_the_lab.html#group-interest",
@@ -480,7 +521,10 @@
     "href": "lab/about_the_lab.html#news",
     "title": "Laboratory of Quantitative Ecology",
     "section": "News",
-    "text": "News\n\n\n\n\n\n\n\nLooking for a new PhD student!\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "News\n\n\n\n\n\n\n\nLooking for a new PhD student!\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Laboratory of Quantitative Ecology"
+    ]
   },
   {
     "objectID": "lab/lab_news/01-new_position.html",
@@ -676,6 +720,10 @@
     "href": "projects/BIODYNAMICS/index.html#core-collaborators",
     "title": "BIODYNAMICS",
     "section": "Core collaborators",
-    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste"
+    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste",
+    "crumbs": [
+      "Projects",
+      "BIODYNAMICS"
+    ]
   }
 ]

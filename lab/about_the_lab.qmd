@@ -55,7 +55,7 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
 - ### [Ondřej Mottl](/about_me/cv.qmd) <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-396270-1579792833.jpg?itok=hez3oHo-" alt="Ondřej Mottl" align="right" width="120" /> 
   * **Head of the Laboratory**
   * Assistant Professor for Plant Ecology
-  * 📬email:  ondrej.mottl(at)gmail.com
+  * 📬email: ondrej.mottl(at)gmail.com
   * [![ORCID](https://img.shields.io/badge/orcid-0000--0002--9796--5081-brightgreen.svg)](https://orcid.org/0000-0002-9796-5081)
   * [About me](/index.qmd)
   * [List of publications](/about_me/list_of_publications.qmd)
@@ -65,7 +65,8 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
   * [*Holocene Diversity Trends*](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) project
   - will start in Autumn 2024
 
-- ### Markéta Tumová
+- ### Markéta Tumová <img src="img/marketa_crop.JPG" alt="Markéta Tumová" align="right" width="120" />
    * Bc student
+   * 📬email: tumovamarket(at)natur.cuni.cz.
    * *Alpine Biodiversity Across Continents* project (linked to the [PPF Alpine](/projects/PPF-Alpine/index.qmd))
    * will start in Autumn 2024

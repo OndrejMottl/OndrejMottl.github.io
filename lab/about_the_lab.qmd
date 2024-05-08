@@ -62,11 +62,13 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
   
 - ### Bryan Novio  
   * PhD student
+  * 📬email: noviobryan(at)gmail.com / noviobryan(at)yahoo.com
+  * [![ORCID](https://img.shields.io/badge/orcid-0000--0003--1600--4973-brightgreen.svg)](https://orcid.org/0000-0003-1600-4973)
   * [*Holocene Diversity Trends*](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) project
   - will start in Autumn 2024
 
 - ### Markéta Tumová <img src="img/marketa_crop.JPG" alt="Markéta Tumová" align="right" width="120" />
    * Bc student
-   * 📬email: tumovamarket(at)natur.cuni.cz.
+   * 📬email: tumovamarket(at)natur.cuni.cz
    * *Alpine Biodiversity Across Continents* project (linked to the [PPF Alpine](/projects/PPF-Alpine/index.qmd))
    * will start in Autumn 2024

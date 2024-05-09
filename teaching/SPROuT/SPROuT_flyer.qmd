@@ -1,0 +1,32 @@
+---
+title: "🌱SPROuT - Science Powered through Reproducibility, Openness, and Teamwork"
+format: docx
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+![](sprout_logo_blue.jpg){width=300 fig-align="center"}
+
+Join our interactive four-day workshop, designed for Master's and PhD students who wish to enhance their scientific research capabilities through **Open Science, Version Control, and Team Collaboration**.
+
+## Why Join SPROuT?
+* Losing track of all the different versions of a document?
+* Unsure how to better organise your files, code, analyses, results, and texts?
+* Would you love to involve a collaborator, but explaining your project structure is overwhelming?
+
+## There is a better way! Join SPROuT!
+
+## Expected Learning Outcomes:
+- Master the tools for **Open Science** 🌎 and **Reproducibility** 📜.
+- Gain hands-on experience with **Git/GitHub** for version control 💻.
+- Learn **collaborative techniques** that will boost your career in science 🤝.
+- Navigate and solve real-world challenges🛠️ in a team setting👥.
+
+## Workshop Details:
+- **Duration:** 4 Days (specific days to be specified).
+- **Credits:** 3.
+- **SIS Code**: *MB120C26*.
+
+## Scan the QR Code for More Info:
+![](/teaching//SPROuT/qr_code.png)

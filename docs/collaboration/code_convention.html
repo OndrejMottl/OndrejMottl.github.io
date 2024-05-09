@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,6 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -104,12 +111,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../collaboration/code_convention.html">Code Convention</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../collaboration/code_convention.html">Code Convention</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -119,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Ondřej Mottl</a> 
@@ -161,6 +168,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about_me/teaching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
@@ -216,24 +229,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#reasoning" id="toc-reasoning" class="nav-link active" data-scroll-target="#reasoning">Reasoning</a></li>
   <li><a href="#r-specific" id="toc-r-specific" class="nav-link" data-scroll-target="#r-specific">R-specific</a></li>
   <li><a href="#holistic-workflow" id="toc-holistic-workflow" class="nav-link" data-scroll-target="#holistic-workflow">Holistic workflow</a></li>
   <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project structure</a>
   <ul class="collapse">
-  <li><a href="#files-folders" id="toc-files-folders" class="nav-link" data-scroll-target="#files-folders">Files &amp; folders</a>
-  <ul class="collapse">
-  <li><a href="#folders-names" id="toc-folders-names" class="nav-link" data-scroll-target="#folders-names">Folders names</a></li>
-  <li><a href="#file-naming" id="toc-file-naming" class="nav-link" data-scroll-target="#file-naming">File naming</a></li>
-  <li><a href="#safe-path" id="toc-safe-path" class="nav-link" data-scroll-target="#safe-path">Safe path</a></li>
-  </ul></li>
+  <li><a href="#files-folders" id="toc-files-folders" class="nav-link" data-scroll-target="#files-folders">Files &amp; folders</a></li>
   <li><a href="#package-dependencies" id="toc-package-dependencies" class="nav-link" data-scroll-target="#package-dependencies">Package dependencies</a></li>
   <li><a href="#cascade-of-r-scripts" id="toc-cascade-of-r-scripts" class="nav-link" data-scroll-target="#cascade-of-r-scripts">Cascade of R scripts</a></li>
   <li><a href="#configuration-file" id="toc-configuration-file" class="nav-link" data-scroll-target="#configuration-file">Configuration file</a></li>
@@ -242,30 +250,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
   <ul class="collapse">
   <li><a href="#coding-style" id="toc-coding-style" class="nav-link" data-scroll-target="#coding-style">Coding style</a></li>
-  <li><a href="#code-script-structure" id="toc-code-script-structure" class="nav-link" data-scroll-target="#code-script-structure">Code (script) structure</a>
-  <ul class="collapse">
-  <li><a href="#script-annotation-comments" id="toc-script-annotation-comments" class="nav-link" data-scroll-target="#script-annotation-comments">Script annotation (comments)</a></li>
-  <li><a href="#code-width" id="toc-code-width" class="nav-link" data-scroll-target="#code-width">Code width</a></li>
-  </ul></li>
-  <li><a href="#names-of-objects-and-function" id="toc-names-of-objects-and-function" class="nav-link" data-scroll-target="#names-of-objects-and-function">Names of objects and function</a>
-  <ul class="collapse">
-  <li><a href="#object-names" id="toc-object-names" class="nav-link" data-scroll-target="#object-names">Object names</a></li>
-  <li><a href="#function-names" id="toc-function-names" class="nav-link" data-scroll-target="#function-names">Function names</a></li>
-  <li><a href="#column-variable-names-in-data.frames" id="toc-column-variable-names-in-data.frames" class="nav-link" data-scroll-target="#column-variable-names-in-data.frames">Column (variable) names in <code>data.frames</code></a></li>
-  </ul></li>
-  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax">Syntax</a>
-  <ul class="collapse">
-  <li><a href="#spaces-empty-character" id="toc-spaces-empty-character" class="nav-link" data-scroll-target="#spaces-empty-character">Spaces (empty character)</a></li>
-  <li><a href="#new-line" id="toc-new-line" class="nav-link" data-scroll-target="#new-line">New line (<code>↵</code>)</a></li>
-  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
-  <li><a href="#logical-evaluation" id="toc-logical-evaluation" class="nav-link" data-scroll-target="#logical-evaluation">Logical evaluation</a></li>
-  </ul></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
-  <ul class="collapse">
-  <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse">Tidyverse</a></li>
-  <li><a href="#namespace" id="toc-namespace" class="nav-link" data-scroll-target="#namespace">Namespace</a></li>
-  <li><a href="#creating-functions" id="toc-creating-functions" class="nav-link" data-scroll-target="#creating-functions">Creating functions</a></li>
-  </ul></li>
+  <li><a href="#code-script-structure" id="toc-code-script-structure" class="nav-link" data-scroll-target="#code-script-structure">Code (script) structure</a></li>
+  <li><a href="#names-of-objects-and-function" id="toc-names-of-objects-and-function" class="nav-link" data-scroll-target="#names-of-objects-and-function">Names of objects and function</a></li>
+  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax">Syntax</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -273,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../collaboration/code_convention.html">Code Convention</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Code Convention</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
@@ -288,7 +276,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>last updated: 14.06.2023</p>
 <section id="reasoning" class="level2">
@@ -881,10 +871,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -894,8 +883,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -908,6 +906,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -951,6 +1068,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -976,6 +1094,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1037,7 +1181,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../collaboration/collaboration_guide.html" class="pagination-link">
+      <a href="../collaboration/collaboration_guide.html" class="pagination-link" aria-label="Collaboration guide">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Collaboration guide</span>
       </a>          
   </div>
@@ -1164,18 +1308,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a>Example of a header:</span>
 <span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
-<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a><span class="co"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           Project name&nbsp;</span></span>
-<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a><span class="co"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      Script name</span></span>
-<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a><span class="co"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      - continue</span></span>
-<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a><span class="co"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       Authors&nbsp;</span></span>
-<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a><span class="co"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    Year</span></span>
-<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb22-132"><a href="#cb22-132" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
+<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
+<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a><span class="in">#</span></span>
+<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a><span class="in">#</span></span>
+<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a><span class="in"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;           Project name&nbsp;</span></span>
+<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a><span class="in">#</span></span>
+<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a><span class="in"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      Script name</span></span>
+<span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a><span class="in"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      - continue</span></span>
+<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a><span class="in">#</span></span>
+<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a><span class="in"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       Authors&nbsp;</span></span>
+<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a><span class="in"># &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    Year</span></span>
+<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a><span class="in">#</span></span>
+<span id="cb22-132"><a href="#cb22-132" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
 <span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Section header</span></span>
@@ -1192,23 +1336,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a>Example of a header:</span>
 <span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
-<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data -----</span></span>
-<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
+<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
+<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a><span class="in"># Load data -----</span></span>
+<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
 <span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a>Header names can be denoted by numbers, with subsections separated by <span class="in">`*.*`</span></span>
 <span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>Example of a numbered header:</span>
 <span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
-<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Estimate diversity -----</span></span>
-<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------#</span></span>
+<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
+<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Estimate diversity -----</span></span>
+<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a><span class="in">#----------------------------------------------------------#</span></span>
 <span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------#</span></span>
-<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.1. Fit model -----</span></span>
-<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------#</span></span>
+<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a><span class="in">#--------------------------------------------------#</span></span>
+<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a><span class="in"># 1.1. Fit model -----</span></span>
+<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a><span class="in">#--------------------------------------------------#</span></span>
 <span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Single-line comments</span></span>
@@ -1217,7 +1361,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a>Example of a single-line comment:</span>
 <span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a comment.</span></span>
+<span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a><span class="in"># This is a comment.</span></span>
 <span id="cb22-175"><a href="#cb22-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Multi-line comment</span></span>
@@ -1226,8 +1370,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a>Example of a multi-line comment:</span>
 <span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a very long comment, where I need to describe</span></span>
-<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a><span class="co">#    what this code is doing</span></span>
+<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a><span class="in"># This is a very long comment, where I need to describe</span></span>
+<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a><span class="in">#    what this code is doing</span></span>
 <span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Inline comment</span></span>
@@ -1236,9 +1380,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a>Example of inline comment:</span>
 <span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span>(</span>
-<span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a>    <span class="at">agr =</span> <span class="dv">1</span> <span class="co"># This is an example of an inline comment</span></span>
-<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a><span class="in">function(</span></span>
+<span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a><span class="in">    agr = 1 # This is an example of an inline comment</span></span>
+<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Commenting functions </span></span>
@@ -1252,7 +1396,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## Names of objects and function </span></span>
 <span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a><span class="st">"There are only two hard things in Computer Science: cache invalidation and naming things."</span></span>
+<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a><span class="in">"There are only two hard things in Computer Science: cache invalidation and naming things."</span></span>
 <span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### Object names</span></span>
@@ -1269,20 +1413,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-223"><a href="#cb22-223" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-224"><a href="#cb22-224" aria-hidden="true" tabindex="-1"></a>Examples of good names:</span>
 <span id="cb22-225"><a href="#cb22-225" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a><span class="co"># data</span></span>
-<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a>data_diversity_survey</span>
+<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a><span class="in"># data</span></span>
+<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity_survey</span></span>
 <span id="cb22-228"><a href="#cb22-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a><span class="co"># list</span></span>
-<span id="cb22-230"><a href="#cb22-230" aria-hidden="true" tabindex="-1"></a>list_diversity_individual_plots</span>
+<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a><span class="in"># list</span></span>
+<span id="cb22-230"><a href="#cb22-230" aria-hidden="true" tabindex="-1"></a><span class="in">list_diversity_individual_plots</span></span>
 <span id="cb22-231"><a href="#cb22-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-232"><a href="#cb22-232" aria-hidden="true" tabindex="-1"></a><span class="co"># vector</span></span>
-<span id="cb22-233"><a href="#cb22-233" aria-hidden="true" tabindex="-1"></a>vec_region_names</span>
+<span id="cb22-232"><a href="#cb22-232" aria-hidden="true" tabindex="-1"></a><span class="in"># vector</span></span>
+<span id="cb22-233"><a href="#cb22-233" aria-hidden="true" tabindex="-1"></a><span class="in">vec_region_names</span></span>
 <span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a><span class="co"># model</span></span>
-<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a>mod_diversity_linear</span>
+<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a><span class="in"># model</span></span>
+<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a><span class="in">mod_diversity_linear</span></span>
 <span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a><span class="co"># result</span></span>
-<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>res_estimated_weight</span>
+<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a><span class="in"># result</span></span>
+<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a><span class="in">res_estimated_weight</span></span>
 <span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-241"><a href="#cb22-241" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-242"><a href="#cb22-242" aria-hidden="true" tabindex="-1"></a><span class="fu">### Function names</span></span>
@@ -1291,11 +1435,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-245"><a href="#cb22-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-246"><a href="#cb22-246" aria-hidden="true" tabindex="-1"></a>Examples of good function names</span>
 <span id="cb22-247"><a href="#cb22-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a><span class="fu">estimate_alpha_diversity</span>()</span>
+<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a><span class="in">estimate_alpha_diversity()</span></span>
 <span id="cb22-249"><a href="#cb22-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a><span class="fu">get_first_value</span>()</span>
+<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a><span class="in">get_first_value()</span></span>
 <span id="cb22-251"><a href="#cb22-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a><span class="fu">tranform_into_character</span>()</span>
+<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a><span class="in">tranform_into_character()</span></span>
 <span id="cb22-253"><a href="#cb22-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-254"><a href="#cb22-254" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-255"><a href="#cb22-255" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Internal function</span></span>
@@ -1331,43 +1475,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-285"><a href="#cb22-285" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-286"><a href="#cb22-286" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 1. After an object assignment (`&lt;-`)</span></span>
 <span id="cb22-287"><a href="#cb22-287" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE, eval=FALSE}</span></span>
-<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a>data_diversity <span class="ot">&lt;-</span></span>
-<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_data</span>(...)</span>
+<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity &lt;-</span></span>
+<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a><span class="in">  read_data(...)</span></span>
 <span id="cb22-290"><a href="#cb22-290" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-291"><a href="#cb22-291" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-292"><a href="#cb22-292" aria-hidden="true" tabindex="-1"></a>An exception is an assignment of function.</span>
 <span id="cb22-293"><a href="#cb22-293" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a>get_data <span class="ot">&lt;-</span> <span class="cf">function</span>(...){</span>
-<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a><span class="in">get_data &lt;- function(...){</span></span>
+<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a><span class="in">    ...</span></span>
+<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb22-297"><a href="#cb22-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 2. After a pipe operator (`%&gt;%`)</span></span>
 <span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>Note that there should be a space before a pipe</span>
 <span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a>data_diversity <span class="ot">&lt;-</span></span>
-<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_data</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform_to_percentages</span>()</span>
+<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity &lt;-</span></span>
+<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a><span class="in">  get_data() %&gt;%</span></span>
+<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a><span class="in">  transform_to_percentages()</span></span>
 <span id="cb22-306"><a href="#cb22-306" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-307"><a href="#cb22-307" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-308"><a href="#cb22-308" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 3. After a function argument</span></span>
 <span id="cb22-309"><a href="#cb22-309" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-310"><a href="#cb22-310" aria-hidden="true" tabindex="-1"></a>This should be true for both function declaration and usage. The exception is a single argument.</span>
 <span id="cb22-311"><a href="#cb22-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a>get_data <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">arg1 =</span> foo,</span>
-<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a>                     <span class="at">arg2 =</span> here<span class="sc">::</span><span class="fu">here</span>()) {</span>
-<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a>  ...</span>
-<span id="cb22-315"><a href="#cb22-315" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a><span class="in">get_data &lt;- function(arg1 = foo,</span></span>
+<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a><span class="in">                     arg2 = here::here()) {</span></span>
+<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a><span class="in">  ...</span></span>
+<span id="cb22-315"><a href="#cb22-315" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb22-316"><a href="#cb22-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-317"><a href="#cb22-317" aria-hidden="true" tabindex="-1"></a>data_diversity <span class="ot">&lt;-</span></span>
-<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_data</span>(</span>
-<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a>    <span class="at">arg1 =</span> foo,</span>
-<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a>    <span class="at">arg2 =</span> here<span class="sc">::</span><span class="fu">here</span>()</span>
-<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-317"><a href="#cb22-317" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity &lt;-</span></span>
+<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a><span class="in">  get_data(</span></span>
+<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a><span class="in">    arg1 = foo,</span></span>
+<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a><span class="in">    arg2 = here::here()</span></span>
+<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
 <span id="cb22-322"><a href="#cb22-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a>vec_selected_regions <span class="ot">&lt;-</span></span>
-<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_regions</span>(<span class="at">arg1 =</span> foo)</span>
+<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a><span class="in">vec_selected_regions &lt;-</span></span>
+<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a><span class="in">  get_regions(arg1 = foo)</span></span>
 <span id="cb22-325"><a href="#cb22-325" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-326"><a href="#cb22-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-327"><a href="#cb22-327" aria-hidden="true" tabindex="-1"></a></span>
@@ -1382,14 +1526,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-336"><a href="#cb22-336" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-337"><a href="#cb22-337" aria-hidden="true" tabindex="-1"></a>Examples:</span>
 <span id="cb22-338"><a href="#cb22-338" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> ( a <span class="sc">+</span> b ) </span>
+<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a><span class="in">1 + ( a + b ) </span></span>
 <span id="cb22-340"><a href="#cb22-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a><span class="fu">get_data</span>(<span class="at">arg =</span> foo)</span>
+<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a><span class="in">get_data(arg = foo)</span></span>
 <span id="cb22-342"><a href="#cb22-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a><span class="fu">get_data</span>(</span>
-<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a>    <span class="at">agr1 =</span> foo,</span>
-<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a>    <span class="at">agr2 =</span> here<span class="sc">::</span><span class="fu">here</span>()</span>
-<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a><span class="in">get_data(</span></span>
+<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a><span class="in">    agr1 = foo,</span></span>
+<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a><span class="in">    agr2 = here::here()</span></span>
+<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Square `[ ]`</span></span>
@@ -1398,9 +1542,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-352"><a href="#cb22-352" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-353"><a href="#cb22-353" aria-hidden="true" tabindex="-1"></a>Examples:</span>
 <span id="cb22-354"><a href="#cb22-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a>list_diversity_for_each_plot[[<span class="dv">1</span>]]</span>
+<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a><span class="in">list_diversity_for_each_plot[[1]]</span></span>
 <span id="cb22-356"><a href="#cb22-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-357"><a href="#cb22-357" aria-hidden="true" tabindex="-1"></a>data_cars[, <span class="dv">2</span>]</span>
+<span id="cb22-357"><a href="#cb22-357" aria-hidden="true" tabindex="-1"></a><span class="in">data_cars[, 2]</span></span>
 <span id="cb22-358"><a href="#cb22-358" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-359"><a href="#cb22-359" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-360"><a href="#cb22-360" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Curly `{ }`</span></span>
@@ -1412,23 +1556,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-366"><a href="#cb22-366" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-367"><a href="#cb22-367" aria-hidden="true" tabindex="-1"></a>Examples:</span>
 <span id="cb22-368"><a href="#cb22-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a>get_data <span class="ot">&lt;-</span> <span class="cf">function</span>(agr1){</span>
-<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a><span class="in">get_data &lt;- function(agr1){</span></span>
+<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a><span class="in">    ...</span></span>
+<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(</span>
-<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a>    logical_test</span>
-<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a>) {</span>
-<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a> ...</span>
-<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a><span class="in">if(</span></span>
+<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a><span class="in">    logical_test</span></span>
+<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a><span class="in">) {</span></span>
+<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a><span class="in"> ...</span></span>
+<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
+<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a><span class="in">    ...</span></span>
+<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
 <span id="cb22-380"><a href="#cb22-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a><span class="fu">try</span>(</span>
-<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a>    <span class="at">expr =</span> {</span>
-<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a>    ...</span>
-<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a><span class="in">try(</span></span>
+<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a><span class="in">    expr = {</span></span>
+<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a><span class="in">    ...</span></span>
+<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
+<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-387"><a href="#cb22-387" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-388"><a href="#cb22-388" aria-hidden="true" tabindex="-1"></a></span>
@@ -1442,10 +1586,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-396"><a href="#cb22-396" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-397"><a href="#cb22-397" aria-hidden="true" tabindex="-1"></a>There should be a new line after the assignment. Note that rarely singe-line assignment can be used:</span>
 <span id="cb22-398"><a href="#cb22-398" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-399"><a href="#cb22-399" aria-hidden="true" tabindex="-1"></a>data_diversity <span class="ot">&lt;-</span></span>
-<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_data</span>()</span>
+<span id="cb22-399"><a href="#cb22-399" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity &lt;-</span></span>
+<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a><span class="in">  get_data()</span></span>
 <span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a>prefered_shape <span class="ot">&lt;-</span> <span class="st">"triangle"</span></span>
+<span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a><span class="in">prefered_shape &lt;- "triangle"</span></span>
 <span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a><span class="fu">### Logical evaluation</span></span>
@@ -1472,10 +1616,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a>Always use the full package namespace with a function call. This helps to track the source of function in a script:</span>
 <span id="cb22-428"><a href="#cb22-428" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a>data_diversity <span class="sc">%&gt;%</span></span>
-<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a>    <span class="at">beta_diverisity =</span> <span class="dv">0</span></span>
-<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a><span class="in">data_diversity %&gt;%</span></span>
+<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a><span class="in">  dplyr::mutate(</span></span>
+<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a><span class="in">    beta_diverisity = 0</span></span>
+<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
 <span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating functions</span></span>
@@ -1491,25 +1635,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>In that case, the user should use tidle (<span class="in">`~`</span>) for change in map default values in the function:</span>
 <span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(</span>
-<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>    <span class="at">.f =</span> <span class="sc">~</span> {</span>
-<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mean</span>(.x)</span>
-<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a><span class="in">purrr::map(</span></span>
+<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a><span class="in">    .f = ~ {</span></span>
+<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a><span class="in">        mean(.x)</span></span>
+<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
+<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a>For <span class="in">`purrr::pmap_*()`</span>, the user should use <span class="in">`..1`</span>, <span class="in">`..2`</span>, etc</span>
 <span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">pmap</span>(</span>
-<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a>    <span class="at">.l =</span> <span class="fu">list</span>(</span>
-<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a>        list_1,</span>
-<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a>        list_2,</span>
-<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a>        list_3,</span>
-<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a>     <span class="at">.f =</span> <span class="sc">~</span> {</span>
-<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a>         ..<span class="dv">1</span> <span class="sc">+</span> ..<span class="dv">2</span> <span class="sc">+</span> ..<span class="dv">3</span></span>
-<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>     }</span>
-<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a><span class="in">purrr::pmap(</span></span>
+<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a><span class="in">    .l = list(</span></span>
+<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a><span class="in">        list_1,</span></span>
+<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="in">        list_2,</span></span>
+<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a><span class="in">        list_3,</span></span>
+<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a><span class="in">     .f = ~ {</span></span>
+<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a><span class="in">         ..1 + ..2 + ..3</span></span>
+<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a><span class="in">     }</span></span>
+<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
+<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Function documentation</span></span>
@@ -1525,9 +1669,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 

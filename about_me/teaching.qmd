@@ -1,0 +1,90 @@
+---
+title: "My Teaching Activities"
+format: 
+  html:
+    code-fold: false
+    code-tools: false
+    toc: true
+    toc-depth: 3
+editor: 
+  markdown: 
+    wrap: sentence
+---
+::: {.callout-tip}  
+## Reasoning  
+
+I am a researcher at the Department of Botany, Charles University, dedicated to providing students with knowledge and skills in reproducible, open, and collaborative science. My courses are designed to foster teamwork skills, critical thinking, and innovative research methodologies.  
+:::  
+
+## Mentoring  
+
+Are you a student at the Department of Botany struggling with the complexities of ecological data? I'm here to assist you in analysing ecological data for your project.  
+
+More information in [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/student_mentoring_cz.qmd).  
+
+## Courses I currently teach
+
+::: {.callout-note appearance="simple" icon="false"}
+
+### 🌱 SPROuT
+
+#### SPROuT - Science Powered through Reproducibility, Openness, and Teamwork
+
+#### Description 
+
+A four-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master's and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently tackle modern scientific challenges.
+
+#### Expected Learning Outcomes**
+
+* Learn fundamental concepts in Open Science 🌐 and reproducibility 📜.
+* Use Git/GitHub for version control, including branching 🌿, merging 🔀, and resolving conflicts ❗.
+* Manage projects and collaborate using GitHub's tools like Issues 📝, Milestones 🏆, and Teams 🤝.
+* Ensure project reproducibility through best practices in coding etiquette and project management 🗃️.
+
+**Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C26-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C26)
+:::
+
+___
+
+::: {.callout-note appearance="simple" icon="false"}
+
+### 🌍 SSoQE
+
+#### Science School on Quantitative Ecology
+
+More info on the project's [**websites**](https://bit.ly/SSoQE).
+
+#### Description
+
+An intensive five-day international workshop designed for master's and motivated PhD students. It provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. The workshop alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.
+
+#### Expected Learning Outcomes
+
+* Gain expertise in statistical modelling and data analysis for ecological datasets 📈.
+* Participate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.
+* Network with peers and experts through formal and informal sessions 🗣️.
+* Learn contemporary methods and concepts in Quantitative Ecology 🌿.
+
+**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C28-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C28)
+:::
+
+___
+
+::: {.callout-note appearance="simple" icon="false"}
+
+### 💡 CodeFest 
+
+#### CodeFest - Innovating Together for a Better University Environment
+
+#### Description
+
+CodeFest is a three-day workshop 💻 where master's and PhD students collaborate to develop tools 🛠️ that enhance the university's educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.
+
+#### Expected Learning Outcomes
+
+* Develop innovative solutions to improve the university environment 🌍.
+* Gain experience in software development and project management 🚀.
+* Learn diverse roles like project management, design 🎨, and review♻️.
+
+**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C27-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C27)
+:::

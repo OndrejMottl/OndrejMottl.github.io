@@ -491,7 +491,7 @@
     "href": "lab/about_the_lab.html#people",
     "title": "Laboratory of Quantitative Ecology",
     "section": "People",
-    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAssistant Professor for Plant Ecology\n📬email: ondrej.mottl(at)gmail.com\n\nAbout me\nList of publications\n\nBryan Novio\n\nPhD student\nHolocene Diversity Trends project\nwill start in Autumn 2024\n\nMarkéta Tumová \n\nBc student\n📬email: tumovamarket(at)natur.cuni.cz.\nAlpine Biodiversity Across Continents project (linked to the PPF Alpine)\nwill start in Autumn 2024"
+    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAssistant Professor for Plant Ecology\n📬email: ondrej.mottl(at)gmail.com\n\nAbout me\nList of publications\n\nBryan Novio\n\nPhD student\n📬email: noviobryan(at)gmail.com / noviobryan(at)yahoo.com\n\nHolocene Diversity Trends project\nwill start in Autumn 2024\n\nMarkéta Tumová \n\nBc student\n📬email: tumovamarket(at)natur.cuni.cz\nAlpine Biodiversity Across Continents project (linked to the PPF Alpine)\nwill start in Autumn 2024"
   },
   {
     "objectID": "lab/about_the_lab.html#group-description",
@@ -713,5 +713,33 @@
       "Projects",
       "BIODYNAMICS"
     ]
+  },
+  {
+    "objectID": "about_me/teaching.html",
+    "href": "about_me/teaching.html",
+    "title": "My Teaching Activities",
+    "section": "",
+    "text": "Reasoning\n\n\n\nI am a researcher at the Department of Botany, Charles University, dedicated to providing students with knowledge and skills in reproducible, open, and collaborative science. My courses are designed to foster teamwork skills, critical thinking, and innovative research methodologies."
+  },
+  {
+    "objectID": "about_me/teaching.html#courses",
+    "href": "about_me/teaching.html#courses",
+    "title": "My Teaching Activities",
+    "section": "Courses",
+    "text": "Courses\n\n\n\n\n\n\n🌱 SPROuT\n\n\n\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\n\n\nDescription\nA four-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master’s and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently navigate modern scientific challenges.\n\n\nExpected Learning Outcomes**\n\nUnderstand the structure and requirements of the course, and set up essential tools 🛠️.\nLearn fundamental concepts in Open Science 🌐 and reproducibility 📜.\nUse Git/GitHub for version control, including branching 🌿, merging 🔀, and resolving conflicts ❗.\nManage projects and collaborate using GitHub’s tools like Issues 📝, Milestones 🏆, and Teams 🤝.\nEnsure project reproducibility through best practices in coding etiquette and project management 🗃️.\n\nCourse Code: \n\n\n\n\n\n\n\n\n\n🌍 SSoQE\n\n\n\n\nScience School on Quantitative Ecology\nMore info on project’s webistes.\n\n\nDescription\nAn intensive five-day international workshop designed for master’s and motivated PhD students. It provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. The workshop alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.\n\n\nExpected Learning Outcomes\n\nGain expertise in statistical modelling and data analysis for ecological datasets 📈.\nParticipate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.\nNetwork with peers and experts through formal and informal sessions 🗣️.\nLearn contemporary methods and concepts in Quantitative Ecology 🌿.\n\nSIS Course Code: \n\n\n\n\n\n\n\n\n\n💡 CodeFest\n\n\n\n\nCodeFest - Innovating Together for a Better University Environment\n\n\nDescription\nCodeFest is a 3 day workshop 💻 where master’s and PhD students collaborate to develop tools 🛠️ that enhance the university’s educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.\n\n\nExpected Learning Outcomes\n\nDevelop innovative solutions to improve the university environment 🌍.\nGain experience in software development and project management 🚀.\nLearn diverse roles like project management, design 🎨, and testing 🧪.\nCollaborate with peers from various departments 🤝.\n\nSIS Course Code:"
+  },
+  {
+    "objectID": "about_me/teaching.html#mentoring",
+    "href": "about_me/teaching.html#mentoring",
+    "title": "My Teaching Activities",
+    "section": "Mentoring",
+    "text": "Mentoring\nAre you a student at the Department of Botany struggling with the complexities of ecological data? I’m here to assist you in analysing ecological data for your project.\nMore information in EN / CZ."
+  },
+  {
+    "objectID": "about_me/teaching.html#courses-i-currently-teach",
+    "href": "about_me/teaching.html#courses-i-currently-teach",
+    "title": "My Teaching Activities",
+    "section": "Courses I currently teach",
+    "text": "Courses I currently teach\n\n\n\n\n\n\n🌱 SPROuT\n\n\n\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\n\n\nDescription\nA four-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master’s and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently tackle modern scientific challenges.\n\n\nExpected Learning Outcomes**\n\nLearn fundamental concepts in Open Science 🌐 and reproducibility 📜.\nUse Git/GitHub for version control, including branching 🌿, merging 🔀, and resolving conflicts ❗.\nManage projects and collaborate using GitHub’s tools like Issues 📝, Milestones 🏆, and Teams 🤝.\nEnsure project reproducibility through best practices in coding etiquette and project management 🗃️.\n\nCourse Code: \n\n\n\n\n\n\n\n\n\n\n🌍 SSoQE\n\n\n\n\nScience School on Quantitative Ecology\nMore info on the project’s websites.\n\n\nDescription\nAn intensive five-day international workshop designed for master’s and motivated PhD students. It provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. The workshop alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.\n\n\nExpected Learning Outcomes\n\nGain expertise in statistical modelling and data analysis for ecological datasets 📈.\nParticipate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.\nNetwork with peers and experts through formal and informal sessions 🗣️.\nLearn contemporary methods and concepts in Quantitative Ecology 🌿.\n\nSIS Course Code: \n\n\n\n\n\n\n\n\n\n\n💡 CodeFest\n\n\n\n\nCodeFest - Innovating Together for a Better University Environment\n\n\nDescription\nCodeFest is a three-day workshop 💻 where master’s and PhD students collaborate to develop tools 🛠️ that enhance the university’s educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.\n\n\nExpected Learning Outcomes\n\nDevelop innovative solutions to improve the university environment 🌍.\nGain experience in software development and project management 🚀.\nLearn diverse roles like project management, design 🎨, and review♻️.\n\nSIS Course Code:"
   }
 ]

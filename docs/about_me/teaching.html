@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Ondřej Mottl - Laboratory of Quantitative Ecology</title>
+<title>Ondřej Mottl - My Teaching Activities</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,12 +29,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../projects/index.html" rel="next">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="../about_me/cv.html" rel="next">
+<link href="../projects/BIODYNAMICS/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,38 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-lab_news .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-lab_news'] = new List('listing-lab_news', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -105,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/about_the_lab.html">Laboratory of Quantitative Ecology</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../about_me/teaching.html">Teaching</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -132,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/about_the_lab.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
   </div>
 </li>
@@ -159,6 +128,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about_me/teaching.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Teaching</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
@@ -220,114 +195,141 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul class="collapse">
-  <li><a href="#group-description" id="toc-group-description" class="nav-link active" data-scroll-target="#group-description">Group Description</a></li>
-  <li><a href="#news" id="toc-news" class="nav-link" data-scroll-target="#news">News</a></li>
-  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+  <ul>
+  <li><a href="#mentoring" id="toc-mentoring" class="nav-link active" data-scroll-target="#mentoring">Mentoring</a></li>
+  <li><a href="#courses-i-currently-teach" id="toc-courses-i-currently-teach" class="nav-link" data-scroll-target="#courses-i-currently-teach">Courses I currently teach</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-<div class="quarto-about-jolla">
- <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Laboratory of Quantitative Ecology</h1>
+<h1 class="title">My Teaching Activities</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><div id="heading">
-<p>The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research.</p>
-</div>  
-</div>
+  
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="lab_news/img/HoloceneDiversityTrends_HD.png" class="img-fluid figure-img" width="300"></p>
-</figure>
+</header>
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="group-description" class="level2">
-<h2 data-anchor-id="group-description">Group Description</h2>
-<p>Welcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.</p>
-<section id="research-focus" class="level3">
-<h3 data-anchor-id="research-focus">Research Focus</h3>
-<p>Delving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.</p>
-<section id="state-of-the-art-tools-and-methods" class="level4">
-<h4 data-anchor-id="state-of-the-art-tools-and-methods">State-of-the-Art Tools and Methods</h4>
-<p>We actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.</p>
+<div class="callout-title-container flex-fill">
+Reasoning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I am a researcher at the Department of Botany, Charles University, dedicated to providing students with knowledge and skills in reproducible, open, and collaborative science. My courses are designed to foster teamwork skills, critical thinking, and innovative research methodologies.</p>
+</div>
+</div>
+<section id="mentoring" class="level2">
+<h2 class="anchored" data-anchor-id="mentoring">Mentoring</h2>
+<p>Are you a student at the Department of Botany struggling with the complexities of ecological data? I’m here to assist you in analysing ecological data for your project.</p>
+<p>More information in <a href="../about_me/student_mentoring_en.html">EN</a> / <a href="../about_me/student_mentoring_cz.html">CZ</a>.</p>
 </section>
-<section id="interdisciplinary-approach" class="level4">
-<h4 data-anchor-id="interdisciplinary-approach">Interdisciplinary Approach</h4>
-<p>Our work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.</p>
+<section id="courses-i-currently-teach" class="level2">
+<h2 class="anchored" data-anchor-id="courses-i-currently-teach">Courses I currently teach</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🌱 SPROuT
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="sprout---science-powered-through-reproducibility-openness-and-teamwork" class="level4">
+<h4 class="anchored" data-anchor-id="sprout---science-powered-through-reproducibility-openness-and-teamwork">SPROuT - Science Powered through Reproducibility, Openness, and Teamwork</h4>
 </section>
-<section id="ongoing-projects" class="level4">
-<h4 data-anchor-id="ongoing-projects">Ongoing projects</h4>
+<section id="description" class="level4">
+<h4 class="anchored" data-anchor-id="description">Description</h4>
+<p>A four-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master’s and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently tackle modern scientific challenges.</p>
+</section>
+<section id="expected-learning-outcomes" class="level4">
+<h4 class="anchored" data-anchor-id="expected-learning-outcomes">Expected Learning Outcomes**</h4>
 <ul>
-<li><a href="../projects/BIODYNAMICS/index.html">BIODYNAMICS</a></li>
-<li><a href="../projects/FOSSILPOL/index.html">FOSSILPOL</a></li>
-<li><a href="../projects/PPF-Alpine/index.html">PPF Alpine</a></li>
-<li><a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html">Holocene Diversity Trends</a></li>
+<li>Learn fundamental concepts in Open Science 🌐 and reproducibility 📜.</li>
+<li>Use Git/GitHub for version control, including branching 🌿, merging 🔀, and resolving conflicts ❗.</li>
+<li>Manage projects and collaborate using GitHub’s tools like Issues 📝, Milestones 🏆, and Teams 🤝.</li>
+<li>Ensure project reproducibility through best practices in coding etiquette and project management 🗃️.</li>
 </ul>
+<p><strong>Course Code</strong>: <a href="https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&amp;tid=&amp;do=predmet&amp;kod=MB120C26"><img src="https://img.shields.io/badge/SIS-MB120C26-blue.png" class="img-fluid" alt="Badge"></a></p>
 </section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🌍 SSoQE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="science-school-on-quantitative-ecology" class="level4">
+<h4 class="anchored" data-anchor-id="science-school-on-quantitative-ecology">Science School on Quantitative Ecology</h4>
+<p>More info on the project’s <a href="https://bit.ly/SSoQE"><strong>websites</strong></a>.</p>
 </section>
+<section id="description-1" class="level4">
+<h4 class="anchored" data-anchor-id="description-1">Description</h4>
+<p>An intensive five-day international workshop designed for master’s and motivated PhD students. It provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. The workshop alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.</p>
 </section>
-<section id="news" class="level2">
-<h2 data-anchor-id="news">News</h2>
-<div id="listing-lab_news" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news,lab,phd,position" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1711611145071" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Looking for a new PhD student!
-</h5>
-<div class="card-text listing-description">
-Are you passionate about unravelling the mysteries of our planet’s biodiversity using large data…
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="people" class="level2">
-<h2 data-anchor-id="people">People</h2>
+<section id="expected-learning-outcomes-1" class="level4">
+<h4 class="anchored" data-anchor-id="expected-learning-outcomes-1">Expected Learning Outcomes</h4>
 <ul>
-<li><h3 id="ondřej-mottl"><a href="../about_me/cv.html">Ondřej Mottl</a> <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-396270-1579792833.jpg?itok=hez3oHo-" alt="Ondřej Mottl" align="right" width="120"></h3>
-<ul>
-<li><strong>Head of the Laboratory</strong></li>
-<li>Assistant Professor for Plant Ecology</li>
-<li>📬email: ondrej.mottl(at)gmail.com</li>
-<li><a href="https://orcid.org/0000-0002-9796-5081"><img src="https://img.shields.io/badge/orcid-0000--0002--9796--5081-brightgreen.svg" class="img-fluid" alt="ORCID"></a></li>
-<li><a href="../index.html">About me</a></li>
-<li><a href="../about_me/list_of_publications.html">List of publications</a></li>
-</ul></li>
-<li><h3 id="bryan-novio">Bryan Novio</h3>
-<ul>
-<li>PhD student</li>
-<li>📬email: noviobryan(at)gmail.com / noviobryan(at)yahoo.com</li>
-<li><a href="https://orcid.org/0000-0003-1600-4973"><img src="https://img.shields.io/badge/orcid-0000--0003--1600--4973-brightgreen.svg" class="img-fluid" alt="ORCID"></a></li>
-<li><a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html"><em>Holocene Diversity Trends</em></a> project</li>
-<li>will start in Autumn 2024</li>
-</ul></li>
-<li><h3 id="markéta-tumová">Markéta Tumová <img src="img/marketa_crop.JPG" alt="Markéta Tumová" align="right" width="120"></h3>
-<ul>
-<li>Bc student</li>
-<li>📬email: tumovamarket(at)natur.cuni.cz</li>
-<li><em>Alpine Biodiversity Across Continents</em> project (linked to the <a href="../projects/PPF-Alpine/index.html">PPF Alpine</a>)</li>
-<li>will start in Autumn 2024</li>
-</ul></li>
+<li>Gain expertise in statistical modelling and data analysis for ecological datasets 📈.</li>
+<li>Participate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.</li>
+<li>Network with peers and experts through formal and informal sessions 🗣️.</li>
+<li>Learn contemporary methods and concepts in Quantitative Ecology 🌿.</li>
 </ul>
-
-
+<p><strong>SIS Course Code</strong>: <a href="https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&amp;tid=&amp;do=predmet&amp;kod=MB120C28"><img src="https://img.shields.io/badge/SIS-MB120C28-blue.png" class="img-fluid" alt="Badge"></a></p>
+</section>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💡 CodeFest
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="codefest---innovating-together-for-a-better-university-environment" class="level4">
+<h4 class="anchored" data-anchor-id="codefest---innovating-together-for-a-better-university-environment">CodeFest - Innovating Together for a Better University Environment</h4>
+</section>
+<section id="description-2" class="level4">
+<h4 class="anchored" data-anchor-id="description-2">Description</h4>
+<p>CodeFest is a three-day workshop 💻 where master’s and PhD students collaborate to develop tools 🛠️ that enhance the university’s educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.</p>
+</section>
+<section id="expected-learning-outcomes-2" class="level4">
+<h4 class="anchored" data-anchor-id="expected-learning-outcomes-2">Expected Learning Outcomes</h4>
+<ul>
+<li>Develop innovative solutions to improve the university environment 🌍.</li>
+<li>Gain experience in software development and project management 🚀.</li>
+<li>Learn diverse roles like project management, design 🎨, and review♻️.</li>
+</ul>
+<p><strong>SIS Course Code</strong>: <a href="https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&amp;tid=&amp;do=predmet&amp;kod=MB120C27"><img src="https://img.shields.io/badge/SIS-MB120C27-blue.png" class="img-fluid" alt="Badge"></a></p>
+</section>
+</div>
+</div>
 
 
 </section>
@@ -353,6 +355,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -561,10 +570,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../projects/BIODYNAMICS/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">BIODYNAMICS</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../projects/index.html" class="pagination-link">
-        <span class="nav-page-text">Overview of projects</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../about_me/cv.html" class="pagination-link">
+        <span class="nav-page-text">CV</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

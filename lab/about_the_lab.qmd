@@ -60,9 +60,9 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
   * [About me](/index.qmd)
   * [List of publications](/about_me/list_of_publications.qmd)
   
-- ### Bryan Novio  
+- ### Bryan Novio <img src="img/bryan_crop.jpg" alt="Bryan Novio" align="right" width="120" /> 
   * PhD student
-  * 📬email: noviobryan(at)gmail.com / noviobryan(at)yahoo.com
+  * 📬email: noviobryan(at)gmail.com
   * [![ORCID](https://img.shields.io/badge/orcid-0000--0003--1600--4973-brightgreen.svg)](https://orcid.org/0000-0003-1600-4973)
   * [*Holocene Diversity Trends*](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) project
   - will start in Autumn 2024

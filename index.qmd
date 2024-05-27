@@ -31,6 +31,7 @@ I am the head of the newly established Laboratory of Quantitative Ecology. My re
 
 - [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd)👩🏽‍💻
 - [Projects, on which I am currently working](projects/index.qmd)🚀
+- [My teaching activities](teaching/teaching.qmd)📚
 - [My CV](about_me/cv.qmd)📄
 - [Get in touch](/collaboration/get_in_touch.qmd)📬
 - [My publications](about_me/list_of_publications.qmd)📚

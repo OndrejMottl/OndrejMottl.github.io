@@ -26,9 +26,9 @@ More information in [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/st
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-### 🌱 SPROuT
+### 🌱 SPROuT 
 
-#### SPROuT - Science Powered through Reproducibility, Openness, and Teamwork
+#### SPROuT - Science Powered through Reproducibility, Openness, and Teamwork <img src="SPROuT/sprout_logo_white.jpg" alt="SPROuT logo" align="right" width="180"/>
 
 #### Description 
 

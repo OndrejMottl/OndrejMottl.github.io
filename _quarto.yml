@@ -27,7 +27,7 @@ website:
             href: projects/BIODYNAMICS/index.qmd
 
       - text: "Teaching"
-        href: about_me/teaching.qmd
+        href: teaching/teaching.qmd
       
       - section: "About me"
         contents:

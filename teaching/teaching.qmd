@@ -7,7 +7,7 @@ format:
     toc: true
     toc-depth: 3
 aliases:
-  - about_me/teaching.html
+  - ../about_me/teaching.html
 editor: 
   markdown: 
     wrap: sentence

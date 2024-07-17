@@ -59,7 +59,7 @@ Assistant Professor of Plant Ecology
 
 Center for Theoretical Sciences, Charles University, Prague, Czech Republic
 
-Awardet a personal GACR grand for my *BIODYNAMICS* project.
+Awardet a personal GACR grand for my *[BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)* project.
 
 -------------------------------------
 
@@ -76,6 +76,70 @@ Department of Biological Sciences, University of Bergen, Norway
 Postdoc at ERC project (PI: Prof. H.J.B. Birks) entitled "*Humans on planet Earth (HOPE)*"
 
 -------------------------------------
+
+7/2015 - 12/2019
+
+Department of Ecology, Institute of Entomology, Czech Republic
+
+PhD researcher funded by several individual grants.
+
+### Major collaboration
+ 
+2022 - present
+
+Past Global Changes
+
+Committee member of [Planetary Boundaries Working Group](https://pastglobalchanges.org/science/wg/planetary-boundaries/intro) led by Prof. Lindsey Gillson
+
+-------------------------------------
+
+2022 - present
+
+Department of Biological Sciences, University of Bergen, Norway
+
+Adviser of [The Past, Present and Future of Alpine Biomes Worldwide](/projects/PPF-Alpine/index.qmd) led by Dr. Suzette Flantua
+
+
+### Institutional responsibilities
+
+Department of Botany, Faculty of Science, Charles University, CZ
+
+* 2024 - present head of the [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd)
+* 2024 - Present [Graduate Student Advisor](/teaching/teaching.qmd#mentoring)
+* 2023 - Present Faculty member 
+* 2023 - Present Organizer of the Internal Seminar
+
+-------------------------------------
+
+Department of Biological Sciences, University of Bergen, Norway
+
+* 2022 - 2023 Member of a PhD Hiring Committee
+
+### Fellowships
+
+6/2023 - present 
+
+Center for Theoretical Sciences, Charles University, Prague, Czech Republic
+
+Awarded personal GACR Postdoc Individual Fellowship - Incoming
+
+-------------------------------------
+
+2018
+
+Institute of Entomology, Czech Academy of Science, České Budějovice, Czech Republic
+
+IBERA scholarship
+
+-------------------------------------
+
+2017 (2 months)
+
+Smithsonian Institution Conservation and Research Center, Virginia, USA
+
+Smithsonian Fellowship
+
+### Other work experiences
 
 2019 (6 weeks) 
 
@@ -101,48 +165,164 @@ Field experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) ent
 
 -------------------------------------
 
-2017 (2 months)
-
-Virginia, USA
-
-Fellowship at Smithsonian Institution Conservation and Research Center
-
--------------------------------------
-
 2016 (6 months)
 
 Binatang research centre, Papua New Guinea
 
 Leading field project focused on arboreal ant ecology 
 
-## Software development
+## Invited presentations to conferences 
 
-I have developed 4 R packages:
+2022
 
-* RRatepol 
-* RFossilpol
-* REcopol
-* RUtilpol
+*[What is pristine?](https://docs.google.com/presentation/d/10NHhaFmz8g_f6sYQI64g0Ike1lTr9x5oEIA5n1438-8/edit?usp=sharing)*
+
+Conference of the Czech Society for Ecology
+
+-------------------------------------
+
+2022 
+
+*FOSSILPOL: The workflow to process global palaeoecological pollen data*
+
+European Pollen Database Open Science Meeting
+
 
 ## Teaching
-2021 - 2023	
 
-University of Bergen
+2024 (upcoming)
 
-Open Science Workshop: Reproducibility in science
+Course organiser of 3 classes at the Department of Botany, Faculty of Science, Charles University, Czech Republic:
+
+*  SPROuT - Science Powered through Reproducibility, Openness, and Teamwork
+*  CodeFest - Innovating Together for a Better University Environment
+*  [Science School on Quantitative Ecology](https://bit.ly/SSoQE)
+
+see [my current teaching acitities](/teaching/teaching.qmd) for more details
 
 -------------------------------------
 
 2021 - 2023
 
-University of Bergen
+Department of Biological Sciences, University of Bergen, Norway
 
-Practical course on community ecology 
+* Course organiser of *OSW: Reproducibility in science*
+* Course co-organiser of *Community Ecology*
 
-## Funding received	
+## Supervision
 
-* POSTDOC INDIVIDUAL FELLOWSHIP - Incoming (GACR) 
-* IBERA grant (Czech Academy of Science)  
+2024 (starting)
+
+Department of Botany, Faculty of Science, Charles University, Czech Republic
+
+* 1 PhD student - STARS program 
+* 1 bachelor student
+
+See [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) for more details about team members
+
+-------------------------------------
+
+2016 - 2019
+
+Department of Zoology, Faculty of Science, University of South Bohemia, Czech Republic
+
+* 1 bachelor student
+
+## Organisation of scientific meeting
+
+2024 	(upcoming)
+
+**[Science School of Quantitative Ecology](bit.ly/SSoQE)**
+
+* Main co-organizer 
+* Germany
+* ~35 participants
+
+-------------------------------------
+
+2024	
+
+**Quantitative Ecology Special Interest Group meeting**
+
+* Main organiser
+* Prague, Czech Republic
+* ~15 participants
+
+-------------------------------------
+
+2023	
+
+**[RoC for geochemistry and XRF data workshop](https://ondrejmottl.github.io/OCCR_R-Ratepol_workshop/)**
+
+* Co-organiser and presenter
+* Oeschger Centre for Climate Change Research, Switzerland
+* ~20 participants 
+
+-------------------------------------
+
+2023	
+
+**[Palaeoecology and Sustainability](https://ondrejmottl.github.io/INQUA2023-Planetary_Boundaries-Workshop_materials/)**
+
+* Main co-organiser and presenter 
+* Meeting by Planetary Boundaries Working Group, Rome, Italy  
+* ~15 participants
+
+-------------------------------------
+
+2022	
+
+**Conference of the Czech Society for Ecology**
+
+* Co-organiser (part of the Rising Star program) and presenter
+* Brno, CZ
+* ~300-500 participants
+
+-------------------------------------
+
+2023	
+
+**[APD R-Ratepol workshop](https://ondrejmottl.github.io/APD_R-Ratepol_workshop/)**
+
+* Co-organiser and presenter 
+* Workshop by African Pollen Database Council
+* online
+* ~35 participants
+
+-------------------------------------
+
+2021	
+
+**Data Manipulation & Statistical Analysis in Palaeoecology**
+
+* Co-organiser and presenter 
+* Seminar by Palaeoecology Special Interest Group BES
+* online
+* ~50 participants
+
+
+## Reviewing activities
+
+2023 - present
+
+GAUK Evaluator, Charles University, Czech Republic
+
+-------------------------------------
+
+2019 - present
+
+Reviewer, >15 registered reviews in Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, Biotropica, etc.
+
+
+## Software development
+
+I have developed several R packages:
+
+* [RRatepol](/projects/RRatepol/index.qmd) 
+* [RFossilpol](/projects/FOSSILPOL/index.qmd)
+* [REcopol](/projects/REcopol/index.qmd)
+* [RUtilpol](/projects/RUtilpol/index.qmd)
+* [taxospace](https://github.com/OndrejMottl/taxospace)
 
 :::
 

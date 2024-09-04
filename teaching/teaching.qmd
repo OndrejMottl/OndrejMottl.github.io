@@ -36,7 +36,7 @@ More information in [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/st
 
 A four-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master's and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently tackle modern scientific challenges.
 
-🗓️**Date**: The date will be selected based on the participants' availability. I will contact you after you register. Personally preffered dates by the end of the year 2024.
+🗓️**Date**: The date will be selected based on the participants' availability. I will contact you after you register. The expected time is during November 2024.
 
 #### Expected Learning Outcomes
 
@@ -93,6 +93,8 @@ ___
 #### Description
 
 CodeFest is a three-day workshop 💻 where master's and PhD students collaborate to develop tools 🛠️ that enhance the university's educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.
+
+🗓️**Date**: The date will be selected based on the participants' availability. I will contact you after you register. The expected time is during December 2024.
 
 #### Expected Learning Outcomes
 

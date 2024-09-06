@@ -5,8 +5,10 @@ format:
     code-fold: false
     code-tools: false
 editor: visual
-date: 2023-10-10
+date: last-modified
 ---
+
+* Bhatta, K.P., **Mottl O.**, Felde V.A., Grytnes j., Reitalu T., Birks H.H., Birks,  H.J.B., Vetaas O.R. (2024) *Latitudinal gradients in the phylogenetic assembly of angiosperms in Asia during the Holocene.* **Scientific Reports** 14.1: 17940. [![Badge](https://img.shields.io/badge/DOI-10.1038%2Fs41598--024--67650--1-yellow)](https://doi.org/10.1038/s41598-024-67650-1)
 
 * Birks,  H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., **Mottl, O.**, Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023). *Approaches to pollen taxonomic harmonisation in Quaternary palynology*. **Palaeobotany and Palynology** 319: 104989. [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpablo.2023.104989-yellow)](https://doi.org/10.1016/j.revpalbo.2023.104989)
 

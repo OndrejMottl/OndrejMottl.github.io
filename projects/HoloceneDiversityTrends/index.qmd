@@ -1,0 +1,24 @@
+---
+title: "Holocene Diversity Trends"
+categories: [project, STARS, PhD]
+image: "logo_HoloceneDiversityTrends.png"
+about:
+  id: heading
+  template: trestles
+  image-shape: round
+  image-width: 250px
+---
+
+::: {#heading}
+## Quantifying Global Vegetation Biodiversity Changes since the Last Glacial Maximum
+
+**HoloceneDiversityTrends** aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment.
+
+## Project Description
+This project examines plant biodiversity from taxonomic, functional, and phylogenetic perspectives across different spatial scales (from biomes to global) and covers the period since the Last Glacial Maximum (the last 21,000 years). The research is based on fossil pollen records and aims to provide insights into long-term ecological changes.
+
+The project is a 4-year research initiative led by [**Bryan Novio**](/lab/about_the_lab.qmd#people), supported by the [STARS program](https://stars-natur.cz/). It is also linked to the [Functional Vegetation Paleoecology](/projects/FunctionalVegetationPaleoecology/index.html) project.
+
+## My Role
+As Bryan's main supervisor, I will provide guidance and support throughout the research process.
+:::

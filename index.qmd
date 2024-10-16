@@ -19,21 +19,25 @@ about:
 
 ::: {#hero-heading}
 
-Hello, I am Ondřej Mottl.
+Hello, I'm Ondřej Mottl.
 
-I am the head of the newly established Laboratory of Quantitative Ecology. My research primarily focuses on quantitative ecology, macroecology, palaeoecology, and community ecology, with a keen interest in data science.
+I am the head of the [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) at [Charles University](https://cuni.cz/UKEN-1.html) in Prague, CZ. My research spans quantitative ecology, macroecology, palaeoecology, and community ecology, with a strong focus on data science. You can learn more about my ongoing work through my [projects](projects/index.qmd).
 
-🔭 My current efforts are dedicated to developing cutting-edge tools for studying global biodiversity patterns and breaking down barriers to scientific exploration.
+🔭 My current research focuses on developing advanced tools for analysing global biodiversity patterns and addressing challenges in scientific exploration.
 
-💬 Ask me about R, GitHub, biodiversity, and more...
+🌱 I am deeply committed to teaching and mentoring, helping to inspire and guide the next generation of ecologists and data scientists. Learn more about my [teaching activities](teaching/teaching.qmd).
 
-### Webiste navigation
+💡 In addition, I proudly serve as the [Open Science Champion](https://openscience.cuni.cz/OSCI-251.html) at Charles University, advocating for scientific reproducibility - a cause close to my heart.
 
-- [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd)👩🏽‍💻
-- [Projects, on which I am currently working](projects/index.qmd)🚀
-- [My teaching activities](teaching/teaching.qmd)📚
-- [My CV](about_me/cv.qmd)📄
-- [Get in touch](/collaboration/get_in_touch.qmd)📬
-- [My publications](about_me/list_of_publications.qmd)📚
+💬 Feel free to reach out if you'd like to discuss R programming, GitHub, biodiversity patterns, or other topics of interest.
+
+### Website Navigation
+
+- [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) 👩🏽‍💻
+- [Current Projects](projects/index.qmd) 🚀
+- [Teaching Activities](teaching/teaching.qmd) 📚
+- [My CV](about_me/cv.qmd) 📄
+- [Contact Me](/collaboration/get_in_touch.qmd) 📬
+- [Publications](about_me/list_of_publications.qmd) 📚
 
 :::

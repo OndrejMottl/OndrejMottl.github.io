@@ -1,0 +1,33 @@
+---
+title: "Planetary Boundaries Working Group"
+categories: [project]
+image: "planterary boundaries vector.jpg"
+about:
+  id: heading
+  template: trestles
+  image-shape: round
+  image-width: 250px
+  links:
+    - icon: link
+      text: website
+      href: https://pastglobalchanges.org/science/wg/planetary-boundaries/intro
+---
+
+::: {#heading}
+**Planetary Boundaries and Safe Operating Spaces** is a working group within [Past Global Changes - PAGES](https://pastglobalchanges.org/about/general-overview), aiming to link palaeoecology with planetary boundaries to define variability and changes over decades to millennia.
+
+![](logo_PLANETARYBOUNDARIES.png)
+
+## Project Description
+To guide us towards sustainable futures, this working group explores how past ecological data can help define safe operating spaces for critical Earth system processes. By studying long-term data on land use, biosphere integrity, freshwater, and biochemical flows, we aim to model changes and identify potential tipping points.
+
+This approach provides insights into stabilising Earth system processes by aiming for "Holocene-like" conditions, essential in mitigating ongoing environmental crises.
+
+For more information, visit the [project website](https://pastglobalchanges.org/science/wg/planetary-boundaries/intro).
+
+## My Role
+As a committee member, I contribute expertise in palaeoecology and long-term data analysis, helping to develop and coordinate the project.
+
+Figure for the planetary boundaries framework is Licenced under CC BY-NC-ND 3.0. Credit: J. Lokrantz/Azote based on Steffen et al. 2015.
+:::
+

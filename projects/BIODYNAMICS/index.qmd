@@ -1,7 +1,7 @@
 ---
 title: "BIODYNAMICS"
-categories: [project]
-image: "logo_no_bg.png"
+categories: [project, GACR]
+image: "logo_v2.png"
 about:
   id: heading
   template: jolla
@@ -12,13 +12,13 @@ listing:
     max-description-length: 500
     fields: [title, description]
     contents: "blog"
-    sort: "true"
+    sort: "date desc" 
     type: grid
     grid-item-border: true
 ---
 
 ::: {#heading}
-BIODYNAMICS is a 3-year personal research project, for which I have received funding by the [Czech Science Foundation](https://gacr.cz/en/) (GACR), and started on 1.6.2023.
+**BIODYNAMICS** is a 3-year personal research project, for which I have received funding by the [Czech Science Foundation](https://gacr.cz/en/) (GACR), and started on 1.6.2023.
 :::
 
 ## Project description

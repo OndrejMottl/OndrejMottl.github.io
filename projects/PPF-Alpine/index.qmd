@@ -1,7 +1,7 @@
 ---
 title: "PPF-Alpine"
 categories: [project]
-image: "ppf_logo.jpg"
+image: "ppf_logo.png"
 about:
   id: heading
   template: trestles

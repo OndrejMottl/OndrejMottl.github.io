@@ -1,5 +1,5 @@
 ---
-title: "Looking for a new PhD student!"
+title: "~~Looking for a new PhD student!~~"
 date: "2024-01-10"
 categories: [news, lab, phd, position] 
 output:

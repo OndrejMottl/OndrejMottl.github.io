@@ -9,21 +9,12 @@ listing:
     fields: [image, title, description]
     contents: 
       - BIODYNAMICS/index.qmd
+      - FunctionalVegetationPaleoecology/index.qmd
       - PPF-Alpine/index.qmd
+      - HoloceneDiversityTrends/index.qmd
+      - FOSSILPOL/index.qmd
+      - PlanetaryBoundaries/index.qmd
     sort: "false" 
-    type: grid
-    grid-item-border: false
-    
-  - id: packages
-    max-description-length: 500
-    image-height: 250px
-    fields: [image, title, description]
-    contents: 
-      - RRatepol
-      - FOSSILPOL
-      - REcopol
-      - RUtilpol
-    sort: "false"
     type: grid
     grid-item-border: false
   
@@ -32,6 +23,8 @@ listing:
     image-height: 200px
     fields: [image, title, description]
     contents: 
+      - RRatepol/index.qmd
+      - REcopol/index.qmd
       - HOPE/index.qmd
     sort: "false" 
     type: grid
@@ -47,14 +40,3 @@ listing:
 ## Past Projects
 ::: {#past}
 :::
-
-## Software and R-packages 
-
-::: {#packages}
-:::
-
-
-
-
-
-

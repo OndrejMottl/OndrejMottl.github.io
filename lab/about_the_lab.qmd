@@ -10,16 +10,16 @@ listing:
     max-description-length: 100
     fields: [title, description]
     contents: "lab_news"
-    sort: "true"
+    sort: "date desc"
     type: grid
     grid-item-border: true
 ---
 
 ::: {#heading}
-The Laboratory of Quantitative Ecology is a dynamic and newly established working group dedicated to exploring the intricacies of vegetation biodiversity trends across spatio-temporal scales, with a keen focus on understanding human impacts and fostering interdisciplinary research.
+The Laboratory of Quantitative Ecology is a research group focused on examining vegetation biodiversity trends across spatial and temporal scales. We are particularly interested in understanding the influence of human activities and advancing interdisciplinary research in ecology.
 :::
 
-![](lab_news/img/HoloceneDiversityTrends_HD.png){width=300 fig-align="center"}
+![](lab_logo_nobg.png){width=300 fig-align="center"}
 
 ## Group Description
 
@@ -31,24 +31,24 @@ Delving into various facets of biodiversity, including taxonomic, functional, an
 
 #### State-of-the-Art Tools and Methods
 
-We actively integrate cutting-edge tools and techniques into our research endeavors. Ranging from advanced quantitative statistical methods to state-of-the-art data science and machine learning applications, our toolkit is meticulously designed not only for analysis but also for the development of new methodologies. This design enables us to extract profound insights from intricate ecological datasets. By pioneering novel methods, we ensure that our research stays at the forefront of innovation, advancing the capabilities of contemporary ecological research and pushing the boundaries of what can be achieved in understanding vegetation patterns.
-
+We use cutting-edge quantitative and statistical methods, alongside state-of-the-art data science and machine learning approaches. Our research not only involves the application of existing methods but also the development of new methodologies to extract deeper insights from complex ecological datasets. This continuous innovation ensures that our research remains at the forefront of ecological science, expanding the limits of our understanding of vegetation patterns.
 
 #### Interdisciplinary Approach
 
-Our work goes beyond traditional ecological boundaries, fostering an interdisciplinary approach. By synthesizing knowledge across disciplines such as macroecology, palaeoecology, biodiversity science, and quantitative ecology, we aim to provide a comprehensive understanding of vegetation dynamics and their drivers.
+Our research integrates concepts and methodologies from various fields, including macroecology, palaeoecology, biodiversity science, and quantitative ecology. This interdisciplinary perspective allows us to gain a comprehensive understanding of vegetation dynamics and their underlying drivers.
 
 #### Ongoing projects
 
 - [BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)
-- [FOSSILPOL](/projects/FOSSILPOL/index.qmd)
+- [Functional Vegetation Paleoecology](/projects/FunctionalVegetationPaleoecology/index.qmd)
 - [PPF Alpine](/projects/PPF-Alpine/index.qmd)
-- [Holocene Diversity Trends](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd)
+- [Holocene Diversity Trends](/projects/HoloceneDiversityTrends/index.qmd)
+- [FOSSILPOL](/projects/FOSSILPOL/index.qmd)
+- [Planetary Boundaries Working Group](/projects/PlanetaryBoundaries/index.qmd)
 
 ## News
 ::: {#lab_news}
 :::
-
 
 ## People
 
@@ -64,11 +64,16 @@ Our work goes beyond traditional ecological boundaries, fostering an interdiscip
   * PhD student
   * 📬email: noviobryan(at)gmail.com
   * [![ORCID](https://img.shields.io/badge/orcid-0000--0003--1600--4973-brightgreen.svg)](https://orcid.org/0000-0003-1600-4973)
-  * [*Holocene Diversity Trends*](/lab/lab_news/01-phd_position_HoloceneDiversityTrends.qmd) project
-  - will start in Autumn 2024
+  * [*Holocene Diversity Trends*](/projects/HoloceneDiversityTrends/index.qmd) project
+  - joined Autumn 2024
+
+- ### PhD Student Position
+  * staring October 2025
+  * [*Functional Vegetation Paleoecology*](/projects/FunctionalVegetationPaleoecology/index.qmd) project
+  * *application open soon*
 
 - ### Markéta Tumová <img src="img/marketa_crop.JPG" alt="Markéta Tumová" align="right" width="120" />
    * Bc student
    * 📬email: tumovamarket(at)natur.cuni.cz
    * *Alpine Biodiversity Across Continents* project (linked to the [PPF Alpine](/projects/PPF-Alpine/index.qmd))
-   * will start in Autumn 2024
+   * joined in Autumn 2024

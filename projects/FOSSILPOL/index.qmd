@@ -16,17 +16,15 @@ about:
 ---
 
 ::: {#hero-heading}
-<!-- badges: start -->
-[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Fossilpol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Fossilpol-package/releases)
-<!-- badges: end -->
-
-{`RFossilpol`} R-package is a part of the **FOSSILPOL** project. 
-
-The goal of the **FOSSILPOL** project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.
+{`RFossilpol`} R-package is a part of the **FOSSILPOL** project. The goal of the **FOSSILPOL** project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.
 
 Learn more about the project on the [project websites](https://hope-uib-bio.github.io/FOSSILPOL-website/).
 
 ## Installation
+
+<!-- badges: start -->
+[![Version](https://img.shields.io/github/v/release/HOPE-UIB-BIO/R-Fossilpol-package?label=Version&logo=github)](https://github.com/HOPE-UIB-BIO/R-Fossilpol-package/releases)
+<!-- badges: end -->
 
 You can install the development version of RFossilpol:package: from [GitHub](https://github.com/) with:
 

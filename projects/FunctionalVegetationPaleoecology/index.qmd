@@ -1,0 +1,24 @@
+---
+title: "Functional Vegetation Paleoecology"
+categories: [project, PRIMUS, PhD]
+image: "logo_FunctionalvegetationPaleoecology.jpg"
+about:
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 500px
+---
+
+::: {#heading}
+**Functional Vegetation Paleoecology** is a 4-year research project funded by [PRIMUS](https://cuni.cz/UKEN-558.html), starting on 1st June 2025.
+:::
+
+## Project Description
+Anticipating ecosystem changes under global climate change presents a complex challenge that demands interdisciplinary solutions. By leveraging paleoecological vegetation data and functional ecology methods, the project aims to estimate spatio-temporal variations of functional ecosystem properties beyond the point of human observation, thereby gaining an unprecedented understanding of global vegetation patterns.
+
+Through the integration of global fossil pollen data with modern plant traits, the project aims to identify regions most vulnerable to climate change based on paleoecological insights. Utilizing probabilistic Bayesian models, the project will address taxonomic uncertainties and estimate variations in functional ecosystem properties globally, spanning since the Last Glacial Maximum.
+
+## Project Goals
+- **Aim 1**: Integrate global fossil pollen data with modern plant traits to account for uncertainties.
+- **Aim 2**: Estimate global functional ecosystem properties since the Last Glacial Maximum.
+- **Aim 3**: Assess current ecosystems' Safe Operating Space to help mitigate the impact of climate change (see my participation [Planetary Boundaries](/projects/PlanetaryBoundaries/index.html) project).

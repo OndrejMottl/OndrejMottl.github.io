@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-10-21">
 
-<title>Ondřej Mottl - BIODYNAMICS</title>
+<title>Ondřej Mottl - Looking for a new PhD student!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,13 +30,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../teaching/teaching.html" rel="next">
-<link href="../../projects/index.html" rel="prev">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -68,65 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blogs .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blogs'] = new List('listing-blogs', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -140,7 +80,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/index.html">Projects</a></li><li class="breadcrumb-item"><a href="../../projects/BIODYNAMICS/index.html">BIODYNAMICS</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Ondřej Mottl
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -173,13 +115,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/index.html" class="sidebar-item-text sidebar-link">
@@ -188,7 +130,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/BIODYNAMICS/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../projects/BIODYNAMICS/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIODYNAMICS</span></a>
   </div>
 </li>
@@ -262,149 +204,140 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#project-description" id="toc-project-description" class="nav-link active" data-scroll-target="#project-description">Project description</a></li>
-  <li><a href="#project-goals" id="toc-project-goals" class="nav-link" data-scroll-target="#project-goals">Project goals</a></li>
-  <li><a href="#core-collaborators" id="toc-core-collaborators" class="nav-link" data-scroll-target="#core-collaborators">Core collaborators</a></li>
-  <li><a href="#news" id="toc-news" class="nav-link" data-scroll-target="#news">News</a></li>
+  <li><a href="#exploring-the-past-shaping-the-future-a-full-time-phd-position-in-functional-vegetation-paleoecology-prague-4-years-starting-october-2025" id="toc-exploring-the-past-shaping-the-future-a-full-time-phd-position-in-functional-vegetation-paleoecology-prague-4-years-starting-october-2025" class="nav-link active" data-scroll-target="#exploring-the-past-shaping-the-future-a-full-time-phd-position-in-functional-vegetation-paleoecology-prague-4-years-starting-october-2025">Exploring the Past, Shaping the Future: A full-time PhD position in Functional Vegetation Paleoecology (Prague, 4 years, starting October 2025)</a></li>
+  <li><a href="#about-the-team" id="toc-about-the-team" class="nav-link" data-scroll-target="#about-the-team">About the team</a></li>
+  <li><a href="#project-in-detail" id="toc-project-in-detail" class="nav-link" data-scroll-target="#project-in-detail">Project in Detail</a></li>
+  <li><a href="#i-offer" id="toc-i-offer" class="nav-link" data-scroll-target="#i-offer">I Offer</a></li>
+  <li><a href="#i-require" id="toc-i-require" class="nav-link" data-scroll-target="#i-require">I Require</a>
+  <ul class="collapse">
+  <li><a href="#desirable-but-not-required" id="toc-desirable-but-not-required" class="nav-link" data-scroll-target="#desirable-but-not-required">Desirable but Not Required:</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a>
+  <ul class="collapse">
+  <li><a href="#the-application-deadline-is-the-15th-of-january-2025" id="toc-the-application-deadline-is-the-15th-of-january-2025" class="nav-link" data-scroll-target="#the-application-deadline-is-the-15th-of-january-2025">! The application deadline is the 15th of January 2025 !</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="02-phd_position_FunctionalVegetationPaleoecology.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<div class="quarto-about-jolla content">
-  <img src="logo_v2.png" class="about-image
-  round " style="height: 500px; width: 500px;">
- <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/index.html">Projects</a></li><li class="breadcrumb-item"><a href="../../projects/BIODYNAMICS/index.html">BIODYNAMICS</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIODYNAMICS</h1>
+<h1 class="title">Looking for a new PhD student!</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">project</div>
-    <div class="quarto-category">GACR</div>
+    <div class="quarto-category">news</div>
+    <div class="quarto-category">lab</div>
+    <div class="quarto-category">phd</div>
+    <div class="quarto-category">position</div>
   </div>
   </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 21, 2024</p>
+    </div>
   </div>
-</header><div id="heading">
-<p><strong>BIODYNAMICS</strong> is a 3-year personal research project, for which I have received funding by the <a href="https://gacr.cz/en/">Czech Science Foundation</a> (GACR), and started on 1.6.2023.</p>
-</div>  
-</div>
+  
+    
+  </div>
+  
 
-<section id="project-description" class="level2">
-<h2 data-anchor-id="project-description">Project description</h2>
-<p>The BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.</p>
-<p>It will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.</p>
-<p>A key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society.</p>
+
+</header>
+
+
+<section id="exploring-the-past-shaping-the-future-a-full-time-phd-position-in-functional-vegetation-paleoecology-prague-4-years-starting-october-2025" class="level1">
+<h1>Exploring the Past, Shaping the Future: A full-time PhD position in Functional Vegetation Paleoecology (Prague, 4 years, starting October 2025)</h1>
+<p>Are you passionate about understanding ecosystem changes using large datasets and advanced modelling techniques? I am offering a fully funded, full-time PhD position as part of the <a href="https://ondrejmottl.github.io/projects/FunctionalVegetationPaleoecology/">Functional Vegetation Paleoecology project</a>, funded by <a href="https://cuni.cz/UKEN-558.html">PRIMUS</a>, spanning paleoecology, quantitative ecology, and functional ecology. The candidate will join my <a href="https://bit.ly/CU_QuantitativeEcology">Laboratory of Quantitative Ecology</a> at the <a href="https://natur.cuni.cz/en/biology/departments-and-work-places/department-of-botany">Department of Botany</a>, <a href="https://natur.cuni.cz/en">Faculty of Science, Charles University</a> in Prague, Czech Republic.</p>
+<p>For the latest updates on this position, visit: <a href="https://bit.ly/PhD_FunctionalVegetationPaleoecology">bit.ly/PhD_FunctionalVegetationPaleoecology</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/PR-iF_znak_UK_1c_pos_en.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
 </section>
-<section id="project-goals" class="level2">
-<h2 data-anchor-id="project-goals">Project goals</h2>
-<p>Improve the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka.</p>
+<section id="about-the-team" class="level1">
+<h1>About the team</h1>
+<p>The <a href="https://bit.ly/CU_QuantitativeEcology">Laboratory of Quantitative Ecology</a>, led by <a href="https://ondrejmottl.github.io/">Ondřej Mottl</a>, is dedicated to advancing quantitative ecology, macroecology, palaeoecology, and community ecology, with a particular focus on data science. Our research integrates global ecological datasets, functional ecology, and interdisciplinary approaches to address pressing challenges in biodiversity conservation, climate change, and human impacts on ecosystems. We are committed to open science, ensuring our work is accessible and reproducible, and we aim to foster an inclusive and collaborative environment that inspires and supports the next generation of ecologists and data scientists.</p>
 </section>
-<section id="core-collaborators" class="level2">
-<h2 data-anchor-id="core-collaborators">Core collaborators</h2>
-<section id="suzette-flantua" class="level3">
-<h3 data-anchor-id="suzette-flantua">Suzette Flantua <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-388168-1536217906.jpg?itok=yqGLK7Kg" align="right" width="120"></h3>
+<section id="project-in-detail" class="level1">
+<h1>Project in Detail</h1>
+<p><strong>Functional Vegetation Paleoecology: Mitigate the impact of climate change with data-driven insight from past vegetation</strong></p>
+<p>Anticipating ecosystem changes under global climate change presents a complex challenge that demands interdisciplinary solutions. This project aims to leverage paleoecological vegetation data and functional ecology methods to estimate spatio-temporal variations of functional ecosystem properties beyond the point of human observation, thereby gaining an unprecedented understanding of global vegetation patterns.</p>
+<p>The PhD project will focus on integrating global fossil pollen data with modern plant traits to explain ecosystem resilience and vulnerability to past climatic changes. By developing advanced models, this research will address taxonomic uncertainties and provide insights into regions most at risk under future climate scenarios, with a specific focus on assessing ecosystem stability in relation to <a href="https://ondrejmottl.github.io/projects/PlanetaryBoundaries/">Planetary Boundaries project</a>. Leveraging cutting-edge advancements in quantitative paleoecological methods and data science, the project will explore ecosystem functionality since the Last Glacial Maximum, spanning various spatial scales from biomes to global.</p>
+<p>Through interdisciplinary research, the project aims to push the boundaries of our understanding of historical ecosystem dynamics and contribute essential insights into mitigating the impact of anthropogenic climate change.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/logo_FunctionalvegetationPaleoecology.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+</figure>
+</div>
+</section>
+<section id="i-offer" class="level1">
+<h1>I Offer</h1>
 <ul>
-<li>Research group leader</li>
-<li>🏦University of Bergen, Norway</li>
-<li>📬email: suzette.flantua(at)uib.no</li>
-<li><a href="https://orcid.org/0000-0001-6526-3037"><img src="https://img.shields.io/badge/orcid-0000--0001--6526--3037-brightgreen.svg" class="img-fluid" alt="orcid"></a></li>
-<li><a href="https://mountainsinmotion.w.uib.no/">🔗personal webiste</a></li>
+<li>A fully funded, full-time PhD position.</li>
+<li>Comprehensive medical insurance and social security.</li>
+<li>Support for settling in a foreign culture and language environment.</li>
+<li>Opportunity to acquire skills in:
+<ul>
+<li>Advanced coding protocols, especially in <a href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>.</li>
+<li>Data analysis and statistical modelling.</li>
+<li>Working with large dataset compilations from global databases.</li>
+<li>Tools to foster reproducibility in science (Im am an <a href="https://openscience.cuni.cz/OSCI-251.html">Open Science Champion</a> at Charles University).</li>
+<li>Presentation and communication skills, with the opportunity to present at conferences, congresses, and workshops.</li>
+</ul></li>
+<li>The financial compensation consists of 2 parts
+<ul>
+<li>Salary of 7,000 CZK/month before taxes (approx. 5,500 CZK/month after taxes, which is around 220 EUR/month as of October 2024).</li>
+<li>Tax-free PhD stipend of 28,000 CZK/month (approx. 1100 EUR/month as of October 2024).</li>
+</ul></li>
+<li>Access to state-of-the-art scientific and computing equipment, software, journals, and scientific databases.</li>
+<li>Access to my worldwide network of collaborators, with the possibility to participate in related projects (see list of all my <a href="../../projects/index.html">current projects</a>).</li>
+<li>Subsidized meals at the university canteen.</li>
+<li>Work in an inspiring academic international environment (the working language is English).</li>
+<li>Working in the heart of Prague city centre. Prague, renowned for its <a href="https://goout.net/en/">cultural richness</a>, stands as one of the safest cities globally, with excellent public transport, international accessibility, and healthcare (<a href="https://stars-natur.cz/practical-info">read more about living in Prague</a>).</li>
 </ul>
 </section>
-<section id="franka-gaiser" class="level3">
-<h3 data-anchor-id="franka-gaiser">Franka Gaiser <img src="https://www.spowi5.uni-bayreuth.de/pool/bilder/team/Gaiser_hp_2022.jpg" align="right" width="120"></h3>
+<section id="i-require" class="level1">
+<h1>I Require</h1>
 <ul>
-<li>PhD Student in Quantitative Ecology</li>
-<li>🏦University of Bayreuth, Bayreuth, Germany</li>
-<li>📬email: franka.gaiser(at)uni-bayreuth.de</li>
-<li><a href="https://orcid.org/0009-0003-2600-6603"><img src="https://img.shields.io/badge/orcid-0000--0003--2600--6603-brightgreen.svg" class="img-fluid" alt="ORCID"></a></li>
-<li><a href="https://www.spowi5.uni-bayreuth.de/en/team/Gaiser/index.php">🔗personal webiste</a></li>
+<li>A master’s or equivalent degree/diploma in a project-related field (e.g., ecology, geography, paleoecology, botany, bioinformatics, biostatistics, environmental sciences). Applicants with degrees in statistics, data science, or computer science are also encouraged to apply.</li>
+<li>Proficiency in spoken and written English.</li>
+<li>Motivation to learn new skills.</li>
+<li>Enthusiasm for team building and collaboration.</li>
+</ul>
+<section id="desirable-but-not-required" class="level2">
+<h2 class="anchored" data-anchor-id="desirable-but-not-required">Desirable but Not Required:</h2>
+<ul>
+<li>Prior experience with programming in R; experience with other languages (Python, C#, etc.) is also welcomed.</li>
+<li>Solid background in data analysis and statistical testing.</li>
+<li>Experience with large-scale biodiversity patterns.</li>
+<li>Good knowledge of Function Ecology (functional traits)</li>
+<li>Experience in an international working environment.</li>
 </ul>
 </section>
-<section id="irena-šímová" class="level3">
-<h3 data-anchor-id="irena-šímová">Irena Šímová <img src="https://www.cts.cuni.cz/img/people/%C5%A0%C3%ADmov%C3%A1.jpg" align="right" width="120"></h3>
-<ul>
-<li>Researcher</li>
-<li>🏦Charles University, Czech Republic</li>
-<li>📬email: simova(at)cts.cuni.cz</li>
-<li><a href="https://orcid.org/0000-0002-9474-569X"><img src="https://img.shields.io/badge/orcid-0000--0002--9474--569X-brightgreen.svg" class="img-fluid" alt="ORCID"></a></li>
-<li><a href="https://www.cts.cuni.cz/en/simova.html">🔗personal webiste</a></li>
-</ul>
 </section>
+<section id="applications" class="level1">
+<h1>Applications</h1>
+<section id="the-application-deadline-is-the-15th-of-january-2025" class="level2">
+<h2 class="anchored" data-anchor-id="the-application-deadline-is-the-15th-of-january-2025">! The application deadline is the 15th of January 2025 !</h2>
+<p>Send an email to ‘quantitative.ecology@natur.cuni.cz’ with “PhD application [your surname]” in the email subject, containing:</p>
+<ol type="1">
+<li>Motivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why you are interested in obtaining a PhD.</li>
+<li>Your CV highlighting the most relevant information (1-2 pages)</li>
+<li>Contact details for 2-3 academic referees, e.g., your former supervisor, boss, or collaborator.</li>
+</ol>
+<p>Note that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents in advance.</p>
+
+
 </section>
-<section id="news" class="level2">
-<h2 data-anchor-id="news">News</h2>
-<div id="listing-blogs" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news" data-listing-date-sort="1702594800000" data-listing-file-modified-sort="1705409338029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="246">
-<a href="../../projects/BIODYNAMICS/blog/04-unveiling_vegvault.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unveiling VegVault
-</h5>
-<div class="card-text listing-description">
-Greetings, everyone! I’m excited to share an in-depth glimple into <strong>VegVault</strong>, my ambitious interdisciplinary database project.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="news" data-listing-date-sort="1696888800000" data-listing-file-modified-sort="1705409338029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
-<a href="../../projects/BIODYNAMICS/blog/03-kickoff_meering.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Kick-Off Meeting
-</h5>
-<div class="card-text listing-description">
-Greetings, everyone! It’s an exciting time as my project BIODYNAMICS has taken flight, and I couldn’t be more thrilled!
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="news" data-listing-date-sort="1686866400000" data-listing-file-modified-sort="1729087289320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-<a href="../../projects/BIODYNAMICS/blog/02-new_logo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-A new logo
-</h5>
-<div class="card-text listing-description">
-The BIODYNAMICS project has a new logo!🖼️
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="news" data-listing-date-sort="1685570400000" data-listing-file-modified-sort="1705409338029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="38">
-<a href="../../projects/BIODYNAMICS/blog/01-project_start.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Project has started!
-</h5>
-<div class="card-text listing-description">
-The BIODYNAMICS project has started!🎉
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
-
-
-
 </section>
 
 </main> <!-- /main -->
@@ -428,6 +361,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -788,18 +728,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../projects/index.html" class="pagination-link" aria-label="Overview of projects">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview of projects</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../teaching/teaching.html" class="pagination-link" aria-label="Teaching">
-        <span class="nav-page-text">Teaching</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

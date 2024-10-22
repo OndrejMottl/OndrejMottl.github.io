@@ -2,9 +2,11 @@
 title: "~~Looking for a new PhD student!~~"
 date: "2024-01-10"
 categories: [news, lab, phd, position] 
-output:
-  pdf_document:
-    latex_engine: xelatex
+format:
+  pdf: 
+    fig-align: center
+    fig-width: 10
+  html:
     fig-align: center
     fig-width: 10
 sansfont: Calibri Light

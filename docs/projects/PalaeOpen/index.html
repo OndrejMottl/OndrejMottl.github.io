@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Projects, in which I am actively participating.">
 
-<title>Ondřej Mottl - Projects</title>
+<title>Ondřej Mottl - Open Palaeoecological Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +23,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../projects/BIODYNAMICS/index.html" rel="next">
-<link href="../lab/about_the_lab.html" rel="prev">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -70,98 +64,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-active .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-active'] = new List('listing-active', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-past .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-past'] = new List('listing-past', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -170,7 +78,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/index.html">Projects</a></li><li class="breadcrumb-item"><a href="../projects/index.html">Overview of projects</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Ondřej Mottl
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -185,7 +95,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Ondřej Mottl</a> 
+      <a href="../../">Ondřej Mottl</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -197,28 +107,28 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../projects/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview of projects</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/BIODYNAMICS/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../projects/BIODYNAMICS/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">BIODYNAMICS</span></a>
   </div>
 </li>
@@ -226,7 +136,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../teaching/teaching.html" class="sidebar-item-text sidebar-link">
+  <a href="../../teaching/teaching.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching</span></a>
   </div>
 </li>
@@ -241,13 +151,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../about_me/cv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">List of publications</span></a>
   </div>
 </li>
@@ -264,19 +174,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Get in touch!</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaboration guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code Convention</span></a>
   </div>
 </li>
@@ -287,236 +197,54 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#active-projects" id="toc-active-projects" class="nav-link active" data-scroll-target="#active-projects">Active Projects</a></li>
-  <li><a href="#past-projects" id="toc-past-projects" class="nav-link" data-scroll-target="#past-projects">Past Projects</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/index.html">Projects</a></li><li class="breadcrumb-item"><a href="../projects/index.html">Overview of projects</a></li></ol></nav>
+
+
+
+<div class="quarto-about-trestles content">
+  <div class="about-entity">
+    <img src="PalaeOpen.png" class="about-image
+  round " style="height: 250px; width: 250px;">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
-
-<div>
-  <div class="description">
-    <p>Projects, in which I am actively participating.</p>
+<h1 class="title">Open Palaeoecological Data</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">project</div>
   </div>
-</div>
-
-
+  </div>
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
-
-
 </header>
-
-
-<section id="active-projects" class="level2">
-<h2 class="anchored" data-anchor-id="active-projects">Active Projects</h2>
-<div id="listing-active" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="project,GACR" data-listing-file-modified-sort="1729087289322" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
-<a href="../projects/BIODYNAMICS/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/BIODYNAMICS/logo_v2.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-BIODYNAMICS
-</h5>
-<div class="card-text listing-description">
-<strong>BIODYNAMICS</strong> is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023.
+    <div class="about-links">
+  <a href="https://www.cost.eu/actions/CA23116/" class="about-link" rel="" target="">
+    <i class="bi bi-link"></i>
+     <span class="about-link-text">website</span>
+  </a>
 </div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="project,PRIMUS,PhD" data-listing-file-modified-sort="1729087289353" data-listing-reading-time-sort="1" data-listing-word-count-sort="167">
-<a href="../projects/FunctionalVegetationPaleoecology/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/FunctionalVegetationPaleoecology/logo_FunctionalvegetationPaleoecology.jpg" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Functional Vegetation Paleoecology
-</h5>
-<div class="card-text listing-description">
-<strong>Functional Vegetation Paleoecology</strong> is a 4-year research project funded by PRIMUS, starting on 1st June 2025.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="project" data-listing-file-modified-sort="1729087289394" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
-<a href="../projects/PPF-Alpine/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/PPF-Alpine/ppf_logo.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-PPF-Alpine
-</h5>
-<div class="card-text listing-description">
-<strong>The Past, Present and Future of Alpine Biomes Worldwide</strong> (PPF-Alpine) aims to take a deep dive into the biogeographical history of alpine systems on a global scale and decipher the drivers of present-day alpine biodiversity.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="project,STARS,PhD" data-listing-file-modified-sort="1729087289354" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
-<a href="../projects/HoloceneDiversityTrends/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/HoloceneDiversityTrends/logo_HoloceneDiversityTrends.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Holocene Diversity Trends
-</h5>
-<div class="card-text listing-description">
-<strong>HoloceneDiversityTrends</strong> aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="package,R" data-listing-file-modified-sort="1729087289352" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
-<a href="../projects/FOSSILPOL/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/FOSSILPOL/RFossilpol_logo.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-FOSSILPOL
-</h5>
-<div class="card-text listing-description">
-{<code>RFossilpol</code>} R-package is a part of the <strong>FOSSILPOL</strong> project. The goal of the <strong>FOSSILPOL</strong> project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="project" data-listing-file-modified-sort="1729087289373" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
-<a href="../projects/PlanetaryBoundaries/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/PlanetaryBoundaries/planterary boundaries vector.jpg" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Planetary Boundaries Working Group
-</h5>
-<div class="card-text listing-description">
-<strong>Planetary Boundaries and Safe Operating Spaces</strong> is a working group within Past Global Changes - PAGES, aiming to link palaeoecology with planetary boundaries to define variability and changes over decades to millennia.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="project" data-listing-file-modified-sort="1729682163005" data-listing-reading-time-sort="2" data-listing-word-count-sort="297">
-<a href="../projects/PalaeOpen/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/PalaeOpen/PalaeOpen.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Open Palaeoecological Data
-</h5>
-<div class="card-text listing-description">
-<strong>Open Palaeoecological Data (PalaeOpen)- analysing the past building foresight</strong> is a Action funded by European Cooperation in Science and Technology - COST.
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+  </div>
+  <div class="about-contents"><div id="heading">
+<p><strong>Open Palaeoecological Data (PalaeOpen)- analysing the past building foresight</strong> is a Action funded by <a href="https://www.cost.eu/">European Cooperation in Science and Technology - COST</a>.</p>
+<section id="project-description" class="level2">
+<h2 data-anchor-id="project-description">Project Description</h2>
+<p>Restoring and managing nature during times of rapid environmental change requires knowledge of ecosystem response to climate and land use change on timescales of decades to millennia. Different palaeoecological disciplines have collected relevant, site-specific data during the last decades. Much of the palaeoecological data are currently dispersed across different repositories, databases and largely not publicly available.</p>
+<p>This Action aims to meet the challenge of bringing much of these data into the public domain, harmonise their taxonomy and metadata, and make them relevant to nature conservation. By combining domain specific repositories and databases, the Action will unlock these data collections and make them available for palaeoecological meta-analysis of ecosystem interactions on a continental scale. This will permit integrated analysis of terrestrial and aquatic ecosystem responses to natural and anthropogenic environmental change for the first time. The Action will overcome the barriers between palaeoecologist, macroecologists and nature conservation practitioners by developing and engaging with a new research agenda.</p>
+<p>Scientific workshops in different parts of Europe will provide formats to interact with local nature conservation practitioners. The research agenda will address the knowledge gaps in nature conservation as well as the need to understand continental scale interactions of ecosystem components, including lagged or threshold responses. A dedicated outreach working group will ensure that the new knowledge is also accessible to the public. Moreover, the group will develop educational material for schools and universities based on the collected data.</p>
+<p>For more information, visit the <a href="https://www.cost.eu/actions/CA23116/">project website</a>.</p>
 </section>
-<section id="past-projects" class="level2">
-<h2 class="anchored" data-anchor-id="past-projects">Past Projects</h2>
-<div id="listing-past" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="package,R" data-listing-file-modified-sort="1729087289425" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<a href="../projects/RRatepol/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/RRatepol/RRatepol_logo.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RRatepol
-</h5>
-<div class="card-text listing-description">
-{<code>RRatepol</code>} is an R package for estimating rate of change (RoC) from community data in time series.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="package,R" data-listing-file-modified-sort="1729087289422" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
-<a href="../projects/REcopol/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/REcopol/REcopol_logo.png" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-REcopol
-</h5>
-<div class="card-text listing-description">
-The goal of {<code>REcopol</code>} R-package is to make an easy-to-use function to analyse fossil pollen data.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="project" data-listing-file-modified-sort="1693208076077" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
-<a href="../projects/HOPE/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/HOPE/hope_logo.gif" class="thumbnail-image card-img" style="height: 200px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-HOPE
-</h5>
-<div class="card-text listing-description">
-<strong>Humans on Planet Earth</strong> - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
-
-
+<section id="my-role" class="level2">
+<h2 data-anchor-id="my-role">My Role</h2>
+<p>As a Co-Leader of “Data storage and management” Working group, I contribute expertise in processing of paleoecological data and helping to develop and coordinate the project.</p>
+<p>Figure is obtained directly from <a href="https://e-services.cost.eu/files/domain_files/CA/Action_CA23116/mou/CA23116-e.pdf">Project Proposal</a>.</p>
 </section>
+</div></div>
+</div>
+
+
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -539,13 +267,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -906,18 +627,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../lab/about_the_lab.html" class="pagination-link" aria-label="Laboratory of Quantitative Ecology">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Laboratory of Quantitative Ecology</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../projects/BIODYNAMICS/index.html" class="pagination-link" aria-label="BIODYNAMICS">
-        <span class="nav-page-text">BIODYNAMICS</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

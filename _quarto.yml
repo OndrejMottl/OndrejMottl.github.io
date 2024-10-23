@@ -19,12 +19,8 @@ website:
       - text: "Laboratory of Quantitative Ecology"
         href: lab/about_the_lab.qmd
       
-      - section: "Projects"
-        contents: 
-          - text: "Overview of projects" 
-            href: projects/index.qmd
-          - text: "BIODYNAMICS"
-            href: projects/BIODYNAMICS/index.qmd
+      - text: "Overview of projects"
+        href: projects/index.qmd
 
       - text: "Teaching"
         href: teaching/teaching.qmd

@@ -22,3 +22,9 @@ Through the integration of global fossil pollen data with modern plant traits, t
 - **Aim 1**: Integrate global fossil pollen data with modern plant traits to account for uncertainties.
 - **Aim 2**: Estimate global functional ecosystem properties since the Last Glacial Maximum.
 - **Aim 3**: Assess current ecosystems' Safe Operating Space to help mitigate the impact of climate change (see my participation [Planetary Boundaries](/projects/PlanetaryBoundaries/index.html) project).
+
+## My role
+I am the Principal Investigator of the project.
+
+## Open PhD possition
+See the details [here](/lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.qmd)!

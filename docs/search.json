@@ -106,7 +106,6 @@
     "section": "",
     "text": "No matching items",
     "crumbs": [
-      "Projects",
       "Overview of projects"
     ]
   },
@@ -117,7 +116,6 @@
     "section": "",
     "text": "No matching items",
     "crumbs": [
-      "Projects",
       "Overview of projects"
     ]
   },
@@ -128,7 +126,6 @@
     "section": "Past Projects",
     "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Projects",
       "Overview of projects"
     ]
   },
@@ -165,14 +162,14 @@
     "href": "projects/FOSSILPOL/index.html",
     "title": "FOSSILPOL",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \n{RFossilpol} R-package is a part of the FOSSILPOL project. The goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\n\n \nYou can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nI am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
   },
   {
-    "objectID": "projects/FOSSILPOL/index.html#installation",
-    "href": "projects/FOSSILPOL/index.html#installation",
+    "objectID": "projects/FOSSILPOL/index.html#my-role",
+    "href": "projects/FOSSILPOL/index.html#my-role",
     "title": "FOSSILPOL",
     "section": "",
-    "text": "You can install the development version of RFossilpol:package: from GitHub with:\n# install.packages(\"remotes\")\nremotes::install_github(\"HOPE-UIB-BIO/R-Fossilpol-package\")"
+    "text": "I am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
   },
   {
     "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
@@ -746,55 +743,42 @@
     "href": "projects/BIODYNAMICS/index.html",
     "title": "BIODYNAMICS",
     "section": "",
-    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023.",
-    "crumbs": [
-      "Projects",
-      "BIODYNAMICS"
-    ]
+    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023."
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-description",
     "href": "projects/BIODYNAMICS/index.html#project-description",
     "title": "BIODYNAMICS",
     "section": "Project description",
-    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society.",
-    "crumbs": [
-      "Projects",
-      "BIODYNAMICS"
-    ]
+    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society."
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#project-goals",
     "href": "projects/BIODYNAMICS/index.html#project-goals",
     "title": "BIODYNAMICS",
     "section": "Project goals",
-    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka.",
-    "crumbs": [
-      "Projects",
-      "BIODYNAMICS"
-    ]
+    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html#my-role",
+    "href": "projects/BIODYNAMICS/index.html#my-role",
+    "title": "BIODYNAMICS",
+    "section": "My role",
+    "text": "My role\nI am the Principal Investigator of the project."
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#core-collaborators",
     "href": "projects/BIODYNAMICS/index.html#core-collaborators",
     "title": "BIODYNAMICS",
     "section": "Core collaborators",
-    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste",
-    "crumbs": [
-      "Projects",
-      "BIODYNAMICS"
-    ]
+    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste"
   },
   {
     "objectID": "projects/BIODYNAMICS/index.html#news",
     "href": "projects/BIODYNAMICS/index.html#news",
     "title": "BIODYNAMICS",
     "section": "News",
-    "text": "News\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Projects",
-      "BIODYNAMICS"
-    ]
+    "text": "News\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/FunctionalVegetationPaleoecology/index.html",
@@ -816,6 +800,20 @@
     "title": "Functional Vegetation Paleoecology",
     "section": "Project Goals",
     "text": "Project Goals\n\nAim 1: Integrate global fossil pollen data with modern plant traits to account for uncertainties.\nAim 2: Estimate global functional ecosystem properties since the Last Glacial Maximum.\nAim 3: Assess current ecosystems’ Safe Operating Space to help mitigate the impact of climate change (see my participation Planetary Boundaries project)."
+  },
+  {
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "My role",
+    "text": "My role\nI am the Principal Investigator of the project."
+  },
+  {
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#open-phd-possition",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#open-phd-possition",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "Open PhD possition",
+    "text": "Open PhD possition\nSee the details here!"
   },
   {
     "objectID": "projects/HOPE/index.html",

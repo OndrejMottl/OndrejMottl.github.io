@@ -38,11 +38,11 @@ A four-day workshop focused on mastering the principles of reproducibility, open
 
 🗓️**Date**: The course is designed as a practical exercise over several days. Based on the participants' preferences and room availability, the course will take part:
 
-- **05.11.** 14:30 - 19:30 
-- **07.11.** 14:30 - 19:30 
-- **13.11.** 14:45 - 19:45 
-- **14.11.** 14:30 - 19:30 
-- **19.11.** 14:30 - 19:30 
+- **05.11.2024** 14:45 - 19:30
+- **07.11.2024** 14:45 - 19:30
+- **13.11.2024** *14:00 - 19:30* !
+- **14.11.2024** 14:45 - 19:30
+- **19.11.2024** 14:45 - 19:30
 
 #### Expected Learning Outcomes
 

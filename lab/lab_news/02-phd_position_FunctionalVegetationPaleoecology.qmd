@@ -47,9 +47,10 @@ Through interdisciplinary research, the project aims to push the boundaries of o
   - Working with large dataset compilations from global databases.
   - Tools to foster reproducibility in science (Im am an [Open Science Champion](https://openscience.cuni.cz/OSCI-251.html) at Charles University).
   - Presentation and communication skills, with the opportunity to present at conferences, congresses, and workshops.
-- The financial compensation consists of 2 parts
+- The financial compensation consists of 2 parts:
   - Salary of 7,000 CZK/month before taxes (approx. 5,500 CZK/month after taxes, which is around 220 EUR/month as of October 2024).
   - Tax-free PhD stipend of 28,000 CZK/month (approx. 1100 EUR/month as of October 2024).
+  - Please note that the cost of living in [Prague is relatively low](https://www.numbeo.com/cost-of-living/in/Prague) compared to other European cities.
 - Access to state-of-the-art scientific and computing equipment, software, journals, and scientific databases.
 - Access to my worldwide network of collaborators, with the possibility to participate in related projects (see list of all my [current projects](/projects/index.qmd)).
 - Subsidized meals at the university canteen.

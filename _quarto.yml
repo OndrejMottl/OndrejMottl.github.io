@@ -3,11 +3,16 @@ project:
   output-dir: docs
 
 website:
-  page-navigation: true
+  page-navigation: false
   title: "Ondřej Mottl"
+  description: "Personal website of Ondřej Mottl, Faculty of Science, Charles University."
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
+  repo-url: "https://github.com/OndrejMottl/OndrejMottl.github.io"
+  favicon: about_me/img/Ondrej_Mottl-transparent-noshadow.png
+  image: about_me/img/Ondrej_Mottl-transparent-noshadow.png 
 
   sidebar:
     pinned: true

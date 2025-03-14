@@ -6,9 +6,9 @@ about:
   template: trestles
   image-shape: rectangle
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/OndrejMottl
+    - icon: Bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/ondrejmottl.bsky.social
     - icon: ORCID
       text: ORCID
       href: https://orcid.org/0000-0002-9796-5081
@@ -27,7 +27,7 @@ I am the head of the [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd
 
 🌱 I am deeply committed to teaching and mentoring, helping to inspire and guide the next generation of ecologists and data scientists. Learn more about my [teaching activities](teaching/teaching.qmd).
 
-💡 In addition, I proudly serve as the [Open Science Champion](https://openscience.cuni.cz/OSCI-251.html) at Charles University, advocating for scientific reproducibility - a cause close to my heart.
+💡 In addition, I proudly serve as the [Open Science Champion](https://openscience.cuni.cz/OSCIEN-161.html) at Charles University, advocating for scientific reproducibility - a cause close to my heart.
 
 💬 Feel free to reach out if you'd like to discuss R programming, GitHub, biodiversity patterns, or other topics of interest.
 

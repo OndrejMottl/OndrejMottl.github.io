@@ -1,0 +1,24 @@
+---
+title: "VegVault is published!"
+date: "2025-03-14"
+date-format: long
+date-modified: last-modified
+categories: [news]
+---
+
+# VegVault is published!
+
+I'm thrilled to announce that VegVault is now published! 🎉
+
+There are seversal parts of the VegVault project that are now available for you to explore:
+
+- [VegVault website](https://bit.ly/VegVault)
+- [Pre-print publication](https://doi.org/10.1101/2025.01.31.635213) - "*VegVault database: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*" [![static-badge](https://img.shields.io/badge/DOI-10.1101/2025.01.31.635213-blue)](https://doi.org/10.1101/2025.01.31.635213)
+- [VegVault Database v1.0.0 ](https://doi.org/10.48700/datst.m7ky4-4de51) 
+  - Please check [Guidelines for data reuse and update](https://ondrejmottl.github.io/VegVault/website/database_access.html#guidelines-for-data-reuse-and-update)
+- [{vaultkeepr} R-package](https://bit.ly/vaultkeepr)
+  - In order to make usage of the VegVault database as easy as possible, we have developed an R-package called {vaultkeepr}, providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ([![Codecov-test-coverage](https://codecov.io/gh/OndrejMottl/vaultkeepr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/OndrejMottl/vaultkeepr?branch=main)).
+- Additional resources
+  - [BlueSky announcement](https://bsky.app/profile/ondrejmottl.bsky.social/post/3ljkuntoc5s2a) 
+  - [VegVault poster](https://ondrejmottl.github.io/VegVault/Outputs/Figures/poster2024/mottl_poster.jpeg) - CSPE conference September 2024
+  - [VegVault Flash Presentation](https://ondrejmottl.github.io/VegVault-FlashPresentation-20250323/) - Geobotany meeting, Sudějov 23 March 2025

@@ -6,9 +6,9 @@ about:
   template: trestles
   image-shape: rectangle
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/OndrejMottl
+    - icon: Bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/ondrejmottl.bsky.social
     - icon: ORCID
       text: ORCID
       href: https://orcid.org/0000-0002-9796-5081

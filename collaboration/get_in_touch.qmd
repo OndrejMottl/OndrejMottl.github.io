@@ -7,18 +7,31 @@ format:
 editor: visual
 ---
 
-I like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. 🌟
+I like to work collaboratively! So, feel free to reach out to me and we can
+discuss the possibility of working together. In order to make such collaboration
+easy for everyone, I have prepared various materials for you. 🌟
 
 ## Contact me 📬
 
-Do you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to **ondrej.mottl(at)gmail.com**. Also, feel free to reach out to me via [Twitter](https://twitter.com/ondrejmottl)! 📧🐦
+Do you have a question? Do you want to set up a meeting? The easiest way to
+contact me is to hit me up via an email to **ondrej.mottl(at)gmail.com**📧.
+Also, feel free to reach out to me via
+[Bluesky](https://bsky.app/profile/ondrejmottl.bsky.social)!🦋
 
 ## Collaboration guide 🤝
 
-Everyone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a [collaboration guide](/collaboration/collaboration_guide.qmd) for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. 📚🌱
+Everyone has their own way of working and pace. In order to make collaboration
+easy for everyone, I have prepared a [collaboration
+guide](/collaboration/collaboration_guide.qmd) for you. It contains all the
+information to make sure that there are no unpleasant surprises and that doing
+science is as much fun as possible for everyone. 📚🌱
 
 ## Code convention 💻
 
-My work is heavily focused on writing code. For this reason, I have prepared a [code convention](/collaboration/code_convention.qmd), which I am following in my projects. I am making it publically available so feel free to check it out! 💡📝
+My work is heavily focused on writing code. For this reason, I have prepared a
+[code convention](/collaboration/code_convention.qmd), which I am following in
+my projects. I am making it publically available so feel free to check it
+out!💡📝
 
-Feel free to explore these resources, and let's create something amazing together! 🌟🌍🔬
+Feel free to explore these resources, and let's create something amazing
+together! 🌟🌍🔬

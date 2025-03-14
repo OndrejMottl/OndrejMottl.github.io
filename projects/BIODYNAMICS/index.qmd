@@ -34,6 +34,27 @@ Improve the capacity to predict global biodiversity patterns using a new multidi
 ## My role
 I am the Principal Investigator of the project.
 
+## News
+::: {#blogs}
+:::
+
+## Project outputs
+
+### VegVault <img src="https://ondrejmottl.github.io/VegVault/Outputs/Figures/website/VegVault_logo.png" align="right" width="250"/>
+
+VegVault is a database that links global paleo-, and neo-vegetation data with functional traits and abiotic drivers. The database is a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology. More detais about the release [here](/projects/BIODYNAMICS/blog/05-vegvault_published.qmd).
+
+- [VegVault website](https://bit.ly/VegVault)
+- [Pre-print publication](https://doi.org/10.1101/2025.01.31.635213) - "*VegVault database: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*" [![static-badge](https://img.shields.io/badge/DOI-10.1101/2025.01.31.635213-blue)](https://doi.org/10.1101/2025.01.31.635213)
+
+<br>
+
+### {vaultkeepr} R-package <img src="https://ondrejmottl.github.io/vaultkeepr/reference/figures/vaultkeeper_logo.png" align="right" width="150"/>
+
+In order to make usage of the **VegVault** database as easy as possible, we have developed an R-package called [{vaultkeepr}](https://bit.ly/vaultkeepr), providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ([![Codecov-test-coverage](https://codecov.io/gh/OndrejMottl/vaultkeepr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/OndrejMottl/vaultkeepr?branch=main)).
+
+<br>
+
 ## Core collaborators
 
 ### Suzette Flantua <img src="https://www.uib.no/sites/w3.uib.no/files/styles/user_thumbnail/public/pictures/picture-388168-1536217906.jpg?itok=yqGLK7Kg" align="right" width="120" />
@@ -59,8 +80,4 @@ I am the Principal Investigator of the project.
 * 📬email: simova(at)cts.cuni.cz
 * [![ORCID](https://img.shields.io/badge/orcid-0000--0002--9474--569X-brightgreen.svg)](https://orcid.org/0000-0002-9474-569X)
 * [🔗personal webiste](https://www.cts.cuni.cz/en/simova.html)
-
-## News
-::: {#blogs}
-:::
 

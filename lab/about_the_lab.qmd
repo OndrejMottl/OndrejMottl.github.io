@@ -67,10 +67,11 @@ Our research integrates concepts and methodologies from various fields, includin
   * [*Holocene Diversity Trends*](/projects/HoloceneDiversityTrends/index.qmd) project
   - joined Autumn 2024
 
-- ### PhD Student Position
-  * staring October 2025
+- ### Natálie Hanusová <img src="img/naty_crop.png" alt="Natálie Hanusová" align="right" width="120" /> 
+- * PhD student
+  * 📬email: hanusova.nat(at)gmail.com
   * [*Functional Vegetation Paleoecology*](/projects/FunctionalVegetationPaleoecology/index.qmd) project
-  * *application open soon*
+  - joined Autumn 2025
 
 - ### Markéta Tumová <img src="img/marketa_crop.JPG" alt="Markéta Tumová" align="right" width="120" />
    * Bc student

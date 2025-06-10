@@ -1,6 +1,6 @@
 ---
 title: "Ondřej Mottl"
-image: img/profile_mottl_zoom.jpg
+image: img/Profile head photo 2025 - close - nobg.png
 about:
   id: hero-heading
   template: trestles

@@ -10,7 +10,7 @@ about:
 listing: 
   - id: blogs
     max-description-length: 500
-    fields: [title, description]
+    fields: [title, description, image, date]
     contents: "blog"
     sort: "date desc" 
     type: grid

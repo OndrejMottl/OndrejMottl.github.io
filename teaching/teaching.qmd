@@ -30,24 +30,38 @@ More information in [EN](/about_me/student_mentoring_en.qmd) / [CZ](/about_me/st
 
 ### 🌱 SPROuT 
 
-#### SPROuT - Science Powered through Reproducibility, Openness, and Teamwork <img src="SPROuT/sprout_logo_white.jpg" alt="SPROuT logo" align="right" width="180"/>
+#### SPROuT – Science Powered through Reproducibility, Openness, and Teamwork <img src="SPROuT/sprout_logo_white.jpg" alt="SPROuT logo" align="right" width="180"/>
 
-#### Description 
+##### Description 
 
-A five-day workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research. Designed for master's and PhD students, this course covers the foundations of Open Science 🌎, version control using Git/GitHub 💻, and effective collaboration techniques 🤝. Participants will engage in practical sessions to build skills in version control, collaborative project management, and coding hygiene, empowering them to confidently tackle modern scientific challenges.
+**SPROuT** is a five-day, hands-on workshop focused on mastering the principles of **reproducibility**, **openness**, and **teamwork** in scientific research.  
+Designed for **master’s and PhD students**, the course offers a practical and engaging approach to building modern research workflows using **R**, **Git/GitHub**, and **Quarto**.  
 
-🗓️**Date**: The course is designed as a practical exercise over several days. Based on the participants' preferences and room availability, the course will take part on a week **26.1.2026** - **30.1.2026**.
+Participants will learn how to organise their projects efficiently, write clean and reproducible code, manage their work with version control, collaborate effectively within research teams, and publish transparent, reproducible results. Through interactive group-based sessions in **RStudio**, students will gain the confidence to apply Open Science practices in their own research—making their work more robust, collaborative, and shareable.
 
-#### Expected Learning Outcomes
+🗓️ **Date:** 26–30 January 2026 (10:00–16:00)  
+📍 **Location:** Seminarium, Department of Botany  
+🎓 **Credits:** 3 ECTS  
+💻 **Format:** Practical, group-based sessions in RStudio (bring your own laptop)  
+🎯 **Course Code:** [![Badge](https://img.shields.io/badge/SIS-MB120C26-blue)](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=MB120C26)
 
-* Learn fundamental concepts in Open Science 🌐 and reproducibility 📜.
-* Use Git/GitHub for version control, including branching 🌿, merging 🔀, and resolving conflicts ❗.
-* Manage projects and collaborate using GitHub's tools like Issues 📝, Milestones 🏆, and Teams 🤝.
-* Ensure project reproducibility through best practices in coding etiquette and project management 🗃️.
+##### Daily Themes
+1. **Organise** – Set up your project structure, manage your environment, and learn the principles of Open Science.  
+2. **Analyse** – Write readable, reproducible, scalable R code with good coding etiquette.  
+3. **Save** – Implement version control with Git/GitHub to track, protect, and manage your research.  
+4. **Collaborate** – Learn to work in teams using GitHub for transparent project collaboration.  
+5. **Publish** – Communicate and share your research openly.
 
-**Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C26-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C26)
+##### Expected Learning Outcomes
 
-#### Advertisements
+* Understand the principles of Open Science 🌐 and reproducibility ♻️.  
+* Apply best practices for data and project organisation 🗂️.  
+* Use Git/GitHub for version control 📚.  
+* Manage projects and collaborate using GitHub 🧑‍💼.  
+* Create reproducible reports using Quarto 📜.  
+* Share research openly following FAIR principles and modern publishing standards 🔓.  
+
+##### Advertisements
 
 [![](https://img.shields.io/badge/FlyerLarge-PDF-red)](/teaching/SPROuT/SPROuT_flyer_manual_edit.pdf) [![](https://img.shields.io/badge/FlyerLarge-JPG-green)](/teaching/SPROuT/SPROuT_flyer_manual_edit.jpg)
 
@@ -77,7 +91,7 @@ An intensive five-day international workshop designed for master's and motivated
 * Network with peers and experts through formal and informal sessions 🗣️.
 * Learn contemporary methods and concepts in Quantitative Ecology 🌿.
 
-**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C28-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C28)
+**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C28-blue)](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=MB120C28)
 :::
 
 ___
@@ -92,7 +106,7 @@ ___
 
 CodeFest is a three-day workshop 💻 where master's and PhD students collaborate to develop tools 🛠️ that enhance the university's educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.
 
-🗓️**Date**: The date will be selected based on the participants' availability. I will contact you after you register. The expected time is during December 2024.
+🗓️**Date**: The date will be selected based on the participants' availability. I will contact you after you register.
 
 #### Expected Learning Outcomes
 
@@ -100,5 +114,6 @@ CodeFest is a three-day workshop 💻 where master's and PhD students collaborat
 * Gain experience in software development and project management 🚀.
 * Learn diverse roles like project management, design 🎨, and review♻️.
 
-**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C27-blue)](https://is.cuni.cz/studium/predmety/index.php?id=d05883cb77201986e76bb53ceefb99e1&tid=&do=predmet&kod=MB120C27)
+**SIS Course Code**: [![Badge](https://img.shields.io/badge/SIS-MB120C27-blue)](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=MB120C27)
 :::
+

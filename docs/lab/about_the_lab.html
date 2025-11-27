@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.14">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,13 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0508618caa1d256af916c83e0797e277.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-05c098147c7f3c00b47f1cb1d3ce465f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,7 +113,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -311,7 +312,7 @@ window.Quarto = {
 <h2 data-anchor-id="news">News</h2>
 <div id="listing-lab_news" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="bmV3cyUyQ2xhYiUyQ3BoZCUyQ3Bvc2l0aW9u" data-listing-date-sort="1729461600000" data-listing-file-modified-sort="1748521005608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="787">
+<div class="g-col-1" data-index="0" data-categories="bmV3cyUyQ2xhYiUyQ3BoZCUyQ3Bvc2l0aW9u" data-listing-date-sort="1729461600000" data-listing-file-modified-sort="1744360528228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="787">
 <a href="../lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -324,7 +325,7 @@ Are you passionate about understanding ecosystem changes using large datasets an
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="bmV3cyUyQ2xhYiUyQ3BoZCUyQ3Bvc2l0aW9u" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1729602931128" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="792">
+<div class="g-col-1" data-index="1" data-categories="bmV3cyUyQ2xhYiUyQ3BoZCUyQ3Bvc2l0aW9u" data-listing-date-sort="1704841200000" data-listing-file-modified-sort="1740387573474" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="792">
 <a href="../lab/lab_news/01-phd_position_HoloceneDiversityTrends.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -372,10 +373,10 @@ Are you passionate about unravelling the mysteries of our planet’s biodiversit
 <section id="former-members" class="level3">
 <h3 data-anchor-id="former-members">Former members</h3>
 <ul>
-<li><h3 id="friederika-wolke">Friederika Wolke <img src="img/frieda.jpeg" alt="Friederika Wolke" align="right" width="120"></h3>
+<li><h3 id="friederike-wolke">Friederike Wolke <img src="img/frieda.jpeg" alt="Friederike Wolke" align="right" width="120"></h3>
 <ul>
 <li>Technical assistant (programming)</li>
-<li>📬email: wolke.friederika(at)gmail.com</li>
+<li>📬email: friederike.woelke(at)gmail.com</li>
 <li><a href="../projects/RRatepol/index.html"><em>RRatepol</em></a> R-Package development</li>
 <li>Employed summer and autumn 2025</li>
 </ul></li>

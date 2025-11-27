@@ -79,9 +79,9 @@ Our research integrates concepts and methodologies from various fields, includin
 
 ### Former members
 
-- ### Friederika Wolke <img src="img/frieda.jpeg" alt="Friederika Wolke" align="right" width="120" /> 
+- ### Friederike Wolke <img src="img/frieda.jpeg" alt="Friederike Wolke" align="right" width="120" /> 
   * Technical assistant (programming)
-  * 📬email: wolke.friederika(at)gmail.com
+  * 📬email: friederike.woelke(at)gmail.com
   * [*RRatepol*](/projects/RRatepol/index.qmd) R-Package development
   - Employed summer and autumn 2025
 

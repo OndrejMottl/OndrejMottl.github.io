@@ -1,0 +1,34 @@
+---
+title: "VegVault officially published in Scientific Data!"
+date: "2026-01-02"
+date-format: long
+date-modified: last-modified
+categories: [news]
+---
+
+# VegVault in Scientific Data!
+
+I'm delighted to share that our VegVault paper has been officially published in Scientific Data! 🎉
+
+The paper "*VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*" is now available in peer-reviewed form.
+
+[![](https://img.shields.io/badge/DOI-10.1038%2Fss41597--025--06176--1-yellow)](https://doi.org/10.1038/s41597-025-06176-1)
+
+# What is VegVault?
+
+VegVault is an interdisciplinary SQL database that bridges the gap between paleo- and neo-ecological plot-based vegetation data, species functional traits, and abiotic information including climate and soil data. This resource is designed to facilitate large-scale analyses of vegetation dynamics across space and time.
+
+# Resources
+
+All VegVault resources remain freely available:
+
+- [VegVault website](https://bit.ly/VegVault)
+- [VegVault Database v1.0.0](https://doi.org/10.48700/datst.m7ky4-4de51)
+- [{vaultkeepr} R-package](https://bit.ly/vaultkeepr) - An R interface for easy database access
+- [GitHub repositories](https://github.com/OndrejMottl/) - Individual repos for each data component
+
+# Acknowledgments
+
+I'm grateful to all co-authors - Franziska Gaiser, Irena Šímová, and Suzette Flantua - for their invaluable contributions to making this project a reality.
+
+Stay tuned for future updates and developments!

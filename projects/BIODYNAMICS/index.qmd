@@ -42,10 +42,10 @@ I am the Principal Investigator of the project.
 
 ### VegVault <img src="https://ondrejmottl.github.io/VegVault/Outputs/Figures/website/VegVault_logo.png" align="right" width="250"/>
 
-VegVault is a database that links global paleo-, and neo-vegetation data with functional traits and abiotic drivers. The database is a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology. More detais about the release [here](/projects/BIODYNAMICS/blog/05-vegvault_published.qmd).
+VegVault is a database that links global paleo-, and neo-vegetation data with functional traits and abiotic drivers. The database is a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology. More details about the release [here](/projects/BIODYNAMICS/blog/06-vegvault_scientific_data.qmd).
 
 - [VegVault website](https://bit.ly/VegVault)
-- [Pre-print publication](https://doi.org/10.1101/2025.01.31.635213) - "*VegVault database: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*" [![static-badge](https://img.shields.io/badge/DOI-10.1101/2025.01.31.635213-blue)](https://doi.org/10.1101/2025.01.31.635213)
+- [Official publication](https://doi.org/10.1038/s41597-025-06176-1) - "*VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*" [![Badge](https://img.shields.io/badge/DOI-10.1038%2Fs41597--025--06176--1-yellow)](https://doi.org/10.1038/s41597-025-06176-1)
 
 <br>
 

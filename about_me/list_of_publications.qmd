@@ -7,6 +7,14 @@ format:
 date: last-modified
 ---
 
+## 2025
+
+* _**Mottl, O.**_, Gaiser, F., Šímová, I. Flantua S.G.A. (2025) *VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*. **Scientific Data** 12: 1923 . 
+[![Badge](https://img.shields.io/badge/DOI-10.1038%2Fss41597--025--06176--1-yellow)](https://doi.org/10.1038/s41597-025-06176-1)
+[![Static Badge](https://img.shields.io/badge/project-BIODYNAMICS-silver)](/projects/BIODYNAMICS/index.qmd)
+[![Static Badge](https://img.shields.io/badge/project-FOSSILPOL-purple)](/projects/FOSSILPOL/index.qmd)
+[![Static Badge](https://img.shields.io/badge/project-Functional%20Vegetation%20Paleoecology-teal)](/projects/FunctionalVegetationPaleoecology/index.qmd)
+
 * _Rentier E.S._, **Mottl O.**, Pacheco-Riaño L.C., Schultz L., Seguinot J., Wiersma A.T., Grytnes J., Flantua S.G.A. (2025) *Global variability in LGM cooling amongst paleoclimate datasets affects biome reconstructions in mountains*. **Frontiers of Biogeography** 18: e135871. 
 [![Badge](https://img.shields.io/badge/DOI-10.21425%2Fsfob.18.135871-yellow)](https://doi.org/10.21425/fob.18.135871) 
 [![Static Badge](https://img.shields.io/badge/project-PPF--Alpine-green)](/projects/PPF-Alpine/index.qmd)
@@ -15,6 +23,8 @@ date: last-modified
 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fsgcb.70017-yellow)](https://doi.org/10.1111/gcb.70017) 
 [![Static Badge](https://img.shields.io/badge/project-Planetary%20Boundaries-orange)](/projects/PlanetaryBoundaries/index.qmd)
 
+## 2024
+
 * _Herbert, A.V._, Haberle, S.G., Flantua, S.G.A., **Mottl,O.**, Blois, J.L., Williams, J.W., George, A., Hope, G.S. (2024) *The Indo-Pacific Pollen Database - a Neotoma constituent database*, **Climate of the Past** 20: 2473-2485. [![Badge](https://img.shields.io/badge/DOI-10.5194%2Fscp--20--2473--2024-yellow)](https://doi.org/10.5194/cp-20-2473-2024) 
 [![Static Badge](https://img.shields.io/badge/project-FOSSILPOL-purple)](/projects/FOSSILPOL/index.qmd)
 [![Static Badge](https://img.shields.io/badge/project-HOPE-blue)](/projects/HOPE/index.qmd)
@@ -22,6 +32,8 @@ date: last-modified
 * _Bhatta, K.P._, **Mottl O.**, Felde V.A., Grytnes J., Reitalu T., Birks H.H., Birks,  H.J.B., Vetaas O.R. (2024), *Latitudinal gradients in the phylogenetic assembly of angiosperms in Asia during the Holocene.* **Scientific Reports** 14.1: 17940.
 [![Badge](https://img.shields.io/badge/DOI-10.1038%2Fs41598--024--67650--1-yellow)](https://doi.org/10.1038/s41598-024-67650-1)
 [![Static Badge](https://img.shields.io/badge/project-HOPE-blue)](/projects/HOPE/index.qmd)
+
+## 2023
 
 * _Birks, H.J.B._, Bhatta, K.P., Felde, V.A., Flantua, S.G., **Mottl, O.**, Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023), *Approaches to pollen taxonomic harmonisation in Quaternary palynology*. **Palaeobotany and Palynology** 319: 104989.
 [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpablo.2023.104989-yellow)](https://doi.org/10.1016/j.revpalbo.2023.104989)
@@ -42,14 +54,17 @@ date: last-modified
 [![Badge](https://img.shields.io/badge/DOI-10.3389%2Ffevo.2023.1115784-yellow)](https://doi.org/10.3389/fevo.2023.1115784) 
 [![Static Badge](https://img.shields.io/badge/project-HOPE-blue)](/projects/HOPE/index.qmd)
 
+## 2022
+
 * _Houska Tahadlova, M._, **Mottl, O.**, Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), *Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea*. **Biotropica** 55: 70-80.
 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fbtp.13160-yellow)](https://doi.org/10.1111/btp.13160)
+
+## 2021
 
 * _**Mottl, O.** & Flantua, S.G.A._, Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), *Global acceleration in rates of vegetation change over the past 18,000 years*. **Science** 372: 860-864.
 [![Badge](https://img.shields.io/badge/DOI-10.1126%2Fscience.abg1685-yellow)](https://doi.org/10.1126/science.abg1685)
 [![Static Badge](https://img.shields.io/badge/project-HOPE-blue)](/projects/HOPE/index.qmd)
 [![Static Badge](https://img.shields.io/badge/project-RRatepol-red)](/projects/RRatepol/index.qmd)
-
 
 * _**Mottl, O.**_, Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), *Rate-of-change analysis in paleoecology revisited: A new approach*. **Review of Palaeobotany and Palynology** 293.
 [![Badge](https://img.shields.io/badge/DOI-10.1016%2Fj.revpalbo.2021.104483-yellow)](https://doi.org/10.1016/j.revpalbo.2021.104483)
@@ -65,6 +80,8 @@ date: last-modified
 * _Yombai, J._, Klimeš, P., Dargusch, P., Posman, A., **Mottl, O.**, Mani A., Novotny V. (2021), *Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea*. **Case Studies in the Environment** 5: 1342727.
 [![Badge](https://img.shields.io/badge/DOI-10.1525%2Fcse.2021.1342727-yellow)](https://doi.org/10.1525/cse.2021.1342727)
 
+## 2020
+
 * _**Mottl, O.**_, Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), *Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient*. **Ecology Letters** 23: 1499-1510.
 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fele.13579-yellow)](https://doi.org/10.1111/ele.13579)
 
@@ -73,6 +90,8 @@ date: last-modified
 
 * _Plowman, N.S._, **Mottl, O.**, Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), *Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies*. **Ecography** 43: 431-442.
 [![Badge](https://img.shields.io/badge/DOI-10.1111%2Fecog.04730-yellow)](https://doi.org/10.1111/ecog.04730)
+
+## 2019
 
 * _**Mottl, O.**_, Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), *Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest*. **Ecosphere** 10: e02848.
 [![Badge](https://img.shields.io/badge/DOI-10.1002%2Fecs2.2848-yellow)](https://doi.org/10.1002/ecs2.2848)

@@ -26,5 +26,6 @@ Through the integration of global fossil pollen data with modern plant traits, t
 ## My role
 I am the Principal Investigator of the project.
 
-## Open PhD possition
-See the details [here](/lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.qmd)!
+## Current openings
+
+See [current opportunities in the Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd#open-positions).

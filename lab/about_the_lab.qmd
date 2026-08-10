@@ -6,10 +6,12 @@ about:
   image-shape: round
   image-width: 500px
 listing: 
-  - id: lab_news
+  - id: open_positions
     max-description-length: 100
     fields: [title, description]
     contents: "lab_news"
+    include:
+      vacancy-status: "open"
     sort: "date desc"
     type: grid
     grid-item-border: true
@@ -45,13 +47,17 @@ Our research integrates concepts and methodologies from various fields, includin
 - [Holocene Diversity Trends](/projects/HoloceneDiversityTrends/index.qmd)
 - [FOSSILPOL](/projects/FOSSILPOL/index.qmd)
 - [Planetary Boundaries Working Group](/projects/PlanetaryBoundaries/index.qmd)
+- [MEMELAND](/projects/MEMELAND/index.qmd)
 
 #### Presentations
 
 - [Flash talk about our lab](https://ondrejmottl.github.io/Presentation-FlashTalk-JF-20250926/) presented at the [Junior Faculty](https://natur.cuni.cz/en/research/junior-faculty) Conference September 2025.
 
-## News
-::: {#lab_news}
+## Open positions
+
+Current vacancies appear here when available.
+
+::: {#open_positions}
 :::
 
 ## People
@@ -72,10 +78,10 @@ Our research integrates concepts and methodologies from various fields, includin
   - joined Autumn 2024
 
 - ### Natálie Hanusová <img src="img/naty_crop.png" alt="Natálie Hanusová" align="right" width="120" /> 
-- * PhD student
+  * PhD student
   * 📬email: hanusova.nat(at)gmail.com
   * [*Functional Vegetation Paleoecology*](/projects/FunctionalVegetationPaleoecology/index.qmd) project
-  - joined Autumn 2025
+  * Joined Autumn 2025
 
 ### Former members
 

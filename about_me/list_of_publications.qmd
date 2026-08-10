@@ -7,6 +7,12 @@ format:
 date: last-modified
 ---
 
+## 2026
+
+* _Schultz, L., **Mottl, O.**, Pacheco-Riaño, L.C., et al._ (2026) *Contrasting patterns of alpine biodiversity across mountains and taxa worldwide*. **Nature Communications**.
+[![Badge](https://img.shields.io/badge/DOI-10.1038%2Fs41467--026--75210--6-yellow)](https://doi.org/10.1038/s41467-026-75210-6)
+[![Static Badge](https://img.shields.io/badge/project-PPF--Alpine-green)](/projects/PPF-Alpine/index.qmd)
+
 ## 2025
 
 * _**Mottl, O.**_, Gaiser, F., Šímová, I. Flantua S.G.A. (2025) *VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers*. **Scientific Data** 12: 1923 . 

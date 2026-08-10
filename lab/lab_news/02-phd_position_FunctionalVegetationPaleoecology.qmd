@@ -1,7 +1,9 @@
 ---
-title: "~~Looking for a new PhD student!~~"
+title: "Looking for a new PhD student!"
+description: "A four-year PhD position in functional vegetation paleoecology, based in Prague."
 date: "2024-10-21"
 categories: [news, lab, phd, position] 
+vacancy-status: closed
 format:
   pdf:
     fig-width: 10    
@@ -11,6 +13,12 @@ format:
     fig-width: 10
 sansfont: Calibri Light
 ---
+
+::: {.callout-warning}
+## Position closed
+
+This position is closed. The page is retained for reference.
+:::
 
 # Exploring the Past, Shaping the Future: A full-time PhD position in Functional Vegetation Paleoecology (Prague, 4 years, starting October 2025)
 

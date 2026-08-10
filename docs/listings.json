@@ -1,27 +1,5 @@
 [
   {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/BIODYNAMICS/index.html",
-      "/projects/FunctionalVegetationPaleoecology/index.html",
-      "/projects/PPF-Alpine/index.html",
-      "/projects/HoloceneDiversityTrends/index.html",
-      "/projects/FOSSILPOL/index.html",
-      "/projects/PlanetaryBoundaries/index.html",
-      "/projects/PalaeOpen/index.html",
-      "/projects/RRatepol/index.html",
-      "/projects/REcopol/index.html",
-      "/projects/HOPE/index.html"
-    ]
-  },
-  {
-    "listing": "/lab/about_the_lab.html",
-    "items": [
-      "/lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html",
-      "/lab/lab_news/01-phd_position_HoloceneDiversityTrends.html"
-    ]
-  },
-  {
     "listing": "/projects/BIODYNAMICS/index.html",
     "items": [
       "/projects/BIODYNAMICS/blog/06-vegvault_scientific_data.html",
@@ -30,6 +8,26 @@
       "/projects/BIODYNAMICS/blog/03-kickoff_meering.html",
       "/projects/BIODYNAMICS/blog/02-new_logo.html",
       "/projects/BIODYNAMICS/blog/01-project_start.html"
+    ]
+  },
+  {
+    "listing": "/lab/about_the_lab.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/BIODYNAMICS/index.html",
+      "/projects/FunctionalVegetationPaleoecology/index.html",
+      "/projects/MEMELAND/index.html",
+      "/projects/PPF-Alpine/index.html",
+      "/projects/PalaeOpen/index.html",
+      "/projects/HoloceneDiversityTrends/index.html",
+      "/projects/FOSSILPOL/index.html",
+      "/projects/PlanetaryBoundaries/index.html",
+      "/projects/RRatepol/index.html",
+      "/projects/REcopol/index.html",
+      "/projects/HOPE/index.html"
     ]
   }
 ]

@@ -1,0 +1,36 @@
+---
+title: "MEMELAND"
+description: "An ERC Synergy project reconstructing how medieval land use shaped European landscapes and biodiversity."
+categories: [project, ERC, Synergy]
+image: "MEMELAND.png"
+about:
+  id: heading
+  template: trestles
+  image-shape: rectangle
+  image-width: 280px
+  links:
+    - icon: link
+      text: Project website
+      href: https://memeland.no/en/index.html
+    - icon: file-text
+      text: CORDIS record
+      href: https://cordis.europa.eu/project/id/101166850
+---
+
+::: {#heading}
+**Molecular Ecology of Medieval European Landscapes (MEMELAND)** is an ERC Synergy project running from 1 July 2025 to 30 June 2031.
+
+## Project description
+
+MEMELAND will develop a species-level ecological history of Europe from the Roman era to the present. The project combines sedimentary ancient DNA, lipid biomarkers, archaeobotanical evidence, pollen, and climate records to investigate how medieval land use, technology, and social organisation left persistent effects on European landscapes and biodiversity.
+
+The project studies paired lakes across northern and central Europe to compare landscapes associated with high-status medieval sites against nearby areas with less archaeological influence. This long-term perspective will support biodiversity conservation, sustainable land management, and heritage-informed restoration under climate change.
+
+For project news and further information, visit the [MEMELAND website](https://memeland.no/en/index.html). The [European Commission CORDIS record](https://cordis.europa.eu/project/id/101166850) provides the authoritative grant details.
+
+## My role
+
+I am a member of the Charles University team.
+
+The logo shown above is the official project logo from the [MEMELAND website](https://memeland.no/en/index.html).
+:::

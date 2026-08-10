@@ -19,7 +19,9 @@ about:
 
 ::: {#hero-heading}
 
-I am a researcher at Charles University in Prague, Czech Republic, with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.
+I am an Assistant Professor of Plant Ecology and Head of the Laboratory of Quantitative Ecology at Charles University in Prague, Czech Republic. I am a quantitative ecologist studying long-term biodiversity dynamics across large spatial and temporal scales. My work integrates fossil-pollen archives, contemporary vegetation, functional traits, climate data, and quantitative modelling to understand ecological memory, biodiversity change, human impacts, and climate-change responses. I lead open and reproducible data-integration and software-development workflows in R.
+
+**Research identifiers:** [ORCID 0000-0002-9796-5081](https://orcid.org/0000-0002-9796-5081) | [Scopus ID 57209659764](https://www.scopus.com/authid/detail.uri?authorId=57209659764) | [ResearcherID AAC-7606-2019](https://www.webofscience.com/wos/author/record/AAC-7606-2019)
 
 ## Education 
 
@@ -35,7 +37,7 @@ MSc in Zoology   | 6/2015
 
 University of South Bohemia | České Budějovice, Czech Republic
 
-Thesis awarded dean's price entitled "*Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea*"
+Thesis awarded the Dean's Prize, entitled "*Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea*"
 
 -------------------------------------
 
@@ -55,11 +57,41 @@ Assistant Professor of Plant Ecology
 
 -------------------------------------
 
+7/2025 - present
+
+Faculty of Science, Charles University, Prague, Czech Republic
+
+Member of the Charles University team in the ERC Synergy project *[MEMELAND: Molecular Ecology of Medieval European Landscapes](/projects/MEMELAND/index.qmd)* (101166850).
+
+-------------------------------------
+
+6/2025 - present
+
+Faculty of Science, Charles University, Prague, Czech Republic
+
+Principal Investigator of the Charles University PRIMUS project *[Functional Vegetation Paleoecology](/projects/FunctionalVegetationPaleoecology/index.qmd)* (PRIMUS/25/SCI/002).
+
+-------------------------------------
+
+6/2025 - 12/2025
+
+Parental leave
+
+-------------------------------------
+
+2024 - present
+
+Charles University Research Centre
+
+Member of the Charles University Research Centre programme UNCE/24/SCI/006.
+
+-------------------------------------
+
 6/2023 - present 
 
 Center for Theoretical Sciences, Charles University, Prague, Czech Republic
 
-Awardet a personal GACR grand for my *[BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)* project.
+Principal Investigator of the GAČR Postdoc Individual Fellowship - Incoming project *[BIODYNAMICS](/projects/BIODYNAMICS/index.qmd)* (23-06386I).
 
 -------------------------------------
 
@@ -84,7 +116,23 @@ Department of Ecology, Institute of Entomology, Czech Republic
 PhD researcher funded by several individual grants.
 
 ### Major collaboration
- 
+
+2024 - present
+
+[Open Palaeoecological Data (PalaeOpen)](/projects/PalaeOpen/index.qmd)
+
+Steering Committee member and co-leader of Working Group 3, Data Storage and Management.
+
+-------------------------------------
+
+Present
+
+[International Association for Vegetation Science](https://www.iavs.org/)
+
+Steering Committee member of the [Historical Vegetation Ecology Working Group](https://www.iavs.org/page/working-groups_historical-vegetation-ecology).
+
+-------------------------------------
+
 2022 - present
 
 Past Global Changes
@@ -104,10 +152,13 @@ Adviser of [The Past, Present and Future of Alpine Biomes Worldwide](/projects/P
 
 Department of Botany, Faculty of Science, Charles University, CZ
 
-* 2024 - present head of the [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd)
-* 2024 - Present [Graduate Student Advisor](/teaching/teaching.qmd#mentoring)
-* 2023 - Present Faculty member 
-* 2023 - Present Organizer of the Internal Seminar
+* 2024 - present: Head of the [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd)
+* 2024 - present: [Graduate Student Advisor](/teaching/teaching.qmd#mentoring)
+* 2023 - present: Faculty member
+* 2023 - present: Organiser of the Internal Seminar
+* Founding member and leader of Working Group 3, [Junior Faculty](https://natur.cuni.cz/en/research/junior-faculty)
+* Member of the scientific board, Czexpats in Science PI Forum
+* [Open Science Champion](https://openscience.cuni.cz/OSCIEN-161.html)
 
 -------------------------------------
 
@@ -173,11 +224,19 @@ Leading field project focused on arboreal ant ecology
 
 ## Invited presentations to conferences 
 
+2026
+
+*Estimating Vegetation Change from Fossil Pollen to Planetary Boundaries: A Global, Long-Term Synthesis Using Big Data*
+
+Symposium of the International Biogeography Society, Aarhus, Denmark
+
+-------------------------------------
+
 2022
 
-*[What is pristine?](https://docs.google.com/presentation/d/10NHhaFmz8g_f6sYQI64g0Ike1lTr9x5oEIA5n1438-8/edit?usp=sharing)*
+*Quantifying rates of vegetation change over the last 18,000 years*
 
-Conference of the Czech Society for Ecology
+Keynote lecture, Conference of the Czech Society for Ecology, Brno, Czech Republic
 
 -------------------------------------
 
@@ -190,15 +249,23 @@ European Pollen Database Open Science Meeting
 
 ## Teaching
 
-2024 (upcoming)
+2024 - present
 
-Course organiser of 3 classes at the Department of Botany, Faculty of Science, Charles University, Czech Republic:
+Current teaching at the Department of Botany, Faculty of Science, Charles University, Czech Republic:
 
-*  SPROuT - Science Powered through Reproducibility, Openness, and Teamwork
-*  CodeFest - Innovating Together for a Better University Environment
-*  [Science School on Quantitative Ecology](https://bit.ly/SSoQE)
+**Course guarantor and organiser:**
 
-see [my current teaching acitities](/teaching/teaching.qmd) for more details
+* [SPROuT - Science Powered through Reproducibility, Openness, and Teamwork](/teaching/teaching.qmd#sprout)
+* [Statistics in Biology and Design of Ecological Experiments](/teaching/teaching.qmd#biostatistics-for-biologists)
+* [CodeFest - Innovating Together for a Better University Environment](/teaching/teaching.qmd#codefest)
+* [Science School on Quantitative Ecology](https://bit.ly/SSoQE)
+
+**Member of the teaching team:**
+
+* [Seminar for PhD Students](/teaching/teaching.qmd#seminar-for-phd-students)
+* [Diploma Thesis Seminar (Geobotany) II](/teaching/teaching.qmd#diploma-thesis-seminar-geobotany-ii)
+
+See [my current teaching activities](/teaching/teaching.qmd) for more details.
 
 -------------------------------------
 
@@ -211,12 +278,12 @@ Department of Biological Sciences, University of Bergen, Norway
 
 ## Supervision
 
-2024 (starting)
+2024 - present
 
 Department of Botany, Faculty of Science, Charles University, Czech Republic
 
-* 1 PhD student - STARS program 
-* 1 bachelor student
+* Two PhD researchers: Bryan Novio (STARS, since 2024) and Natálie Hanusová (PRIMUS, since 2025)
+* One bachelor thesis completed in 2025
 
 See [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) for more details about team members
 
@@ -230,13 +297,13 @@ Department of Zoology, Faculty of Science, University of South Bohemia, Czech Re
 
 ## Organisation of scientific meeting
 
-2024 	(upcoming)
+2024 - present
 
-**[Science School of Quantitative Ecology](bit.ly/SSoQE)**
+**[Science School on Quantitative Ecology](https://bit.ly/SSoQE)**
 
-* Main co-organizer 
-* Germany
-* ~35 participants
+* Co-founder and main co-organiser of the annual Czech-German school
+* Alternates between Germany and the Czech Republic
+* Supported through three funding rounds
 
 -------------------------------------
 
@@ -311,13 +378,15 @@ GAUK Evaluator, Charles University, Czech Republic
 
 2019 - present
 
-Reviewer, >15 registered reviews in Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, Biotropica, etc.
+Reviewer for international journals including Nature Communications, Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, and Biotropica.
 
 
 ## Software development
 
-I have developed several R packages:
+I lead or contribute to open ecological data infrastructure and R software:
 
+* [VegVault](/projects/BIODYNAMICS/index.qmd#vegvault) - an integrated global palaeo- and neo-vegetation database with functional traits and abiotic drivers
+* [{vaultkeepr}](https://ondrejmottl.github.io/vaultkeepr/) - an R interface for reproducible access to VegVault
 * [RRatepol](/projects/RRatepol/index.qmd) 
 * [RFossilpol](/projects/FOSSILPOL/index.qmd)
 * [REcopol](/projects/REcopol/index.qmd)

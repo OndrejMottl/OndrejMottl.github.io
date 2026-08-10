@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 description: |
-  Projects, in which I am actively participating.
+  Projects in which I actively participate.
 listing:
   - id: active
     max-description-length: 500
@@ -10,11 +10,12 @@ listing:
     contents: 
       - BIODYNAMICS/index.qmd
       - FunctionalVegetationPaleoecology/index.qmd
+      - MEMELAND/index.qmd
       - PPF-Alpine/index.qmd
+      - PalaeOpen/index.qmd
       - HoloceneDiversityTrends/index.qmd
       - FOSSILPOL/index.qmd
       - PlanetaryBoundaries/index.qmd
-      - PalaeOpen/index.qmd
     sort: "false" 
     type: grid
     grid-item-border: false
@@ -32,6 +33,15 @@ listing:
     grid-item-border: false
 
 ---
+
+<style>
+#listing-active .thumbnail-image,
+#listing-past .thumbnail-image {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.5rem;
+}
+</style>
 
 ## Active Projects
 

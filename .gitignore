@@ -3,3 +3,5 @@ docs/REAMDE.html
 .Rproj.user
 debug.r
 .Rhistory
+
+**/*.quarto_ipynb

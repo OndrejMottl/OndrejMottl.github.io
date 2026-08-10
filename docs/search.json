@@ -24,7 +24,7 @@
     "href": "teaching/teaching.html#courses-i-currently-teach",
     "title": "My Teaching Activities",
     "section": "Courses I currently teach",
-    "text": "Courses I currently teach\n\n\n\n\n\n\nNote🌱 SPROuT\n\n\n\nSPROuT – Science Powered through Reproducibility, Openness, and Teamwork \n\nDescription\nSPROuT is a five-day, hands-on workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research.\nDesigned for master’s and PhD students, the course offers a practical and engaging approach to building modern research workflows using R, Git/GitHub, and Quarto.\nParticipants will learn how to organise their projects efficiently, write clean and reproducible code, manage their work with version control, collaborate effectively within research teams, and publish transparent, reproducible results. Through interactive group-based sessions in RStudio, students will gain the confidence to apply Open Science practices in their own research—making their work more robust, collaborative, and shareable.\n🗓️ Date: 26–30 January 2026 (10:00–16:00)\n📍 Location: Seminarium, Department of Botany\n🎓 Credits: 3 ECTS\n💻 Format: Practical, group-based sessions in RStudio (bring your own laptop)\n🎯 Course Code: \n\n\nDaily Themes\n\nOrganise – Set up your project structure, manage your environment, and learn the principles of Open Science.\n\nAnalyse – Write readable, reproducible, scalable R code with good coding etiquette.\n\nSave – Implement version control with Git/GitHub to track, protect, and manage your research.\n\nCollaborate – Learn to work in teams using GitHub for transparent project collaboration.\n\nPublish – Communicate and share your research openly.\n\n\n\nExpected Learning Outcomes\n\nUnderstand the principles of Open Science 🌐 and reproducibility ♻️.\n\nApply best practices for data and project organisation 🗂️.\n\nUse Git/GitHub for version control 📚.\n\nManage projects and collaborate using GitHub 🧑‍💼.\n\nCreate reproducible reports using Quarto 📜.\n\nShare research openly following FAIR principles and modern publishing standards 🔓.\n\n\n\nAdvertisements\n \n \n \n\n\n\n\n\n\n\n\n\n\nNote🌍 SSoQE\n\n\n\n\nScience School on Quantitative Ecology\nMore info on the project’s websites.\n\n\nDescription\nAn intensive five-day international workshop designed for master’s and motivated PhD students. It provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. The workshop alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.\n\n\nExpected Learning Outcomes\n\nGain expertise in statistical modelling and data analysis for ecological datasets 📈.\nParticipate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.\nNetwork with peers and experts through formal and informal sessions 🗣️.\nLearn contemporary methods and concepts in Quantitative Ecology 🌿.\n\nSIS Course Code: \n\n\n\n\n\n\n\n\n\n\nNote💡 CodeFest\n\n\n\n\nCodeFest - Innovating Together for a Better University Environment\n\n\nDescription\nCodeFest is a three-day workshop 💻 where master’s and PhD students collaborate to develop tools 🛠️ that enhance the university’s educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.\n🗓️Date: The date will be selected based on the participants’ availability. I will contact you after you register.\n\n\nExpected Learning Outcomes\n\nDevelop innovative solutions to improve the university environment 🌍.\nGain experience in software development and project management 🚀.\nLearn diverse roles like project management, design 🎨, and review♻️.\n\nSIS Course Code:",
+    "text": "Courses I currently teach\n\n\n\n\n\n\nNote🌱 SPROuT\n\n\n\nSPROuT – Science Powered through Reproducibility, Openness, and Teamwork \n📍 Location: Seminarium, Department of Botany\n🎓 Credits: 3 ECTS\n💻 Format: Practical, group-based sessions in RStudio (bring your own laptop)\n🎯 Course Code: \n\nDescription\nSPROuT is a five-day, hands-on workshop focused on mastering the principles of reproducibility, openness, and teamwork in scientific research.\nDesigned for master’s and PhD students, the course offers a practical and engaging approach to building modern research workflows using R, Git/GitHub, and Quarto.\nParticipants will learn how to organise their projects efficiently, write clean and reproducible code, manage their work with version control, collaborate effectively within research teams, and publish transparent, reproducible results. Through interactive group-based sessions in RStudio, students will gain the confidence to apply Open Science practices in their own research—making their work more robust, collaborative, and shareable.\n\n\nDaily Themes\n\nOrganise – Set up your project structure, manage your environment, and learn the principles of Open Science.\n\nAnalyse – Write readable, reproducible, scalable R code with good coding etiquette.\n\nSave – Implement version control with Git/GitHub to track, protect, and manage your research.\n\nCollaborate – Learn to work in teams using GitHub for transparent project collaboration.\n\nPublish – Communicate and share your research openly.\n\n\n\nExpected Learning Outcomes\n\nUnderstand the principles of Open Science 🌐 and reproducibility ♻️.\n\nApply best practices for data and project organisation 🗂️.\n\nUse Git/GitHub for version control 📚.\n\nManage projects and collaborate using GitHub 🧑‍💼.\n\nCreate reproducible reports using Quarto 📜.\n\nShare research openly following FAIR principles and modern publishing standards 🔓.\n\n\n\nAdvertisements\n \n \n \n\n\n\n\n\n\n\n\n\n\nNote📊 Biostatistics for biologists\n\n\n\nStatistics in biology and design of ecological experiments\n🎓 Credits: 5 ECTS\n🎯 SIS Course Code: \n\nExpected Learning Outcomes\n\nDistinguish among variable types and select appropriate numerical summaries and graphical displays 📊.\nTranslate a biological or ecological question into a model by identifying the response and predictor variables 🧩.\nUse the linear model as a fundamental analytical tool 📈.\nInterpret linear-model parameters (\\(a\\), \\(b\\)) and assess the strength of a relationship (\\(R^2\\)) 🔎.\nInterpret effect estimates and uncertainty, including confidence intervals 🎯.\nInterpret p-values in context 🧪.\nAssess model assumptions and determine whether they are satisfied ✅.\nWork with multiple predictors and explain the consequences of correlated predictors 🧮.\nRecognise and interpret interactions between predictors 🔀.\nCompare candidate models using AIC and justify the choice of a final model ⚖️.\nRecognise nonlinearity and select a simple solution, such as a transformation or an appropriate functional form 📉.\nRecognise hierarchical data structures, including repeated measurements, sites, and blocks, and determine when the model needs to be extended 🧱.\nSelect an appropriate model for categorical responses and explain why a linear model (lm) is unsuitable for binary data (0/1) 🔢.\nConstruct a complete analytical workflow in R: data import → visualisation → modelling → diagnostics → interpretation ♻️.\n\n\n\n\n\n\n\n\n\n\n\nNote🌍 SSOQE\n\n\n\nScience School on Quantitative Ecology \n🎓 Credits: 5 ECTS\n🎯 SIS Course Code: \nMore info on the project’s websites.\n\nDescription\nI am a co-founder and organiser of this annual Czech-German school, supported through three funding rounds. It is an intensive five-day international workshop designed for master’s and motivated PhD students. The school provides hands-on training in statistical modelling 📊, computational techniques 💻, and data analysis. It alternates between the Czech Republic and Germany, offering a dynamic learning environment led by lecturers from Charles University, the University of Bayreuth, and guest experts 🌟.\n\n\nExpected Learning Outcomes\n\nGain expertise in statistical modelling and data analysis for ecological datasets 📈.\nParticipate in hands-on projects led by esteemed lecturers and guest experts 👨‍🏫👩‍🏫.\nNetwork with peers and experts through formal and informal sessions 🗣️.\nLearn contemporary methods and concepts in Quantitative Ecology 🌿.\n\n\n\n\n\n\n\n\n\n\n\nNote🎓 Seminars of Vegetation science\n\n\n\n\nSeminar for PhD students\n🎓 Credits: 1 ECTS\n🎯 SIS Course Code: \n\nExpected Learning Outcomes\n\nFormulate and communicate the research clearly, including objectives, hypotheses, methods, and expected or achieved results, with the focus adapted to the current year of PhD study 🎯.\nExplain the wider relevance of the project in an ecological and geobotanical context for an audience across study levels 🌍.\nDesign and deliver a structured scientific talk within the allocated time, balancing presentation and discussion 🎤.\nPresent methods and results clearly so that the key messages and uncertainties are evident 📊.\nIdentify focused questions for discussion—conceptual, methodological, or interpretative—and share them in advance ❓.\nEngage constructively in scientific discussion and use questions, criticism, and questionnaire feedback to refine research design, analyses, and manuscripts 💬.\nDemonstrate progression through the PhD, from the initial project outline to progress reports and near-complete or submitted manuscripts 🧭.\nContribute to a supportive scholarly community by providing collegial, constructive feedback to peers 🤝.\n\n\n\n\nDiploma thesis seminar (geobotany) II\n🎓 Credits: 1 ECTS\n🎯 SIS Course Code: \n\nExpected Learning Outcomes\n\nDescribe the main stages of a diploma-thesis project—from formulating questions to interpreting results—and relate them to the seminar presentations delivered during the master’s programme 🗺️.\nFormulate clear and meaningful research questions, distinguish known from unknown aspects of the problem, and explain their relevance ❓.\nDevelop a realistic work plan covering data, collection strategy, methods, expected contribution, principal risks, and contingency plans 🗓️.\nPrepare and deliver a clear scientific presentation within the allocated time, introducing the context, objectives, methods, results to date, and next steps 🎤.\nOrganise collected data effectively into clear tables, figures, and structured text linked to both original and newly emerging questions 📊.\nCritically discuss research projects, identify weaknesses in design, data collection, analysis, or interpretation, and propose realistic improvements 🔍.\nRespond constructively to feedback, distinguish fundamental concerns from technical comments, and use both to strengthen the thesis 💬.\nAdapt presentation format and language to the audience, including non-Czech-speaking colleagues, while following academic communication principles 🌐.\nReflect on the project’s development across successive presentations and evaluate changes in questions, data, analyses, and interpretation 🧭.\n\n\n\n\n\n\n\n\n\n\n\n\nNote💡CodeFest\n\n\n\nCodeFest - Innovating Together for a Better University Environment\n🎓 Credits: 2 ECTS\n🎯 SIS Course Code: \n\nDescription\nCodeFest is a three-day workshop 💻 where master’s and PhD students collaborate to develop tools 🛠️ that enhance the university’s educational and environmental framework. Participants will engage in team projects 👥 with roles in design, project management, and documentation, promoting creativity and cooperation 🌟. Prior coding knowledge is not required, as an optional GitHub introduction session is offered.\n🗓️Date: The date will be selected based on the participants’ availability. I will contact you after you register.\n\n\nExpected Learning Outcomes\n\nDevelop innovative solutions to improve the university environment 🌍.\nGain experience in software development and project management 🚀.\nLearn diverse roles like project management, design 🎨, and review♻️.",
     "crumbs": [
       "Teaching"
     ]
@@ -100,209 +100,523 @@
     "text": "As a committee member, I contribute expertise in palaeoecology and long-term data analysis, helping to develop and coordinate the project.\nFigure for the planetary boundaries framework is Licenced under CC BY-NC-ND 3.0. Credit: J. Lokrantz/Azote based on Steffen et al. 2015."
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "projects/MEMELAND/index.html",
+    "href": "projects/MEMELAND/index.html",
+    "title": "MEMELAND",
     "section": "",
-    "text": "No matching items",
-    "crumbs": [
-      "Overview of projects"
-    ]
+    "text": "Project website\n  \n  \n    \n     CORDIS record\n  \n\n  \n  \nMolecular Ecology of Medieval European Landscapes (MEMELAND) is an ERC Synergy project running from 1 July 2025 to 30 June 2031.\n\n\nMEMELAND will develop a species-level ecological history of Europe from the Roman era to the present. The project combines sedimentary ancient DNA, lipid biomarkers, archaeobotanical evidence, pollen, and climate records to investigate how medieval land use, technology, and social organisation left persistent effects on European landscapes and biodiversity.\nThe project studies paired lakes across northern and central Europe to compare landscapes associated with high-status medieval sites against nearby areas with less archaeological influence. This long-term perspective will support biodiversity conservation, sustainable land management, and heritage-informed restoration under climate change.\nFor project news and further information, visit the MEMELAND website. The European Commission CORDIS record provides the authoritative grant details.\n\n\n\nI am a member of the Charles University team.\nThe logo shown above is the official project logo from the MEMELAND website."
   },
   {
-    "objectID": "projects/index.html#active-projects",
-    "href": "projects/index.html#active-projects",
-    "title": "Projects",
+    "objectID": "projects/MEMELAND/index.html#project-description",
+    "href": "projects/MEMELAND/index.html#project-description",
+    "title": "MEMELAND",
     "section": "",
-    "text": "No matching items",
-    "crumbs": [
-      "Overview of projects"
-    ]
+    "text": "MEMELAND will develop a species-level ecological history of Europe from the Roman era to the present. The project combines sedimentary ancient DNA, lipid biomarkers, archaeobotanical evidence, pollen, and climate records to investigate how medieval land use, technology, and social organisation left persistent effects on European landscapes and biodiversity.\nThe project studies paired lakes across northern and central Europe to compare landscapes associated with high-status medieval sites against nearby areas with less archaeological influence. This long-term perspective will support biodiversity conservation, sustainable land management, and heritage-informed restoration under climate change.\nFor project news and further information, visit the MEMELAND website. The European Commission CORDIS record provides the authoritative grant details."
   },
   {
-    "objectID": "projects/index.html#past-projects",
-    "href": "projects/index.html#past-projects",
-    "title": "Projects",
-    "section": "Past Projects",
-    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Overview of projects"
-    ]
-  },
-  {
-    "objectID": "projects/HoloceneDiversityTrends/index.html",
-    "href": "projects/HoloceneDiversityTrends/index.html",
-    "title": "Holocene Diversity Trends",
+    "objectID": "projects/MEMELAND/index.html#my-role",
+    "href": "projects/MEMELAND/index.html#my-role",
+    "title": "MEMELAND",
     "section": "",
-    "text": "HoloceneDiversityTrends aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment.\n\n\n\nThis project examines plant biodiversity from taxonomic, functional, and phylogenetic perspectives across different spatial scales (from biomes to global) and covers the period since the Last Glacial Maximum (the last 21,000 years). The research is based on fossil pollen records and aims to provide insights into long-term ecological changes.\nThe project is a 4-year research initiative led by Bryan Novio, supported by the STARS program. It is also linked to the Functional Vegetation Paleoecology project.\n\n\n\nAs Bryan’s main supervisor, I will provide guidance and support throughout the research process."
+    "text": "I am a member of the Charles University team.\nThe logo shown above is the official project logo from the MEMELAND website."
   },
   {
-    "objectID": "projects/HoloceneDiversityTrends/index.html#quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
-    "href": "projects/HoloceneDiversityTrends/index.html#quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
-    "title": "Holocene Diversity Trends",
+    "objectID": "projects/HOPE/index.html",
+    "href": "projects/HOPE/index.html",
+    "title": "HOPE",
     "section": "",
-    "text": "HoloceneDiversityTrends aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment."
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nHumans on Planet Earth - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?\n\n\n\nTo test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past ‘natural experiments’ and of the past as an analogue to the uncertain future of Earth in the ‘Anthropocene’ is a ‘flawed strategy’ and uniformitarianism should be discarded. As much of Earth system science relies on such ‘natural experiments’ and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.\nTo test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.\n\nCheck out the project website for more information.\n\n\n\nI was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
   },
   {
-    "objectID": "projects/HoloceneDiversityTrends/index.html#project-description",
-    "href": "projects/HoloceneDiversityTrends/index.html#project-description",
-    "title": "Holocene Diversity Trends",
+    "objectID": "projects/HOPE/index.html#project-main-objectives",
+    "href": "projects/HOPE/index.html#project-main-objectives",
+    "title": "HOPE",
     "section": "",
-    "text": "This project examines plant biodiversity from taxonomic, functional, and phylogenetic perspectives across different spatial scales (from biomes to global) and covers the period since the Last Glacial Maximum (the last 21,000 years). The research is based on fossil pollen records and aims to provide insights into long-term ecological changes.\nThe project is a 4-year research initiative led by Bryan Novio, supported by the STARS program. It is also linked to the Functional Vegetation Paleoecology project."
+    "text": "To test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past ‘natural experiments’ and of the past as an analogue to the uncertain future of Earth in the ‘Anthropocene’ is a ‘flawed strategy’ and uniformitarianism should be discarded. As much of Earth system science relies on such ‘natural experiments’ and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.\nTo test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.\n\nCheck out the project website for more information."
   },
   {
-    "objectID": "projects/HoloceneDiversityTrends/index.html#my-role",
-    "href": "projects/HoloceneDiversityTrends/index.html#my-role",
-    "title": "Holocene Diversity Trends",
+    "objectID": "projects/HOPE/index.html#my-role",
+    "href": "projects/HOPE/index.html#my-role",
+    "title": "HOPE",
     "section": "",
-    "text": "As Bryan’s main supervisor, I will provide guidance and support throughout the research process."
+    "text": "I was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
   },
   {
-    "objectID": "projects/FOSSILPOL/index.html",
-    "href": "projects/FOSSILPOL/index.html",
-    "title": "FOSSILPOL",
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html",
+    "title": "Functional Vegetation Paleoecology",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nI am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
+    "text": "Functional Vegetation Paleoecology is a 4-year research project funded by PRIMUS, starting on 1st June 2025."
   },
   {
-    "objectID": "projects/FOSSILPOL/index.html#my-role",
-    "href": "projects/FOSSILPOL/index.html#my-role",
-    "title": "FOSSILPOL",
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#project-description",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#project-description",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "Project Description",
+    "text": "Project Description\nAnticipating ecosystem changes under global climate change presents a complex challenge that demands interdisciplinary solutions. By leveraging paleoecological vegetation data and functional ecology methods, the project aims to estimate spatio-temporal variations of functional ecosystem properties beyond the point of human observation, thereby gaining an unprecedented understanding of global vegetation patterns.\nThrough the integration of global fossil pollen data with modern plant traits, the project aims to identify regions most vulnerable to climate change based on paleoecological insights. Utilizing probabilistic Bayesian models, the project will address taxonomic uncertainties and estimate variations in functional ecosystem properties globally, spanning since the Last Glacial Maximum."
+  },
+  {
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#project-goals",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#project-goals",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "Project Goals",
+    "text": "Project Goals\n\nAim 1: Integrate global fossil pollen data with modern plant traits to account for uncertainties.\nAim 2: Estimate global functional ecosystem properties since the Last Glacial Maximum.\nAim 3: Assess current ecosystems’ Safe Operating Space to help mitigate the impact of climate change (see my participation Planetary Boundaries project)."
+  },
+  {
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "My role",
+    "text": "My role\nI am the Principal Investigator of the project."
+  },
+  {
+    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#current-openings",
+    "href": "projects/FunctionalVegetationPaleoecology/index.html#current-openings",
+    "title": "Functional Vegetation Paleoecology",
+    "section": "Current openings",
+    "text": "Current openings\nSee current opportunities in the Laboratory of Quantitative Ecology."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/index.html",
+    "href": "projects/BIODYNAMICS/index.html",
+    "title": "BIODYNAMICS",
     "section": "",
-    "text": "I am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
+    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023."
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/06-vegvault_scientific_data.html",
-    "href": "projects/BIODYNAMICS/blog/06-vegvault_scientific_data.html",
-    "title": "VegVault officially published in Scientific Data!",
-    "section": "",
-    "text": "VegVault in Scientific Data!\nI’m delighted to share that our VegVault paper has been officially published in Scientific Data! 🎉\nThe paper “VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” is now available in peer-reviewed form.\n\n\n\nWhat is VegVault?\nVegVault is an interdisciplinary SQL database that bridges the gap between paleo- and neo-ecological plot-based vegetation data, species functional traits, and abiotic information including climate and soil data. This resource is designed to facilitate large-scale analyses of vegetation dynamics across space and time.\n\n\nResources\nAll VegVault resources remain freely available:\n\nVegVault website\nVegVault Database v1.0.0\n{vaultkeepr} R-package - An R interface for easy database access\nGitHub repositories - Individual repos for each data component\n\n\n\nAcknowledgments\nI’m grateful to all co-authors - Franziska Gaiser, Irena Šímová, and Suzette Flantua - for their invaluable contributions to making this project a reality.\nStay tuned for future updates and developments!"
+    "objectID": "projects/BIODYNAMICS/index.html#project-description",
+    "href": "projects/BIODYNAMICS/index.html#project-description",
+    "title": "BIODYNAMICS",
+    "section": "Project description",
+    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society."
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
-    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
-    "title": "Unveiling VegVault",
-    "section": "",
-    "text": "Greetings, everyone! I’m excited to share an in-depth glimple into VegVault, my ambitious interdisciplinary database project."
+    "objectID": "projects/BIODYNAMICS/index.html#project-goals",
+    "href": "projects/BIODYNAMICS/index.html#project-goals",
+    "title": "BIODYNAMICS",
+    "section": "Project goals",
+    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
-    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
-    "title": "Unveiling VegVault",
-    "section": "repos",
-    "text": "repos\n\nNeo-ecological plot-based data - Mainly BIEN and sPlot data\nPalaeo-ecological plot-based data - Fossil pollen data from Neotota acessed and processed using FOSSILPOL workflow\nTrait data - 6 selected traits from TRY database\nAbiotic data - climate data form CHELSA and CHELSA-TRACE21, and soil data from WOSIS\nVegVault migration - code to migrate all data into SQLite database"
+    "objectID": "projects/BIODYNAMICS/index.html#my-role",
+    "href": "projects/BIODYNAMICS/index.html#my-role",
+    "title": "BIODYNAMICS",
+    "section": "My role",
+    "text": "My role\nI am the Principal Investigator of the project."
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/02-new_logo.html",
-    "href": "projects/BIODYNAMICS/blog/02-new_logo.html",
-    "title": "A new logo",
-    "section": "",
-    "text": "The BIODYNAMICS project has a new logo!🖼️\nI habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
-  },
-  {
-    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html",
-    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html",
-    "title": "Looking for a new PhD student!",
-    "section": "",
-    "text": "Are you passionate about understanding ecosystem changes using large datasets and advanced modelling techniques? I am offering a fully funded, full-time PhD position as part of the Functional Vegetation Paleoecology project, funded by PRIMUS, spanning paleoecology, quantitative ecology, and functional ecology. The candidate will join my Laboratory of Quantitative Ecology at the Department of Botany, Faculty of Science, Charles University in Prague, Czech Republic.\nFor the latest updates on this position, visit: bit.ly/PhD_FunctionalVegetationPaleoecology"
-  },
-  {
-    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#desirable-but-not-required",
-    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#desirable-but-not-required",
-    "title": "Looking for a new PhD student!",
-    "section": "Desirable but Not Required:",
-    "text": "Desirable but Not Required:\n\nPrior experience with programming in R; experience with other languages (Python, C#, etc.) is also welcomed.\nSolid background in data analysis and statistical testing.\nExperience with large-scale biodiversity patterns.\nGood knowledge of Function Ecology (functional traits)\nExperience in an international working environment."
-  },
-  {
-    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#the-application-deadline-is-the-15th-of-january-2025",
-    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#the-application-deadline-is-the-15th-of-january-2025",
-    "title": "Looking for a new PhD student!",
-    "section": "! The application deadline is the 15th of January 2025 !",
-    "text": "! The application deadline is the 15th of January 2025 !\nSend an email to ‘quantitative.ecology@natur.cuni.cz’ with “PhD application [your surname]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why you are interested in obtaining a PhD.\nYour CV highlighting the most relevant information (1-2 pages)\nContact details for 2-3 academic referees, e.g., your former supervisor, boss, or collaborator.\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents in advance."
-  },
-  {
-    "objectID": "lab/about_the_lab.html",
-    "href": "lab/about_the_lab.html",
-    "title": "Laboratory of Quantitative Ecology",
-    "section": "",
-    "text": "The Laboratory of Quantitative Ecology is a research group focused on examining vegetation biodiversity trends across spatial and temporal scales. We are particularly interested in understanding the influence of human activities and advancing interdisciplinary research in ecology.",
-    "crumbs": [
-      "Laboratory of Quantitative Ecology"
-    ]
-  },
-  {
-    "objectID": "lab/about_the_lab.html#group-description",
-    "href": "lab/about_the_lab.html#group-description",
-    "title": "Laboratory of Quantitative Ecology",
-    "section": "Group Description",
-    "text": "Group Description\nWelcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.\n\nResearch Focus\nDelving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.\n\nState-of-the-Art Tools and Methods\nWe use cutting-edge quantitative and statistical methods, alongside state-of-the-art data science and machine learning approaches. Our research not only involves the application of existing methods but also the development of new methodologies to extract deeper insights from complex ecological datasets. This continuous innovation ensures that our research remains at the forefront of ecological science, expanding the limits of our understanding of vegetation patterns.\n\n\nInterdisciplinary Approach\nOur research integrates concepts and methodologies from various fields, including macroecology, palaeoecology, biodiversity science, and quantitative ecology. This interdisciplinary perspective allows us to gain a comprehensive understanding of vegetation dynamics and their underlying drivers.\n\n\nOngoing projects\n\nBIODYNAMICS\nFunctional Vegetation Paleoecology\nPPF Alpine\nHolocene Diversity Trends\nFOSSILPOL\nPlanetary Boundaries Working Group\n\n\n\nPresentations\n\nFlash talk about our lab presented at the Junior Faculty Conference September 2025.",
-    "crumbs": [
-      "Laboratory of Quantitative Ecology"
-    ]
-  },
-  {
-    "objectID": "lab/about_the_lab.html#news",
-    "href": "lab/about_the_lab.html#news",
-    "title": "Laboratory of Quantitative Ecology",
+    "objectID": "projects/BIODYNAMICS/index.html#news",
+    "href": "projects/BIODYNAMICS/index.html#news",
+    "title": "BIODYNAMICS",
     "section": "News",
-    "text": "News\n\n\n\n\n\n\n\nLooking for a new PhD student!\n\n\n\n\n\n\n\n\n\n\n\n\nLooking for a new PhD student!\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Laboratory of Quantitative Ecology"
-    ]
+    "text": "News\n\n\n\n\n\n\n\n\nVegVault officially published in Scientific Data!\n\n\n\n\n\n\nJan 2, 2026\n\n\n\n\n\n\n\n\n\n\n\nVegVault is published!\n\n\n\n\n\n\nMar 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\nDec 15, 2023\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\nOct 10, 2023\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\nJun 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\nJun 1, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "lab/about_the_lab.html#people",
-    "href": "lab/about_the_lab.html#people",
-    "title": "Laboratory of Quantitative Ecology",
-    "section": "People",
-    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAssistant Professor for Plant Ecology\n📬email: ondrej.mottl(at)gmail.com\n\nAbout me\nList of publications\n\nBryan Novio \n\nPhD student\n📬email: noviobryan(at)gmail.com\n\nHolocene Diversity Trends project\njoined Autumn 2024\n\nNatálie Hanusová \n\nPhD student\n📬email: hanusova.nat(at)gmail.com\nFunctional Vegetation Paleoecology project\njoined Autumn 2025\n\n\n\nFormer members\n\nFriederike Wolke \n\nTechnical assistant (programming)\n📬email: friederike.woelke(at)gmail.com\nRRatepol R-Package development\nEmployed summer and autumn 2025\n\nMarkéta Tumová \n\nBc student\n📬email: tumovamarket(at)natur.cuni.cz\nAlpine Biodiversity Across Continents project (linked to the PPF Alpine)\njoined in Autumn 2024\nFinished Bc thesis in Spring 2025",
-    "crumbs": [
-      "Laboratory of Quantitative Ecology"
-    ]
+    "objectID": "projects/BIODYNAMICS/index.html#project-outputs",
+    "href": "projects/BIODYNAMICS/index.html#project-outputs",
+    "title": "BIODYNAMICS",
+    "section": "Project outputs",
+    "text": "Project outputs\n\nVegVault \nVegVault is a database that links global paleo-, and neo-vegetation data with functional traits and abiotic drivers. The database is a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology. More details about the release here.\n\nVegVault website\nOfficial publication - “VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” \n\n\n\n\n{vaultkeepr} R-package \nIn order to make usage of the VegVault database as easy as possible, we have developed an R-package called {vaultkeepr}, providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ()."
   },
   {
-    "objectID": "collaboration/get_in_touch.html",
-    "href": "collaboration/get_in_touch.html",
-    "title": "Get in touch!",
+    "objectID": "projects/BIODYNAMICS/index.html#core-collaborators",
+    "href": "projects/BIODYNAMICS/index.html#core-collaborators",
+    "title": "BIODYNAMICS",
+    "section": "Core collaborators",
+    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/05-vegvault_published.html",
+    "href": "projects/BIODYNAMICS/blog/05-vegvault_published.html",
+    "title": "VegVault is published!",
     "section": "",
-    "text": "I like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. 🌟",
+    "text": "VegVault is published!\nI’m thrilled to announce that VegVault is now published! 🎉\nThere are seversal parts of the VegVault project that are now available for you to explore:\n\nVegVault website\nPre-print publication - “VegVault database: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” \nVegVault Database v1.0.0\n\nPlease check Guidelines for data reuse and update\n\n{vaultkeepr} R-package\n\nIn order to make usage of the VegVault database as easy as possible, we have developed an R-package called {vaultkeepr}, providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ().\n\nAdditional resources\n\nBlueSky announcement\nVegVault poster - CSPE conference September 2024\nVegVault Flash Presentation - Geobotany meeting, Sudějov 23 March 2025"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
+    "href": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
+    "title": "Kick-Off Meeting",
+    "section": "",
+    "text": "Introduction\nGreetings, everyone! It’s an exciting time as my project BIODYNAMICS has taken flight, and I couldn’t be more thrilled!\n\n\nKick-Off Meeting\nTo celebrate this occasion, I am hosting our very first BIODYNAMICS kick-off meeting. This gathering is a chance for people to come together, share excitement, and set the stage for the incredible work that lies ahead.\n\n\nWhat to Expect:\nI’ll provide a brief overview of the BIODYNAMICS project, its goals, and the journey we’re about to embark on. We’ll also provide a brief introduction to know everyone. Learn about our backgrounds, passions, and what motivates us to join this project. I want to emphasize that there’s no pressure to contribute any additional work. These meetings will be all about brainstorming, discussing ideas, and sharing our perspectives. It’s going to be a friendly and informal environment.\n\n\nHow to Join:\nIf you already didn’t receive an email with an invitation, please drop me a message via email expressing your interest, and I’ll make sure you receive all the information you need to join."
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/01-project_start.html",
+    "href": "projects/BIODYNAMICS/blog/01-project_start.html",
+    "title": "Project has started!",
+    "section": "",
+    "text": "The BIODYNAMICS project has started!🎉\nI have accompanied it with a website (which you are reading right now!).\nI have created a collaboration guide🤝 and code convention💻 as a framework to invite other researchers to participate in the project."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
+    "title": "Looking for a new PhD student!",
+    "section": "",
+    "text": "WarningPosition closed\n\n\n\nThis position is closed. The page is retained for reference."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
+    "title": "Looking for a new PhD student!",
+    "section": "About the team",
+    "text": "About the team\nMy lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human impact."
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
+    "title": "Looking for a new PhD student!",
+    "section": "Desirable but not required:",
+    "text": "Desirable but not required:\n\nPrior experience with programming in R; experience with other languages (Python, C#, etc) are also welcomed\nSolid background in data analysis and statistical testing\nExperience from an international working environment"
+  },
+  {
+    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
+    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
+    "title": "Looking for a new PhD student!",
+    "section": "! Application deadline is 13th of March 2024 !",
+    "text": "! Application deadline is 13th of March 2024 !\nThe application process has 2 stages:\n\nYour application needs to be submitted via STARS portal\n\nThe STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income for PhD students. More info can be found on website\n\nSend an email to ‘ondrej.mottl@natur.cuni.cz’ with “PhD application [your surename]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.\nContact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.\n\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents prior."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Bluesky\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I’m Ondřej Mottl.\nI am an Assistant Professor of Plant Ecology and head of the Laboratory of Quantitative Ecology at Charles University in Prague, Czech Republic. I study long-term biodiversity dynamics across large spatial and temporal scales. You can learn more about my ongoing work through my projects.\n🔭 My research integrates fossil-pollen archives, contemporary vegetation, functional traits, climate data, and quantitative modelling to understand ecological memory, biodiversity change, human impacts, and climate-change responses.\n🌱 I am deeply committed to teaching and mentoring, helping to inspire and guide the next generation of ecologists and data scientists. Learn more about my teaching activities.\n💡 In addition, I proudly serve as the Open Science Champion at Charles University, advocating for scientific reproducibility - a cause close to my heart.\n💬 Feel free to reach out if you’d like to discuss R programming, GitHub, biodiversity patterns, or other topics of interest.\n\nWebsite Navigation\n\nLaboratory of Quantitative Ecology 👩🏽‍💻\nCurrent Projects 🚀\nTeaching Activities 📚\nMy CV 📄\nContact Me 📬\nPublications 📚"
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html",
+    "href": "collaboration/collaboration_guide.html",
+    "title": "Collaboration Guide",
+    "section": "",
+    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way.",
     "crumbs": [
       "Work with me",
-      "Get in touch!"
+      "Collaboration guide"
     ]
   },
   {
-    "objectID": "collaboration/get_in_touch.html#contact-me",
-    "href": "collaboration/get_in_touch.html#contact-me",
-    "title": "Get in touch!",
-    "section": "Contact me 📬",
-    "text": "Contact me 📬\nDo you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to ondrej.mottl(at)gmail.com📧. Also, feel free to reach out to me via Bluesky!🦋",
+    "objectID": "collaboration/collaboration_guide.html#reasoning",
+    "href": "collaboration/collaboration_guide.html#reasoning",
+    "title": "Collaboration Guide",
+    "section": "",
+    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way.",
     "crumbs": [
       "Work with me",
-      "Get in touch!"
+      "Collaboration guide"
     ]
   },
   {
-    "objectID": "collaboration/get_in_touch.html#collaboration-guide",
-    "href": "collaboration/get_in_touch.html#collaboration-guide",
-    "title": "Get in touch!",
-    "section": "Collaboration guide 🤝",
-    "text": "Collaboration guide 🤝\nEveryone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a collaboration guide for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. 📚🌱",
+    "objectID": "collaboration/collaboration_guide.html#lines-of-communication",
+    "href": "collaboration/collaboration_guide.html#lines-of-communication",
+    "title": "Collaboration Guide",
+    "section": "Lines of communication",
+    "text": "Lines of communication\nOpen and effective communication is crucial for successful collaboration. My general style of communication is “ping-pong,” meaning I prefer short exchanges frequently. Here are some preferred lines of communication:\n\nEmail\nEmail serves as the primary mode of communication. Feel free to reach out to me at ondrej.mottl(at)gmail.com for any queries, updates, or discussions related to our collaboration. See ways to get in touch with me.\nIf you expect me to respond to your email, please state it clearly.\nI strive to reply to all emails as soon as possible. However, there is a chance that I may have forgotten to answer yours. If I do not respond for a significant amount of time, feel free to send me a friendly reminder. 😊⏰\n\nOther lines of communication\nIn addition to email, we can also utilize collaborative platforms such as Slack, Microsoft Teams, or any other platform that suits our needs. These platforms offer faster, real-time communication, which aligns well with the “ping-pong” style of interaction.",
     "crumbs": [
       "Work with me",
-      "Get in touch!"
+      "Collaboration guide"
     ]
   },
   {
-    "objectID": "collaboration/get_in_touch.html#code-convention",
-    "href": "collaboration/get_in_touch.html#code-convention",
-    "title": "Get in touch!",
-    "section": "Code convention 💻",
-    "text": "Code convention 💻\nMy work is heavily focused on writing code. For this reason, I have prepared a code convention, which I am following in my projects. I am making it publically available so feel free to check it out!💡📝\nFeel free to explore these resources, and let’s create something amazing together! 🌟🌍🔬",
+    "objectID": "collaboration/collaboration_guide.html#github",
+    "href": "collaboration/collaboration_guide.html#github",
+    "title": "Collaboration Guide",
+    "section": "GitHub",
+    "text": "GitHub\nSince my primary research involves writing code, GitHub is an essential platform for any collaborative work. Check out the overview of GitHub features to get familiar with its capabilities.\nI love leveraging its features, such as Issues, Pull Requests, and Projects, to streamline our collaborative coding efforts. If you are not familiar with GitHub, don’t worry! I can provide guidance and support to help you get started. It’s worth checking out their documentation for more details.\nHere is my basic GitHub workflow:\n\n\n\n\n\nflowchart\n    1[\"Make an Issue\"] --&gt; 2(\"Create a new branch\")\n    2 --&gt; 351471[\"Commit code\"]\n    351471 --&gt; 257387[\"Create Pull Request\"]\n    949464{{\"Does it need a review?\"}} --&gt; 625480([\"Yes\"])\n    949464 --&gt; 564859([\"No\"])\n    625480 --&gt; 752396[\"Assign reviewer\"]\n    564859 --&gt; 715681[\"Squash merge PR\"]\n    752396 --&gt; 715681\n    257387 --&gt; 385770[\"Link the Issue\"]\n    715681 --&gt; 688855(\"Close issue (if needed)\")\n    688855 --&gt; 791180[\"Delete the branch\"]\n    385770 --&gt; 515426(\"Add to Project (if &lt;span&gt;applicable&lt;/span&gt;)\")\n    515426 --&gt; 949464\n    791180 -.-&gt;|\"repeat\"| 2\n\n\n\n\n\n\nHere are the individual steps in detail:\n\n1. Issues\nAn Issue represents a single task that needs to be addressed.\nEach Issue provides a platform to communicate the task with a description and the possibility to discuss details using comments. An Issue should be related to a specific problem or task. If a task is too complex or large, the Issue can be divided into several smaller ones and linked using task lists.\nFor more details about Issues, refer to the GitHub documentation.\n\n\n2. Branches\nFor any code change, a new branch should be created.\nEach branch should correspond to a specific task (Issue). Therefore, a branch should be named to describe the problem it is solving or directly as issue[Issue number]. If you find that the problem is too complex and needs to be split into multiple Issues or branches, you can create another branch from the current one. Branches are lightweight, so don’t worry about creating many of them.\nFor more details about branches, refer to the GitHub documentation.\n\n\n3. Writing code\nPlease follow the code conventions when writing code. Commit often but make sure to keep the description for each commit meaningful.\n\n\n4. Pull Request (PR)\nA Pull Request is a way to merge a branch into the main branch (or another branch). The PR name should clearly indicate the purpose of the changes.\nThe PR details should provide an explanation of the main modifications. Additionally, you can add comments to provide further context. If possible, create the PR as a “draft” until it is ready for review and merge (learn more about drafts).\nAs PRs are linked to branches, and each branch should be linked to an Issue, I prefer to use the “link” functionality explicitly. This can be achieved by mentioning the Issue with specific words (e.g., close) in the PR description (see more about linking).\nIf you want me to review your PR before merging, simply “assign” it to me (learn more about assigning).\nI prefer to merge Pull Requests using the “squash merge commit” option (learn more about it here) for a cleaner git history.\n\n\n5. Projects\nGitHub Projects offer a new way of project management. If we agree to use a Project in our collaboration, we will define how to collaborate individually within that project framework.",
     "crumbs": [
       "Work with me",
-      "Get in touch!"
+      "Collaboration guide"
     ]
+  },
+  {
+    "objectID": "collaboration/collaboration_guide.html#manuscript-writing",
+    "href": "collaboration/collaboration_guide.html#manuscript-writing",
+    "title": "Collaboration Guide",
+    "section": "Manuscript writing",
+    "text": "Manuscript writing\nWriting manuscripts is a crucial aspect of scientific collaboration. The most common tools for working on a manuscript are MS Word. However, to ensure consistency and efficient collaboration during manuscript preparation, I prefer to use Google Docs, which provides real-time collaboration, and simultaneous editing, and facilitates constructive feedback on the manuscript.\nIn any case, I prefer to make any edits via “suggestions”. However, note that I believe that it is absolutely fine to reject suggestions (or my suggestions to be rejected).",
+    "crumbs": [
+      "Work with me",
+      "Collaboration guide"
+    ]
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html",
+    "href": "about_me/student_mentoring_en.html",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "",
+    "text": "Are you a student struggling to navigate the complexities of ecological data? Whether you’re from the Department of Botany or embarking on a different scientific journey, this offer is for you. I am here to assist you with the analysis of ecological data for your project."
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html#what-i-offer",
+    "href": "about_me/student_mentoring_en.html#what-i-offer",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "What I Offer",
+    "text": "What I Offer\n\nPersonalized Consultation Sessions: Tailored to meet the specific needs and challenges of your project.\nMentoring in Ecological Data Analysis: From basic concepts to advanced techniques.\nHelp with Coding: Aimed at resolving that persistent bug in R.\nA Supportive Learning Environment: Where questions are encouraged, and discovery is promoted."
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html#how-to-get-started",
+    "href": "about_me/student_mentoring_en.html#how-to-get-started",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "How to Get Started",
+    "text": "How to Get Started\n\nContact Me: Send an email to ondrej.mottl(at)natur.cuni.cz with a brief description of your project and your issue.\nWait for Your Time Slot: You will be placed on a waiting list and invited to the nearest available time slot."
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html#when-and-where",
+    "href": "about_me/student_mentoring_en.html#when-and-where",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "When and Where",
+    "text": "When and Where\n\nMy office is located at Benátská 2, first floor, room 58.\nConsultations are scheduled for Tuesdays from 14:00 to 14:30 (please attend only if your session has been confirmed)."
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html#book-a-time-slot",
+    "href": "about_me/student_mentoring_en.html#book-a-time-slot",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "Book a Time Slot",
+    "text": "Book a Time Slot"
+  },
+  {
+    "objectID": "about_me/student_mentoring_en.html#disclaimer",
+    "href": "about_me/student_mentoring_en.html#disclaimer",
+    "title": "Ecological Data Analyses - Consultations and Mentoring",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nI am not an oracle, nor do I have all the answers. However, I am hopeful that together, we can steer your project in the right direction."
+  },
+  {
+    "objectID": "about_me/list_of_publications.html",
+    "href": "about_me/list_of_publications.html",
+    "title": "List of publications published in peer-review journals",
+    "section": "",
+    "text": "Schultz, L., Mottl, O., Pacheco-Riaño, L.C., et al. (2026) Contrasting patterns of alpine biodiversity across mountains and taxa worldwide. Nature Communications.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section",
+    "href": "about_me/list_of_publications.html#section",
+    "title": "List of publications published in peer-review journals",
+    "section": "",
+    "text": "Schultz, L., Mottl, O., Pacheco-Riaño, L.C., et al. (2026) Contrasting patterns of alpine biodiversity across mountains and taxa worldwide. Nature Communications.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-1",
+    "href": "about_me/list_of_publications.html#section-1",
+    "title": "List of publications published in peer-review journals",
+    "section": "2025",
+    "text": "2025\n\nMottl, O., Gaiser, F., Šímová, I. Flantua S.G.A. (2025) VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers. Scientific Data 12: 1923 .    \nRentier E.S., Mottl O., Pacheco-Riaño L.C., Schultz L., Seguinot J., Wiersma A.T., Grytnes J., Flantua S.G.A. (2025) Global variability in LGM cooling amongst paleoclimate datasets affects biome reconstructions in mountains. Frontiers of Biogeography 18: e135871.  \nGillson, L., Seddon, A., Mottl, O., Zhang, K., Kirsten, K., Gell, P., Marchant, R.A., Schwörer, C., Razanatsoa, E., Lane, P.J., Courtney-Mustaphi, C.J. and Dearing, J. (2025), Exploring the Interface Between Planetary Boundaries and Palaeoecology. Global Change Biology 31: e70017.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-2",
+    "href": "about_me/list_of_publications.html#section-2",
+    "title": "List of publications published in peer-review journals",
+    "section": "2024",
+    "text": "2024\n\nHerbert, A.V., Haberle, S.G., Flantua, S.G.A., Mottl,O., Blois, J.L., Williams, J.W., George, A., Hope, G.S. (2024) The Indo-Pacific Pollen Database - a Neotoma constituent database, Climate of the Past 20: 2473-2485.   \nBhatta, K.P., Mottl O., Felde V.A., Grytnes J., Reitalu T., Birks H.H., Birks, H.J.B., Vetaas O.R. (2024), Latitudinal gradients in the phylogenetic assembly of angiosperms in Asia during the Holocene. Scientific Reports 14.1: 17940.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-3",
+    "href": "about_me/list_of_publications.html#section-3",
+    "title": "List of publications published in peer-review journals",
+    "section": "2023",
+    "text": "2023\n\nBirks, H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., Mottl, O., Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023), Approaches to pollen taxonomic harmonisation in Quaternary palynology. Palaeobotany and Palynology 319: 104989.  \nMoses, J., Peters, M. K., Tiede, Y., Mottl, O., Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison. Global Ecology and Biogeography 00: 1-18. \nBrown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., Mottl, O., Reitalu, T., & Svenning, J.-C. (2023), Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems. Functional Ecology 00: 1-18.  \nFlantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. (2023), A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography 32: 1377-1394.   \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. (2023), Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution 11: 1115784",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-4",
+    "href": "about_me/list_of_publications.html#section-4",
+    "title": "List of publications published in peer-review journals",
+    "section": "2022",
+    "text": "2022\n\nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica 55: 70-80.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-5",
+    "href": "about_me/list_of_publications.html#section-5",
+    "title": "List of publications published in peer-review journals",
+    "section": "2021",
+    "text": "2021\n\nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864.   \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293.   \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130: 1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438 \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-6",
+    "href": "about_me/list_of_publications.html#section-6",
+    "title": "List of publications published in peer-review journals",
+    "section": "2020",
+    "text": "2020\n\nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecology Letters 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277-287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/list_of_publications.html#section-7",
+    "href": "about_me/list_of_publications.html#section-7",
+    "title": "List of publications published in peer-review journals",
+    "section": "2019",
+    "text": "2019\n\nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119.",
+    "crumbs": [
+      "About me",
+      "List of publications"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html",
+    "href": "about_me/cv.html",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "Bluesky\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am an Assistant Professor of Plant Ecology and Head of the Laboratory of Quantitative Ecology at Charles University in Prague, Czech Republic. I am a quantitative ecologist studying long-term biodiversity dynamics across large spatial and temporal scales. My work integrates fossil-pollen archives, contemporary vegetation, functional traits, climate data, and quantitative modelling to understand ecological memory, biodiversity change, human impacts, and climate-change responses. I lead open and reproducible data-integration and software-development workflows in R.\nResearch identifiers: ORCID 0000-0002-9796-5081 | Scopus ID 57209659764 | ResearcherID AAC-7606-2019\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded the Dean’s Prize, entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n11/2023 - present\nDepartment of Botany, Faculty of Science, Charles University, Prague, Czech Republic\nAssistant Professor of Plant Ecology\n\n7/2025 - present\nFaculty of Science, Charles University, Prague, Czech Republic\nMember of the Charles University team in the ERC Synergy project MEMELAND: Molecular Ecology of Medieval European Landscapes (101166850).\n\n6/2025 - present\nFaculty of Science, Charles University, Prague, Czech Republic\nPrincipal Investigator of the Charles University PRIMUS project Functional Vegetation Paleoecology (PRIMUS/25/SCI/002).\n\n6/2025 - 12/2025\nParental leave\n\n2024 - present\nCharles University Research Centre\nMember of the Charles University Research Centre programme UNCE/24/SCI/006.\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nPrincipal Investigator of the GAČR Postdoc Individual Fellowship - Incoming project BIODYNAMICS (23-06386I).\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2023\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n7/2015 - 12/2019\nDepartment of Ecology, Institute of Entomology, Czech Republic\nPhD researcher funded by several individual grants.\n\n\n2024 - present\nOpen Palaeoecological Data (PalaeOpen)\nSteering Committee member and co-leader of Working Group 3, Data Storage and Management.\n\nPresent\nInternational Association for Vegetation Science\nSteering Committee member of the Historical Vegetation Ecology Working Group.\n\n2022 - present\nPast Global Changes\nCommittee member of Planetary Boundaries Working Group led by Prof. Lindsey Gillson\n\n2022 - present\nDepartment of Biological Sciences, University of Bergen, Norway\nAdviser of The Past, Present and Future of Alpine Biomes Worldwide led by Dr. Suzette Flantua\n\n\n\nDepartment of Botany, Faculty of Science, Charles University, CZ\n\n2024 - present: Head of the Laboratory of Quantitative Ecology\n2024 - present: Graduate Student Advisor\n2023 - present: Faculty member\n2023 - present: Organiser of the Internal Seminar\nFounding member and leader of Working Group 3, Junior Faculty\nMember of the scientific board, Czexpats in Science PI Forum\nOpen Science Champion\n\n\nDepartment of Biological Sciences, University of Bergen, Norway\n\n2022 - 2023 Member of a PhD Hiring Committee\n\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwarded personal GACR Postdoc Individual Fellowship - Incoming\n\n2018\nInstitute of Entomology, Czech Academy of Science, České Budějovice, Czech Republic\nIBERA scholarship\n\n2017 (2 months)\nSmithsonian Institution Conservation and Research Center, Virginia, USA\nSmithsonian Fellowship\n\n\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\n\n2026\nEstimating Vegetation Change from Fossil Pollen to Planetary Boundaries: A Global, Long-Term Synthesis Using Big Data\nSymposium of the International Biogeography Society, Aarhus, Denmark\n\n2022\nQuantifying rates of vegetation change over the last 18,000 years\nKeynote lecture, Conference of the Czech Society for Ecology, Brno, Czech Republic\n\n2022\nFOSSILPOL: The workflow to process global palaeoecological pollen data\nEuropean Pollen Database Open Science Meeting\n\n\n\n2024 - present\nCurrent teaching at the Department of Botany, Faculty of Science, Charles University, Czech Republic:\nCourse guarantor and organiser:\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\nStatistics in Biology and Design of Ecological Experiments\nCodeFest - Innovating Together for a Better University Environment\nScience School on Quantitative Ecology\n\nMember of the teaching team:\n\nSeminar for PhD Students\nDiploma Thesis Seminar (Geobotany) II\n\nSee my current teaching activities for more details.\n\n2021 - 2023\nDepartment of Biological Sciences, University of Bergen, Norway\n\nCourse organiser of OSW: Reproducibility in science\nCourse co-organiser of Community Ecology\n\n\n\n\n2024 - present\nDepartment of Botany, Faculty of Science, Charles University, Czech Republic\n\nTwo PhD researchers: Bryan Novio (STARS, since 2024) and Natálie Hanusová (PRIMUS, since 2025)\nOne bachelor thesis completed in 2025\n\nSee Laboratory of Quantitative Ecology for more details about team members\n\n2016 - 2019\nDepartment of Zoology, Faculty of Science, University of South Bohemia, Czech Republic\n\n1 bachelor student\n\n\n\n\n2024 - present\nScience School on Quantitative Ecology\n\nCo-founder and main co-organiser of the annual Czech-German school\nAlternates between Germany and the Czech Republic\nSupported through three funding rounds\n\n\n2024\nQuantitative Ecology Special Interest Group meeting\n\nMain organiser\nPrague, Czech Republic\n~15 participants\n\n\n2023\nRoC for geochemistry and XRF data workshop\n\nCo-organiser and presenter\nOeschger Centre for Climate Change Research, Switzerland\n~20 participants\n\n\n2023\nPalaeoecology and Sustainability\n\nMain co-organiser and presenter\nMeeting by Planetary Boundaries Working Group, Rome, Italy\n\n~15 participants\n\n\n2022\nConference of the Czech Society for Ecology\n\nCo-organiser (part of the Rising Star program) and presenter\nBrno, CZ\n~300-500 participants\n\n\n2023\nAPD R-Ratepol workshop\n\nCo-organiser and presenter\nWorkshop by African Pollen Database Council\nonline\n~35 participants\n\n\n2021\nData Manipulation & Statistical Analysis in Palaeoecology\n\nCo-organiser and presenter\nSeminar by Palaeoecology Special Interest Group BES\nonline\n~50 participants\n\n\n\n\n2023 - present\nGAUK Evaluator, Charles University, Czech Republic\n\n2019 - present\nReviewer for international journals including Nature Communications, Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, and Biotropica.\n\n\n\nI lead or contribute to open ecological data infrastructure and R software:\n\nVegVault - an integrated global palaeo- and neo-vegetation database with functional traits and abiotic drivers\n{vaultkeepr} - an R interface for reproducible access to VegVault\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\ntaxospace",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#education",
+    "href": "about_me/cv.html#education",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "PhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded the Dean’s Prize, entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#professional-experience",
+    "href": "about_me/cv.html#professional-experience",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "11/2023 - present\nDepartment of Botany, Faculty of Science, Charles University, Prague, Czech Republic\nAssistant Professor of Plant Ecology\n\n7/2025 - present\nFaculty of Science, Charles University, Prague, Czech Republic\nMember of the Charles University team in the ERC Synergy project MEMELAND: Molecular Ecology of Medieval European Landscapes (101166850).\n\n6/2025 - present\nFaculty of Science, Charles University, Prague, Czech Republic\nPrincipal Investigator of the Charles University PRIMUS project Functional Vegetation Paleoecology (PRIMUS/25/SCI/002).\n\n6/2025 - 12/2025\nParental leave\n\n2024 - present\nCharles University Research Centre\nMember of the Charles University Research Centre programme UNCE/24/SCI/006.\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nPrincipal Investigator of the GAČR Postdoc Individual Fellowship - Incoming project BIODYNAMICS (23-06386I).\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2023\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n7/2015 - 12/2019\nDepartment of Ecology, Institute of Entomology, Czech Republic\nPhD researcher funded by several individual grants.\n\n\n2024 - present\nOpen Palaeoecological Data (PalaeOpen)\nSteering Committee member and co-leader of Working Group 3, Data Storage and Management.\n\nPresent\nInternational Association for Vegetation Science\nSteering Committee member of the Historical Vegetation Ecology Working Group.\n\n2022 - present\nPast Global Changes\nCommittee member of Planetary Boundaries Working Group led by Prof. Lindsey Gillson\n\n2022 - present\nDepartment of Biological Sciences, University of Bergen, Norway\nAdviser of The Past, Present and Future of Alpine Biomes Worldwide led by Dr. Suzette Flantua\n\n\n\nDepartment of Botany, Faculty of Science, Charles University, CZ\n\n2024 - present: Head of the Laboratory of Quantitative Ecology\n2024 - present: Graduate Student Advisor\n2023 - present: Faculty member\n2023 - present: Organiser of the Internal Seminar\nFounding member and leader of Working Group 3, Junior Faculty\nMember of the scientific board, Czexpats in Science PI Forum\nOpen Science Champion\n\n\nDepartment of Biological Sciences, University of Bergen, Norway\n\n2022 - 2023 Member of a PhD Hiring Committee\n\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwarded personal GACR Postdoc Individual Fellowship - Incoming\n\n2018\nInstitute of Entomology, Czech Academy of Science, České Budějovice, Czech Republic\nIBERA scholarship\n\n2017 (2 months)\nSmithsonian Institution Conservation and Research Center, Virginia, USA\nSmithsonian Fellowship\n\n\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#invited-presentations-to-conferences",
+    "href": "about_me/cv.html#invited-presentations-to-conferences",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "2026\nEstimating Vegetation Change from Fossil Pollen to Planetary Boundaries: A Global, Long-Term Synthesis Using Big Data\nSymposium of the International Biogeography Society, Aarhus, Denmark\n\n2022\nQuantifying rates of vegetation change over the last 18,000 years\nKeynote lecture, Conference of the Czech Society for Ecology, Brno, Czech Republic\n\n2022\nFOSSILPOL: The workflow to process global palaeoecological pollen data\nEuropean Pollen Database Open Science Meeting",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#teaching",
+    "href": "about_me/cv.html#teaching",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "2024 - present\nCurrent teaching at the Department of Botany, Faculty of Science, Charles University, Czech Republic:\nCourse guarantor and organiser:\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\nStatistics in Biology and Design of Ecological Experiments\nCodeFest - Innovating Together for a Better University Environment\nScience School on Quantitative Ecology\n\nMember of the teaching team:\n\nSeminar for PhD Students\nDiploma Thesis Seminar (Geobotany) II\n\nSee my current teaching activities for more details.\n\n2021 - 2023\nDepartment of Biological Sciences, University of Bergen, Norway\n\nCourse organiser of OSW: Reproducibility in science\nCourse co-organiser of Community Ecology",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#supervision",
+    "href": "about_me/cv.html#supervision",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "2024 - present\nDepartment of Botany, Faculty of Science, Charles University, Czech Republic\n\nTwo PhD researchers: Bryan Novio (STARS, since 2024) and Natálie Hanusová (PRIMUS, since 2025)\nOne bachelor thesis completed in 2025\n\nSee Laboratory of Quantitative Ecology for more details about team members\n\n2016 - 2019\nDepartment of Zoology, Faculty of Science, University of South Bohemia, Czech Republic\n\n1 bachelor student",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#organisation-of-scientific-meeting",
+    "href": "about_me/cv.html#organisation-of-scientific-meeting",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "2024 - present\nScience School on Quantitative Ecology\n\nCo-founder and main co-organiser of the annual Czech-German school\nAlternates between Germany and the Czech Republic\nSupported through three funding rounds\n\n\n2024\nQuantitative Ecology Special Interest Group meeting\n\nMain organiser\nPrague, Czech Republic\n~15 participants\n\n\n2023\nRoC for geochemistry and XRF data workshop\n\nCo-organiser and presenter\nOeschger Centre for Climate Change Research, Switzerland\n~20 participants\n\n\n2023\nPalaeoecology and Sustainability\n\nMain co-organiser and presenter\nMeeting by Planetary Boundaries Working Group, Rome, Italy\n\n~15 participants\n\n\n2022\nConference of the Czech Society for Ecology\n\nCo-organiser (part of the Rising Star program) and presenter\nBrno, CZ\n~300-500 participants\n\n\n2023\nAPD R-Ratepol workshop\n\nCo-organiser and presenter\nWorkshop by African Pollen Database Council\nonline\n~35 participants\n\n\n2021\nData Manipulation & Statistical Analysis in Palaeoecology\n\nCo-organiser and presenter\nSeminar by Palaeoecology Special Interest Group BES\nonline\n~50 participants",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#reviewing-activities",
+    "href": "about_me/cv.html#reviewing-activities",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "2023 - present\nGAUK Evaluator, Charles University, Czech Republic\n\n2019 - present\nReviewer for international journals including Nature Communications, Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, and Biotropica.",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/cv.html#software-development",
+    "href": "about_me/cv.html#software-development",
+    "title": "Ondřej Mottl",
+    "section": "",
+    "text": "I lead or contribute to open ecological data infrastructure and R software:\n\nVegVault - an integrated global palaeo- and neo-vegetation database with functional traits and abiotic drivers\n{vaultkeepr} - an R interface for reproducible access to VegVault\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\ntaxospace",
+    "crumbs": [
+      "About me",
+      "CV"
+    ]
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html",
+    "href": "about_me/student_mentoring_cz.html",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "",
+    "text": "Jsi student, který se neví rady s komplexními ekologickými daty? Ať už jsi ze Katedry Botaniky nebo ne, tato nabídka je určena právě tobě. Jsem tu, abych ti pomohl s analýzou ekologických dat pro tvůj projekt."
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html#co-nabízím",
+    "href": "about_me/student_mentoring_cz.html#co-nabízím",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "Co Nabízím",
+    "text": "Co Nabízím\n\nOsobní konzultační kchůzku: Přizpůsobenou konkrétním potřebám a výzvám tvého projektu.\nMentoring v analýze ekologických dat: Od základních konceptů po pokročilé techniky.\nPomoc s programováním: Zaměřená na odstranění té otravné chyby v Rku.\nPříjemné prostředí: Kde jsou otázky vítány a žádný dotaz není hloupý."
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html#jak-začít",
+    "href": "about_me/student_mentoring_cz.html#jak-začít",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "Jak Začít",
+    "text": "Jak Začít\n\nKontaktuj mě: Pošli mi email na ondrej.mottl(at)natur.cuni.cz s krátkým popisem tvého projektu a problému.\nPočkej na na volný časový slot: Budeš zařazen na čekací listinu a pozván k nejbližšímu dostupnému termínu."
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html#kdy-a-kde",
+    "href": "about_me/student_mentoring_cz.html#kdy-a-kde",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "Kdy a Kde",
+    "text": "Kdy a Kde\n\nMoje kancelář se nachází na adrese Benátská 2, první patro, místnost 58.\nKonzultace se konají v úterý od 14:00 do 14:30 (přijď prosím jen s potvrzenou schůzkou)."
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html#rezervuj-si-časový-slot",
+    "href": "about_me/student_mentoring_cz.html#rezervuj-si-časový-slot",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "Rezervuj si časový slot",
+    "text": "Rezervuj si časový slot"
+  },
+  {
+    "objectID": "about_me/student_mentoring_cz.html#upozornění",
+    "href": "about_me/student_mentoring_cz.html#upozornění",
+    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "section": "Upozornění",
+    "text": "Upozornění\nNejsem věštec a nemám všechny odpovědi. Avšak doufám, že společně můžeme tvůj projekt nasměrovat správným směrem."
   },
   {
     "objectID": "collaboration/code_convention.html",
@@ -448,512 +762,230 @@
     ]
   },
   {
-    "objectID": "about_me/student_mentoring_cz.html",
-    "href": "about_me/student_mentoring_cz.html",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
+    "objectID": "collaboration/get_in_touch.html",
+    "href": "collaboration/get_in_touch.html",
+    "title": "Get in touch!",
     "section": "",
-    "text": "Jsi student, který se neví rady s komplexními ekologickými daty? Ať už jsi ze Katedry Botaniky nebo ne, tato nabídka je určena právě tobě. Jsem tu, abych ti pomohl s analýzou ekologických dat pro tvůj projekt."
-  },
-  {
-    "objectID": "about_me/student_mentoring_cz.html#co-nabízím",
-    "href": "about_me/student_mentoring_cz.html#co-nabízím",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
-    "section": "Co Nabízím",
-    "text": "Co Nabízím\n\nOsobní konzultační kchůzku: Přizpůsobenou konkrétním potřebám a výzvám tvého projektu.\nMentoring v analýze ekologických dat: Od základních konceptů po pokročilé techniky.\nPomoc s programováním: Zaměřená na odstranění té otravné chyby v Rku.\nPříjemné prostředí: Kde jsou otázky vítány a žádný dotaz není hloupý."
-  },
-  {
-    "objectID": "about_me/student_mentoring_cz.html#jak-začít",
-    "href": "about_me/student_mentoring_cz.html#jak-začít",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
-    "section": "Jak Začít",
-    "text": "Jak Začít\n\nKontaktuj mě: Pošli mi email na ondrej.mottl(at)natur.cuni.cz s krátkým popisem tvého projektu a problému.\nPočkej na na volný časový slot: Budeš zařazen na čekací listinu a pozván k nejbližšímu dostupnému termínu."
-  },
-  {
-    "objectID": "about_me/student_mentoring_cz.html#kdy-a-kde",
-    "href": "about_me/student_mentoring_cz.html#kdy-a-kde",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
-    "section": "Kdy a Kde",
-    "text": "Kdy a Kde\n\nMoje kancelář se nachází na adrese Benátská 2, první patro, místnost 58.\nKonzultace se konají v úterý od 14:00 do 14:30 (přijď prosím jen s potvrzenou schůzkou)."
-  },
-  {
-    "objectID": "about_me/student_mentoring_cz.html#rezervuj-si-časový-slot",
-    "href": "about_me/student_mentoring_cz.html#rezervuj-si-časový-slot",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
-    "section": "Rezervuj si časový slot",
-    "text": "Rezervuj si časový slot"
-  },
-  {
-    "objectID": "about_me/student_mentoring_cz.html#upozornění",
-    "href": "about_me/student_mentoring_cz.html#upozornění",
-    "title": "Analýza Ekologických Dat - Konzultace a Mentoring",
-    "section": "Upozornění",
-    "text": "Upozornění\nNejsem věštec a nemám všechny odpovědi. Avšak doufám, že společně můžeme tvůj projekt nasměrovat správným směrem."
-  },
-  {
-    "objectID": "about_me/cv.html",
-    "href": "about_me/cv.html",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "Bluesky\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nI am a researcher at Charles University in Prague, Czech Republic, with a main focus on quantitative ecology, macroecology, palaeoecology, and community ecology with an interest in data science.\n\n\nPhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”\n\n\n\n11/2023 - present\nDepartment of Botany, Faculty of Science, Charles University, Prague, Czech Republic\nAssistant Professor of Plant Ecology\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2023\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n7/2015 - 12/2019\nDepartment of Ecology, Institute of Entomology, Czech Republic\nPhD researcher funded by several individual grants.\n\n\n2022 - present\nPast Global Changes\nCommittee member of Planetary Boundaries Working Group led by Prof. Lindsey Gillson\n\n2022 - present\nDepartment of Biological Sciences, University of Bergen, Norway\nAdviser of The Past, Present and Future of Alpine Biomes Worldwide led by Dr. Suzette Flantua\n\n\n\nDepartment of Botany, Faculty of Science, Charles University, CZ\n\n2024 - present head of the Laboratory of Quantitative Ecology\n2024 - Present Graduate Student Advisor\n2023 - Present Faculty member\n2023 - Present Organizer of the Internal Seminar\n\n\nDepartment of Biological Sciences, University of Bergen, Norway\n\n2022 - 2023 Member of a PhD Hiring Committee\n\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwarded personal GACR Postdoc Individual Fellowship - Incoming\n\n2018\nInstitute of Entomology, Czech Academy of Science, České Budějovice, Czech Republic\nIBERA scholarship\n\n2017 (2 months)\nSmithsonian Institution Conservation and Research Center, Virginia, USA\nSmithsonian Fellowship\n\n\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology\n\n\n\n\n2022\nWhat is pristine?\nConference of the Czech Society for Ecology\n\n2022\nFOSSILPOL: The workflow to process global palaeoecological pollen data\nEuropean Pollen Database Open Science Meeting\n\n\n\n2024 (upcoming)\nCourse organiser of 3 classes at the Department of Botany, Faculty of Science, Charles University, Czech Republic:\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\nCodeFest - Innovating Together for a Better University Environment\nScience School on Quantitative Ecology\n\nsee my current teaching acitities for more details\n\n2021 - 2023\nDepartment of Biological Sciences, University of Bergen, Norway\n\nCourse organiser of OSW: Reproducibility in science\nCourse co-organiser of Community Ecology\n\n\n\n\n2024 (starting)\nDepartment of Botany, Faculty of Science, Charles University, Czech Republic\n\n1 PhD student - STARS program\n1 bachelor student\n\nSee Laboratory of Quantitative Ecology for more details about team members\n\n2016 - 2019\nDepartment of Zoology, Faculty of Science, University of South Bohemia, Czech Republic\n\n1 bachelor student\n\n\n\n\n2024 (upcoming)\nScience School of Quantitative Ecology\n\nMain co-organizer\nGermany\n~35 participants\n\n\n2024\nQuantitative Ecology Special Interest Group meeting\n\nMain organiser\nPrague, Czech Republic\n~15 participants\n\n\n2023\nRoC for geochemistry and XRF data workshop\n\nCo-organiser and presenter\nOeschger Centre for Climate Change Research, Switzerland\n~20 participants\n\n\n2023\nPalaeoecology and Sustainability\n\nMain co-organiser and presenter\nMeeting by Planetary Boundaries Working Group, Rome, Italy\n\n~15 participants\n\n\n2022\nConference of the Czech Society for Ecology\n\nCo-organiser (part of the Rising Star program) and presenter\nBrno, CZ\n~300-500 participants\n\n\n2023\nAPD R-Ratepol workshop\n\nCo-organiser and presenter\nWorkshop by African Pollen Database Council\nonline\n~35 participants\n\n\n2021\nData Manipulation & Statistical Analysis in Palaeoecology\n\nCo-organiser and presenter\nSeminar by Palaeoecology Special Interest Group BES\nonline\n~50 participants\n\n\n\n\n2023 - present\nGAUK Evaluator, Charles University, Czech Republic\n\n2019 - present\nReviewer, &gt;15 registered reviews in Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, Biotropica, etc.\n\n\n\nI have developed several R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\ntaxospace",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#education",
-    "href": "about_me/cv.html#education",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "PhD in Entomology | 11/2019\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded by dean’s prize entitled “Spatial structure and community dynamics of arboreal ants in a tropical rainforest”\n\nMSc in Zoology | 6/2015\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis awarded dean’s price entitled “Structure and dynamics of arboreal ant communities along successional gradient in a mountain tropical forest of New Guinea”\n\nBSc in Biology | 6/2013\nUniversity of South Bohemia | České Budějovice, Czech Republic\nThesis entitled “Detection of UV-fluorescent-marked prey in the guts of predators and scavengers, dynamics of scavenging in a model experiment”",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#professional-experience",
-    "href": "about_me/cv.html#professional-experience",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "11/2023 - present\nDepartment of Botany, Faculty of Science, Charles University, Prague, Czech Republic\nAssistant Professor of Plant Ecology\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwardet a personal GACR grand for my BIODYNAMICS project.\n\n9/2022 - 6/2023\nParental leave\n\n2/2020 - 6/2023\nDepartment of Biological Sciences, University of Bergen, Norway\nPostdoc at ERC project (PI: Prof. H.J.B. Birks) entitled “Humans on planet Earth (HOPE)”\n\n7/2015 - 12/2019\nDepartment of Ecology, Institute of Entomology, Czech Republic\nPhD researcher funded by several individual grants.\n\n\n2022 - present\nPast Global Changes\nCommittee member of Planetary Boundaries Working Group led by Prof. Lindsey Gillson\n\n2022 - present\nDepartment of Biological Sciences, University of Bergen, Norway\nAdviser of The Past, Present and Future of Alpine Biomes Worldwide led by Dr. Suzette Flantua\n\n\n\nDepartment of Botany, Faculty of Science, Charles University, CZ\n\n2024 - present head of the Laboratory of Quantitative Ecology\n2024 - Present Graduate Student Advisor\n2023 - Present Faculty member\n2023 - Present Organizer of the Internal Seminar\n\n\nDepartment of Biological Sciences, University of Bergen, Norway\n\n2022 - 2023 Member of a PhD Hiring Committee\n\n\n\n\n6/2023 - present\nCenter for Theoretical Sciences, Charles University, Prague, Czech Republic\nAwarded personal GACR Postdoc Individual Fellowship - Incoming\n\n2018\nInstitute of Entomology, Czech Academy of Science, České Budějovice, Czech Republic\nIBERA scholarship\n\n2017 (2 months)\nSmithsonian Institution Conservation and Research Center, Virginia, USA\nSmithsonian Fellowship\n\n\n\n2019 (6 weeks)\nNditam, Cameroon, Africa\nLeading field sampling of arboreal ants on an ERC project (PI: Prof. V. Novotny) entitled “Ecological determinants of tropical-temperate trends in insect diversity”\n\n2017 - 2019 (6 weeks)\nBrussels, Belgium\nMain data analytics at Mobility Plus project (PIs: Dr P. Klimes and Dr M. Leponce)\n\n2018 (2 months)\nEuCFACE - WSU, Australia\nField experiments on tri-trophic interactions on ERC project (PI: Dr K. Sam) entitled “Why is the world green: testing top-down control of plant-herbivore food webs by experiments with birds, bats and ants”\n\n2016 (6 months)\nBinatang research centre, Papua New Guinea\nLeading field project focused on arboreal ant ecology",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#invited-presentations-to-conferences",
-    "href": "about_me/cv.html#invited-presentations-to-conferences",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "2022\nWhat is pristine?\nConference of the Czech Society for Ecology\n\n2022\nFOSSILPOL: The workflow to process global palaeoecological pollen data\nEuropean Pollen Database Open Science Meeting",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#teaching",
-    "href": "about_me/cv.html#teaching",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "2024 (upcoming)\nCourse organiser of 3 classes at the Department of Botany, Faculty of Science, Charles University, Czech Republic:\n\nSPROuT - Science Powered through Reproducibility, Openness, and Teamwork\nCodeFest - Innovating Together for a Better University Environment\nScience School on Quantitative Ecology\n\nsee my current teaching acitities for more details\n\n2021 - 2023\nDepartment of Biological Sciences, University of Bergen, Norway\n\nCourse organiser of OSW: Reproducibility in science\nCourse co-organiser of Community Ecology",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#supervision",
-    "href": "about_me/cv.html#supervision",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "2024 (starting)\nDepartment of Botany, Faculty of Science, Charles University, Czech Republic\n\n1 PhD student - STARS program\n1 bachelor student\n\nSee Laboratory of Quantitative Ecology for more details about team members\n\n2016 - 2019\nDepartment of Zoology, Faculty of Science, University of South Bohemia, Czech Republic\n\n1 bachelor student",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#organisation-of-scientific-meeting",
-    "href": "about_me/cv.html#organisation-of-scientific-meeting",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "2024 (upcoming)\nScience School of Quantitative Ecology\n\nMain co-organizer\nGermany\n~35 participants\n\n\n2024\nQuantitative Ecology Special Interest Group meeting\n\nMain organiser\nPrague, Czech Republic\n~15 participants\n\n\n2023\nRoC for geochemistry and XRF data workshop\n\nCo-organiser and presenter\nOeschger Centre for Climate Change Research, Switzerland\n~20 participants\n\n\n2023\nPalaeoecology and Sustainability\n\nMain co-organiser and presenter\nMeeting by Planetary Boundaries Working Group, Rome, Italy\n\n~15 participants\n\n\n2022\nConference of the Czech Society for Ecology\n\nCo-organiser (part of the Rising Star program) and presenter\nBrno, CZ\n~300-500 participants\n\n\n2023\nAPD R-Ratepol workshop\n\nCo-organiser and presenter\nWorkshop by African Pollen Database Council\nonline\n~35 participants\n\n\n2021\nData Manipulation & Statistical Analysis in Palaeoecology\n\nCo-organiser and presenter\nSeminar by Palaeoecology Special Interest Group BES\nonline\n~50 participants",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#reviewing-activities",
-    "href": "about_me/cv.html#reviewing-activities",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "2023 - present\nGAUK Evaluator, Charles University, Czech Republic\n\n2019 - present\nReviewer, &gt;15 registered reviews in Global Ecology and Biogeography, Global Change Biology, Ecology Letters, Anthropocene, Biotropica, etc.",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/cv.html#software-development",
-    "href": "about_me/cv.html#software-development",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "I have developed several R packages:\n\nRRatepol\nRFossilpol\nREcopol\nRUtilpol\ntaxospace",
-    "crumbs": [
-      "About me",
-      "CV"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html",
-    "href": "about_me/list_of_publications.html",
-    "title": "List of publications published in peer-review journals",
-    "section": "",
-    "text": "Mottl, O., Gaiser, F., Šímová, I. Flantua S.G.A. (2025) VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers. Scientific Data 12: 1923 .    \nRentier E.S., Mottl O., Pacheco-Riaño L.C., Schultz L., Seguinot J., Wiersma A.T., Grytnes J., Flantua S.G.A. (2025) Global variability in LGM cooling amongst paleoclimate datasets affects biome reconstructions in mountains. Frontiers of Biogeography 18: e135871.  \nGillson, L., Seddon, A., Mottl, O., Zhang, K., Kirsten, K., Gell, P., Marchant, R.A., Schwörer, C., Razanatsoa, E., Lane, P.J., Courtney-Mustaphi, C.J. and Dearing, J. (2025), Exploring the Interface Between Planetary Boundaries and Palaeoecology. Global Change Biology 31: e70017.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section",
-    "href": "about_me/list_of_publications.html#section",
-    "title": "List of publications published in peer-review journals",
-    "section": "",
-    "text": "Mottl, O., Gaiser, F., Šímová, I. Flantua S.G.A. (2025) VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers. Scientific Data 12: 1923 .    \nRentier E.S., Mottl O., Pacheco-Riaño L.C., Schultz L., Seguinot J., Wiersma A.T., Grytnes J., Flantua S.G.A. (2025) Global variability in LGM cooling amongst paleoclimate datasets affects biome reconstructions in mountains. Frontiers of Biogeography 18: e135871.  \nGillson, L., Seddon, A., Mottl, O., Zhang, K., Kirsten, K., Gell, P., Marchant, R.A., Schwörer, C., Razanatsoa, E., Lane, P.J., Courtney-Mustaphi, C.J. and Dearing, J. (2025), Exploring the Interface Between Planetary Boundaries and Palaeoecology. Global Change Biology 31: e70017.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-1",
-    "href": "about_me/list_of_publications.html#section-1",
-    "title": "List of publications published in peer-review journals",
-    "section": "2024",
-    "text": "2024\n\nHerbert, A.V., Haberle, S.G., Flantua, S.G.A., Mottl,O., Blois, J.L., Williams, J.W., George, A., Hope, G.S. (2024) The Indo-Pacific Pollen Database - a Neotoma constituent database, Climate of the Past 20: 2473-2485.   \nBhatta, K.P., Mottl O., Felde V.A., Grytnes J., Reitalu T., Birks H.H., Birks, H.J.B., Vetaas O.R. (2024), Latitudinal gradients in the phylogenetic assembly of angiosperms in Asia during the Holocene. Scientific Reports 14.1: 17940.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-2",
-    "href": "about_me/list_of_publications.html#section-2",
-    "title": "List of publications published in peer-review journals",
-    "section": "2023",
-    "text": "2023\n\nBirks, H.J.B., Bhatta, K.P., Felde, V.A., Flantua, S.G., Mottl, O., Haberle, S.G., Herbert A., Hooghiemstra H., Birks, H.H., Grytnes, J., Seddon, A.W.R. (2023), Approaches to pollen taxonomic harmonisation in Quaternary palynology. Palaeobotany and Palynology 319: 104989.  \nMoses, J., Peters, M. K., Tiede, Y., Mottl, O., Donoso, D. A., Farwig, N., Fayle, T. M., Novotny, V., Sanders, N. J., & Klimes, P. (2023). Nutrient use by tropical ant communities varies among three extensive elevational gradients: A cross-continental comparison. Global Ecology and Biogeography 00: 1-18. \nBrown, K. A., Bunting, M. J., Carvalho, F., de Bello, F., Mander, L., Marcisz, K., Mottl, O., Reitalu, T., & Svenning, J.-C. (2023), Trait-based approaches as ecological time machines: Developing tools for reconstructing long-term variation in ecosystems. Functional Ecology 00: 1-18.  \nFlantua S.G. & Mottl, O. & Felde, V.A. & Bhatta, K.P., Birks, H.H., Grytnes, J., Seddon, A.W.R., Birks, H.J.B. (2023), A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen. Global Ecology and Biogeography 32: 1377-1394.   \nBhatta, K.P., Mottl, O., Felde, V.A., Flantua S.G., Birks, H.H., Cao, X., Chen, F., Grytnes, J., Seddon, A.W. R., Birks, H.J.B. (2023), Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene. Frontiers in Ecology and Evolution 11: 1115784",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-3",
-    "href": "about_me/list_of_publications.html#section-3",
-    "title": "List of publications published in peer-review journals",
-    "section": "2022",
-    "text": "2022\n\nHouska Tahadlova, M., Mottl, O., Jorge, L.R., Koane, B., Novotny, V., & Sam, K. (2022), Trophic cascades in tropical rainforests: Effects of vertebrate predator exclusion on arthropods and plants in Papua New Guinea. Biotropica 55: 70-80.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-4",
-    "href": "about_me/list_of_publications.html#section-4",
-    "title": "List of publications published in peer-review journals",
-    "section": "2021",
-    "text": "2021\n\nMottl, O. & Flantua, S.G.A., Bhatta K.B., Felde, V.A., Giesecke, T., Goring, S., Grimm, E.C., Haberle, S., Hooghiemstra H., Ivory, S., Kuneš, P., Wolters, S., Seddon A.W.R, Williams J.W. (2021), Global acceleration in rates of vegetation change over the past 18,000 years. Science 372: 860-864.   \nMottl, O., Grytnes, J., Seddon, A.W.R, Steinbauer, M.J., Bhatta, K.P., Felde, V.A., Flantua, S.G.A, Birks H.J.B (2021), Rate-of-change analysis in paleoecology revisited: A new approach. Review of Palaeobotany and Palynology 293.   \nMottl, O., Yombai, J., Novotný, V., Leponce, M., Weiblen, G.D. and Klimeš, P. (2021), Inter-specific aggression generates ant mosaics in canopies of primary tropical rainforest. Oikos 130: 1087. \nLeponce, M., Dejean, A., Mottl, O., Klimes, P. (2021), Rapid assessment of the three-dimensional distribution of dominant arboreal ants in tropical forests. Insect Conserv. Divers. 14: 426-438 \nYombai, J., Klimeš, P., Dargusch, P., Posman, A., Mottl, O., Mani A., Novotny V. (2021), Ant Species Diversity, Distribution, and Community Composition in Different Forest Types in Papua New Guinea. Case Studies in the Environment 5: 1342727.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-5",
-    "href": "about_me/list_of_publications.html#section-5",
-    "title": "List of publications published in peer-review journals",
-    "section": "2020",
-    "text": "2020\n\nMottl, O., Fibich, P., Klimes, P., Volf, M., Tropek, R., Anderson-Teixeira, K., Auga, J., Blair, T., Butterill, P., Carscallen, G., Gonzalez-Akre, E., Goodman, A., Kaman, O., Lamarre, G.P.A., Libra, M., Losada, M.E., Manumbor, M., Miller, S.E., Molem, K., Nichols, G., Plowman, N.S., Redmond, C., Seifert, C.L., Vrana, J., Weiblen, G.D., Novotny, V. (2020), Spatial covariance of herbivorous and predatory guilds of forest canopy arthropods along a latitudinal gradient. Ecology Letters 23: 1499-1510. \nMottl, O., Yombai, J., Fayle, T.M., Novotný, V., Klimeš, P. (2020), Experiments with artificial nests provide evidence for ant community stratification and nest site limitation in a tropical forest. Biotropica 52: 277-287. \nPlowman, N.S., Mottl, O., Novotny, V., Idigel, C., Philip, F.J., Rimandai, M. and Klimes, P. (2020), Nest microhabitats and tree size mediate shifts in ant community structure across elevation in tropical rainforest canopies. Ecography 43: 431-442.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/list_of_publications.html#section-6",
-    "href": "about_me/list_of_publications.html#section-6",
-    "title": "List of publications published in peer-review journals",
-    "section": "2019",
-    "text": "2019\n\nMottl, O., Plowman, N. S., Novotny, V., Gewa, B., Rimandai, M., and Klimes, P. (2019), Secondary succession has surprisingly low impact on arboreal ant communities in tropical montane rainforest. Ecosphere 10: e02848. \nVolf M., Klimeš P., Lamarre G.P.A., Redmond C.M., Seifert C.L., Abe, T., Auga, J., Anderson-Teixeira, K., Basset, Y., Beckett, S., Butterill, P.T., Drozd P., Gonzalez-Akre E.,, Kaman O., Kamata N.,, Laird-Hopkins, B., Libra, M., Manumbor, M., Miller, S.E., Molem, K., Mottl, O., Murakami M.,, Nakaji, T., Plowman, N.S., Pyszko, P., Šigut, M., Šipoš, J., Tropek, R., Weiblen, G.D., Novotny V. (2019), Quantitative assessment of plant-arthropod interactions in forest canopies: A plot-based approach. PLOS ONE 14: e0222119.",
-    "crumbs": [
-      "About me",
-      "List of publications"
-    ]
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html",
-    "href": "about_me/student_mentoring_en.html",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "",
-    "text": "Are you a student struggling to navigate the complexities of ecological data? Whether you’re from the Department of Botany or embarking on a different scientific journey, this offer is for you. I am here to assist you with the analysis of ecological data for your project."
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html#what-i-offer",
-    "href": "about_me/student_mentoring_en.html#what-i-offer",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "What I Offer",
-    "text": "What I Offer\n\nPersonalized Consultation Sessions: Tailored to meet the specific needs and challenges of your project.\nMentoring in Ecological Data Analysis: From basic concepts to advanced techniques.\nHelp with Coding: Aimed at resolving that persistent bug in R.\nA Supportive Learning Environment: Where questions are encouraged, and discovery is promoted."
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html#how-to-get-started",
-    "href": "about_me/student_mentoring_en.html#how-to-get-started",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "How to Get Started",
-    "text": "How to Get Started\n\nContact Me: Send an email to ondrej.mottl(at)natur.cuni.cz with a brief description of your project and your issue.\nWait for Your Time Slot: You will be placed on a waiting list and invited to the nearest available time slot."
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html#when-and-where",
-    "href": "about_me/student_mentoring_en.html#when-and-where",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "When and Where",
-    "text": "When and Where\n\nMy office is located at Benátská 2, first floor, room 58.\nConsultations are scheduled for Tuesdays from 14:00 to 14:30 (please attend only if your session has been confirmed)."
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html#book-a-time-slot",
-    "href": "about_me/student_mentoring_en.html#book-a-time-slot",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "Book a Time Slot",
-    "text": "Book a Time Slot"
-  },
-  {
-    "objectID": "about_me/student_mentoring_en.html#disclaimer",
-    "href": "about_me/student_mentoring_en.html#disclaimer",
-    "title": "Ecological Data Analyses - Consultations and Mentoring",
-    "section": "Disclaimer",
-    "text": "Disclaimer\nI am not an oracle, nor do I have all the answers. However, I am hopeful that together, we can steer your project in the right direction."
-  },
-  {
-    "objectID": "collaboration/collaboration_guide.html",
-    "href": "collaboration/collaboration_guide.html",
-    "title": "Collaboration Guide",
-    "section": "",
-    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way.",
+    "text": "I like to work collaboratively! So, feel free to reach out to me and we can discuss the possibility of working together. In order to make such collaboration easy for everyone, I have prepared various materials for you. 🌟",
     "crumbs": [
       "Work with me",
-      "Collaboration guide"
+      "Get in touch!"
     ]
   },
   {
-    "objectID": "collaboration/collaboration_guide.html#reasoning",
-    "href": "collaboration/collaboration_guide.html#reasoning",
-    "title": "Collaboration Guide",
+    "objectID": "collaboration/get_in_touch.html#contact-me",
+    "href": "collaboration/get_in_touch.html#contact-me",
+    "title": "Get in touch!",
+    "section": "Contact me 📬",
+    "text": "Contact me 📬\nDo you have a question? Do you want to set up a meeting? The easiest way to contact me is to hit me up via an email to ondrej.mottl(at)gmail.com📧. Also, feel free to reach out to me via Bluesky!🦋",
+    "crumbs": [
+      "Work with me",
+      "Get in touch!"
+    ]
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#collaboration-guide",
+    "href": "collaboration/get_in_touch.html#collaboration-guide",
+    "title": "Get in touch!",
+    "section": "Collaboration guide 🤝",
+    "text": "Collaboration guide 🤝\nEveryone has their own way of working and pace. In order to make collaboration easy for everyone, I have prepared a collaboration guide for you. It contains all the information to make sure that there are no unpleasant surprises and that doing science is as much fun as possible for everyone. 📚🌱",
+    "crumbs": [
+      "Work with me",
+      "Get in touch!"
+    ]
+  },
+  {
+    "objectID": "collaboration/get_in_touch.html#code-convention",
+    "href": "collaboration/get_in_touch.html#code-convention",
+    "title": "Get in touch!",
+    "section": "Code convention 💻",
+    "text": "Code convention 💻\nMy work is heavily focused on writing code. For this reason, I have prepared a code convention, which I am following in my projects. I am making it publically available so feel free to check it out!💡📝\nFeel free to explore these resources, and let’s create something amazing together! 🌟🌍🔬",
+    "crumbs": [
+      "Work with me",
+      "Get in touch!"
+    ]
+  },
+  {
+    "objectID": "lab/about_the_lab.html",
+    "href": "lab/about_the_lab.html",
+    "title": "Laboratory of Quantitative Ecology",
     "section": "",
-    "text": "Collaboration is a dynamic process that involves individuals with different approaches, perspectives, and working paces. To ensure a smooth and enjoyable collaboration experience, it is important to establish clear expectations and guidelines. This collaboration guide aims to provide all the necessary information to foster effective collaboration and minimize any potential surprises along the way.",
+    "text": "The Laboratory of Quantitative Ecology is a research group focused on examining vegetation biodiversity trends across spatial and temporal scales. We are particularly interested in understanding the influence of human activities and advancing interdisciplinary research in ecology.",
     "crumbs": [
-      "Work with me",
-      "Collaboration guide"
+      "Laboratory of Quantitative Ecology"
     ]
   },
   {
-    "objectID": "collaboration/collaboration_guide.html#lines-of-communication",
-    "href": "collaboration/collaboration_guide.html#lines-of-communication",
-    "title": "Collaboration Guide",
-    "section": "Lines of communication",
-    "text": "Lines of communication\nOpen and effective communication is crucial for successful collaboration. My general style of communication is “ping-pong,” meaning I prefer short exchanges frequently. Here are some preferred lines of communication:\n\nEmail\nEmail serves as the primary mode of communication. Feel free to reach out to me at ondrej.mottl(at)gmail.com for any queries, updates, or discussions related to our collaboration. See ways to get in touch with me.\nIf you expect me to respond to your email, please state it clearly.\nI strive to reply to all emails as soon as possible. However, there is a chance that I may have forgotten to answer yours. If I do not respond for a significant amount of time, feel free to send me a friendly reminder. 😊⏰\n\nOther lines of communication\nIn addition to email, we can also utilize collaborative platforms such as Slack, Microsoft Teams, or any other platform that suits our needs. These platforms offer faster, real-time communication, which aligns well with the “ping-pong” style of interaction.",
+    "objectID": "lab/about_the_lab.html#group-description",
+    "href": "lab/about_the_lab.html#group-description",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "Group Description",
+    "text": "Group Description\nWelcome to the Laboratory of Quantitative Ecology, where we are dedicated to unraveling the complexities of vegetation dynamics. Our research spans spatio-temporal scales, investigating both historical and contemporary factors that shape ecological patterns of ecosystems.\n\nResearch Focus\nDelving into various facets of biodiversity, including taxonomic, functional, and phylogenetic dimensions, we utilize advanced quantitative palaeoecological methods, data science, and machine learning. Our investigations cover diverse spatial scales, from local biomes to continents, enriched by the inclusion of long-term data, such as fossil pollen records and other ecological archives.\n\nState-of-the-Art Tools and Methods\nWe use cutting-edge quantitative and statistical methods, alongside state-of-the-art data science and machine learning approaches. Our research not only involves the application of existing methods but also the development of new methodologies to extract deeper insights from complex ecological datasets. This continuous innovation ensures that our research remains at the forefront of ecological science, expanding the limits of our understanding of vegetation patterns.\n\n\nInterdisciplinary Approach\nOur research integrates concepts and methodologies from various fields, including macroecology, palaeoecology, biodiversity science, and quantitative ecology. This interdisciplinary perspective allows us to gain a comprehensive understanding of vegetation dynamics and their underlying drivers.\n\n\nOngoing projects\n\nBIODYNAMICS\nFunctional Vegetation Paleoecology\nPPF Alpine\nHolocene Diversity Trends\nFOSSILPOL\nPlanetary Boundaries Working Group\nMEMELAND\n\n\n\nPresentations\n\nFlash talk about our lab presented at the Junior Faculty Conference September 2025.",
     "crumbs": [
-      "Work with me",
-      "Collaboration guide"
+      "Laboratory of Quantitative Ecology"
     ]
   },
   {
-    "objectID": "collaboration/collaboration_guide.html#github",
-    "href": "collaboration/collaboration_guide.html#github",
-    "title": "Collaboration Guide",
-    "section": "GitHub",
-    "text": "GitHub\nSince my primary research involves writing code, GitHub is an essential platform for any collaborative work. Check out the overview of GitHub features to get familiar with its capabilities.\nI love leveraging its features, such as Issues, Pull Requests, and Projects, to streamline our collaborative coding efforts. If you are not familiar with GitHub, don’t worry! I can provide guidance and support to help you get started. It’s worth checking out their documentation for more details.\nHere is my basic GitHub workflow:\n\n\n\n\n\nflowchart\n    1[\"Make an Issue\"] --&gt; 2(\"Create a new branch\")\n    2 --&gt; 351471[\"Commit code\"]\n    351471 --&gt; 257387[\"Create Pull Request\"]\n    949464{{\"Does it need a review?\"}} --&gt; 625480([\"Yes\"])\n    949464 --&gt; 564859([\"No\"])\n    625480 --&gt; 752396[\"Assign reviewer\"]\n    564859 --&gt; 715681[\"Squash merge PR\"]\n    752396 --&gt; 715681\n    257387 --&gt; 385770[\"Link the Issue\"]\n    715681 --&gt; 688855(\"Close issue (if needed)\")\n    688855 --&gt; 791180[\"Delete the branch\"]\n    385770 --&gt; 515426(\"Add to Project (if &lt;span&gt;applicable&lt;/span&gt;)\")\n    515426 --&gt; 949464\n    791180 -.-&gt;|\"repeat\"| 2\n\n\n\n\n\n\nHere are the individual steps in detail:\n\n1. Issues\nAn Issue represents a single task that needs to be addressed.\nEach Issue provides a platform to communicate the task with a description and the possibility to discuss details using comments. An Issue should be related to a specific problem or task. If a task is too complex or large, the Issue can be divided into several smaller ones and linked using task lists.\nFor more details about Issues, refer to the GitHub documentation.\n\n\n2. Branches\nFor any code change, a new branch should be created.\nEach branch should correspond to a specific task (Issue). Therefore, a branch should be named to describe the problem it is solving or directly as issue[Issue number]. If you find that the problem is too complex and needs to be split into multiple Issues or branches, you can create another branch from the current one. Branches are lightweight, so don’t worry about creating many of them.\nFor more details about branches, refer to the GitHub documentation.\n\n\n3. Writing code\nPlease follow the code conventions when writing code. Commit often but make sure to keep the description for each commit meaningful.\n\n\n4. Pull Request (PR)\nA Pull Request is a way to merge a branch into the main branch (or another branch). The PR name should clearly indicate the purpose of the changes.\nThe PR details should provide an explanation of the main modifications. Additionally, you can add comments to provide further context. If possible, create the PR as a “draft” until it is ready for review and merge (learn more about drafts).\nAs PRs are linked to branches, and each branch should be linked to an Issue, I prefer to use the “link” functionality explicitly. This can be achieved by mentioning the Issue with specific words (e.g., close) in the PR description (see more about linking).\nIf you want me to review your PR before merging, simply “assign” it to me (learn more about assigning).\nI prefer to merge Pull Requests using the “squash merge commit” option (learn more about it here) for a cleaner git history.\n\n\n5. Projects\nGitHub Projects offer a new way of project management. If we agree to use a Project in our collaboration, we will define how to collaborate individually within that project framework.",
+    "objectID": "lab/about_the_lab.html#open-positions",
+    "href": "lab/about_the_lab.html#open-positions",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "Open positions",
+    "text": "Open positions\nCurrent vacancies appear here when available.\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Work with me",
-      "Collaboration guide"
+      "Laboratory of Quantitative Ecology"
     ]
   },
   {
-    "objectID": "collaboration/collaboration_guide.html#manuscript-writing",
-    "href": "collaboration/collaboration_guide.html#manuscript-writing",
-    "title": "Collaboration Guide",
-    "section": "Manuscript writing",
-    "text": "Manuscript writing\nWriting manuscripts is a crucial aspect of scientific collaboration. The most common tools for working on a manuscript are MS Word. However, to ensure consistency and efficient collaboration during manuscript preparation, I prefer to use Google Docs, which provides real-time collaboration, and simultaneous editing, and facilitates constructive feedback on the manuscript.\nIn any case, I prefer to make any edits via “suggestions”. However, note that I believe that it is absolutely fine to reject suggestions (or my suggestions to be rejected).",
+    "objectID": "lab/about_the_lab.html#people",
+    "href": "lab/about_the_lab.html#people",
+    "title": "Laboratory of Quantitative Ecology",
+    "section": "People",
+    "text": "People\n\nOndřej Mottl \n\nHead of the Laboratory\nAssistant Professor for Plant Ecology\n📬email: ondrej.mottl(at)gmail.com\n\nAbout me\nList of publications\n\nBryan Novio \n\nPhD student\n📬email: noviobryan(at)gmail.com\n\nHolocene Diversity Trends project\njoined Autumn 2024\n\nNatálie Hanusová \n\nPhD student\n📬email: hanusova.nat(at)gmail.com\nFunctional Vegetation Paleoecology project\nJoined Autumn 2025\n\n\n\nFormer members\n\nFriederike Wolke \n\nTechnical assistant (programming)\n📬email: friederike.woelke(at)gmail.com\nRRatepol R-Package development\nEmployed summer and autumn 2025\n\nMarkéta Tumová \n\nBc student\n📬email: tumovamarket(at)natur.cuni.cz\nAlpine Biodiversity Across Continents project (linked to the PPF Alpine)\njoined in Autumn 2024\nFinished Bc thesis in Spring 2025",
     "crumbs": [
-      "Work with me",
-      "Collaboration guide"
+      "Laboratory of Quantitative Ecology"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ondřej Mottl",
-    "section": "",
-    "text": "Bluesky\n  \n  \n    \n     ORCID\n  \n  \n    \n     Github\n  \n\n  \n  \nHello, I’m Ondřej Mottl.\nI am the head of the Laboratory of Quantitative Ecology at Charles University in Prague, CZ. My research spans quantitative ecology, macroecology, palaeoecology, and community ecology, with a strong focus on data science. You can learn more about my ongoing work through my projects.\n🔭 My current research focuses on developing advanced tools for analysing global biodiversity patterns and addressing challenges in scientific exploration.\n🌱 I am deeply committed to teaching and mentoring, helping to inspire and guide the next generation of ecologists and data scientists. Learn more about my teaching activities.\n💡 In addition, I proudly serve as the Open Science Champion at Charles University, advocating for scientific reproducibility - a cause close to my heart.\n💬 Feel free to reach out if you’d like to discuss R programming, GitHub, biodiversity patterns, or other topics of interest.\n\nWebsite Navigation\n\nLaboratory of Quantitative Ecology 👩🏽‍💻\nCurrent Projects 🚀\nTeaching Activities 📚\nMy CV 📄\nContact Me 📬\nPublications 📚"
-  },
-  {
-    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
-    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html",
+    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html",
+    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html",
     "title": "Looking for a new PhD student!",
     "section": "",
-    "text": "Are you passionate about unravelling the mysteries of our planet’s biodiversity using large data and statistics? I offer a fully funded, full-time PhD position in a field spanning macroecology, palaeoecology, biodiversity science, and quantitative ecology. The candidate will join my newly established Laboratory of Quantitative Ecology at the Department of Botany at the Faculty of Sciences, Charles University in Prague, Czech Republic.\nThe latest news about the position can be found on the website: https://bit.ly/PhD_HoloceneDiversityTrends\n\n\n\n\n\n\n\nMy lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human impact."
+    "text": "WarningPosition closed\n\n\n\nThis position is closed. The page is retained for reference."
   },
   {
-    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
-    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#about-the-team",
+    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#desirable-but-not-required",
+    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#desirable-but-not-required",
     "title": "Looking for a new PhD student!",
-    "section": "",
-    "text": "My lab is fascinated by macroecology, palaeoecology, and biodiversity science. I focus on exploring spatio-temporal patterns of vegetation biodiversity, with a commitment to interdisciplinary research and a focus on human impact."
+    "section": "Desirable but Not Required:",
+    "text": "Desirable but Not Required:\n\nPrior experience with programming in R; experience with other languages (Python, C#, etc.) is also welcomed.\nSolid background in data analysis and statistical testing.\nExperience with large-scale biodiversity patterns.\nGood knowledge of Function Ecology (functional traits)\nExperience in an international working environment."
   },
   {
-    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
-    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#desirable-but-not-required",
+    "objectID": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#the-application-deadline-is-the-15th-of-january-2025",
+    "href": "lab/lab_news/02-phd_position_FunctionalVegetationPaleoecology.html#the-application-deadline-is-the-15th-of-january-2025",
     "title": "Looking for a new PhD student!",
-    "section": "Desirable but not required:",
-    "text": "Desirable but not required:\n\nPrior experience with programming in R; experience with other languages (Python, C#, etc) are also welcomed\nSolid background in data analysis and statistical testing\nExperience from an international working environment"
+    "section": "! The application deadline is the 15th of January 2025 !",
+    "text": "! The application deadline is the 15th of January 2025 !\nSend an email to ‘quantitative.ecology@natur.cuni.cz’ with “PhD application [your surname]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why you are interested in obtaining a PhD.\nYour CV highlighting the most relevant information (1-2 pages)\nContact details for 2-3 academic referees, e.g., your former supervisor, boss, or collaborator.\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents in advance."
   },
   {
-    "objectID": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
-    "href": "lab/lab_news/01-phd_position_HoloceneDiversityTrends.html#application-deadline-is-13th-of-march-2024",
-    "title": "Looking for a new PhD student!",
-    "section": "! Application deadline is 13th of March 2024 !",
-    "text": "! Application deadline is 13th of March 2024 !\nThe application process has 2 stages:\n\nYour application needs to be submitted via STARS portal\n\nThe STARS is a framework to attract the best students from abroad, as well as from the Czech Republic, to ensure excellent education and an adequate income for PhD students. More info can be found on website\n\nSend an email to ‘ondrej.mottl@natur.cuni.cz’ with “PhD application [your surename]” in the email subject, containing:\n\nMotivation letter (1-2 pages) describing your expertise and research interests, stating why you see yourself as a good fit for my group/team, and why are you interested in getting a PhD.\nContact details for 2-3 academic referees, e.g. your former supervisor, boss, or collaborator.\n\n\nNote that additional materials such as your theses, manuscripts, diplomas, or certificates may be requested later on, so make sure to prepare all relevant documents prior."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/blog/01-project_start.html",
-    "href": "projects/BIODYNAMICS/blog/01-project_start.html",
-    "title": "Project has started!",
+    "objectID": "projects/BIODYNAMICS/blog/02-new_logo.html",
+    "href": "projects/BIODYNAMICS/blog/02-new_logo.html",
+    "title": "A new logo",
     "section": "",
-    "text": "The BIODYNAMICS project has started!🎉\nI have accompanied it with a website (which you are reading right now!).\nI have created a collaboration guide🤝 and code convention💻 as a framework to invite other researchers to participate in the project."
+    "text": "The BIODYNAMICS project has a new logo!🖼️\nI habe used my favourite AI tools to give me some ideas for the new logo. What do you think? I am very happy with the result!"
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
-    "href": "projects/BIODYNAMICS/blog/03-kickoff_meering.html",
-    "title": "Kick-Off Meeting",
+    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
+    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html",
+    "title": "Unveiling VegVault",
     "section": "",
-    "text": "Introduction\nGreetings, everyone! It’s an exciting time as my project BIODYNAMICS has taken flight, and I couldn’t be more thrilled!\n\n\nKick-Off Meeting\nTo celebrate this occasion, I am hosting our very first BIODYNAMICS kick-off meeting. This gathering is a chance for people to come together, share excitement, and set the stage for the incredible work that lies ahead.\n\n\nWhat to Expect:\nI’ll provide a brief overview of the BIODYNAMICS project, its goals, and the journey we’re about to embark on. We’ll also provide a brief introduction to know everyone. Learn about our backgrounds, passions, and what motivates us to join this project. I want to emphasize that there’s no pressure to contribute any additional work. These meetings will be all about brainstorming, discussing ideas, and sharing our perspectives. It’s going to be a friendly and informal environment.\n\n\nHow to Join:\nIf you already didn’t receive an email with an invitation, please drop me a message via email expressing your interest, and I’ll make sure you receive all the information you need to join."
+    "text": "Greetings, everyone! I’m excited to share an in-depth glimple into VegVault, my ambitious interdisciplinary database project."
   },
   {
-    "objectID": "projects/BIODYNAMICS/blog/05-vegvault_published.html",
-    "href": "projects/BIODYNAMICS/blog/05-vegvault_published.html",
-    "title": "VegVault is published!",
+    "objectID": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
+    "href": "projects/BIODYNAMICS/blog/04-unveiling_vegvault.html#repos",
+    "title": "Unveiling VegVault",
+    "section": "repos",
+    "text": "repos\n\nNeo-ecological plot-based data - Mainly BIEN and sPlot data\nPalaeo-ecological plot-based data - Fossil pollen data from Neotota acessed and processed using FOSSILPOL workflow\nTrait data - 6 selected traits from TRY database\nAbiotic data - climate data form CHELSA and CHELSA-TRACE21, and soil data from WOSIS\nVegVault migration - code to migrate all data into SQLite database"
+  },
+  {
+    "objectID": "projects/BIODYNAMICS/blog/06-vegvault_scientific_data.html",
+    "href": "projects/BIODYNAMICS/blog/06-vegvault_scientific_data.html",
+    "title": "VegVault officially published in Scientific Data!",
     "section": "",
-    "text": "VegVault is published!\nI’m thrilled to announce that VegVault is now published! 🎉\nThere are seversal parts of the VegVault project that are now available for you to explore:\n\nVegVault website\nPre-print publication - “VegVault database: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” \nVegVault Database v1.0.0\n\nPlease check Guidelines for data reuse and update\n\n{vaultkeepr} R-package\n\nIn order to make usage of the VegVault database as easy as possible, we have developed an R-package called {vaultkeepr}, providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ().\n\nAdditional resources\n\nBlueSky announcement\nVegVault poster - CSPE conference September 2024\nVegVault Flash Presentation - Geobotany meeting, Sudějov 23 March 2025"
+    "text": "VegVault in Scientific Data!\nI’m delighted to share that our VegVault paper has been officially published in Scientific Data! 🎉\nThe paper “VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” is now available in peer-reviewed form.\n\n\n\nWhat is VegVault?\nVegVault is an interdisciplinary SQL database that bridges the gap between paleo- and neo-ecological plot-based vegetation data, species functional traits, and abiotic information including climate and soil data. This resource is designed to facilitate large-scale analyses of vegetation dynamics across space and time.\n\n\nResources\nAll VegVault resources remain freely available:\n\nVegVault website\nVegVault Database v1.0.0\n{vaultkeepr} R-package - An R interface for easy database access\nGitHub repositories - Individual repos for each data component\n\n\n\nAcknowledgments\nI’m grateful to all co-authors - Franziska Gaiser, Irena Šímová, and Suzette Flantua - for their invaluable contributions to making this project a reality.\nStay tuned for future updates and developments!"
   },
   {
-    "objectID": "projects/BIODYNAMICS/index.html",
-    "href": "projects/BIODYNAMICS/index.html",
-    "title": "BIODYNAMICS",
+    "objectID": "projects/FOSSILPOL/index.html",
+    "href": "projects/FOSSILPOL/index.html",
+    "title": "FOSSILPOL",
     "section": "",
-    "text": "BIODYNAMICS is a 3-year personal research project, for which I have received funding by the Czech Science Foundation (GACR), and started on 1.6.2023."
+    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nThe goal of the FOSSILPOL project is to process multiple fossil pollen records to create a comprehensive, standardised dataset compilation, ready for multi-record and multi-proxy analyses at various spatial and temporal scales.\nLearn more about the project on the project websites.\n\n\nI am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
   },
   {
-    "objectID": "projects/BIODYNAMICS/index.html#project-description",
-    "href": "projects/BIODYNAMICS/index.html#project-description",
-    "title": "BIODYNAMICS",
-    "section": "Project description",
-    "text": "Project description\nThe BIODYNAMICS project aims to address the need for predicting biodiversity and ecosystem alteration under global climate change. Life scientists need to be able to predict biodiversity and ecosystem alteration under global climate change. However, scenarios able to predict biodiversity trajectories are wishful thinking as biotic interactions in novel environments or among newly coexisting species are not sufficiently understood. By investigating local processes of species interactions, BIODYNAMICS will contribute crucial insights into how these interactions shape continental and global biodiversity patterns over the past 20 thousand years (ka). BIODYNAMICS will develop innovative approaches that allow estimating ecosystem functioning, especially the essential biotic interactions, at 3 major ecological scales (spatial, temporal, and taxonomic), spanning from individual plants in local sites to whole continents and from 20 ka to the present.\nIt will do so using a newly compiled publicly available multidisciplinary database that integrates present and past global vegetation records with their functional traits and climate data. This database will serve as a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology.\nA key aspect of BIODYNAMICS is to utilize insights from the past to inform future predictions of global biodiversity patterns, which are anticipated to be influenced by anthropogenic climate change. By fostering interdisciplinary cooperation between these scientific disciplines, the project aims to enhance our understanding and quantification of biotic interactions in both historical and contemporary contexts. These insights will be instrumental in predicting ecological responses to global change, thereby ensuring the preservation of ecosystem services that are essential for our society."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/index.html#project-goals",
-    "href": "projects/BIODYNAMICS/index.html#project-goals",
-    "title": "BIODYNAMICS",
-    "section": "Project goals",
-    "text": "Project goals\nImprove the capacity to predict global biodiversity patterns using a new multidisciplinary framework to infer biotic interactions of vegetation, and identify how local-scale biotic interactions scaled up to maintain biodiversity patterns at various spatial scales during the last 20 ka."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/index.html#my-role",
-    "href": "projects/BIODYNAMICS/index.html#my-role",
-    "title": "BIODYNAMICS",
-    "section": "My role",
-    "text": "My role\nI am the Principal Investigator of the project."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/index.html#news",
-    "href": "projects/BIODYNAMICS/index.html#news",
-    "title": "BIODYNAMICS",
-    "section": "News",
-    "text": "News\n\n\n\n\n\n\n\n\nVegVault officially published in Scientific Data!\n\n\n\n\n\n\nJan 2, 2026\n\n\n\n\n\n\n\n\n\n\n\nVegVault is published!\n\n\n\n\n\n\nMar 14, 2025\n\n\n\n\n\n\n\n\n\n\n\nUnveiling VegVault\n\n\n\n\n\n\nDec 15, 2023\n\n\n\n\n\n\n\n\n\n\n\nKick-Off Meeting\n\n\n\n\n\n\nOct 10, 2023\n\n\n\n\n\n\n\n\n\n\n\nA new logo\n\n\n\n\n\n\nJun 16, 2023\n\n\n\n\n\n\n\n\n\n\n\nProject has started!\n\n\n\n\n\n\nJun 1, 2023\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/index.html#project-outputs",
-    "href": "projects/BIODYNAMICS/index.html#project-outputs",
-    "title": "BIODYNAMICS",
-    "section": "Project outputs",
-    "text": "Project outputs\n\nVegVault \nVegVault is a database that links global paleo-, and neo-vegetation data with functional traits and abiotic drivers. The database is a valuable resource for advancing knowledge in eco-informatics, community ecology, climatology, and paleo- and neo-ecology. More details about the release here.\n\nVegVault website\nOfficial publication - “VegVault dataset: linking global paleo-, and neo-vegetation data with functional traits and abiotic drivers” \n\n\n\n\n{vaultkeepr} R-package \nIn order to make usage of the VegVault database as easy as possible, we have developed an R-package called {vaultkeepr}, providing a suite of functions to effectively interact with the database directly from the R programming language. Functions include opening the database, extracting datasets, filtering samples, and accessing specific taxa and traits. This package is a well-tested interface ()."
-  },
-  {
-    "objectID": "projects/BIODYNAMICS/index.html#core-collaborators",
-    "href": "projects/BIODYNAMICS/index.html#core-collaborators",
-    "title": "BIODYNAMICS",
-    "section": "Core collaborators",
-    "text": "Core collaborators\n\nSuzette Flantua \n\nResearch group leader\n🏦University of Bergen, Norway\n📬email: suzette.flantua(at)uib.no\n\n🔗personal webiste\n\n\n\nFranka Gaiser \n\nPhD Student in Quantitative Ecology\n🏦University of Bayreuth, Bayreuth, Germany\n📬email: franka.gaiser(at)uni-bayreuth.de\n\n🔗personal webiste\n\n\n\nIrena Šímová \n\nResearcher\n🏦Charles University, Czech Republic\n📬email: simova(at)cts.cuni.cz\n\n🔗personal webiste"
-  },
-  {
-    "objectID": "projects/FunctionalVegetationPaleoecology/index.html",
-    "href": "projects/FunctionalVegetationPaleoecology/index.html",
-    "title": "Functional Vegetation Paleoecology",
+    "objectID": "projects/FOSSILPOL/index.html#my-role",
+    "href": "projects/FOSSILPOL/index.html#my-role",
+    "title": "FOSSILPOL",
     "section": "",
-    "text": "Functional Vegetation Paleoecology is a 4-year research project funded by PRIMUS, starting on 1st June 2025."
+    "text": "I am the lead developer of the project and joined first-author of the associated publication “A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen”."
   },
   {
-    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#project-description",
-    "href": "projects/FunctionalVegetationPaleoecology/index.html#project-description",
-    "title": "Functional Vegetation Paleoecology",
-    "section": "Project Description",
-    "text": "Project Description\nAnticipating ecosystem changes under global climate change presents a complex challenge that demands interdisciplinary solutions. By leveraging paleoecological vegetation data and functional ecology methods, the project aims to estimate spatio-temporal variations of functional ecosystem properties beyond the point of human observation, thereby gaining an unprecedented understanding of global vegetation patterns.\nThrough the integration of global fossil pollen data with modern plant traits, the project aims to identify regions most vulnerable to climate change based on paleoecological insights. Utilizing probabilistic Bayesian models, the project will address taxonomic uncertainties and estimate variations in functional ecosystem properties globally, spanning since the Last Glacial Maximum."
-  },
-  {
-    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#project-goals",
-    "href": "projects/FunctionalVegetationPaleoecology/index.html#project-goals",
-    "title": "Functional Vegetation Paleoecology",
-    "section": "Project Goals",
-    "text": "Project Goals\n\nAim 1: Integrate global fossil pollen data with modern plant traits to account for uncertainties.\nAim 2: Estimate global functional ecosystem properties since the Last Glacial Maximum.\nAim 3: Assess current ecosystems’ Safe Operating Space to help mitigate the impact of climate change (see my participation Planetary Boundaries project)."
-  },
-  {
-    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
-    "href": "projects/FunctionalVegetationPaleoecology/index.html#my-role",
-    "title": "Functional Vegetation Paleoecology",
-    "section": "My role",
-    "text": "My role\nI am the Principal Investigator of the project."
-  },
-  {
-    "objectID": "projects/FunctionalVegetationPaleoecology/index.html#open-phd-possition",
-    "href": "projects/FunctionalVegetationPaleoecology/index.html#open-phd-possition",
-    "title": "Functional Vegetation Paleoecology",
-    "section": "Open PhD possition",
-    "text": "Open PhD possition\nSee the details here!"
-  },
-  {
-    "objectID": "projects/HOPE/index.html",
-    "href": "projects/HOPE/index.html",
-    "title": "HOPE",
+    "objectID": "projects/HoloceneDiversityTrends/index.html",
+    "href": "projects/HoloceneDiversityTrends/index.html",
+    "title": "Holocene Diversity Trends",
     "section": "",
-    "text": "website\n  \n  \n    \n     Github\n  \n\n  \n  \nHumans on Planet Earth - Long-term impacts on biosphere dynamics (HOPE) is a 5.5-year European Research Council Advanced Grant project running from 1 January 2018 to the end of 2023. It addresses a critical question in Earth system science - what was the impact of prehistoric people on the biosphere and its dynamics?\n\n\n\nTo test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past ‘natural experiments’ and of the past as an analogue to the uncertain future of Earth in the ‘Anthropocene’ is a ‘flawed strategy’ and uniformitarianism should be discarded. As much of Earth system science relies on such ‘natural experiments’ and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.\nTo test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.\n\nCheck out the project website for more information.\n\n\n\nI was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
+    "text": "HoloceneDiversityTrends aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment.\n\n\n\nThis project examines plant biodiversity from taxonomic, functional, and phylogenetic perspectives across different spatial scales (from biomes to global) and covers the period since the Last Glacial Maximum (the last 21,000 years). The research is based on fossil pollen records and aims to provide insights into long-term ecological changes.\nThe project is a 4-year research initiative led by Bryan Novio, supported by the STARS program. It is also linked to the Functional Vegetation Paleoecology project.\n\n\n\nAs Bryan’s main supervisor, I will provide guidance and support throughout the research process."
   },
   {
-    "objectID": "projects/HOPE/index.html#project-main-objectives",
-    "href": "projects/HOPE/index.html#project-main-objectives",
-    "title": "HOPE",
+    "objectID": "projects/HoloceneDiversityTrends/index.html#quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
+    "href": "projects/HoloceneDiversityTrends/index.html#quantifying-global-vegetation-biodiversity-changes-since-the-last-glacial-maximum",
+    "title": "Holocene Diversity Trends",
     "section": "",
-    "text": "To test the recently proposed hypothesis that prehistoric human impact about 6000 years ago altered the fundamental ecological processes which determine the assembly, ecological structure, and dynamics of terrestrial plant communities. Proponents of this hypothesis argue that the use of past ‘natural experiments’ and of the past as an analogue to the uncertain future of Earth in the ‘Anthropocene’ is a ‘flawed strategy’ and uniformitarianism should be discarded. As much of Earth system science relies on such ‘natural experiments’ and depends on the concept of uniformitarianism, it is clearly imperative to test critically and robustly this hypothesis and related arguments and far-reaching conclusions.\nTo test the associated hypothesis that the inter-relationships (correlations) between estimates of ecosystem properties such as turnover, taxonomic and functional diversity, and co-occurrence patterns changed during the Holocene in response to prehistoric human activities.\n\nCheck out the project website for more information."
+    "text": "HoloceneDiversityTrends aims to identify macroecological patterns that have shaped global plant biodiversity. Understanding past ecological dynamics is essential for accurately predicting future trends, especially in light of the current biodiversity crisis. This project aims to help clarifying the drivers of plant biodiversity over time, which is key to estimating the impact of human activities on the environment."
   },
   {
-    "objectID": "projects/HOPE/index.html#my-role",
-    "href": "projects/HOPE/index.html#my-role",
-    "title": "HOPE",
+    "objectID": "projects/HoloceneDiversityTrends/index.html#project-description",
+    "href": "projects/HoloceneDiversityTrends/index.html#project-description",
+    "title": "Holocene Diversity Trends",
     "section": "",
-    "text": "I was a postdoc between February 2020 and May 2023 (see my CV).\n\n\n\nFlantua & Mottl & Felde & Bhatta, et al 2023 \nBhatta, et al 2023 \nMottl, et al 2021 \nMottl, et al 2021 \n\nCheck all my publications for full refferences."
+    "text": "This project examines plant biodiversity from taxonomic, functional, and phylogenetic perspectives across different spatial scales (from biomes to global) and covers the period since the Last Glacial Maximum (the last 21,000 years). The research is based on fossil pollen records and aims to provide insights into long-term ecological changes.\nThe project is a 4-year research initiative led by Bryan Novio, supported by the STARS program. It is also linked to the Functional Vegetation Paleoecology project."
+  },
+  {
+    "objectID": "projects/HoloceneDiversityTrends/index.html#my-role",
+    "href": "projects/HoloceneDiversityTrends/index.html#my-role",
+    "title": "Holocene Diversity Trends",
+    "section": "",
+    "text": "As Bryan’s main supervisor, I will provide guidance and support throughout the research process."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "An ERC Synergy project reconstructing how medieval land use shaped European landscapes and biodiversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Overview of projects"
+    ]
+  },
+  {
+    "objectID": "projects/index.html#active-projects",
+    "href": "projects/index.html#active-projects",
+    "title": "Projects",
+    "section": "",
+    "text": "An ERC Synergy project reconstructing how medieval land use shaped European landscapes and biodiversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Overview of projects"
+    ]
+  },
+  {
+    "objectID": "projects/index.html#past-projects",
+    "href": "projects/index.html#past-projects",
+    "title": "Projects",
+    "section": "Past Projects",
+    "text": "Past Projects\n\n\n\n\n\n\n\n\n\n\nRRatepol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nREcopol\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHOPE\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Overview of projects"
+    ]
   },
   {
     "objectID": "projects/PalaeOpen/index.html",
     "href": "projects/PalaeOpen/index.html",
     "title": "Open Palaeoecological Data",
     "section": "",
-    "text": "website\n  \n\n  \n  \nOpen Palaeoecological Data (PalaeOpen)- analysing the past building foresight is a Action funded by European Cooperation in Science and Technology - COST.\n\n\nRestoring and managing nature during times of rapid environmental change requires knowledge of ecosystem response to climate and land use change on timescales of decades to millennia. Different palaeoecological disciplines have collected relevant, site-specific data during the last decades. Much of the palaeoecological data are currently dispersed across different repositories, databases and largely not publicly available.\nThis Action aims to meet the challenge of bringing much of these data into the public domain, harmonise their taxonomy and metadata, and make them relevant to nature conservation. By combining domain specific repositories and databases, the Action will unlock these data collections and make them available for palaeoecological meta-analysis of ecosystem interactions on a continental scale. This will permit integrated analysis of terrestrial and aquatic ecosystem responses to natural and anthropogenic environmental change for the first time. The Action will overcome the barriers between palaeoecologist, macroecologists and nature conservation practitioners by developing and engaging with a new research agenda.\nScientific workshops in different parts of Europe will provide formats to interact with local nature conservation practitioners. The research agenda will address the knowledge gaps in nature conservation as well as the need to understand continental scale interactions of ecosystem components, including lagged or threshold responses. A dedicated outreach working group will ensure that the new knowledge is also accessible to the public. Moreover, the group will develop educational material for schools and universities based on the collected data.\nFor more information, visit the project website.\n\n\n\nAs a Co-Leader of “Data storage and management” Working group, I contribute expertise in processing of paleoecological data and helping to develop and coordinate the project.\nFigure is obtained directly from Project Proposal."
+    "text": "Project website\n  \n  \n    \n     COST Action record\n  \n\n  \n  \nOpen Palaeoecological Data (PalaeOpen) - analysing the past, building foresight is an Action funded by European Cooperation in Science and Technology - COST.\n\n\nRestoring and managing nature during times of rapid environmental change requires knowledge of ecosystem response to climate and land use change on timescales of decades to millennia. Different palaeoecological disciplines have collected relevant, site-specific data during the last decades. Much of the palaeoecological data are currently dispersed across different repositories, databases and largely not publicly available.\nThis Action aims to meet the challenge of bringing much of these data into the public domain, harmonise their taxonomy and metadata, and make them relevant to nature conservation. By combining domain specific repositories and databases, the Action will unlock these data collections and make them available for palaeoecological meta-analysis of ecosystem interactions on a continental scale. This will permit integrated analysis of terrestrial and aquatic ecosystem responses to natural and anthropogenic environmental change for the first time. The Action will overcome the barriers between palaeoecologist, macroecologists and nature conservation practitioners by developing and engaging with a new research agenda.\nScientific workshops in different parts of Europe will provide formats to interact with local nature conservation practitioners. The research agenda will address the knowledge gaps in nature conservation as well as the need to understand continental scale interactions of ecosystem components, including lagged or threshold responses. A dedicated outreach working group will ensure that the new knowledge is also accessible to the public. Moreover, the group will develop educational material for schools and universities based on the collected data.\nFor project news and further information, visit the PalaeOpen website. The COST Action record provides the formal Action details.\n\n\n\nI serve on the Steering Committee and co-lead Working Group 3, “Data Storage and Management”. I contribute expertise in palaeoecological data processing and help develop and coordinate the Action.\nThe logo shown above is the official project logo from the PalaeOpen website."
   },
   {
     "objectID": "projects/PalaeOpen/index.html#project-description",
     "href": "projects/PalaeOpen/index.html#project-description",
     "title": "Open Palaeoecological Data",
     "section": "",
-    "text": "Restoring and managing nature during times of rapid environmental change requires knowledge of ecosystem response to climate and land use change on timescales of decades to millennia. Different palaeoecological disciplines have collected relevant, site-specific data during the last decades. Much of the palaeoecological data are currently dispersed across different repositories, databases and largely not publicly available.\nThis Action aims to meet the challenge of bringing much of these data into the public domain, harmonise their taxonomy and metadata, and make them relevant to nature conservation. By combining domain specific repositories and databases, the Action will unlock these data collections and make them available for palaeoecological meta-analysis of ecosystem interactions on a continental scale. This will permit integrated analysis of terrestrial and aquatic ecosystem responses to natural and anthropogenic environmental change for the first time. The Action will overcome the barriers between palaeoecologist, macroecologists and nature conservation practitioners by developing and engaging with a new research agenda.\nScientific workshops in different parts of Europe will provide formats to interact with local nature conservation practitioners. The research agenda will address the knowledge gaps in nature conservation as well as the need to understand continental scale interactions of ecosystem components, including lagged or threshold responses. A dedicated outreach working group will ensure that the new knowledge is also accessible to the public. Moreover, the group will develop educational material for schools and universities based on the collected data.\nFor more information, visit the project website."
+    "text": "Restoring and managing nature during times of rapid environmental change requires knowledge of ecosystem response to climate and land use change on timescales of decades to millennia. Different palaeoecological disciplines have collected relevant, site-specific data during the last decades. Much of the palaeoecological data are currently dispersed across different repositories, databases and largely not publicly available.\nThis Action aims to meet the challenge of bringing much of these data into the public domain, harmonise their taxonomy and metadata, and make them relevant to nature conservation. By combining domain specific repositories and databases, the Action will unlock these data collections and make them available for palaeoecological meta-analysis of ecosystem interactions on a continental scale. This will permit integrated analysis of terrestrial and aquatic ecosystem responses to natural and anthropogenic environmental change for the first time. The Action will overcome the barriers between palaeoecologist, macroecologists and nature conservation practitioners by developing and engaging with a new research agenda.\nScientific workshops in different parts of Europe will provide formats to interact with local nature conservation practitioners. The research agenda will address the knowledge gaps in nature conservation as well as the need to understand continental scale interactions of ecosystem components, including lagged or threshold responses. A dedicated outreach working group will ensure that the new knowledge is also accessible to the public. Moreover, the group will develop educational material for schools and universities based on the collected data.\nFor project news and further information, visit the PalaeOpen website. The COST Action record provides the formal Action details."
   },
   {
     "objectID": "projects/PalaeOpen/index.html#my-role",
     "href": "projects/PalaeOpen/index.html#my-role",
     "title": "Open Palaeoecological Data",
     "section": "",
-    "text": "As a Co-Leader of “Data storage and management” Working group, I contribute expertise in processing of paleoecological data and helping to develop and coordinate the project.\nFigure is obtained directly from Project Proposal."
+    "text": "I serve on the Steering Committee and co-lead Working Group 3, “Data Storage and Management”. I contribute expertise in palaeoecological data processing and help develop and coordinate the Action.\nThe logo shown above is the official project logo from the PalaeOpen website."
   },
   {
     "objectID": "projects/PPF-Alpine/index.html",

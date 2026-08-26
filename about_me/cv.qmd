@@ -1,6 +1,14 @@
 ---
 title: "Ondřej Mottl"
 image: img/Profile head photo 2025 - close - nobg.png
+format:
+  html: default
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+    geometry: margin=1.6cm
+    colorlinks: true
+    toc: false
 about:
   id: hero-heading
   template: trestles
@@ -22,6 +30,10 @@ about:
 I am an Assistant Professor of Plant Ecology and Head of the Laboratory of Quantitative Ecology at Charles University in Prague, Czech Republic. I am a quantitative ecologist studying long-term biodiversity dynamics across large spatial and temporal scales. My work integrates fossil-pollen archives, contemporary vegetation, functional traits, climate data, and quantitative modelling to understand ecological memory, biodiversity change, human impacts, and climate-change responses. I lead open and reproducible data-integration and software-development workflows in R.
 
 **Research identifiers:** [ORCID 0000-0002-9796-5081](https://orcid.org/0000-0002-9796-5081) | [Scopus ID 57209659764](https://www.scopus.com/authid/detail.uri?authorId=57209659764) | [ResearcherID AAC-7606-2019](https://www.webofscience.com/wos/author/record/AAC-7606-2019)
+
+::: {.content-visible when-format="html"}
+[Download this CV as a PDF](cv.pdf){download="Ondrej-Mottl-CV.pdf"}
+:::
 
 ## Education 
 

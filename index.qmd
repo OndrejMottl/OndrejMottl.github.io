@@ -36,7 +36,7 @@ I am an Assistant Professor of Plant Ecology and head of the [Laboratory of Quan
 - [Laboratory of Quantitative Ecology](/lab/about_the_lab.qmd) 👩🏽‍💻
 - [Current Projects](projects/index.qmd) 🚀
 - [Teaching Activities](teaching/teaching.qmd) 📚
-- [My CV](about_me/cv.qmd) 📄
+- [My CV](about_me/cv.qmd) 📄 ([download PDF](about_me/cv.pdf))
 - [Contact Me](/collaboration/get_in_touch.qmd) 📬
 - [Publications](about_me/list_of_publications.qmd) 📚
 

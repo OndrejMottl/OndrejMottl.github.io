@@ -1,0 +1,354 @@
+{
+  // ============================================================================
+  // WINDOW & WORKBENCH SETTINGS
+  // ============================================================================
+  "workbench.panel.defaultLocation": "right",
+  "security.workspace.trust.untrustedFiles": "open",
+  "zenMode.centerLayout": true,
+  "window.commandCenter": true,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.list.openMode": "doubleClick",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.wrapTabs": true,
+  "window.title": "${rootName}",
+  // ============================================================================
+  // TERMINAL SETTINGS
+  // ============================================================================
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "R Terminal",
+  "terminal.integrated.fontWeightBold": "normal",
+  // ============================================================================
+  // EDITOR SETTINGS
+  // ============================================================================
+  "editor.stickyScroll.enabled": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "REditorSupport.r",
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.rulers": [
+    80
+  ],
+  "editor.accessibilitySupport": "off",
+  // Minimap settings
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 2,
+  // ============================================================================
+  // R LANGUAGE SETTINGS
+  // ============================================================================
+  // R Extension configuration
+  "r.alwaysUseActiveTerminal": true,
+  "r.bracketedPaste": true,
+  // Machine-neutral: radian is resolved from PATH. r.executablePath is left
+  // unset so vscode-R finds R on PATH (rig shim), then the registry. Switch R
+  // version with `rig default <version>`; pin per project in .vscode/settings.json.
+  "r.consolePath": "radian",
+  // r.consolePath is machine-overridable and r.plot.backend is ignoreSync, so
+  // Settings Sync skips them by default; the "-" prefix opts them back in.
+  // Application-scoped: must also be in the Default profile for downloads.
+  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
+  "r.source.focus": "editor",
+  "r.sessionWatcher": true,
+  "r.plot.backend": "httpgd",
+  "r.plot.defaults.fullWindowMode": true,
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.debugger.timeouts.startup": 20000,
+  // ============================================================================
+  // FILE ASSOCIATIONS
+  // ============================================================================
+  "files.associations": {
+    "*.rmd": "rmd"
+  },
+  // ============================================================================
+  // LANGUAGE-SPECIFIC FORMATTERS
+  // ============================================================================
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[quarto]": {
+    "editor.defaultFormatter": "quarto.quarto"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "ms-mssql.mssql"
+  },
+  // ============================================================================
+  // FILE NESTING
+  // ============================================================================
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  // ============================================================================
+  // QUARTO SETTINGS
+  // ============================================================================
+  "quarto.mathjax.theme": "dark",
+  "quarto.render.previewReveal": true,
+  "notebook.defaultFormatter": "REditorSupport.r",
+  // ============================================================================
+  // GIT & VERSION CONTROL SETTINGS
+  // ============================================================================
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "git.ignoreLegacyWarning": true,
+  "git-graph.commitDetailsView.location": "Docked to Bottom",
+  "git-graph.date.type": "Commit Date",
+  "scm.defaultViewMode": "tree",
+  "gitlens.views.branches.branches.layout": "list",
+  // ============================================================================
+  // GITHUB SETTINGS
+  // ============================================================================
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.queries": [
+    {
+      "label": "Local Pull Request Branches",
+      "query": "default"
+    },
+    {
+      "label": "Local Pull Request Branches",
+      "query": "repo:${owner}/${repository} default"
+    },
+    {
+      "label": "Waiting For My Review",
+      "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "repo:${owner}/${repository} is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "repo:${owner}/${repository} is:open author:${user}"
+    },
+    {
+      "label": "All PR",
+      "query": "repo:${owner}/${repository}"
+    },
+    {
+      "label": "All Open",
+      "query": "repo:${owner}/${repository} default"
+    },
+    {
+      "label": "All Open",
+      "query": "default"
+    }
+  ],
+  // ============================================================================
+  // GITHUB COPILOT SETTINGS
+  // ============================================================================
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "quarto": true,
+    "R": true,
+    "Markdown": true
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/commit-instructions.md"
+    }
+  ],
+  // ============================================================================
+  // EXTENSION-SPECIFIC SETTINGS
+  // ============================================================================
+  "resmongraphical.cpuusage.style": "Vertical",
+  "resmongraphical.mem.style": "Vertical",
+  "resmongraphical.battery.style": "Vertical",
+  "resmongraphical.cpufreq.style": "Vertical",
+  "resmongraphical.disk.style": "Vertical",
+  "resmongraphical.cputemp.style": "Vertical",
+  "resmongraphical.network.style": "Vertical",
+  "hediet.vscode-drawio.resizeImages": null,
+  "redhat.telemetry.enabled": true,
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "info"
+  ],
+  // ============================================================================
+  // MARKDOWN SETTINGS
+  // ============================================================================
+  "markdown.extension.toc.updateOnSave": false,
+  // ============================================================================
+  // SPELL CHECK SETTINGS
+  // ============================================================================
+  "cSpell.userWords": [
+    "agelim",
+    "dplyr",
+    "hmsc",
+    "Mottl",
+    "Neotoma",
+    "Ondřej",
+    "ORCID",
+    "purrr",
+    "tarchetypes",
+    "tibble",
+    "tidyverse",
+    "timestep",
+    "vegvault",
+    "xlim",
+    "ylim"
+  ],
+  "cSpell.language": "en-GB, cz",
+  // ============================================================================
+  // MULTI-COMMAND CONFIGURATIONS
+  // ============================================================================
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.r.go.previous.chunk.center",
+      "sequence": [
+        "r.goToPreviousChunk"
+      ]
+    },
+    {
+      "command": "multiCommand.r.go.next.chunk.center",
+      "sequence": [
+        "r.goToNextChunk"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.beginning.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorLeft",
+        "cursorDown"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.end.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorRight",
+        "cursorLineStart",
+        "cursorUp"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.end.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorRight",
+        "cursorLineStart",
+        "cursorUp"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.previous.chunk.center",
+      "sequence": [
+        "r.goToPreviousChunk",
+        "r.runCurrentChunk"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.chunk.move.end",
+      "sequence": [
+        "r.runCurrentChunk",
+        "multicmd.r.go.end.chunk.center"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.next.chunk.move.end",
+      "sequence": [
+        "r.goToNextChunk",
+        "multicmd.r.go.end.chunk.center",
+        "r.runCurrentChunk"
+      ]
+    }
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "chat.agent.maxRequests": 100,
+  "workbench.startupEditor": "none",
+  "chat.tools.terminal.autoApprove": {
+    "Copy-Item": true,
+    "New-Item": true,
+    "Test-Path": true,
+    "robocopy": true,
+    "quarto": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.activityBar.location": "top",
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "chat.mcp.gallery.enabled": true,
+  "resourceLens.showMemory": false,
+  "resourceLens.showCpu": false,
+  "resourceLens.showGpu": false,
+  "chat.tools.urls.autoApprove": {
+    "https://cran.r-project.org": true,
+    "https://besjournals.onlinelibrary.wiley.com": {
+      "approveRequest": true,
+      "approveResponse": false
+    }
+  },
+  "github.copilot.chat.agentDebugLog.fileLogging.enabled": true,
+  "[instructions]": {
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "githubIssues.ignoreMilestones": [],
+  "workbench.editor.empty.hint": "hidden",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.sessionSync.enabled": true,
+  "diffEditor.renderSideBySide": false,
+  "chatgpt.reviewDelivery": "detached",
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
+  "claudeCode.hideOnboarding": true,
+  "claudeCode.preferredLocation": "panel"
+}

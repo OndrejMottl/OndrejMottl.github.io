@@ -1,0 +1,400 @@
+// ============================================================================
+// VS Code Keybindings Configuration
+// ============================================================================
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "description": "Insert Triple Backticks",
+        "key": "ctrl+shift+oem_2",
+        "command": "type",
+        "args": {
+            "text": "```"
+        }
+    },
+    // ========================================================================
+    // R LANGUAGE SPECIFIC KEYBINDINGS
+    // ========================================================================
+    // R Documentation and Help
+    {
+        "description": "R Build Docs",
+        "key": "ctrl+shift+d",
+        "command": "r.document",
+        "when": "resourceLangId == 'r'"
+    },
+    {
+        "description": "R Show Documentation",
+        "key": "f1",
+        "command": "r.helpPanel.openForSelection",
+        "when": "editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'qmd'"
+    },
+    // R Code Snippets and Operators
+    {
+        "description": "R Pipe Operator (editor)",
+        "key": "ctrl+shift+m",
+        "command": "type",
+        "args": {
+            "text": " |> "
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "description": "R Pipe Operator (terminal)",
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": " |> "
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "description": "R Assignment Arrow",
+        "key": "ctrl+shift+,",
+        "command": "type",
+        "args": {
+            "text": " <- "
+        },
+        "when": "editorTextFocus || terminalFocus"
+    },
+    // R Tools and Utilities
+    {
+        "description": "R Create Reprex",
+        "key": "ctrl+shift+x",
+        "command": "r.runCommand",
+        "args": "reprex::reprex()",
+        "when": "resourceLangId == 'r'"
+    },
+    {
+        "description": "View: Show R Workspace",
+        "key": "ctrl+shift+w",
+        "command": "workbench.view.extension.workspaceViewer"
+    },
+    {
+        "description": "R Switch Panel Position",
+        "key": "ctrl+alt+p",
+        "command": "r.runCommand",
+        "when": "editorTextFocus && editorLangId == 'r'",
+        "args": ".vsc.browser(httpgd::hgd_url(), viewer = \"Beside\")"
+    },
+    // ========================================================================
+    // EDITOR KEYBINDINGS
+    // ========================================================================
+    // Navigation
+    {
+        "description": "Navigate Up 10 Lines",
+        "key": "shift+alt+up",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "description": "Navigate Down 10 Lines",
+        "key": "shift+alt+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    // Symbols and Search
+    {
+        "description": "Show All Symbols",
+        "key": "ctrl+oem_period",
+        "command": "workbench.action.showAllSymbols"
+    },
+    // File Operations
+    {
+        "description": "New R File",
+        "key": "ctrl+n",
+        "command": "r.newFileDocument",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "description": "Close Active Editor",
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!terminalFocus"
+    },
+    // Autocomplete and Suggestions
+    {
+        "description": "Force Autocomplete",
+        "key": "ctrl+alt+i",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // ========================================================================
+    // TERMINAL KEYBINDINGS
+    // ========================================================================
+    // Terminal Management
+    {
+        "description": "Clear Terminal",
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
+    },
+    {
+        "description": "Kill Terminal",
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "description": "New Terminal (when in terminal)",
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "description": "New Terminal in Active Workspace",
+        "key": "ctrl+shift+oem_3",
+        "command": "workbench.action.terminal.newInActiveWorkspace",
+        "when": "!terminalFocus"
+    },
+    {
+        "description": "Open R Terminal (radian)",
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "!terminalFocus"
+    },
+    {
+        "description": "Split Terminal",
+        "key": "ctrl+alt+oem_3",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    // ========================================================================
+    // GIT/SCM KEYBINDINGS
+    // ========================================================================
+    {
+        "description": "Git Stage",
+        "key": "ctrl+up",
+        "command": "git.stage",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "description": "Git Unstage",
+        "key": "ctrl+down",
+        "command": "git.unstage",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "description": "Git Commit",
+        "key": "ctrl+shift+up",
+        "command": "git.commit",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "description": "Git Push",
+        "key": "ctrl+shift+down",
+        "command": "git.push",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "key": "ctrl+alt+shift+m",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Git: Return to updated main"
+    },
+    // ========================================================================
+    // QUARTO/MARKDOWN KEYBINDINGS
+    // ========================================================================
+    {
+        "description": "Quarto Preview",
+        "key": "ctrl+alt+l",
+        "command": "quarto.previewShortcut",
+        "when": "editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'"
+    },
+    // ========================================================================
+    // LAYOUT PRESETS
+    // ========================================================================
+    // Sidebar width presets per monitor. Width ~= minimum (~170 px) + N steps
+    // (60 px, scaled by zoom/DPI). Tune N via the counts in each description.
+    // Keys use scan codes ([Digit1] = "+" key, [Digit2] = "e-caron" key on
+    // the CZ layout), so they work regardless of the active keyboard layout.
+    // They override the default Fold Level 1/2 (ctrl+k ctrl+1/2).
+    // How it works (VS Code 1.140):
+    // - increase/decreaseViewWidth always resize the editor area. Editor size
+    //   changes are absorbed by the primary sidebar first, then the secondary.
+    // - increase/decreaseViewSize resize the focused part, but focus inside a
+    //   webview (Claude Code) is not detected, so the secondary sidebar is set
+    //   indirectly: hide the primary sidebar (it then absorbs nothing), grow
+    //   the editor to push the secondary sidebar to its minimum, then shrink
+    //   the editor N steps. Reopening the primary sidebar takes space from the
+    //   editor, and it is then reset to minimum + N steps via ViewSize.
+    // - Requires a single editor group; with split editors, editor resizes
+    //   change the group sizes instead.
+    {
+        "description": "Layout Preset 1 (laptop): primary 2 steps, secondary 4 steps",
+        "key": "ctrl+k ctrl+[Digit1]",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.focusSideBar",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        }
+    },
+    {
+        "description": "Layout Preset 2 (external monitor): primary 4 steps, secondary 7 steps",
+        "key": "ctrl+k ctrl+[Digit2]",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.increaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.decreaseViewWidth",
+                "workbench.action.focusSideBar",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.decreaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.increaseViewSize",
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        }
+    },
+    // ========================================================================
+    // DISABLED DEFAULT KEYBINDINGS
+    // ========================================================================
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+shift+oem_3",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "git.stage",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "git.stage",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "-workbench.action.tasks.build",
+        "when": "taskCommandsRegistered"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    }
+]

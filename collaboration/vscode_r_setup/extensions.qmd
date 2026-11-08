@@ -1,0 +1,273 @@
+---
+title: "Extensions"
+description: "Every VS Code extension in my R and R-Lecturer profiles, what it is for, and how to install the set."
+date-format: long
+date-modified: last-modified
+---
+
+```{r}
+#| include: false
+source("_helpers.R")
+check_documented("keys-extensions.txt")
+```
+
+In VS Code, extensions belong to a **profile**: each profile has its own set. Settings Sync carries the lists between machines together with the rest of the profile (see [Profiles and Settings Sync](profiles_sync.qmd)).
+
+I use two profiles:
+
+- **`R`** is my daily profile: analysis, R packages, Quarto websites and everything else. It has 72 extensions.
+- **`R-Lecturer`** mirrors what students see in my courses (light theme, Material icons, `%>%` as the pipe shortcut). It has 65 extensions.
+
+Together that is 85 extensions: 52 in both profiles, 20 only in `R` and 13 only in `R-Lecturer`. The "In profile" column in the tables below says which.
+
+Ids are written in lower case, as `code --list-extensions` prints them. VS Code ignores the case of ids.
+
+### Minimum for R
+
+**Start here.** These six are enough for R scripts, R packages and Quarto documents. Everything else on this page is optional.
+
+- `reditorsupport.r`: the R extension (console, help, plots, workspace viewer).
+- `reditorsupport.r-syntax`: R syntax highlighting (installed together with the R extension).
+- `rdebugger.r-debugger`: the R debugger.
+- `posit.air-vscode`: Air, the R formatter and language server by Posit.
+- `quarto.quarto`: Quarto rendering, preview and editing.
+- `ryuta46.multi-command`: needed for the chunk commands in `multiCommand.commands`.
+
+The R side (R itself, radian and R packages such as `languageserver`, `httpgd` and `vscDebugger`) is covered in [Installation](install.qmd).
+
+## R
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [R](https://marketplace.visualstudio.com/items?itemName=reditorsupport.r) | `reditorsupport.r` | both | The main R extension (vscode-R): console, help, plots, workspace viewer, chunk commands. | Needed. All `r.*` settings and `editor.defaultFormatter` ([Settings](settings.qmd)). Most R keybindings call its commands ([Keybindings](keybindings.qmd)). |
+| [R Syntax](https://marketplace.visualstudio.com/items?itemName=reditorsupport.r-syntax) | `reditorsupport.r-syntax` | both | Syntax highlighting for R. | Needed. A dependency of `reditorsupport.r`, installed with it. |
+| [R Debugger](https://marketplace.visualstudio.com/items?itemName=rdebugger.r-debugger) | `rdebugger.r-debugger` | both | Breakpoints and stepping through R code. | Needs the `vscDebugger` R package. `r.debugger.timeouts.startup` ([Settings](settings.qmd)). |
+| [Air - R Language Support](https://marketplace.visualstudio.com/items?itemName=posit.air-vscode) | `posit.air-vscode` | R | Fast R formatter and language server by Posit. | Only in `R`. `editor.defaultFormatter` still points to `REditorSupport.r`, so Air formats only where it is chosen (per project or with **Format Document With...**). |
+| [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) | `ryuta46.multi-command` | both | Runs a sequence of commands as one command. | Defines the chunk navigation and run commands in `multiCommand.commands` ([Settings](settings.qmd)). Neither profile's `keybindings.json` binds them. |
+
+## Quarto, R Markdown, Markdown and writing
+
+### Quarto and R Markdown
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) | `quarto.quarto` | both | Render and preview Quarto documents, visual editor, run cells. | Needed. `[quarto]` formatter and `quarto.*` settings; in `R-Lecturer` also the `[yaml]` and notebook formatter ([Settings](settings.qmd)). `Ctrl+Alt+L` runs `quarto.previewShortcut` ([Keybindings](keybindings.qmd)). |
+| [R Markdown All in One](https://marketplace.visualstudio.com/items?itemName=tianyishi.rmarkdown) | `tianyishi.rmarkdown` | both | R Markdown, bookdown and blogdown support. | Overlaps with vscode-R and Quarto, see [Overlaps](#overlaps). |
+
+### Markdown
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [markdownlint](https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint) | `davidanson.vscode-markdownlint` | both | Lints Markdown style (headings, lists, spacing). | The `[markdown]` formatter in both profiles ([Settings](settings.qmd)). |
+| [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) | `yzhang.markdown-all-in-one` | both | Markdown shortcuts, table of contents, list editing. | `markdown.extension.toc.updateOnSave` is off in `R` ([Settings](settings.qmd)). |
+| [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) | `bierner.markdown-mermaid` | both | Mermaid diagrams in the built-in Markdown preview. | Quarto renders Mermaid itself; this is for plain `.md` files. |
+| [Markmap](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) | `gera2ld.markmap-vscode` | both | Shows a Markdown file as an interactive mind map. | Optional. |
+| [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) | `shd101wyy.markdown-preview-enhanced` | R | A richer Markdown preview (maths, diagrams, export). | Overlaps with the built-in preview. |
+
+### Spelling, grammar and references
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | `streetsidesoftware.code-spell-checker` | both | Spell checking in code and prose. | `cSpell.userWords` in both, `cSpell.language` in `R` ([Settings](settings.qmd)). |
+| [Grammarly](https://marketplace.visualstudio.com/items?itemName=znck.grammarly) | `znck.grammarly` | R | Grammarly checks in Markdown, Quarto and text files. | Its settings sit in the Default profile, and one in `R-Lecturer`, where the extension is not installed. |
+| [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) | `valentjn.vscode-ltex` | R-Lecturer | Grammar and spelling with LanguageTool, for LaTeX, Markdown and more. | Overlaps with Code Spell Checker. The original LTeX is no longer updated; a community fork (LTeX+) exists. |
+| [Citation Picker for Zotero](https://marketplace.visualstudio.com/items?itemName=mblode.zotero) | `mblode.zotero` | R-Lecturer | Inserts citation keys from Zotero. | Needs Zotero with the Better BibTeX plug-in. Quarto's visual editor can also insert Zotero citations. |
+
+### LaTeX and diagrams
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=james-yu.latex-workshop) | `james-yu.latex-workshop` | R-Lecturer | Compile and preview LaTeX documents. | Needs a TeX distribution. Not needed for Quarto PDFs (Quarto calls TeX itself). |
+| [LaTeX](https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-latex) | `mathematic.vscode-latex` | R-Lecturer | LaTeX language support (highlighting). | Overlaps with LaTeX Workshop, which has its own. |
+| [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) | `hediet.vscode-drawio` | both | Edit draw.io diagrams (`.drawio`, `.drawio.svg`, `.drawio.png`) in VS Code. | `hediet.vscode-drawio.resizeImages` in both profiles ([Settings](settings.qmd)). |
+
+## Git and GitHub
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) | `eamodio.gitlens` | both | Blame annotations, file history, branch and commit views. | `gitlens.*` view layouts; in `R-Lecturer` also `gitlens.ai.*` ([Settings](settings.qmd)). Overlaps with Git Graph for history. |
+| [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) | `mhutchie.git-graph` | both | A graph of all branches; git actions from the graph. | `git-graph.*` in both profiles ([Settings](settings.qmd)). |
+| [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github) | `github.vscode-pull-request-github` | both | Create and review pull requests and issues in VS Code. | `githubPullRequests.*` and `githubIssues.*` ([Settings](settings.qmd)). |
+| [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions) | `github.vscode-github-actions` | both | Workflow runs and logs; checks workflow files. | Useful for Quarto sites and R packages built on GitHub Actions. |
+| [Git Push Progress](https://marketplace.visualstudio.com/items?itemName=luis-domenech.vscode-git-push-progress) | `luis-domenech.vscode-git-push-progress` | both | A push command that shows progress in the Output panel. | Handy for large pushes. The built-in `git.push` has no progress output. |
+
+## AI assistants
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=github.copilot-chat) | `github.copilot-chat` | both | Copilot chat, agent mode, inline and next-edit suggestions. | Now ships with VS Code; no separate install needed. `github.copilot.*` and `chat.*` ([Settings](settings.qmd)). Needs a GitHub Copilot plan (free tier exists). |
+| [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) | `anthropic.claude-code` | R | Anthropic's Claude Code agent in a VS Code panel. | `claudeCode.*` ([Settings](settings.qmd)). Needs a Claude account. |
+| [Codex](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt) | `openai.chatgpt` | R | OpenAI's Codex coding agent. | `chatgpt.reviewDelivery` ([Settings](settings.qmd)). Needs a ChatGPT plan. Installs Codex Audio with it. |
+| [Codex Audio](https://marketplace.visualstudio.com/items?itemName=openai.codex-audio) | `openai.codex-audio` | R | Microphone dictation for Codex. | Part of the Codex extension pack. |
+| [Continue](https://marketplace.visualstudio.com/items?itemName=continue.continue) | `continue.continue` | R | Open-source AI assistant that works with many model providers, also local models. | Optional. |
+| [CodeRabbit](https://marketplace.visualstudio.com/items?itemName=coderabbit.coderabbit-vscode) | `coderabbit.coderabbit-vscode` | R | AI review of local commits before a pull request. | Needs a CodeRabbit account. |
+| [Chat Customizations Evaluations](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-chat-customizations-evaluations) | `ms-vscode.vscode-chat-customizations-evaluations` | R | Analyses and validates prompt and instruction files for AI chat. | Optional; only useful if you write such files. |
+
+## Data, databases and files
+
+### Databases
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [SQL Server (mssql)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) | `ms-mssql.mssql` | both | Connect to and query SQL Server and Azure SQL. | The `[sql]` formatter in `R`; `mssql.*` ([Settings](settings.qmd)). Installs SQL Bindings and the .NET Install Tool with it. |
+| [Data Workspace](https://marketplace.visualstudio.com/items?itemName=ms-mssql.data-workspace-vscode) | `ms-mssql.data-workspace-vscode` | both | Shared workspace view for database projects. | Dependency of SQL Database Projects. |
+| [SQL Database Projects](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode) | `ms-mssql.sql-database-projects-vscode` | both | Develop and publish SQL Server schemas as projects. | Needs `ms-mssql.mssql`. |
+| [SQL Bindings](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode) | `ms-mssql.sql-bindings-vscode` | both | Azure Functions with Azure SQL bindings. | Comes with `ms-mssql.mssql`; not used directly. |
+| [.NET Install Tool](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime) | `ms-dotnettools.vscode-dotnet-runtime` | both | Installs the .NET runtimes that other extensions need. | Comes with `ms-mssql.mssql`; not used directly. |
+| [PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql) | `ms-ossdata.vscode-postgresql` | R-Lecturer | Connect to and query PostgreSQL databases. | Optional. |
+| [SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools) | `mtxr.sqltools` | R-Lecturer | General database client: connections, queries, SQL formatting. | The `[sql]` formatter in `R-Lecturer` ([Settings](settings.qmd)). Needs a driver per database. |
+| [SQLTools SQLite](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-sqlite) | `mtxr.sqltools-driver-sqlite` | R-Lecturer | SQLite driver for SQLTools. | Needs `mtxr.sqltools`. |
+| [SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) | `alexcvzz.vscode-sqlite` | both | Explore and query SQLite databases. | Overlaps with the other SQLite tools. |
+| [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer) | `qwtel.sqlite-viewer` | both | Opens `.sqlite` and `.db` files as tables. | Quickest way to look inside a database file. |
+| [vscode-dbml](https://marketplace.visualstudio.com/items?itemName=matt-meyers.vscode-dbml) | `matt-meyers.vscode-dbml` | both | Syntax highlighting for DBML (Database Markup Language). | Marked deprecated by its author. |
+| [DBML Live Preview](https://marketplace.visualstudio.com/items?itemName=nicolas-liger.dbml-viewer) | `nicolas-liger.dbml-viewer` | both | Live diagram of a database schema written in DBML. | Optional. |
+| [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode) | `dineug.vuerd-vscode` | R | Draw entity-relationship diagrams. | Optional. |
+
+### Tables and spreadsheets
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) | `mechatroner.rainbow-csv` | both | Colours CSV/TSV columns; SQL-like queries on them. | The most useful of the CSV tools. |
+| [CSV](https://marketplace.visualstudio.com/items?itemName=repreng.csv) | `repreng.csv` | R | View and edit CSV files as a table. | Overlaps with Rainbow CSV. |
+| [CSV to Table](https://marketplace.visualstudio.com/items?itemName=phplasma.csv-to-table) | `phplasma.csv-to-table` | R | Converts a CSV file to an aligned plain-text table. | Optional. |
+| [Spreadsheet Viewer](https://marketplace.visualstudio.com/items?itemName=grapecity.gc-excelviewer) | `grapecity.gc-excelviewer` | R-Lecturer | View and edit `.xlsx` and CSV files. | Lets students look at Excel files without leaving VS Code. |
+
+### Viewers and HTTP
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) | `tomoki1207.pdf` | both | Shows PDF files in an editor tab. | `R-Lecturer` opens `*.pdf` with it through `workbench.editorAssociations` ([Settings](settings.qmd)). |
+| [TIFF Preview](https://marketplace.visualstudio.com/items?itemName=analytic-signal.preview-tiff) | `analytic-signal.preview-tiff` | R | Previews TIFF images (for example exported figures). | Optional. |
+| [OOXML Viewer](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer) | `yuenm18.ooxml-viewer` | R-Lecturer | Shows the XML inside `.docx`, `.xlsx` and `.pptx` files. | Useful when debugging Word or PowerPoint templates. |
+| [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) | `humao.rest-client` | R | Send HTTP requests from `.http` files and see the responses. | For testing web APIs. |
+
+## Remote and containers
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) | `ms-vscode-remote.vscode-remote-extensionpack` | both | Extension pack: WSL, Dev Containers, Remote - SSH, Remote - Tunnels. | Installing it installs the next six. |
+| [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) | `ms-vscode-remote.remote-ssh` | both | Open a folder on a server over SSH and work there. | `remote.SSH.remotePlatform` in the Default profile ([Settings](settings.qmd)). |
+| [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) | `ms-vscode-remote.remote-ssh-edit` | both | Language support for SSH config files. | Comes with Remote - SSH. |
+| [Remote Explorer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer) | `ms-vscode.remote-explorer` | both | Side bar with SSH hosts and tunnels. | Comes with Remote - SSH and Remote - Tunnels. |
+| [Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server) | `ms-vscode.remote-server` | both | Connect to a machine through a tunnel, without SSH. | Part of Remote Development. |
+| [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) | `ms-vscode-remote.remote-wsl` | both | Open a folder inside the Windows Subsystem for Linux. | Part of Remote Development. |
+| [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) | `ms-vscode-remote.remote-containers` | both | Work inside a Docker container (for example a fixed R version). | Part of Remote Development. Needs Docker. |
+| [Container Tools](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers) | `ms-azuretools.vscode-containers` | R | Manage images and containers; Dockerfile and Compose support. | Took over the features of the Docker extension. |
+| [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) | `ms-azuretools.vscode-docker` | R | The former Docker extension. | Now depends on Container Tools. See [Overlaps](#overlaps). |
+| [Docker DX](https://marketplace.visualstudio.com/items?itemName=docker.docker) | `docker.docker` | R | Dockerfile and Compose editing (linting, completion) by Docker Inc. | Overlaps with Container Tools. |
+
+## Python
+
+Not needed for R. Useful for Python code in Quarto documents or through `reticulate`.
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | `ms-python.python` | both | Python language support. | Extension pack: installs the next three. |
+| [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) | `ms-python.vscode-pylance` | both | Python language server (completion, type checks). | Comes with Python. |
+| [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy) | `ms-python.debugpy` | both | Debugging Python with debugpy. | Comes with Python. |
+| [Python Environments](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs) | `ms-python.vscode-python-envs` | both | Create and switch Python environments (venv, conda). | Comes with Python. |
+
+## Web and SCSS
+
+Quarto themes for websites and slides are written in SCSS.
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) | `mrmlnc.vscode-scss` | both | Completion for SCSS variables and mixins. | Helps with Quarto `.scss` themes. |
+| [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter) | `sibiraj-s.vscode-scss-formatter` | both | Formats SCSS files. | The `[scss]` formatter in `R-Lecturer`; `R` uses the built-in CSS formatter ([Settings](settings.qmd)). |
+| [Beautify css/sass/scss/less](https://marketplace.visualstudio.com/items?itemName=michelemelluso.code-beautifier) | `michelemelluso.code-beautifier` | R-Lecturer | Formats CSS, Sass, SCSS and Less. | Overlaps with SCSS Formatter. |
+| [Open In Default Browser](https://marketplace.visualstudio.com/items?itemName=peakchen90.open-html-in-browser) | `peakchen90.open-html-in-browser` | R-Lecturer | Opens an HTML file in the default browser. | For example a rendered Quarto document. |
+
+## Scripts and configuration files
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell) | `ms-vscode.powershell` | R | PowerShell language support, debugging and console. | For the task scripts ([Snippets and tasks](snippets_tasks.qmd)) and the scripts on this site. |
+| [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) | `redhat.vscode-yaml` | R | YAML validation and completion from schemas, formatting. | The `[yaml]` formatter in `R` (`R-Lecturer` uses `quarto.quarto`). `yaml.disableSchemaDetection` and `redhat.telemetry.enabled` ([Settings](settings.qmd)). |
+
+## Look and workspace UX
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) | `vscode-icons-team.vscode-icons` | R | File icon theme. | Active in `R` and Default (`workbench.iconTheme`, [Settings](settings.qmd)). `vsicons.*`. |
+| [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme) | `pkief.material-icon-theme` | both | File icon theme. | Active in `R-Lecturer`; installed but not active in `R`. |
+| [Material Product Icons](https://marketplace.visualstudio.com/items?itemName=pkief.material-product-icons) | `pkief.material-product-icons` | R-Lecturer | Material style for VS Code's own UI icons. | Not active: no `workbench.productIconTheme` is set. |
+| [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) | `usernamehw.errorlens` | both | Shows diagnostics at the end of the line. | In `R`, `errorLens.enabledDiagnosticLevels` limits it to warnings and info ([Settings](settings.qmd)). |
+| [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock) | `johnpapa.vscode-peacock` | both | Colours the window per workspace, to tell windows apart. | Writes its colours to the workspace's `.vscode/settings.json`, not to the profile. |
+| [filesize](https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize) | `mkxml.vscode-filesize` | both | Shows the size of the current file in the status bar. | Optional. |
+| [Copy file name](https://marketplace.visualstudio.com/items?itemName=nemesv.copy-file-name) | `nemesv.copy-file-name` | both | Copies the file name (without the path) to the clipboard. | Optional. |
+| [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) | `christian-kohler.path-intellisense` | both | Completes file paths while you type them. | Handy for paths in R and Quarto. |
+| [Todo Tree](https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree) | `gruntfuggly.todo-tree` | both | Lists `TODO`, `FIXME` and similar comments in a tree. | Also highlights them; overlaps with TODO Highlight. |
+| [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight) | `wayou.vscode-todo-highlight` | both | Highlights `TODO`, `FIXME` and similar keywords. | Overlaps with Todo Tree. |
+| [Resource Monitor Graphical](https://marketplace.visualstudio.com/items?itemName=joshabb.resmongraphical) | `joshabb.resmongraphical` | both | CPU, memory, disk and network use in the status bar. | `resmongraphical.*` ([Settings](settings.qmd)). Handy when a long R job runs. |
+
+## Other
+
+Not related to R or teaching. Both are optional.
+
+| Extension | ID | In profile | What it's for | Notes |
+|---|---|---|---|---|
+| [Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) | `sumneko.lua` | R-Lecturer | Lua language server. | Quarto filters and shortcodes are written in Lua, so it helps when writing a Quarto extension. |
+| [MonoBehaviour Snippets](https://marketplace.visualstudio.com/items?itemName=zrachod.mono-snippets) | `zrachod.mono-snippets` | both | C# snippets for Unity scripts. | Probably left over from game development; unrelated to R. |
+
+## Overlaps and clean-up candidates {#overlaps}
+
+Extensions that do the same job twice, or that seem to be left over. These are candidates to check, not decisions.
+
+- **Icon themes.** `vscode-icons-team.vscode-icons` is the active theme in `R` (and Default), `pkief.material-icon-theme` in `R-Lecturer` (`workbench.iconTheme`). `R` has both installed but uses one. `pkief.material-product-icons` in `R-Lecturer` is installed but not selected.
+- **Docker.** `docker.docker`, `ms-azuretools.vscode-docker` and `ms-azuretools.vscode-containers` are all in `R`. Container Tools has taken over the Docker extension, which now depends on it. Docker DX adds Dockerfile and Compose editing on top. Dev Containers works without any of them, as long as Docker itself is installed.
+- **CSV.** `mechatroner.rainbow-csv`, `repreng.csv` and `phplasma.csv-to-table` in `R`; `mechatroner.rainbow-csv` and `grapecity.gc-excelviewer` (which also opens CSV) in `R-Lecturer`.
+- **SQLite.** `alexcvzz.vscode-sqlite`, `qwtel.sqlite-viewer` and, in `R-Lecturer`, `mtxr.sqltools-driver-sqlite` all open SQLite databases.
+- **TODO comments.** `gruntfuggly.todo-tree` and `wayou.vscode-todo-highlight`. Todo Tree highlights the tags as well.
+- **DBML.** `matt-meyers.vscode-dbml` is marked deprecated by its author. `nicolas-liger.dbml-viewer` is the other DBML extension.
+- **AI assistants.** `R` has `github.copilot-chat`, `anthropic.claude-code`, `openai.chatgpt` (with `openai.codex-audio`), `continue.continue` and `coderabbit.coderabbit-vscode`. They do not conflict, but each adds a view, a sign-in and background work.
+- **R Markdown.** `tianyishi.rmarkdown` sits next to `reditorsupport.r`, which already handles `.Rmd` files (chunks, knitting), and `quarto.quarto`, which renders them too. It may still matter for bookdown or blogdown projects.
+- **R formatters.** `posit.air-vscode` and `reditorsupport.r` (through the `styler` package) both format R code. `R` uses `REditorSupport.r` as `editor.defaultFormatter`.
+- **SCSS formatters.** `michelemelluso.code-beautifier` and `sibiraj-s.vscode-scss-formatter` both format SCSS in `R-Lecturer`; `[scss]` picks the second.
+- **Spelling and grammar.** `streetsidesoftware.code-spell-checker` in both, `znck.grammarly` in `R`, `valentjn.vscode-ltex` in `R-Lecturer`. `R-Lecturer` also has a Grammarly setting without the extension.
+- **LaTeX.** `james-yu.latex-workshop` and `mathematic.vscode-latex` both provide LaTeX language support.
+- **Markdown preview.** `shd101wyy.markdown-preview-enhanced` duplicates much of the built-in preview with `bierner.markdown-mermaid`.
+- **Not used for R work.** `zrachod.mono-snippets`, `sumneko.lua` (unless you write Quarto filters) and `ms-mssql.sql-bindings-vscode` (comes with `ms-mssql.mssql`).
+
+## Installing them
+
+### With Settings Sync
+
+With Settings Sync on, VS Code installs each profile's extensions automatically when it downloads the profile on a new machine. Nothing else to do; see [Profiles and Settings Sync](profiles_sync.qmd).
+
+### Manual rebuild
+
+`install_extensions.ps1` reads a list with one extension id per line and installs it into a named profile:
+
+- It checks that `code` (the VS Code command-line tool) is on `PATH`.
+- It skips blank lines, lines starting with `#`, and extensions the profile already has (`code --list-extensions --profile <name>`).
+- It installs the rest with `code --install-extension <id> --profile <name>`.
+- At the end it lists the failures and exits with code 1 if there were any.
+
+The VS Code command line only installs into a profile that **already exists**; for a missing one it reports `Profile '<name>' not found.` The script then opens VS Code once with `code --profile <name>`, which creates an empty profile, waits until the profile is there, and continues. If that does not work, create the profile in the Profiles editor (*File* → *Preferences* → *Profiles*) and run the script again. Use `-Profile Default` for the Default profile.
+
+Put the script and the lists in one folder, then run, for example:
+
+```powershell
+pwsh -File install_extensions.ps1 -Profile R -List extensions-R.txt
+pwsh -File install_extensions.ps1 -Profile R-Lecturer
+```
+
+Without `-List`, the script uses `extensions-<Profile>.txt` next to itself. It needs PowerShell 7 (`pwsh`). `github.copilot-chat` now ships with VS Code, so the script reports it as built in or already installed.
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("install_extensions.ps1", "powershell")
+```
+
+### The lists
+
+Both lists are written by `code --list-extensions --profile <name>` when I export the configuration.
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("extensions-R.txt", "text")
+show_file("extensions-R-Lecturer.txt", "text", label = "extensions-R-Lecturer.txt")
+```

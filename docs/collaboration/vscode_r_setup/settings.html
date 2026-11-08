@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Every setting in my R profile’s settings.json: what it does and why it has that value.">
+
+<title>Settings reference – Ondřej Mottl</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../about_me/img/Ondrej_Mottl-transparent-noshadow.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2a65e1e7e3b548fba08f3e7ec074fd25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/settings.html">Settings reference</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Ondřej Mottl</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview of projects</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teaching/teaching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">About me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CV</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List of publications</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Work with me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get in touch!</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaboration guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Convention</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../collaboration/vscode_r_setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">VS Code for R</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: VS Code for R">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Install, in order</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/settings.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Settings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/keybindings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Keybindings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/snippets_tasks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Snippets and tasks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/profiles_sync.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Profiles and Settings Sync</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/outside_vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outside VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/r_versions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R versions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#window-and-workbench" id="toc-window-and-workbench" class="nav-link active" data-scroll-target="#window-and-workbench">Window and workbench</a></li>
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a></li>
+  <li><a href="#editor" id="toc-editor" class="nav-link" data-scroll-target="#editor">Editor</a></li>
+  <li><a href="#r-language" id="toc-r-language" class="nav-link" data-scroll-target="#r-language">R language</a></li>
+  <li><a href="#file-associations" id="toc-file-associations" class="nav-link" data-scroll-target="#file-associations">File associations</a></li>
+  <li><a href="#language-specific-formatters" id="toc-language-specific-formatters" class="nav-link" data-scroll-target="#language-specific-formatters">Language-specific formatters</a></li>
+  <li><a href="#file-nesting" id="toc-file-nesting" class="nav-link" data-scroll-target="#file-nesting">File nesting</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#git-and-version-control" id="toc-git-and-version-control" class="nav-link" data-scroll-target="#git-and-version-control">Git and version control</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
+  <li><a href="#github-copilot" id="toc-github-copilot" class="nav-link" data-scroll-target="#github-copilot">GitHub Copilot</a></li>
+  <li><a href="#extension-specific-settings" id="toc-extension-specific-settings" class="nav-link" data-scroll-target="#extension-specific-settings">Extension-specific settings</a></li>
+  <li><a href="#markdown" id="toc-markdown" class="nav-link" data-scroll-target="#markdown">Markdown</a></li>
+  <li><a href="#spell-check" id="toc-spell-check" class="nav-link" data-scroll-target="#spell-check">Spell check</a></li>
+  <li><a href="#multi-command" id="toc-multi-command" class="nav-link" data-scroll-target="#multi-command">Multi-command</a></li>
+  <li><a href="#ai-assistants-and-chat" id="toc-ai-assistants-and-chat" class="nav-link" data-scroll-target="#ai-assistants-and-chat">AI assistants and chat</a></li>
+  <li><a href="#explorer-diff-and-workbench-extras" id="toc-explorer-diff-and-workbench-extras" class="nav-link" data-scroll-target="#explorer-diff-and-workbench-extras">Explorer, diff and workbench extras</a></li>
+  <li><a href="#yaml" id="toc-yaml" class="nav-link" data-scroll-target="#yaml">YAML</a></li>
+  <li><a href="#written-by-extensions-or-left-over" id="toc-written-by-extensions-or-left-over" class="nav-link" data-scroll-target="#written-by-extensions-or-left-over">Written by extensions or left over</a></li>
+  <li><a href="#the-full-file" id="toc-the-full-file" class="nav-link" data-scroll-target="#the-full-file">The full file</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/settings.html">Settings reference</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Settings reference</h1>
+</div>
+
+<div>
+  <div class="description">
+    Every setting in my R profile’s settings.json: what it does and why it has that value.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 8, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page goes through the <code>settings.json</code> of my <strong><code>R</code> profile</strong>, the one profile I use for all R work. It is synced between my machines with Settings Sync. Profiles do not inherit settings from the Default profile, so this file is complete on its own: copy it into a new profile and you get the same set-up. The exceptions are a few application-wide settings, which VS Code always reads from the Default profile (see <a href="#r-language"><code>settingsSync.ignoredSettings</code></a> below). How profiles and sync fit together is on <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>.</p>
+<p>The sections follow the comment headers and the order of <a href="files/R/settings.json"><code>files/R/settings.json</code></a>. The keys at the end of the file, which have no header, are grouped by topic after them. “(default)” in a row means the value is the same as VS Code’s or the extension’s default, so the line only makes the choice explicit.</p>
+<section id="window-and-workbench" class="level2">
+<h2 class="anchored" data-anchor-id="window-and-workbench">Window and workbench</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>workbench.panel.defaultLocation</code></td>
+<td><code>"right"</code></td>
+<td>Opens the panel (terminal, Problems, Output) to the right of the editor instead of below it.</td>
+<td>The R console sits beside the script, and the editor keeps its full height.</td>
+</tr>
+<tr class="even">
+<td><code>security.workspace.trust.untrustedFiles</code></td>
+<td><code>"open"</code></td>
+<td>Opens files from outside a trusted workspace without asking.</td>
+<td>No trust dialog when opening a loose file (e.g.&nbsp;a CSV from Downloads) while a project is open.</td>
+</tr>
+<tr class="odd">
+<td><code>zenMode.centerLayout</code></td>
+<td><code>true</code></td>
+<td>Centres the editor in Zen mode (default).</td>
+<td>Readable line width in Zen mode.</td>
+</tr>
+<tr class="even">
+<td><code>window.commandCenter</code></td>
+<td><code>true</code></td>
+<td>Shows the Command Center search box in the title bar (default).</td>
+<td>Quick access to files and commands with the mouse.</td>
+</tr>
+<tr class="odd">
+<td><code>workbench.iconTheme</code></td>
+<td><code>"vscode-icons"</code></td>
+<td>Uses the file icon theme from the vscode-icons extension.</td>
+<td>Distinct icons for <code>.R</code>, <code>.qmd</code>, <code>.Rproj</code> and many other file types.</td>
+</tr>
+<tr class="even">
+<td><code>vsicons.dontShowNewVersionMessage</code></td>
+<td><code>true</code></td>
+<td>Stops vscode-icons from showing a “new version” message after each update.</td>
+<td>Less noise after updates.</td>
+</tr>
+<tr class="odd">
+<td><code>workbench.list.openMode</code></td>
+<td><code>"doubleClick"</code></td>
+<td>In the Explorer and other lists, a single click selects an item and a double click opens it.</td>
+<td>Selecting files (to move, rename or delete them) does not open them.</td>
+</tr>
+<tr class="even">
+<td><code>workbench.colorTheme</code></td>
+<td><code>"Visual Studio Dark"</code></td>
+<td>Uses the built-in “Dark (Visual Studio)” colour theme.</td>
+<td>A plain dark theme.</td>
+</tr>
+<tr class="odd">
+<td><code>workbench.editor.pinnedTabsOnSeparateRow</code></td>
+<td><code>true</code></td>
+<td>Shows pinned tabs on their own row above the other tabs.</td>
+<td>Pinned files stay visible however many tabs are open.</td>
+</tr>
+<tr class="even">
+<td><code>workbench.editor.wrapTabs</code></td>
+<td><code>true</code></td>
+<td>Wraps tabs onto more rows instead of scrolling them sideways.</td>
+<td>All open tabs stay visible.</td>
+</tr>
+<tr class="odd">
+<td><code>window.title</code></td>
+<td><code>"${rootName}"</code></td>
+<td>Shows only the workspace or folder name in the window title.</td>
+<td>Short titles make windows easy to tell apart in the taskbar and Alt+Tab.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="terminal" class="level2">
+<h2 class="anchored" data-anchor-id="terminal">Terminal</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>terminal.integrated.cursorStyle</code></td>
+<td><code>"underline"</code></td>
+<td>Draws the terminal cursor as an underline.</td>
+<td>Thin cursor that does not cover the character under it.</td>
+</tr>
+<tr class="even">
+<td><code>terminal.integrated.cursorBlinking</code></td>
+<td><code>true</code></td>
+<td>Makes the terminal cursor blink.</td>
+<td>Easier to find the cursor in the console.</td>
+</tr>
+<tr class="odd">
+<td><code>terminal.integrated.defaultProfile.windows</code></td>
+<td><code>"R Terminal"</code></td>
+<td>Every new terminal uses the “R Terminal” profile.</td>
+<td>New terminals open radian directly (see below).</td>
+</tr>
+<tr class="even">
+<td><code>terminal.integrated.fontWeightBold</code></td>
+<td><code>"normal"</code></td>
+<td>Draws bold terminal text in normal weight.</td>
+<td>Bold output from R and the shell does not look heavier than the rest.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>terminal.integrated.defaultProfile.windows: "R Terminal"</code>.</strong> The “R Terminal” profile is not a shell installed on Windows: it is contributed by the vscode-R extension (<code>REditorSupport.r</code>), and it starts the R console set in <code>r.consolePath</code>, which here is radian. So a new terminal (the <strong>+</strong> button in the terminal panel, for example) opens an R session, not PowerShell. PowerShell is still available from the drop-down next to <strong>+</strong>. Without vscode-R installed, the profile does not exist and VS Code falls back to its own default shell. The terminal keybindings are on <a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a>.</p>
+</section>
+<section id="editor" class="level2">
+<h2 class="anchored" data-anchor-id="editor">Editor</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>editor.stickyScroll.enabled</code></td>
+<td><code>true</code></td>
+<td>Pins the headers of the current scopes (functions, headings, chunks) at the top of the editor while scrolling (default).</td>
+<td>You always see which function or section you are in.</td>
+</tr>
+<tr class="even">
+<td><code>editor.unicodeHighlight.nonBasicASCII</code></td>
+<td><code>false</code></td>
+<td>Does not highlight characters outside basic ASCII.</td>
+<td>Czech letters (ř, ě, š) in text and names are not marked as suspicious.</td>
+</tr>
+<tr class="odd">
+<td><code>editor.tabSize</code></td>
+<td><code>2</code></td>
+<td>One indentation level is 2 spaces.</td>
+<td>The tidyverse style guide uses 2 spaces.</td>
+</tr>
+<tr class="even">
+<td><code>editor.defaultFormatter</code></td>
+<td><code>"REditorSupport.r"</code></td>
+<td>Uses vscode-R as the formatter for every language without its own override.</td>
+<td>R code is formatted by vscode-R (see below).</td>
+</tr>
+<tr class="odd">
+<td><code>editor.inlineSuggest.enabled</code></td>
+<td><code>true</code></td>
+<td>Allows inline (ghost-text) suggestions in the editor (default).</td>
+<td>Needed to see Copilot suggestions at all.</td>
+</tr>
+<tr class="even">
+<td><code>editor.guides.bracketPairs</code></td>
+<td><code>"active"</code></td>
+<td>Draws a vertical guide only for the bracket pair the cursor is in.</td>
+<td>Shows where a long <code>function()</code> or pipe chain ends without lines everywhere.</td>
+</tr>
+<tr class="odd">
+<td><code>editor.rulers</code></td>
+<td><code>[80]</code></td>
+<td>Draws a vertical line at column 80.</td>
+<td>The tidyverse style guide limits lines to 80 characters.</td>
+</tr>
+<tr class="even">
+<td><code>editor.accessibilitySupport</code></td>
+<td><code>"off"</code></td>
+<td>Turns off the screen-reader optimised mode instead of detecting it automatically.</td>
+<td>VS Code never switches into screen-reader mode by itself, which changes how some editor features behave.</td>
+</tr>
+</tbody>
+</table>
+<section id="minimap" class="level3">
+<h3 class="anchored" data-anchor-id="minimap">Minimap</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>editor.minimap.autohide</code></td>
+<td><code>"mouseover"</code></td>
+<td>Hides the minimap until the mouse is over it.</td>
+<td>No minimap taking space while typing; it is there when you reach for it.</td>
+</tr>
+<tr class="even">
+<td><code>editor.minimap.maxColumn</code></td>
+<td><code>80</code></td>
+<td>Draws at most 80 columns of each line in the minimap.</td>
+<td>Matches the 80-character ruler and keeps the minimap narrow.</td>
+</tr>
+<tr class="odd">
+<td><code>editor.minimap.renderCharacters</code></td>
+<td><code>false</code></td>
+<td>Draws blocks instead of tiny characters.</td>
+<td>The shape of the code is easier to read than miniature text.</td>
+</tr>
+<tr class="even">
+<td><code>editor.minimap.scale</code></td>
+<td><code>2</code></td>
+<td>Draws the minimap content at twice the normal size.</td>
+<td>Blocks large enough to recognise chunks and functions.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>editor.defaultFormatter: "REditorSupport.r"</code>.</strong> This is the formatter for <strong>Format Document</strong> (<code>Shift+Alt+F</code>) in every language that has no override. vscode-R formats R code through the R language server (the <code>languageserver</code> R package, which uses <code>styler</code>), so those packages have to be installed in the R version you use. Format on save is not turned on anywhere in this file, so formatting only happens when I ask for it.</p>
+<p>The vscode-R formatter can only format R. For other languages VS Code would complain that the configured formatter “cannot format” the file, which is why the file sets a formatter per language in <a href="#language-specific-formatters">Language-specific formatters</a>. The Air extension (<code>posit.air-vscode</code>) is installed in this profile too, but it is not the default formatter here.</p>
+</section>
+</section>
+<section id="r-language" class="level2">
+<h2 class="anchored" data-anchor-id="r-language">R language</h2>
+<p>These settings belong to the vscode-R extension (<code>REditorSupport.r</code>), except <code>r.debugger.timeouts.startup</code>, which belongs to the R Debugger extension (<code>rdebugger.r-debugger</code>).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>r.alwaysUseActiveTerminal</code></td>
+<td><code>true</code></td>
+<td>Sends code to the active terminal instead of a terminal vscode-R created itself.</td>
+<td>Code goes to the radian session I am looking at.</td>
+</tr>
+<tr class="even">
+<td><code>r.bracketedPaste</code></td>
+<td><code>true</code></td>
+<td>Sends code to the console in bracketed paste mode.</td>
+<td>radian receives a multi-line selection as one block, not line by line.</td>
+</tr>
+<tr class="odd">
+<td><code>r.consolePath</code></td>
+<td><code>"radian"</code></td>
+<td>The R console started in R terminals.</td>
+<td>radian instead of plain <code>R</code>, found on <code>PATH</code> (see below).</td>
+</tr>
+<tr class="even">
+<td><code>settingsSync.ignoredSettings</code></td>
+<td><code>["-r.consolePath", "-r.plot.backend"]</code></td>
+<td>Settings that Settings Sync skips; a leading <code>-</code> makes it sync a setting it would skip by default.</td>
+<td>Syncs the two R settings that Settings Sync would otherwise leave out (see below).</td>
+</tr>
+<tr class="odd">
+<td><code>r.source.focus</code></td>
+<td><code>"editor"</code></td>
+<td>Keeps the focus in the editor after sourcing or running code.</td>
+<td>You can keep typing in the script.</td>
+</tr>
+<tr class="even">
+<td><code>r.sessionWatcher</code></td>
+<td><code>true</code></td>
+<td>Connects the R session to VS Code: workspace viewer, plot viewer, data viewer, help (default).</td>
+<td>Needed for the RStudio-like panes.</td>
+</tr>
+<tr class="odd">
+<td><code>r.plot.backend</code></td>
+<td><code>"httpgd"</code></td>
+<td>Shows plots in the httpgd plot viewer inside VS Code.</td>
+<td>Interactive, resizeable plots with history (see below).</td>
+</tr>
+<tr class="even">
+<td><code>r.plot.defaults.fullWindowMode</code></td>
+<td><code>true</code></td>
+<td>Opens the httpgd plot viewer in full-window mode, with the plot filling the viewer.</td>
+<td>The plot uses all the space of the viewer.</td>
+</tr>
+<tr class="odd">
+<td><code>r.lsp.debug</code></td>
+<td><code>true</code></td>
+<td>Writes debug output of the R language server to its Output channel.</td>
+<td>More detail to go on when completion or diagnostics stop working.</td>
+</tr>
+<tr class="even">
+<td><code>r.lsp.diagnostics</code></td>
+<td><code>true</code></td>
+<td>Shows the language server’s lint diagnostics (from <code>lintr</code>) in the editor (default).</td>
+<td>Style and syntax problems appear as you type.</td>
+</tr>
+<tr class="odd">
+<td><code>r.debugger.timeouts.startup</code></td>
+<td><code>20000</code></td>
+<td>How long (ms) the R Debugger waits for R to start.</td>
+<td>20 s gives a slow R start-up time before the debugger gives up.</td>
+</tr>
+</tbody>
+</table>
+<section id="r-console-radian-on-path-no-r-path" class="level3">
+<h3 class="anchored" data-anchor-id="r-console-radian-on-path-no-r-path">R console: radian on PATH, no R path</h3>
+<p><code>r.consolePath</code> is <code>"radian"</code>, a bare program name, and <code>r.executablePath</code> is deliberately <strong>not</strong> set. Both choices keep machine-specific paths out of the file:</p>
+<ul>
+<li>radian is found on <code>PATH</code> (see <a href="../../collaboration/vscode_r_setup/install.html">Installation</a>).</li>
+<li>With <code>r.executablePath</code> unset, vscode-R looks for <code>R.exe</code> on <code>PATH</code> first, then in the Windows registry. With <a href="https://github.com/r-lib/rig">rig</a> installed, the <code>R.exe</code> on <code>PATH</code> is rig’s shim in <code>C:\Program Files\R\bin</code>, which starts rig’s <strong>default</strong> R version.</li>
+</ul>
+<p>So the R version is whatever <code>rig default</code> says on that machine, and the same <code>settings.json</code> works everywhere. To change the version, run <code>rig default &lt;version&gt;</code>. To pin a version for one project, set <code>r.executablePath</code> in that project’s <code>.vscode/settings.json</code>. All of this is on <a href="../../collaboration/vscode_r_setup/r_versions.html">R versions with rig</a>.</p>
+</section>
+<section id="settings-sync-and-the-two-r-settings" class="level3">
+<h3 class="anchored" data-anchor-id="settings-sync-and-the-two-r-settings">Settings Sync and the two R settings</h3>
+<p>Settings Sync silently skips settings that are scoped <code>machine</code> or <code>machine-overridable</code>, or marked <code>ignoreSync</code>. Two settings this set-up depends on are affected: <code>r.consolePath</code> is machine-overridable, and <code>r.plot.backend</code> is ignoreSync. Without help, a new machine would get the rest of the profile but not radian and not httpgd.</p>
+<p><code>settingsSync.ignoredSettings</code> is the list of settings Sync should skip. A leading <code>-</code> does the opposite: it opts a setting back <strong>in</strong>. So <code>["-r.consolePath", "-r.plot.backend"]</code> makes Sync carry both.</p>
+<p><code>settingsSync.ignoredSettings</code> itself is an application-scoped setting: VS Code reads it from the <strong>Default</strong> profile only. The same line therefore has to be in the Default profile’s <code>settings.json</code> as well, otherwise it has no effect on downloads. The copy here keeps both files in step. See <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>.</p>
+</section>
+<section id="plots-httpgd" class="level3">
+<h3 class="anchored" data-anchor-id="plots-httpgd">Plots: httpgd</h3>
+<p><code>r.plot.backend: "httpgd"</code> replaces the older <code>r.plot.useHttpgd: true</code>, which vscode-R has deprecated. With httpgd, plots open in a VS Code tab that resizes the plot with the window and keeps a plot history. It needs the <code>httpgd</code> R package in every R version you use; with rig, each version has its own library, so install it per version (<a href="../../collaboration/vscode_r_setup/r_versions.html">R versions with rig</a>).</p>
+</section>
+</section>
+<section id="file-associations" class="level2">
+<h2 class="anchored" data-anchor-id="file-associations">File associations</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>files.associations</code></td>
+<td><code>{"*.rmd": "rmd"}</code></td>
+<td>Maps files ending in <code>.rmd</code> to the R Markdown language.</td>
+<td>Files with a lower-case <code>.rmd</code> ending also open as R Markdown.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="language-specific-formatters" class="level2">
+<h2 class="anchored" data-anchor-id="language-specific-formatters">Language-specific formatters</h2>
+<p>Each <code>[language]</code> block overrides settings for one language. Here they mostly pick the formatter, because the global <code>editor.defaultFormatter</code> (vscode-R) cannot format anything but R.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[markdown]</code></td>
+<td>formatter <code>DavidAnson.vscode-markdownlint</code>; whitespace shown in diffs</td>
+<td>Formats Markdown with markdownlint (applies its fixes); diffs show whitespace changes.</td>
+<td>Lint-clean Markdown; trailing spaces mean a line break in Markdown, so diffs should show them.</td>
+</tr>
+<tr class="even">
+<td><code>[quarto]</code></td>
+<td>formatter <code>quarto.quarto</code></td>
+<td>Formats <code>.qmd</code> files with the Quarto extension.</td>
+<td>The Quarto extension knows the document structure and code cells.</td>
+</tr>
+<tr class="odd">
+<td><code>[jsonc]</code></td>
+<td>formatter <code>vscode.json-language-features</code></td>
+<td>Formats JSON with comments (e.g.&nbsp;VS Code’s own settings files) with the built-in JSON formatter.</td>
+<td>Built in, no extra extension needed.</td>
+</tr>
+<tr class="even">
+<td><code>[json]</code></td>
+<td>formatter <code>vscode.json-language-features</code></td>
+<td>Same for plain JSON.</td>
+<td>Same.</td>
+</tr>
+<tr class="odd">
+<td><code>[yaml]</code></td>
+<td>formatter <code>redhat.vscode-yaml</code></td>
+<td>Formats YAML with the Red Hat YAML extension.</td>
+<td><code>_quarto.yml</code>, GitHub workflows and other YAML files.</td>
+</tr>
+<tr class="even">
+<td><code>[css]</code></td>
+<td>formatter <code>vscode.css-language-features</code></td>
+<td>Formats CSS with the built-in formatter.</td>
+<td>Website and slide stylesheets.</td>
+</tr>
+<tr class="odd">
+<td><code>[scss]</code></td>
+<td>formatter <code>vscode.css-language-features</code></td>
+<td>Same for SCSS.</td>
+<td>Quarto themes are written in SCSS.</td>
+</tr>
+<tr class="even">
+<td><code>[sql]</code></td>
+<td>formatter <code>ms-mssql.mssql</code></td>
+<td>Formats SQL with the SQL Server extension.</td>
+<td>SQL scripts and queries.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"[markdown]"</span><span class="er">:</span> <span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"DavidAnson.vscode-markdownlint"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"diffEditor.ignoreTrimWhitespace"</span><span class="fu">:</span> <span class="kw">false</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="er">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Two more language blocks, <code>[snippets]</code> and <code>[instructions]</code>, were added at the end of the file; they are in <a href="#explorer-diff-and-workbench-extras">Explorer, diff and workbench extras</a>.</p>
+<p><strong>Formatters, in short.</strong> <code>editor.defaultFormatter</code> covers R. The <code>[language]</code> blocks cover the other languages I edit. <code>notebook.defaultFormatter</code> (in the <a href="#quarto">Quarto</a> section) does the same job for cells of notebooks (<code>.ipynb</code>), which VS Code formats separately from text files. It also points to vscode-R, so R cells in notebooks are formatted like R scripts. <code>.qmd</code> files are not notebooks in this sense; they use the <code>[quarto]</code> formatter.</p>
+</section>
+<section id="file-nesting" class="level2">
+<h2 class="anchored" data-anchor-id="file-nesting">File nesting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>explorer.fileNesting.patterns</code></td>
+<td>12 patterns, see below</td>
+<td>Rules for showing related files nested under a parent file in the Explorer.</td>
+<td>The patterns appear to match VS Code’s built-in defaults (see below).</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="st">"explorer.fileNesting.patterns"</span><span class="er">:</span> <span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.ts"</span><span class="fu">:</span> <span class="st">"${capture}.js"</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.js"</span><span class="fu">:</span> <span class="st">"${capture}.js.map, ${capture}.min.js, ${capture}.d.ts"</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.jsx"</span><span class="fu">:</span> <span class="st">"${capture}.js"</span><span class="fu">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.tsx"</span><span class="fu">:</span> <span class="st">"${capture}.ts"</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"tsconfig.json"</span><span class="fu">:</span> <span class="st">"tsconfig.*.json"</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"package.json"</span><span class="fu">:</span> <span class="st">"package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"</span><span class="fu">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.sqlite"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.db"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.sqlite3"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.db3"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.sdb"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*.s3db"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example, a database <code>data.sqlite</code> would show its <code>data.sqlite-wal</code> and <code>data.sqlite-shm</code> files folded under it. Nesting only happens when the separate switch <code>explorer.fileNesting.enabled</code> is on. That switch is off by default and is not set in this file, so as it stands these patterns have no visible effect.</p>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>quarto.mathjax.theme</code></td>
+<td><code>"dark"</code></td>
+<td>Renders the Quarto extension’s equation previews in the dark style.</td>
+<td>Matches the dark colour theme.</td>
+</tr>
+<tr class="even">
+<td><code>quarto.render.previewReveal</code></td>
+<td><code>true</code></td>
+<td>Shows reveal.js presentations in the Preview pane after rendering (default).</td>
+<td>Slides appear next to the source while I write them.</td>
+</tr>
+<tr class="odd">
+<td><code>notebook.defaultFormatter</code></td>
+<td><code>"REditorSupport.r"</code></td>
+<td>Formatter for notebook cells.</td>
+<td>R cells in notebooks are formatted by vscode-R (see <a href="#language-specific-formatters">formatters</a>).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="git-and-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-version-control">Git and version control</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>git.autofetch</code></td>
+<td><code>true</code></td>
+<td>Fetches from the remotes in the background every few minutes.</td>
+<td>The Source Control view shows when the remote is ahead.</td>
+</tr>
+<tr class="even">
+<td><code>git.confirmSync</code></td>
+<td><code>false</code></td>
+<td>Runs <strong>Sync Changes</strong> (pull, then push) without a confirmation dialog.</td>
+<td>One click instead of two.</td>
+</tr>
+<tr class="odd">
+<td><code>git.suggestSmartCommit</code></td>
+<td><code>false</code></td>
+<td>Stops VS Code from offering “smart commit” (commit all changes when nothing is staged).</td>
+<td>Commits contain only what I staged.</td>
+</tr>
+<tr class="even">
+<td><code>git.ignoreLegacyWarning</code></td>
+<td><code>true</code></td>
+<td>Hides the warning about an old Git installation.</td>
+<td>No warning dialog; harmless with a current Git.</td>
+</tr>
+<tr class="odd">
+<td><code>git-graph.commitDetailsView.location</code></td>
+<td><code>"Docked to Bottom"</code></td>
+<td>Git Graph shows commit details in a panel docked at the bottom, not inline in the graph.</td>
+<td>The graph does not jump when you open a commit.</td>
+</tr>
+<tr class="even">
+<td><code>git-graph.date.type</code></td>
+<td><code>"Commit Date"</code></td>
+<td>Git Graph shows and sorts by commit date instead of author date.</td>
+<td>Rebased or amended commits appear where they now are in history.</td>
+</tr>
+<tr class="odd">
+<td><code>scm.defaultViewMode</code></td>
+<td><code>"tree"</code></td>
+<td>Shows changed files as a folder tree in Source Control.</td>
+<td>Changes are grouped by folder (<code>R/</code>, <code>data/</code>, …).</td>
+</tr>
+<tr class="even">
+<td><code>gitlens.views.branches.branches.layout</code></td>
+<td><code>"list"</code></td>
+<td>GitLens shows branches as a flat list instead of a tree split at <code>/</code>.</td>
+<td><code>feature/x</code>-style names stay on one line.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="github" class="level2">
+<h2 class="anchored" data-anchor-id="github">GitHub</h2>
+<p>These belong to the GitHub Pull Requests extension.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>githubPullRequests.fileListLayout</code></td>
+<td><code>"tree"</code></td>
+<td>Shows the files of a pull request as a folder tree.</td>
+<td>Same layout as Source Control.</td>
+</tr>
+<tr class="even">
+<td><code>githubPullRequests.pullBranch</code></td>
+<td><code>"never"</code></td>
+<td>Never pulls new commits into a checked-out PR branch automatically, and does not ask.</td>
+<td>I pull myself when I want to.</td>
+</tr>
+<tr class="odd">
+<td><code>githubPullRequests.queries</code></td>
+<td>8 queries, see below</td>
+<td>The categories shown in the Pull Requests view.</td>
+<td>PRs of the current repository split by my role.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="st">"githubPullRequests.queries"</span><span class="er">:</span> <span class="ot">[</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Local Pull Request Branches"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"default"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Local Pull Request Branches"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} default"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Waiting For My Review"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open review-requested:${user}"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Assigned To Me"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open assignee:${user}"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Created By Me"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open author:${user}"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All PR"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository}"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All Open"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} default"</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All Open"</span><span class="fu">,</span> <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"default"</span> <span class="fu">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>${owner}</code>, <code>${repository}</code> and <code>${user}</code> are filled in by the extension for the open repository and the signed-in GitHub user, so the queries work in every project. <code>All PR</code> lists open and closed PRs. Two labels appear twice, <code>Local Pull Request Branches</code> and <code>All Open</code>: once with the bare <code>default</code> query (the extension’s built-in behaviour for that category) and once with a <code>repo:</code> filter in front of <code>default</code>. I am not sure the extension treats <code>default</code> specially when it is part of a longer query, so the two filtered entries may not behave like their labels suggest.</p>
+</section>
+<section id="github-copilot" class="level2">
+<h2 class="anchored" data-anchor-id="github-copilot">GitHub Copilot</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>github.copilot.enable</code></td>
+<td>on for <code>*</code>, off for <code>plaintext</code> and <code>scminput</code></td>
+<td>Turns Copilot inline suggestions on or off per language.</td>
+<td>Suggestions in code and documents, none in plain text or the commit message box.</td>
+</tr>
+<tr class="even">
+<td><code>github.copilot.editor.enableAutoCompletions</code></td>
+<td><code>false</code></td>
+<td>Copilot does not show completions automatically while typing.</td>
+<td>No ghost text appearing with every keystroke.</td>
+</tr>
+<tr class="odd">
+<td><code>github.copilot.nextEditSuggestions.enabled</code></td>
+<td><code>true</code></td>
+<td>Turns on Next Edit Suggestions: Copilot proposes the next change based on recent edits.</td>
+<td>Suggests edits instead of autocomplete (see below).</td>
+</tr>
+<tr class="even">
+<td><code>github.copilot.chat.commitMessageGeneration.instructions</code></td>
+<td>file <code>.github/commit-instructions.md</code></td>
+<td>Extra instructions Copilot follows when generating a commit message.</td>
+<td>Commit messages in the style each repository defines (see below).</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">"github.copilot.enable"</span><span class="er">:</span> <span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"*"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"plaintext"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"markdown"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"scminput"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"quarto"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"R"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Markdown"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="er">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Per language.</strong> <code>"*": true</code> turns Copilot on everywhere, and the other keys are exceptions or confirmations. <code>plaintext</code> (<code>.txt</code> files) and <code>scminput</code> (the commit message box in Source Control) are off. <code>markdown</code> and <code>quarto</code> are on explicitly, which <code>*</code> already covers. <code>R</code> and <code>Markdown</code> with capitals are not VS Code language ids (those are lower-case), so these two keys most likely match nothing; R files are covered by <code>*</code> anyway.</p>
+<p><strong>Edits, not autocomplete.</strong> With <code>github.copilot.editor.enableAutoCompletions: false</code> and <code>github.copilot.nextEditSuggestions.enabled: true</code>, Copilot does not complete code as I type. Instead it suggests edits: after a change it proposes the matching next change nearby (for example, renaming the other uses of a variable), which I accept with <code>Tab</code>. When I do want an inline suggestion, <code>Ctrl+Alt+I</code> asks for one on demand (<a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a>).</p>
+<p><strong>Commit message instructions.</strong> The <strong>Generate Commit Message</strong> button in Source Control reads <code>.github/commit-instructions.md</code> from the root of the open repository and follows it. The path is relative, so each repository can have its own rules; if the file does not exist, Copilot uses its default style. My <a href="https://github.com/OndrejMottl/Project_template">Project_template</a> ships this file, so every project made from it has the same commit conventions.</p>
+</section>
+<section id="extension-specific-settings" class="level2">
+<h2 class="anchored" data-anchor-id="extension-specific-settings">Extension-specific settings</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>resmongraphical.cpuusage.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Resource Monitor Graphical: draws the CPU usage gauge in the status bar as vertical bars.</td>
+<td>Compact gauges in the status bar.</td>
+</tr>
+<tr class="even">
+<td><code>resmongraphical.mem.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for memory use.</td>
+<td>Same.</td>
+</tr>
+<tr class="odd">
+<td><code>resmongraphical.battery.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for battery level.</td>
+<td>Same.</td>
+</tr>
+<tr class="even">
+<td><code>resmongraphical.cpufreq.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for CPU frequency.</td>
+<td>Same.</td>
+</tr>
+<tr class="odd">
+<td><code>resmongraphical.disk.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for disk use.</td>
+<td>Same.</td>
+</tr>
+<tr class="even">
+<td><code>resmongraphical.cputemp.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for CPU temperature.</td>
+<td>Same.</td>
+</tr>
+<tr class="odd">
+<td><code>resmongraphical.network.style</code></td>
+<td><code>"Vertical"</code></td>
+<td>Same for network traffic.</td>
+<td>Same.</td>
+</tr>
+<tr class="even">
+<td><code>hediet.vscode-drawio.resizeImages</code></td>
+<td><code>null</code></td>
+<td>Draw.io Integration: whether images added to a diagram are resized; <code>null</code> leaves the choice open.</td>
+<td>No effect beyond the default (see below).</td>
+</tr>
+<tr class="odd">
+<td><code>redhat.telemetry.enabled</code></td>
+<td><code>true</code></td>
+<td>Allows Red Hat extensions (here: YAML) to send usage data to Red Hat.</td>
+<td>Written by the extension when its telemetry prompt is answered.</td>
+</tr>
+<tr class="even">
+<td><code>errorLens.enabledDiagnosticLevels</code></td>
+<td><code>["warning", "info"]</code></td>
+<td>Error Lens prints warning and info messages inline at the end of the line, but not errors.</td>
+<td>Lint messages are visible inline; errors keep their squiggle and Problems entry.</td>
+</tr>
+</tbody>
+</table>
+<p>Notes on the less obvious lines:</p>
+<ul>
+<li>The <code>resmongraphical.*</code> settings belong to Resource Monitor Graphical (<code>joshabb.resmongraphical</code>), which <strong>is</strong> installed in this profile, so they have an effect.</li>
+<li><code>hediet.vscode-drawio.resizeImages: null</code> appears to be the extension’s default value, so the line does nothing and could be removed.</li>
+<li><code>redhat.telemetry.enabled: true</code> is not needed for anything to work. Set it to <code>false</code> if you do not want to send usage data.</li>
+</ul>
+</section>
+<section id="markdown" class="level2">
+<h2 class="anchored" data-anchor-id="markdown">Markdown</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>markdown.extension.toc.updateOnSave</code></td>
+<td><code>false</code></td>
+<td>Markdown All in One does not update a table of contents it created when the file is saved.</td>
+<td>Saving never rewrites part of the document.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spell-check" class="level2">
+<h2 class="anchored" data-anchor-id="spell-check">Spell check</h2>
+<p>These belong to Code Spell Checker (<code>streetsidesoftware.code-spell-checker</code>).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cSpell.userWords</code></td>
+<td>15 words, see below</td>
+<td>Words accepted as correct in every file and project.</td>
+<td>R package names and project names are not flagged.</td>
+</tr>
+<tr class="even">
+<td><code>cSpell.language</code></td>
+<td><code>"en-GB, cz"</code></td>
+<td>Languages to check spelling in.</td>
+<td>British English for writing, plus Czech (see below).</td>
+</tr>
+</tbody>
+</table>
+<p>The user words are:</p>
+<ul>
+<li>R packages and R terms: <code>dplyr</code>, <code>purrr</code>, <code>tarchetypes</code>, <code>tibble</code>, <code>tidyverse</code>, <code>hmsc</code>, <code>xlim</code>, <code>ylim</code>, <code>agelim</code>, <code>timestep</code>.</li>
+<li>Projects and databases: <code>vegvault</code>, <code>Neotoma</code>.</li>
+<li>Names and identifiers: <code>Ondřej</code>, <code>Mottl</code>, <code>ORCID</code>.</li>
+</ul>
+<p><code>cSpell.language</code> takes a comma-separated list. British English is built into Code Spell Checker. Czech is not: it needs the separate Czech dictionary extension, which is not in this profile’s <a href="../../collaboration/vscode_r_setup/extensions.html">extension list</a>, and that dictionary uses the code <code>cs</code>, not <code>cz</code>. As the file stands, only British English is checked.</p>
+</section>
+<section id="multi-command" class="level2">
+<h2 class="anchored" data-anchor-id="multi-command">Multi-command</h2>
+<p><code>multiCommand.commands</code> belongs to the multi-command extension (<code>ryuta46.multi-command</code>). Each entry defines a new command (<code>command</code>) that runs a list of existing commands (<code>sequence</code>) one after the other.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>multiCommand.commands</code></td>
+<td>8 entries (7 different), see below</td>
+<td>Defines commands that run a sequence of other commands.</td>
+<td>Chunk navigation and “run chunk and move” in R Markdown and Quarto.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">"multiCommand.commands"</span><span class="er">:</span> <span class="ot">[</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multiCommand.r.go.previous.chunk.center"</span><span class="fu">,</span> <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.goToPreviousChunk"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multiCommand.r.go.next.chunk.center"</span><span class="fu">,</span>     <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.goToNextChunk"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.beginning.chunk.center"</span><span class="fu">,</span>    <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span> <span class="st">"cursorLeft"</span><span class="ot">,</span> <span class="st">"cursorDown"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="fu">,</span>          <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span> <span class="st">"cursorRight"</span><span class="ot">,</span> <span class="st">"cursorLineStart"</span><span class="ot">,</span> <span class="st">"cursorUp"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="fu">,</span>          <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span> <span class="st">"cursorRight"</span><span class="ot">,</span> <span class="st">"cursorLineStart"</span><span class="ot">,</span> <span class="st">"cursorUp"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.previous.chunk.center"</span><span class="fu">,</span>    <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.goToPreviousChunk"</span><span class="ot">,</span> <span class="st">"r.runCurrentChunk"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.chunk.move.end"</span><span class="fu">,</span>           <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.runCurrentChunk"</span><span class="ot">,</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="ot">]</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.next.chunk.move.end"</span><span class="fu">,</span>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"r.goToNextChunk"</span><span class="ot">,</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="ot">,</span> <span class="st">"r.runCurrentChunk"</span><span class="ot">]</span> <span class="fu">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>(Shortened to one line per entry; the full file has the same content spread over more lines.) What each one does, in plain words. The <code>r.*</code> commands come from vscode-R and work on the code chunks of R Markdown and Quarto documents.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>multiCommand.r.go.previous.chunk.center</code></td>
+<td>Go to the previous chunk.</td>
+</tr>
+<tr class="even">
+<td><code>multiCommand.r.go.next.chunk.center</code></td>
+<td>Go to the next chunk.</td>
+</tr>
+<tr class="odd">
+<td><code>multicmd.r.go.beginning.chunk.center</code></td>
+<td>Jump to the start of the current chunk: select the chunk, collapse the selection to its first line, then move one line down onto the code.</td>
+</tr>
+<tr class="even">
+<td><code>multicmd.r.go.end.chunk.center</code></td>
+<td>Jump to the end of the current chunk: select the chunk, collapse the selection to its end, go to the start of that line (the closing fence), then one line up onto the last line of code.</td>
+</tr>
+<tr class="odd">
+<td><code>multicmd.r.run.previous.chunk.center</code></td>
+<td>Go to the previous chunk and run it.</td>
+</tr>
+<tr class="even">
+<td><code>multicmd.r.run.chunk.move.end</code></td>
+<td>Run the current chunk, then jump to its last line.</td>
+</tr>
+<tr class="odd">
+<td><code>multicmd.r.run.next.chunk.move.end</code></td>
+<td>Go to the next chunk, jump to its last line, and run it.</td>
+</tr>
+</tbody>
+</table>
+<p>Points to know:</p>
+<ul>
+<li><strong>Duplicate.</strong> <code>multicmd.r.go.end.chunk.center</code> is defined twice with an identical sequence. That is harmless, and one copy could be removed.</li>
+<li><strong>Wrappers.</strong> The two <code>multiCommand.r.go.*.chunk.center</code> entries each run a single command, so they do exactly what <code>r.goToPreviousChunk</code> and <code>r.goToNextChunk</code> do on their own.</li>
+<li><strong>Nesting.</strong> Two sequences call <code>multicmd.r.go.end.chunk.center</code>, so one multi-command can be a step in another.</li>
+<li><strong>“center”.</strong> Despite the names, no sequence scrolls or centres the view; they only move the cursor and run code.</li>
+<li><strong>Not bound to keys.</strong> No keybinding in this profile’s <code>keybindings.json</code> uses these commands. They are available through <em>Command Palette</em> → <strong>Multi command: Execute multi command</strong>, or for a keybinding of your own, for example:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"&lt;your key&gt;"</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"extension.multiCommand.execute"</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.next.chunk.move.end"</span> <span class="fu">},</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>VS Code also has a built-in <code>runCommands</code> command that runs a list of commands from a keybinding without any extension; the layout presets on <a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a> use it.</p>
+</section>
+<section id="ai-assistants-and-chat" class="level2">
+<h2 class="anchored" data-anchor-id="ai-assistants-and-chat">AI assistants and chat</h2>
+<p>From here on the keys in the file have no comment header, so they are grouped here by topic.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>chat.agent.maxRequests</code></td>
+<td><code>100</code></td>
+<td>How many requests an agent-mode chat makes before it stops and asks whether to continue.</td>
+<td>Longer agent tasks run without stopping; the default is lower.</td>
+</tr>
+<tr class="even">
+<td><code>chat.tools.terminal.autoApprove</code></td>
+<td>5 commands, see below</td>
+<td>Terminal commands the chat agent can run without asking.</td>
+<td>File copying and Quarto without a confirmation each time.</td>
+</tr>
+<tr class="odd">
+<td><code>chat.tools.urls.autoApprove</code></td>
+<td>2 sites, see below</td>
+<td>URLs the agent’s fetch tool can use without asking.</td>
+<td>CRAN and a journal site (see below).</td>
+</tr>
+<tr class="even">
+<td><code>chat.mcp.gallery.enabled</code></td>
+<td><code>true</code></td>
+<td>Shows the gallery of MCP servers in the Extensions view.</td>
+<td>Browse and install MCP servers from inside VS Code.</td>
+</tr>
+<tr class="odd">
+<td><code>chat.viewSessions.orientation</code></td>
+<td><code>"stacked"</code></td>
+<td>Shows the list of chat sessions stacked above the chat instead of side by side.</td>
+<td>The chat keeps the full width of a narrow panel.</td>
+</tr>
+<tr class="even">
+<td><code>chat.sessionSync.enabled</code></td>
+<td><code>true</code></td>
+<td>Syncs chat sessions between devices.</td>
+<td>Chat history is available on every machine.</td>
+</tr>
+<tr class="odd">
+<td><code>github.copilot.chat.agentDebugLog.fileLogging.enabled</code></td>
+<td><code>true</code></td>
+<td>Writes the Copilot agent’s debug log to files.</td>
+<td>A record to look at when an agent run goes wrong.</td>
+</tr>
+<tr class="even">
+<td><code>chatgpt.reviewDelivery</code></td>
+<td><code>"detached"</code></td>
+<td>Codex extension (<code>openai.chatgpt</code>): delivers code review results separately from the current conversation.</td>
+<td>The review does not interrupt the chat it was started from.</td>
+</tr>
+<tr class="odd">
+<td><code>claudeCode.hideOnboarding</code></td>
+<td><code>true</code></td>
+<td>Hides the onboarding / welcome content in the Claude Code extension.</td>
+<td>No intro screen once you know the tool.</td>
+</tr>
+<tr class="even">
+<td><code>claudeCode.preferredLocation</code></td>
+<td><code>"panel"</code></td>
+<td>Opens Claude Code as a panel (editor tab) instead of in the sidebar.</td>
+<td>More room for the conversation.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="st">"chat.tools.terminal.autoApprove"</span><span class="er">:</span> <span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Copy-Item"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"New-Item"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"Test-Path"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"robocopy"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"quarto"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="er">,</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">"chat.tools.urls.autoApprove"</span><span class="er">:</span> <span class="fu">{</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"https://cran.r-project.org"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"https://besjournals.onlinelibrary.wiley.com"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"approveRequest"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"approveResponse"</span><span class="fu">:</span> <span class="kw">false</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="er">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Terminal commands.</strong> In agent mode, the chat asks before it runs a terminal command. Commands listed in <code>chat.tools.terminal.autoApprove</code> with <code>true</code> run without asking. Here that is three PowerShell commands to copy files, create files and folders, and test whether a path exists (<code>Copy-Item</code>, <code>New-Item</code>, <code>Test-Path</code>), <code>robocopy</code>, and <code>quarto</code>. A plain name matches the command whatever arguments follow it.</p>
+<p>The trade-off: every approved command runs without me seeing it first. <code>Test-Path</code> only reads. <code>Copy-Item</code>, <code>New-Item</code> and <code>robocopy</code> can overwrite files, and <code>robocopy /MIR</code> can delete them. <code>quarto</code> is the widest: <code>quarto render</code> runs the R code inside the documents, and <code>quarto publish</code> uploads a site. Approving it saves a lot of clicks when the agent works on a Quarto website, but it means trusting the agent with those commands.</p>
+<p><strong>URLs.</strong> <code>chat.tools.urls.autoApprove</code> works the same way for web fetches. An entry can approve two steps: sending the request and using the response. <code>true</code> approves both, so pages from CRAN are fetched and used without asking. For the British Ecological Society journals on Wiley, <code>approveRequest: true, approveResponse: false</code> means the page is fetched without asking, but I still confirm before its content goes to the model. Fetched web content can contain instructions aimed at the AI (prompt injection), so reviewing responses from a large external site is the more careful choice.</p>
+</section>
+<section id="explorer-diff-and-workbench-extras" class="level2">
+<h2 class="anchored" data-anchor-id="explorer-diff-and-workbench-extras">Explorer, diff and workbench extras</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>explorer.confirmDragAndDrop</code></td>
+<td><code>false</code></td>
+<td>Moves files dragged in the Explorer without a confirmation dialog.</td>
+<td>Faster file moves (Undo still works).</td>
+</tr>
+<tr class="even">
+<td><code>workbench.startupEditor</code></td>
+<td><code>"none"</code></td>
+<td>Opens no Welcome page or editor at start-up.</td>
+<td>VS Code opens straight to the project.</td>
+</tr>
+<tr class="odd">
+<td><code>workbench.activityBar.location</code></td>
+<td><code>"top"</code></td>
+<td>Shows the activity bar icons in a row at the top of the sidebar instead of a vertical bar.</td>
+<td>Saves a column of horizontal space.</td>
+</tr>
+<tr class="even">
+<td><code>workbench.editor.empty.hint</code></td>
+<td><code>"hidden"</code></td>
+<td>Hides the hint text shown in a new empty editor.</td>
+<td>Empty files are really empty.</td>
+</tr>
+<tr class="odd">
+<td><code>diffEditor.ignoreTrimWhitespace</code></td>
+<td><code>false</code></td>
+<td>Diffs show changes in leading and trailing whitespace.</td>
+<td>You see every change that will be committed, including whitespace.</td>
+</tr>
+<tr class="even">
+<td><code>diffEditor.renderSideBySide</code></td>
+<td><code>false</code></td>
+<td>Shows diffs inline (one column) instead of side by side.</td>
+<td>Readable in a narrow editor next to the R console.</td>
+</tr>
+<tr class="odd">
+<td><code>[snippets]</code></td>
+<td>formatter <code>vscode.json-language-features</code></td>
+<td>Formats snippet files with the built-in JSON formatter.</td>
+<td>Snippet files are JSON (see <a href="../../collaboration/vscode_r_setup/snippets_tasks.html">Snippets and tasks</a>).</td>
+</tr>
+<tr class="even">
+<td><code>[instructions]</code></td>
+<td><code>diffEditor.ignoreTrimWhitespace: true</code></td>
+<td>For Copilot instruction files (<code>*.instructions.md</code>), diffs ignore leading and trailing whitespace.</td>
+<td>Overrides the global <code>false</code> above for these files only.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="yaml" class="level2">
+<h2 class="anchored" data-anchor-id="yaml">YAML</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>yaml.disableSchemaDetection</code></td>
+<td>14 file patterns, see below</td>
+<td>The Red Hat YAML extension does not guess a schema for files matching these patterns.</td>
+<td>The list matches the extension’s default.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">"yaml.disableSchemaDetection"</span><span class="er">:</span> <span class="ot">[</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/docker-compose.yml"</span><span class="ot">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/docker-compose.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/docker-compose.*.yml"</span><span class="ot">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/docker-compose.*.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/compose.yml"</span><span class="ot">,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/compose.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/compose.*.yml"</span><span class="ot">,</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/compose.*.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.github/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.github/workflows/*.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.gitea/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.gitea/workflows/*.yaml"</span><span class="ot">,</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.forgejo/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"**/.forgejo/workflows/*.yaml"</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The YAML extension normally detects a schema for a YAML file (from its file name, via the JSON Schema Store) and uses it for validation and completion. For Docker Compose files and for GitHub, Gitea and Forgejo workflow files, this list turns that automatic detection off. A schema you set yourself, for example with <code>yaml.schemas</code>, still applies. The patterns are the extension’s own default compose and workflow patterns, so the line keeps the default behaviour.</p>
+</section>
+<section id="written-by-extensions-or-left-over" class="level2">
+<h2 class="anchored" data-anchor-id="written-by-extensions-or-left-over">Written by extensions or left over</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+<th>What it does</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mssql.connectionGroups</code></td>
+<td>one group, <code>ROOT</code></td>
+<td>SQL Server extension: the groups saved connections are sorted into.</td>
+<td>Written by the extension itself.</td>
+</tr>
+<tr class="even">
+<td><code>resourceLens.showMemory</code></td>
+<td><code>false</code></td>
+<td>Hides memory use in a resource-monitor extension.</td>
+<td>No effect, leftover (see below).</td>
+</tr>
+<tr class="odd">
+<td><code>resourceLens.showCpu</code></td>
+<td><code>false</code></td>
+<td>Hides CPU use in the same extension.</td>
+<td>No effect, leftover.</td>
+</tr>
+<tr class="even">
+<td><code>resourceLens.showGpu</code></td>
+<td><code>false</code></td>
+<td>Hides GPU use in the same extension.</td>
+<td>No effect, leftover.</td>
+</tr>
+<tr class="odd">
+<td><code>githubIssues.ignoreMilestones</code></td>
+<td><code>[]</code></td>
+<td>GitHub Pull Requests extension: milestones to leave out of the Issues view.</td>
+<td>Empty list, so nothing is left out.</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="st">"mssql.connectionGroups"</span><span class="er">:</span> <span class="ot">[</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span> <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"ROOT"</span><span class="fu">,</span> <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"ROOT"</span> <span class="fu">}</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span><span class="er">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>mssql.connectionGroups</code> is created by the SQL Server extension (<code>ms-mssql.mssql</code>) when it first stores its connection list. The single <code>ROOT</code> group holds no connection details; the extension recreates it if it is missing.</li>
+<li>The <code>resourceLens.*</code> settings belong to a resource-monitor extension that is <strong>not installed</strong> in this profile (it is not in the <a href="../../collaboration/vscode_r_setup/extensions.html">extension list</a>). They have no effect and are leftovers that can be removed. The installed resource monitor is Resource Monitor Graphical (the <code>resmongraphical.*</code> settings above).</li>
+<li><code>githubIssues.ignoreMilestones: []</code> is the empty default and changes nothing.</li>
+<li>Similar leftovers in the sections above: <code>vsicons.dontShowNewVersionMessage</code> only silences a message, <code>redhat.telemetry.enabled</code> was written by a prompt, and <code>hediet.vscode-drawio.resizeImages: null</code> is the default.</li>
+</ul>
+</section>
+<section id="the-full-file" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-file">The full file</h2>
+<details>
+<summary>
+Show the full file: <code>R/settings.json</code>
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">WINDOW</span> <span class="er">&amp;</span> <span class="er">WORKBENCH</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.panel.defaultLocation"</span><span class="fu">:</span> <span class="st">"right"</span><span class="fu">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"security.workspace.trust.untrustedFiles"</span><span class="fu">:</span> <span class="st">"open"</span><span class="fu">,</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"zenMode.centerLayout"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"window.commandCenter"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.iconTheme"</span><span class="fu">:</span> <span class="st">"vscode-icons"</span><span class="fu">,</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"vsicons.dontShowNewVersionMessage"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.list.openMode"</span><span class="fu">:</span> <span class="st">"doubleClick"</span><span class="fu">,</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.colorTheme"</span><span class="fu">:</span> <span class="st">"Visual Studio Dark"</span><span class="fu">,</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.editor.pinnedTabsOnSeparateRow"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.editor.wrapTabs"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"window.title"</span><span class="fu">:</span> <span class="st">"${rootName}"</span><span class="fu">,</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">TERMINAL</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"terminal.integrated.cursorStyle"</span><span class="fu">:</span> <span class="st">"underline"</span><span class="fu">,</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"terminal.integrated.cursorBlinking"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"terminal.integrated.defaultProfile.windows"</span><span class="fu">:</span> <span class="st">"R Terminal"</span><span class="fu">,</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"terminal.integrated.fontWeightBold"</span><span class="fu">:</span> <span class="st">"normal"</span><span class="fu">,</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">EDITOR</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.stickyScroll.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.unicodeHighlight.nonBasicASCII"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.tabSize"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"REditorSupport.r"</span><span class="fu">,</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.inlineSuggest.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.guides.bracketPairs"</span><span class="fu">:</span> <span class="st">"active"</span><span class="fu">,</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.rulers"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>    <span class="dv">80</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.accessibilitySupport"</span><span class="fu">:</span> <span class="st">"off"</span><span class="fu">,</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Minimap</span> <span class="er">settings</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.minimap.autohide"</span><span class="fu">:</span> <span class="st">"mouseover"</span><span class="fu">,</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.minimap.maxColumn"</span><span class="fu">:</span> <span class="dv">80</span><span class="fu">,</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.minimap.renderCharacters"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"editor.minimap.scale"</span><span class="fu">:</span> <span class="dv">2</span><span class="fu">,</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">R</span> <span class="er">LANGUAGE</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">R</span> <span class="er">Extension</span> <span class="er">configuration</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.alwaysUseActiveTerminal"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.bracketedPaste"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Machine-neutral</span><span class="fu">:</span> <span class="er">radian</span> <span class="er">is</span> <span class="er">resolved</span> <span class="er">from</span> <span class="er">PATH.</span> <span class="er">r.executablePath</span> <span class="er">is</span> <span class="er">left</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">unset</span> <span class="er">so</span> <span class="er">vscode-R</span> <span class="er">finds</span> <span class="er">R</span> <span class="er">on</span> <span class="er">PATH</span> <span class="er">(rig</span> <span class="er">shim)</span><span class="fu">,</span> <span class="er">then</span> <span class="er">the</span> <span class="er">registry.</span> <span class="er">Switch</span> <span class="er">R</span></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">version</span> <span class="er">with</span> <span class="er">`rig</span> <span class="er">default</span> <span class="er">&lt;version&gt;`;</span> <span class="er">pin</span> <span class="er">per</span> <span class="er">project</span> <span class="er">in</span> <span class="er">.vscode/settings.json.</span></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.consolePath"</span><span class="fu">:</span> <span class="st">"radian"</span><span class="fu">,</span></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">r.consolePath</span> <span class="er">is</span> <span class="er">machine-overridable</span> <span class="er">and</span> <span class="er">r.plot.backend</span> <span class="er">is</span> <span class="er">ignoreSync,</span> <span class="er">so</span></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Settings</span> <span class="er">Sync</span> <span class="er">skips</span> <span class="er">them</span> <span class="er">by</span> <span class="er">default;</span> <span class="er">the</span> <span class="dt">"-"</span> <span class="er">prefix</span> <span class="er">opts</span> <span class="er">them</span> <span class="er">back</span> <span class="er">in.</span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">Application-scoped</span><span class="fu">:</span> <span class="er">must</span> <span class="er">also</span> <span class="er">be</span> <span class="er">in</span> <span class="er">the</span> <span class="er">Default</span> <span class="er">profile</span> <span class="er">for</span> <span class="er">downloads.</span></span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"settingsSync.ignoredSettings"</span><span class="er">:</span> <span class="ot">[</span><span class="st">"-r.consolePath"</span><span class="ot">,</span> <span class="st">"-r.plot.backend"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.source.focus"</span><span class="fu">:</span> <span class="st">"editor"</span><span class="fu">,</span></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.sessionWatcher"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.plot.backend"</span><span class="fu">:</span> <span class="st">"httpgd"</span><span class="fu">,</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.plot.defaults.fullWindowMode"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.lsp.debug"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.lsp.diagnostics"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.debugger.timeouts.startup"</span><span class="fu">:</span> <span class="dv">20000</span><span class="fu">,</span></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">FILE</span> <span class="er">ASSOCIATIONS</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"files.associations"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.rmd"</span><span class="fu">:</span> <span class="st">"rmd"</span></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">LANGUAGE-SPECIFIC</span> <span class="er">FORMATTERS</span></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[markdown]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"DavidAnson.vscode-markdownlint"</span><span class="fu">,</span></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"diffEditor.ignoreTrimWhitespace"</span><span class="fu">:</span> <span class="kw">false</span></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[quarto]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"quarto.quarto"</span></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[jsonc]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"vscode.json-language-features"</span></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[json]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"vscode.json-language-features"</span></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[yaml]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"redhat.vscode-yaml"</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[css]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"vscode.css-language-features"</span></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[scss]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"vscode.css-language-features"</span></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[sql]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"ms-mssql.mssql"</span></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">FILE</span> <span class="er">NESTING</span></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"explorer.fileNesting.patterns"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.ts"</span><span class="fu">:</span> <span class="st">"${capture}.js"</span><span class="fu">,</span></span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.js"</span><span class="fu">:</span> <span class="st">"${capture}.js.map, ${capture}.min.js, ${capture}.d.ts"</span><span class="fu">,</span></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.jsx"</span><span class="fu">:</span> <span class="st">"${capture}.js"</span><span class="fu">,</span></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.tsx"</span><span class="fu">:</span> <span class="st">"${capture}.ts"</span><span class="fu">,</span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"tsconfig.json"</span><span class="fu">:</span> <span class="st">"tsconfig.*.json"</span><span class="fu">,</span></span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"package.json"</span><span class="fu">:</span> <span class="st">"package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"</span><span class="fu">,</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.sqlite"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.db"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.sqlite3"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.db3"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.sdb"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span><span class="fu">,</span></span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*.s3db"</span><span class="fu">:</span> <span class="st">"${capture}.${extname}-*"</span></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">QUARTO</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"quarto.mathjax.theme"</span><span class="fu">:</span> <span class="st">"dark"</span><span class="fu">,</span></span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"quarto.render.previewReveal"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"notebook.defaultFormatter"</span><span class="fu">:</span> <span class="st">"REditorSupport.r"</span><span class="fu">,</span></span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">GIT</span> <span class="er">&amp;</span> <span class="er">VERSION</span> <span class="er">CONTROL</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git.autofetch"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git.confirmSync"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git.suggestSmartCommit"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git.ignoreLegacyWarning"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git-graph.commitDetailsView.location"</span><span class="fu">:</span> <span class="st">"Docked to Bottom"</span><span class="fu">,</span></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"git-graph.date.type"</span><span class="fu">:</span> <span class="st">"Commit Date"</span><span class="fu">,</span></span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"scm.defaultViewMode"</span><span class="fu">:</span> <span class="st">"tree"</span><span class="fu">,</span></span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"gitlens.views.branches.branches.layout"</span><span class="fu">:</span> <span class="st">"list"</span><span class="fu">,</span></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">GITHUB</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"githubPullRequests.fileListLayout"</span><span class="fu">:</span> <span class="st">"tree"</span><span class="fu">,</span></span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"githubPullRequests.pullBranch"</span><span class="fu">:</span> <span class="st">"never"</span><span class="fu">,</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"githubPullRequests.queries"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Local Pull Request Branches"</span><span class="fu">,</span></span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"default"</span></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Local Pull Request Branches"</span><span class="fu">,</span></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} default"</span></span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Waiting For My Review"</span><span class="fu">,</span></span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open review-requested:${user}"</span></span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Assigned To Me"</span><span class="fu">,</span></span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open assignee:${user}"</span></span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"Created By Me"</span><span class="fu">,</span></span>
+<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} is:open author:${user}"</span></span>
+<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All PR"</span><span class="fu">,</span></span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository}"</span></span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All Open"</span><span class="fu">,</span></span>
+<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"repo:${owner}/${repository} default"</span></span>
+<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"label"</span><span class="fu">:</span> <span class="st">"All Open"</span><span class="fu">,</span></span>
+<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"query"</span><span class="fu">:</span> <span class="st">"default"</span></span>
+<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">GITHUB</span> <span class="er">COPILOT</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github.copilot.enable"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"*"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"plaintext"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"markdown"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"scminput"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"quarto"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"R"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Markdown"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github.copilot.editor.enableAutoCompletions"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github.copilot.nextEditSuggestions.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github.copilot.chat.commitMessageGeneration.instructions"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"file"</span><span class="fu">:</span> <span class="st">".github/commit-instructions.md"</span></span>
+<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">EXTENSION-SPECIFIC</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.cpuusage.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.mem.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.battery.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.cpufreq.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.disk.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.cputemp.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resmongraphical.network.style"</span><span class="fu">:</span> <span class="st">"Vertical"</span><span class="fu">,</span></span>
+<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"hediet.vscode-drawio.resizeImages"</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"redhat.telemetry.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"errorLens.enabledDiagnosticLevels"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a>    <span class="st">"warning"</span><span class="ot">,</span></span>
+<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a>    <span class="st">"info"</span></span>
+<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">MARKDOWN</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"markdown.extension.toc.updateOnSave"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">SPELL</span> <span class="er">CHECK</span> <span class="er">SETTINGS</span></span>
+<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"cSpell.userWords"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a>    <span class="st">"agelim"</span><span class="ot">,</span></span>
+<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dplyr"</span><span class="ot">,</span></span>
+<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a>    <span class="st">"hmsc"</span><span class="ot">,</span></span>
+<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Mottl"</span><span class="ot">,</span></span>
+<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Neotoma"</span><span class="ot">,</span></span>
+<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Ondřej"</span><span class="ot">,</span></span>
+<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORCID"</span><span class="ot">,</span></span>
+<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a>    <span class="st">"purrr"</span><span class="ot">,</span></span>
+<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tarchetypes"</span><span class="ot">,</span></span>
+<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tibble"</span><span class="ot">,</span></span>
+<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tidyverse"</span><span class="ot">,</span></span>
+<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a>    <span class="st">"timestep"</span><span class="ot">,</span></span>
+<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a>    <span class="st">"vegvault"</span><span class="ot">,</span></span>
+<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a>    <span class="st">"xlim"</span><span class="ot">,</span></span>
+<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ylim"</span></span>
+<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"cSpell.language"</span><span class="fu">:</span> <span class="st">"en-GB, cz"</span><span class="fu">,</span></span>
+<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">MULTI-COMMAND</span> <span class="er">CONFIGURATIONS</span></span>
+<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a>  <span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"multiCommand.commands"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-233"><a href="#cb10-233" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-234"><a href="#cb10-234" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multiCommand.r.go.previous.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-235"><a href="#cb10-235" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-236"><a href="#cb10-236" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.goToPreviousChunk"</span></span>
+<span id="cb10-237"><a href="#cb10-237" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-238"><a href="#cb10-238" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-239"><a href="#cb10-239" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-240"><a href="#cb10-240" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multiCommand.r.go.next.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-241"><a href="#cb10-241" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-242"><a href="#cb10-242" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.goToNextChunk"</span></span>
+<span id="cb10-243"><a href="#cb10-243" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-244"><a href="#cb10-244" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.beginning.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span></span>
+<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorLeft"</span><span class="ot">,</span></span>
+<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorDown"</span></span>
+<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span></span>
+<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorRight"</span><span class="ot">,</span></span>
+<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorLineStart"</span><span class="ot">,</span></span>
+<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorUp"</span></span>
+<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-261"><a href="#cb10-261" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-262"><a href="#cb10-262" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-263"><a href="#cb10-263" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-264"><a href="#cb10-264" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-265"><a href="#cb10-265" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.selectCurrentChunk"</span><span class="ot">,</span></span>
+<span id="cb10-266"><a href="#cb10-266" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorRight"</span><span class="ot">,</span></span>
+<span id="cb10-267"><a href="#cb10-267" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorLineStart"</span><span class="ot">,</span></span>
+<span id="cb10-268"><a href="#cb10-268" aria-hidden="true" tabindex="-1"></a>        <span class="st">"cursorUp"</span></span>
+<span id="cb10-269"><a href="#cb10-269" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-270"><a href="#cb10-270" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-271"><a href="#cb10-271" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-272"><a href="#cb10-272" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.previous.chunk.center"</span><span class="fu">,</span></span>
+<span id="cb10-273"><a href="#cb10-273" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-274"><a href="#cb10-274" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.goToPreviousChunk"</span><span class="ot">,</span></span>
+<span id="cb10-275"><a href="#cb10-275" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.runCurrentChunk"</span></span>
+<span id="cb10-276"><a href="#cb10-276" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-277"><a href="#cb10-277" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-278"><a href="#cb10-278" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-279"><a href="#cb10-279" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.chunk.move.end"</span><span class="fu">,</span></span>
+<span id="cb10-280"><a href="#cb10-280" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-281"><a href="#cb10-281" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.runCurrentChunk"</span><span class="ot">,</span></span>
+<span id="cb10-282"><a href="#cb10-282" aria-hidden="true" tabindex="-1"></a>        <span class="st">"multicmd.r.go.end.chunk.center"</span></span>
+<span id="cb10-283"><a href="#cb10-283" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-284"><a href="#cb10-284" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb10-285"><a href="#cb10-285" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-286"><a href="#cb10-286" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"multicmd.r.run.next.chunk.move.end"</span><span class="fu">,</span></span>
+<span id="cb10-287"><a href="#cb10-287" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"sequence"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-288"><a href="#cb10-288" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.goToNextChunk"</span><span class="ot">,</span></span>
+<span id="cb10-289"><a href="#cb10-289" aria-hidden="true" tabindex="-1"></a>        <span class="st">"multicmd.r.go.end.chunk.center"</span><span class="ot">,</span></span>
+<span id="cb10-290"><a href="#cb10-290" aria-hidden="true" tabindex="-1"></a>        <span class="st">"r.runCurrentChunk"</span></span>
+<span id="cb10-291"><a href="#cb10-291" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb10-292"><a href="#cb10-292" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-293"><a href="#cb10-293" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-294"><a href="#cb10-294" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"explorer.confirmDragAndDrop"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-295"><a href="#cb10-295" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.agent.maxRequests"</span><span class="fu">:</span> <span class="dv">100</span><span class="fu">,</span></span>
+<span id="cb10-296"><a href="#cb10-296" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.startupEditor"</span><span class="fu">:</span> <span class="st">"none"</span><span class="fu">,</span></span>
+<span id="cb10-297"><a href="#cb10-297" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.tools.terminal.autoApprove"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-298"><a href="#cb10-298" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Copy-Item"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-299"><a href="#cb10-299" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"New-Item"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-300"><a href="#cb10-300" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Test-Path"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-301"><a href="#cb10-301" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"robocopy"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-302"><a href="#cb10-302" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"quarto"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb10-303"><a href="#cb10-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-304"><a href="#cb10-304" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"diffEditor.ignoreTrimWhitespace"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-305"><a href="#cb10-305" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[snippets]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-306"><a href="#cb10-306" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"editor.defaultFormatter"</span><span class="fu">:</span> <span class="st">"vscode.json-language-features"</span></span>
+<span id="cb10-307"><a href="#cb10-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-308"><a href="#cb10-308" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.activityBar.location"</span><span class="fu">:</span> <span class="st">"top"</span><span class="fu">,</span></span>
+<span id="cb10-309"><a href="#cb10-309" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mssql.connectionGroups"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-310"><a href="#cb10-310" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb10-311"><a href="#cb10-311" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"ROOT"</span><span class="fu">,</span></span>
+<span id="cb10-312"><a href="#cb10-312" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"id"</span><span class="fu">:</span> <span class="st">"ROOT"</span></span>
+<span id="cb10-313"><a href="#cb10-313" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-314"><a href="#cb10-314" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-315"><a href="#cb10-315" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.mcp.gallery.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-316"><a href="#cb10-316" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resourceLens.showMemory"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-317"><a href="#cb10-317" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resourceLens.showCpu"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-318"><a href="#cb10-318" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"resourceLens.showGpu"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-319"><a href="#cb10-319" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.tools.urls.autoApprove"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-320"><a href="#cb10-320" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"https://cran.r-project.org"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-321"><a href="#cb10-321" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"https://besjournals.onlinelibrary.wiley.com"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-322"><a href="#cb10-322" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"approveRequest"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-323"><a href="#cb10-323" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"approveResponse"</span><span class="fu">:</span> <span class="kw">false</span></span>
+<span id="cb10-324"><a href="#cb10-324" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb10-325"><a href="#cb10-325" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-326"><a href="#cb10-326" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github.copilot.chat.agentDebugLog.fileLogging.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-327"><a href="#cb10-327" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"[instructions]"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-328"><a href="#cb10-328" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"diffEditor.ignoreTrimWhitespace"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb10-329"><a href="#cb10-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb10-330"><a href="#cb10-330" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"githubIssues.ignoreMilestones"</span><span class="fu">:</span> <span class="ot">[]</span><span class="fu">,</span></span>
+<span id="cb10-331"><a href="#cb10-331" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"workbench.editor.empty.hint"</span><span class="fu">:</span> <span class="st">"hidden"</span><span class="fu">,</span></span>
+<span id="cb10-332"><a href="#cb10-332" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.viewSessions.orientation"</span><span class="fu">:</span> <span class="st">"stacked"</span><span class="fu">,</span></span>
+<span id="cb10-333"><a href="#cb10-333" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chat.sessionSync.enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-334"><a href="#cb10-334" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"diffEditor.renderSideBySide"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb10-335"><a href="#cb10-335" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"chatgpt.reviewDelivery"</span><span class="fu">:</span> <span class="st">"detached"</span><span class="fu">,</span></span>
+<span id="cb10-336"><a href="#cb10-336" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"yaml.disableSchemaDetection"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb10-337"><a href="#cb10-337" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/docker-compose.yml"</span><span class="ot">,</span></span>
+<span id="cb10-338"><a href="#cb10-338" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/docker-compose.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-339"><a href="#cb10-339" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/docker-compose.*.yml"</span><span class="ot">,</span></span>
+<span id="cb10-340"><a href="#cb10-340" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/docker-compose.*.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-341"><a href="#cb10-341" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/compose.yml"</span><span class="ot">,</span></span>
+<span id="cb10-342"><a href="#cb10-342" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/compose.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-343"><a href="#cb10-343" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/compose.*.yml"</span><span class="ot">,</span></span>
+<span id="cb10-344"><a href="#cb10-344" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/compose.*.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-345"><a href="#cb10-345" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.github/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb10-346"><a href="#cb10-346" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.github/workflows/*.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-347"><a href="#cb10-347" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.gitea/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb10-348"><a href="#cb10-348" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.gitea/workflows/*.yaml"</span><span class="ot">,</span></span>
+<span id="cb10-349"><a href="#cb10-349" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.forgejo/workflows/*.yml"</span><span class="ot">,</span></span>
+<span id="cb10-350"><a href="#cb10-350" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.forgejo/workflows/*.yaml"</span></span>
+<span id="cb10-351"><a href="#cb10-351" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-352"><a href="#cb10-352" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"claudeCode.hideOnboarding"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb10-353"><a href="#cb10-353" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"claudeCode.preferredLocation"</span><span class="fu">:</span> <span class="st">"panel"</span></span>
+<span id="cb10-354"><a href="#cb10-354" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p><a href="files/R/settings.json" download="settings.json">Download <code>settings.json</code></a></p>
+<p>To use it, switch to the target profile, open <em>Command Palette</em> → <strong>Preferences: Open User Settings (JSON)</strong> and paste the file in, or import the whole profile as described on <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

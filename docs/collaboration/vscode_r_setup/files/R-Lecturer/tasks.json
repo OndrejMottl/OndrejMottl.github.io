@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "R: New scratch project",
+      "type": "process",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${env:USERPROFILE}/.vscode-scripts/new-r-scratch-project.ps1",
+        "-Name",
+        "${input:rScratchProjectName}"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "clear": true,
+        "echo": false,
+        "focus": false,
+        "showReuseMessage": false
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "rScratchProjectName",
+      "type": "promptString",
+      "description": "Name for the new R scratch project"
+    }
+  ]
+}

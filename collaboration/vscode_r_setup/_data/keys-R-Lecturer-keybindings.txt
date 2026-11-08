@@ -1,0 +1,16 @@
+cursorMove
+quarto.previewShortcut
+r.document
+r.helpPanel.openForSelection
+r.newFileDocument
+r.runCommand
+type
+workbench.action.closeActiveEditor
+workbench.action.files.newUntitledFile
+workbench.action.showAllSymbols
+workbench.action.terminal.clear
+workbench.action.terminal.kill
+workbench.action.terminal.killEditor
+workbench.action.terminal.new
+workbench.action.terminal.newInActiveWorkspace
+workbench.view.extension.workspaceViewer

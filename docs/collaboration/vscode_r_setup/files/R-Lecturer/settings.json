@@ -1,0 +1,228 @@
+{
+  "window.commandCenter": true,
+  "zenMode.centerLayout": true,
+  "zenMode.restore": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.list.openMode": "doubleClick",
+  // terminal setting
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "R Terminal",
+  "terminal.integrated.fontWeightBold": "normal",
+  // editor
+  "editor.stickyScroll.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.unicodeHighlight.nonBasicASCII": true,
+  "editor.tabSize": 2,
+  //"editor.wordWrap": "wordWrapColumn",
+  "[r]": {
+    "editor.defaultFormatter": "REditorSupport.r"
+  },
+  "[quarto]": {
+    "editor.defaultFormatter": "quarto.quarto",
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.bracketPairs": "active", // adds guides to matching brackets
+  "editor.rulers": [
+    80
+  ],
+  // make sure ".rmd" files are treated as R Markdown
+  "files.associations": {
+    "*.rmd": "rmd"
+  },
+  // git settings
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "git-graph.commitDetailsView.location": "Docked to Bottom",
+  "git-graph.date.type": "Commit Date",
+  // r settings
+  "r.alwaysUseActiveTerminal": true,
+  "r.bracketedPaste": true,
+  // Machine-neutral: radian from PATH; R found via PATH (rig) or registry
+  "r.consolePath": "radian",
+  // Opt these back into Settings Sync (skipped by default); see R profile
+  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
+  "r.source.focus": "editor",
+  "r.sessionWatcher": true,
+  "r.plot.useHttpgd": true,
+  "r.plot.backend": "httpgd",
+  "r.plot.defaults.fullWindowMode": true,
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.debugger.timeouts.startup": 20000,
+  // github settings
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  // resource manager
+  "resmongraphical.cpuusage.style": "Vertical",
+  // markdown and qurto
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "quarto.render.previewReveal": false,
+  // mutlicommand setting
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.r.go.previous.chunk.center",
+      "sequence": [
+        "r.goToPreviousChunk"
+      ]
+    },
+    {
+      "command": "multiCommand.r.go.next.chunk.center",
+      "sequence": [
+        "r.goToNextChunk"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.beginning.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorLeft",
+        "cursorDown"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.end.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorRight",
+        "cursorLineStart",
+        "cursorUp"
+      ]
+    },
+    {
+      "command": "multicmd.r.go.end.chunk.center",
+      "sequence": [
+        "r.selectCurrentChunk",
+        "cursorRight",
+        "cursorLineStart",
+        "cursorUp"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.previous.chunk.center",
+      "sequence": [
+        "r.goToPreviousChunk",
+        "r.runCurrentChunk"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.chunk.move.end",
+      "sequence": [
+        "r.runCurrentChunk",
+        "multicmd.r.go.end.chunk.center"
+      ]
+    },
+    {
+      "command": "multicmd.r.run.next.chunk.move.end",
+      "sequence": [
+        "r.goToNextChunk",
+        "multicmd.r.go.end.chunk.center",
+        "r.runCurrentChunk"
+      ]
+    }
+  ],
+  "editor.accessibilitySupport": "off",
+  "hediet.vscode-drawio.resizeImages": null,
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 2,
+  "workbench.colorTheme": "Light Modern",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "git.ignoreLegacyWarning": true,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "quarto.quarto"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "github.copilot.enable": {
+    "quarto": true,
+    "*": false
+  },
+  "r.removeLeadingComments": true,
+  "r.session.levelOfObjectDetail": "Normal",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.pdf": "pdf.preview",
+    "*.qmd": "default"
+  },
+  "quarto.visualEditor.markdownWrap": "column",
+  "quarto.render.previewType": "external",
+  "quarto.visualEditor.markdownWrapColumn": 80,
+  "quarto.visualEditor.spellingDictionary": "en_GB",
+  "editor.defaultFormatter": "REditorSupport.r",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "scm.defaultViewMode": "tree",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "grammarly.config.suggestionCategories.oxfordComma": "on",
+  "gitlens.views.remotes.branches.layout": "list",
+  "[rmd]": {
+    "editor.defaultFormatter": "REditorSupport.r"
+  },
+  "quarto.visualEditor.spelling": true,
+  "workbench.editor.defaultBinaryEditor": "default",
+  "explorer.fileNesting.enabled": true,
+  "notebook.defaultFormatter": "quarto.quarto",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "cSpell.userWords": [
+    "Mottl",
+    "Ondřej",
+    "revealjs"
+  ],
+  "githubPullRequests.queries": [
+    {
+      "label": "Local Pull Request Branches",
+      "query": "default"
+    },
+    {
+      "label": "Waiting For My Review",
+      "query": "repo:${owner}/${repository} is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "repo:${owner}/${repository} is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "repo:${owner}/${repository} is:open author:${user}"
+    },
+    {
+      "label": "Closed by me",
+      "query": "repo:${owner}/${repository} author:${user}"
+    },
+    {
+      "label": "All Open",
+      "query": "default"
+    }
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.activityBar.location": "top",
+}

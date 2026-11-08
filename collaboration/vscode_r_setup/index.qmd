@@ -1,0 +1,81 @@
+---
+title: "VS Code for R"
+description: "My complete VS Code environment for R on Windows: install steps, every setting, keybinding and extension, and the files to rebuild it from scratch."
+date: "2026-11-08"
+date-format: long
+date-modified: last-modified
+---
+
+I write R in [VS Code](https://code.visualstudio.com/), on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.
+
+It pairs with two other things I use daily:
+
+- my [**project template**](https://github.com/OndrejMottl/Project_template) for reproducible R projects (renv, targets, tests, instructions for coding assistants);
+- the [**R Version Switcher**](https://github.com/OndrejMottl/r-version-switcher) extension, for per-project R versions ([R versions](r_versions.qmd)).
+
+## The idea
+
+**One environment on every machine, with no machine-specific paths.**
+
+- VS Code's [Settings Sync](profiles_sync.qmd) carries settings, keybindings, snippets, tasks and extensions between machines.
+- That only works if the synced files contain no user names and no install paths. So nothing in them says *where* R is or *which* version: VS Code starts `radian`, radian starts `R`, and both are found on `PATH`.
+- [rig](https://github.com/r-lib/rig) decides which R that is, per machine, with `rig default`. Changing the R version never touches VS Code.
+- The few things Sync cannot carry ([task scripts, `.Rprofile`, PowerShell profiles](outside_vscode.qmd)) follow the same rule and are shared through OneDrive.
+
+## How the pieces fit {#how-the-pieces-fit}
+
+```{mermaid}
+flowchart LR
+  subgraph sync["Settings Sync (all machines)"]
+    profile["VS Code profile 'R'<br/>settings · keybindings<br/>snippets · tasks · extensions"]
+  end
+  subgraph machine["Each machine"]
+    path["PATH"]
+    radian["radian<br/>(Python 3.12)"]
+    rig["rig shortcuts<br/>C:\Program Files\R\bin"]
+    r["R x.y.z<br/>(rig default)"]
+    lib["package library<br/>per R version"]
+    rprofile[".Rprofile<br/>(OneDrive)"]
+  end
+  profile -- "r.consolePath: radian" --> path
+  path --> radian
+  path --> rig
+  radian -- "R on PATH" --> rig
+  profile -- "language server, help" --> rig
+  rig --> r
+  r --> lib
+  r --> rprofile
+```
+
+## The pages
+
+| Page | What is in it |
+|---|---|
+| [Install, in order](install.qmd) | VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, with winget commands and tested versions. |
+| [Settings](settings.qmd) | Every setting of the `R` profile: what it does and why. |
+| [Keybindings](keybindings.qmd) | Every keybinding, what it replaces, and the layout presets. |
+| [Extensions](extensions.qmd) | All installed extensions, grouped, with the minimum set for R and an install script. |
+| [Snippets and tasks](snippets_tasks.qmd) | Quarto snippets, the two VS Code tasks and their scripts. |
+| [Profiles and Settings Sync](profiles_sync.qmd) | How profiles work, the sync gotcha that drops R settings, the Default and teaching profiles. |
+| [Outside VS Code](outside_vscode.qmd) | `.Rprofile`, radian, PowerShell, git, and the `PATH` rules. |
+| [R versions](r_versions.qmd) | Switching R for the machine or pinning it per project. |
+| [Troubleshooting](troubleshooting.qmd) | Every problem I hit, with cause and fix. |
+
+## Rebuild from scratch {#rebuild-from-scratch}
+
+On a new Windows machine:
+
+1. **Install** everything in the order on [Install, in order](install.qmd) (steps 1–8).
+2. **VS Code profile.** Either sign in to Settings Sync (on my own machines), or create a profile called `R` and fill it in from the published files:
+   - settings: [settings.json](settings.qmd#the-full-file) → *Preferences: Open User Settings (JSON)*;
+   - keybindings: [keybindings.json](keybindings.qmd#the-full-file) → *Preferences: Open Keyboard Shortcuts (JSON)*;
+   - snippets and tasks: [Snippets and tasks](snippets_tasks.qmd);
+   - extensions: `install_extensions.ps1` from [Extensions](extensions.qmd#installing-them).
+3. **Sync gotcha.** Make sure `settingsSync.ignoredSettings` is also in the **Default** profile ([why](profiles_sync.qmd#the-gotcha)).
+4. **Outside VS Code**: put `.Rprofile` in `Documents`, the task scripts in `%USERPROFILE%\.vscode-scripts\`, and run `rig system fix-r-alias` ([details](outside_vscode.qmd)).
+5. **Check `PATH`** against the [rules](outside_vscode.qmd#path-rules): no `R_HOME`, no `R-x.y.z\bin`, Python 3.12 first.
+6. **Restart VS Code completely**, open an R terminal, and run `plot(1:10)` ([test](install.qmd#restart-vs-code-and-test)).
+
+## Keeping this page current
+
+The configuration files here are exported from my live set-up by a script, which also refuses to publish anything that contains a user name, an e-mail address or a server name. The pages check, when the site is built, that every setting and every extension in the exported files is documented, so this reference cannot silently fall behind.

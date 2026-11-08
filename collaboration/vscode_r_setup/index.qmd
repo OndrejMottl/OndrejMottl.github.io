@@ -4,6 +4,10 @@ description: "My complete VS Code environment for R on Windows: install steps, e
 date: "2026-11-08"
 date-format: long
 date-modified: last-modified
+format:
+  html:
+    mermaid:
+      theme: neutral
 ---
 
 I write R in [VS Code](https://code.visualstudio.com/), on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.
@@ -25,8 +29,8 @@ It pairs with two other things I use daily:
 ## How the pieces fit {#how-the-pieces-fit}
 
 ```{mermaid}
-flowchart LR
-  subgraph sync["Settings Sync (all machines)"]
+flowchart TB
+  subgraph sync["Settings Sync"]
     profile["VS Code profile 'R'<br/>settings · keybindings<br/>snippets · tasks · extensions"]
   end
   subgraph machine["Each machine"]

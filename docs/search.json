@@ -1312,7 +1312,7 @@
     "href": "collaboration/vscode_r_setup/index.html#how-the-pieces-fit",
     "title": "VS Code for R",
     "section": "How the pieces fit",
-    "text": "How the pieces fit\n\n\n\n\n\n\nflowchart LR\n  subgraph sync[\"Settings Sync (all machines)\"]\n    profile[\"VS Code profile 'R'&lt;br/&gt;settings · keybindings&lt;br/&gt;snippets · tasks · extensions\"]\n  end\n  subgraph machine[\"Each machine\"]\n    path[\"PATH\"]\n    radian[\"radian&lt;br/&gt;(Python 3.12)\"]\n    rig[\"rig shortcuts&lt;br/&gt;C:\\Program Files\\R\\bin\"]\n    r[\"R x.y.z&lt;br/&gt;(rig default)\"]\n    lib[\"package library&lt;br/&gt;per R version\"]\n    rprofile[\".Rprofile&lt;br/&gt;(OneDrive)\"]\n  end\n  profile -- \"r.consolePath: radian\" --&gt; path\n  path --&gt; radian\n  path --&gt; rig\n  radian -- \"R on PATH\" --&gt; rig\n  profile -- \"language server, help\" --&gt; rig\n  rig --&gt; r\n  r --&gt; lib\n  r --&gt; rprofile",
+    "text": "How the pieces fit\n\n\n\n\n\n\nflowchart TB\n  subgraph sync[\"Settings Sync\"]\n    profile[\"VS Code profile 'R'&lt;br/&gt;settings · keybindings&lt;br/&gt;snippets · tasks · extensions\"]\n  end\n  subgraph machine[\"Each machine\"]\n    path[\"PATH\"]\n    radian[\"radian&lt;br/&gt;(Python 3.12)\"]\n    rig[\"rig shortcuts&lt;br/&gt;C:\\Program Files\\R\\bin\"]\n    r[\"R x.y.z&lt;br/&gt;(rig default)\"]\n    lib[\"package library&lt;br/&gt;per R version\"]\n    rprofile[\".Rprofile&lt;br/&gt;(OneDrive)\"]\n  end\n  profile -- \"r.consolePath: radian\" --&gt; path\n  path --&gt; radian\n  path --&gt; rig\n  radian -- \"R on PATH\" --&gt; rig\n  profile -- \"language server, help\" --&gt; rig\n  rig --&gt; r\n  r --&gt; lib\n  r --&gt; rprofile",
     "crumbs": [
       "Work with me",
       "VS Code for R"

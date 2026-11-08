@@ -1,0 +1,4 @@
+# Applies to every page in this folder (VS Code for R section).
+# On narrow screens, tables become one card per row with column labels.
+include-in-header: _narrow-tables-head.html
+include-after-body: _narrow-tables-body.html

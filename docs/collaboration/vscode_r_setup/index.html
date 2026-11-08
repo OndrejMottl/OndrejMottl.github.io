@@ -299,7 +299,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-idea" id="toc-the-idea" class="nav-link active" data-scroll-target="#the-idea">The idea</a></li>
+  <li><a href="#in-short" id="toc-in-short" class="nav-link active" data-scroll-target="#in-short">My set-up in short</a></li>
+  <li><a href="#the-idea" id="toc-the-idea" class="nav-link" data-scroll-target="#the-idea">The idea</a></li>
   <li><a href="#how-the-pieces-fit" id="toc-how-the-pieces-fit" class="nav-link" data-scroll-target="#how-the-pieces-fit">How the pieces fit</a></li>
   <li><a href="#the-pages" id="toc-the-pages" class="nav-link" data-scroll-target="#the-pages">The pages</a></li>
   <li><a href="#rebuild-from-scratch" id="toc-rebuild-from-scratch" class="nav-link" data-scroll-target="#rebuild-from-scratch">Rebuild from scratch</a></li>
@@ -347,11 +348,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I write R in <a href="https://code.visualstudio.com/">VS Code</a>, on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.</p>
+<section id="in-short" class="level2">
+<h2 class="anchored" data-anchor-id="in-short">My set-up in short</h2>
+<p>I use <strong>VS Code with the <a href="https://github.com/REditorSupport/vscode-R">vscode-R</a> extension</strong> for all my R work, on Windows. R runs in <strong><a href="https://github.com/randy3k/radian">radian</a></strong>, a modern R console with syntax highlighting and multi-line editing, opened in a terminal panel docked on the right. Plots go to the <strong><a href="https://github.com/nx10/httpgd">httpgd</a></strong> viewer inside VS Code. The <strong><code>languageserver</code></strong> package gives autocompletion, hover help and go to definition; <strong><code>lintr</code></strong> and <strong><code>styler</code></strong> check and format the code as I type. I write documents, slides and this website in <strong><a href="https://quarto.org/">Quarto</a></strong>, with the Quarto extension for preview and code-chunk execution. <strong><a href="https://github.com/r-lib/rig">rig</a></strong> manages several R versions side by side, and <strong><a href="https://rstudio.github.io/renv/">renv</a></strong> with <strong><a href="https://docs.ropensci.org/targets/">targets</a></strong> keeps each project reproducible (<a href="https://github.com/OndrejMottl/Project_template">project template</a>). Git work happens in the built-in Source Control view, with <strong>GitLens</strong>, <strong>Git Graph</strong> and the <strong>GitHub Pull Requests</strong> extension. For AI help I use <strong>GitHub Copilot</strong> and <strong>Claude Code</strong>. The look is the built-in <strong>Visual Studio Dark</strong> theme with <strong>vscode-icons</strong>, and a set of <a href="../../collaboration/vscode_r_setup/keybindings.html">custom keybindings</a> (for example <code>Ctrl+Shift+M</code> for the pipe) makes the common R actions one keystroke. Everything is kept in one VS Code profile called <code>R</code>, synced between my machines.</p>
 <p>It pairs with two other things I use daily:</p>
 <ul>
 <li>my <a href="https://github.com/OndrejMottl/Project_template"><strong>project template</strong></a> for reproducible R projects (renv, targets, tests, instructions for coding assistants);</li>
 <li>the <a href="https://github.com/OndrejMottl/r-version-switcher"><strong>R Version Switcher</strong></a> extension, for per-project R versions (<a href="../../collaboration/vscode_r_setup/r_versions.html">R versions</a>).</li>
 </ul>
+</section>
 <section id="the-idea" class="level2">
 <h2 class="anchored" data-anchor-id="the-idea">The idea</h2>
 <p><strong>One environment on every machine, with no machine-specific paths.</strong></p>

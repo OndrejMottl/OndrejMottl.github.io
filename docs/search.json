@@ -1290,7 +1290,7 @@
     "href": "collaboration/vscode_r_setup/index.html",
     "title": "VS Code for R",
     "section": "",
-    "text": "I write R in VS Code, on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.\nIt pairs with two other things I use daily:",
+    "text": "I write R in VS Code, on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.",
     "crumbs": [
       "Work with me",
       "VS Code for R"
@@ -2193,5 +2193,16 @@
     "title": "RRatepol",
     "section": "",
     "text": "More detailed information can be found on RRatepol package website\nThis include description of the individual steps for RoC estimation Package Description"
+  },
+  {
+    "objectID": "collaboration/vscode_r_setup/index.html#in-short",
+    "href": "collaboration/vscode_r_setup/index.html#in-short",
+    "title": "VS Code for R",
+    "section": "My set-up in short",
+    "text": "My set-up in short\nI use VS Code with the vscode-R extension for all my R work, on Windows. R runs in radian, a modern R console with syntax highlighting and multi-line editing, opened in a terminal panel docked on the right. Plots go to the httpgd viewer inside VS Code. The languageserver package gives autocompletion, hover help and go to definition; lintr and styler check and format the code as I type. I write documents, slides and this website in Quarto, with the Quarto extension for preview and code-chunk execution. rig manages several R versions side by side, and renv with targets keeps each project reproducible (project template). Git work happens in the built-in Source Control view, with GitLens, Git Graph and the GitHub Pull Requests extension. For AI help I use GitHub Copilot and Claude Code. The look is the built-in Visual Studio Dark theme with vscode-icons, and a set of custom keybindings (for example Ctrl+Shift+M for the pipe) makes the common R actions one keystroke. Everything is kept in one VS Code profile called R, synced between my machines.\nIt pairs with two other things I use daily:\n\nmy project template for reproducible R projects (renv, targets, tests, instructions for coding assistants);\nthe R Version Switcher extension, for per-project R versions (R versions).",
+    "crumbs": [
+      "Work with me",
+      "VS Code for R"
+    ]
   }
 ]

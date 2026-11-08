@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Everything to install on a clean Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.">
+<meta name="description" content="What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.">
 
 <title>Install, in order – Ondřej Mottl</title>
 <style>
@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#versions-this-was-tested-with" id="toc-versions-this-was-tested-with" class="nav-link active" data-scroll-target="#versions-this-was-tested-with">Versions this was tested with</a></li>
+  <li><a href="#versions-i-use" id="toc-versions-i-use" class="nav-link active" data-scroll-target="#versions-i-use">Versions I use</a></li>
   <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">1. VS Code</a></li>
   <li><a href="#rig-then-r" id="toc-rig-then-r" class="nav-link" data-scroll-target="#rig-then-r">2. rig, then R</a></li>
   <li><a href="#rstudio-optional" id="toc-rstudio-optional" class="nav-link" data-scroll-target="#rstudio-optional">3. RStudio (optional)</a></li>
@@ -353,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Everything to install on a clean Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.
+    What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.
   </div>
 </div>
 
@@ -376,10 +376,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Tested on a clean Windows 11 install on 2026-11-08 and repeated on a second machine the same day. Everything can be done from PowerShell with <a href="https://learn.microsoft.com/windows/package-manager/winget/"><code>winget</code></a>, which comes with Windows 11.</p>
-<p><strong>The order matters:</strong> R before Rtools and the R packages, Python before radian. And after changing <code>PATH</code>, programs only see the change when they are started again (see <a href="#restart-vs-code-and-test">step 9</a>).</p>
-<section id="versions-this-was-tested-with" class="level2">
-<h2 class="anchored" data-anchor-id="versions-this-was-tested-with">Versions this was tested with</h2>
+<p>Everything can be done from PowerShell with <a href="https://learn.microsoft.com/windows/package-manager/winget/"><code>winget</code></a>, which comes with Windows 11.</p>
+<p>Install R before Rtools and the R packages, and Python before radian. After changing <code>PATH</code>, programs only see the change when they are started again (see <a href="#restart-vs-code-and-test">step 9</a>).</p>
+<section id="versions-i-use" class="level2">
+<h2 class="anchored" data-anchor-id="versions-i-use">Versions I use</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -434,9 +434,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="rig-then-r" class="level2">
 <h2 class="anchored" data-anchor-id="rig-then-r">2. rig, then R</h2>
-<p><a href="https://github.com/r-lib/rig">rig</a> installs and switches R versions. It is what makes the whole set-up free of machine-specific paths: VS Code and radian just use “the <code>R</code> on <code>PATH</code>”, and rig decides which version that is.</p>
+<p><a href="https://github.com/r-lib/rig">rig</a> installs and switches R versions. It keeps the set-up free of machine-specific paths: VS Code and radian use “the <code>R</code> on <code>PATH</code>”, and rig decides which version that is.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install Posit<span class="op">.</span><span class="fu">rig</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Open a <strong>new</strong> terminal (so it sees rig on <code>PATH</code>), then:</p>
+<p>Open a new terminal (so it sees rig on <code>PATH</code>), then:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rig add release          <span class="co"># the current R release; accept the UAC prompt</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rig default <span class="dv">4.6</span><span class="op">.</span><span class="dv">2</span>        <span class="co"># the version used everywhere; `rig list` shows what is installed</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>rig system make-links    <span class="co"># version-named shortcuts: R-4.6.2, R-4.5.1, ...</span></span>
@@ -445,24 +445,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>rig add release</code> looks stuck with no output when it is waiting for the UAC prompt, which can be hidden behind other windows.</li>
 <li><code>rig add 4.5.1</code> (or <code>rig add 4.5</code>) installs an older version next to it.</li>
 <li>In PowerShell, <code>R</code> is a built-in alias for <code>Invoke-History</code>. <code>rig system fix-r-alias</code> removes that alias in your PowerShell profile (see <a href="../../collaboration/vscode_r_setup/outside_vscode.html#powershell">Outside VS Code</a>).</li>
-<li>rig puts its shortcuts (<code>R.exe</code>, <code>Rscript.exe</code>, <code>R-4.6.2.exe</code>, …) in <code>C:\Program Files\R\bin</code>, which must be on <code>PATH</code>. <strong>Do not</strong> also add a version folder such as <code>C:\Program Files\R\R-4.5.0\bin</code> to <code>PATH</code>, and <strong>do not</strong> set <code>R_HOME</code>: both pin one version and override rig (see <a href="../../collaboration/vscode_r_setup/troubleshooting.html#radian-or-vs-code-starts-an-old-r-version">Troubleshooting</a>).</li>
+<li>rig puts its shortcuts (<code>R.exe</code>, <code>Rscript.exe</code>, <code>R-4.6.2.exe</code>, …) in <code>C:\Program Files\R\bin</code>, which must be on <code>PATH</code>. Do not also add a version folder such as <code>C:\Program Files\R\R-x.y.z\bin</code> to <code>PATH</code>, and do not set <code>R_HOME</code>: both pin one version and override rig (see <a href="../../collaboration/vscode_r_setup/troubleshooting.html#radian-or-vs-code-starts-an-old-r-version">Troubleshooting</a>).</li>
 <li>rig does not install Rtools (step 6).</li>
 </ul>
 </section>
 <section id="rstudio-optional" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-optional">3. RStudio (optional)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>winget install Posit<span class="op">.</span><span class="fu">RStudio</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>I keep it for its add-ins and for teaching. rig registers its R versions with RStudio, so there is nothing else to set up. Its bundled pandoc is also used by my <code>.Rprofile</code> (<a href="../../collaboration/vscode_r_setup/outside_vscode.html#rprofile">Outside VS Code</a>).</p>
+<p>rig registers its R versions with RStudio, so there is nothing else to set up. Its bundled pandoc is also used by my <code>.Rprofile</code> (<a href="../../collaboration/vscode_r_setup/outside_vscode.html#rprofile">Outside VS Code</a>).</p>
 </section>
 <section id="python-python.org-build" class="level2">
 <h2 class="anchored" data-anchor-id="python-python.org-build">4. Python (python.org build)</h2>
-<p>radian is a Python program, so it needs Python. Use the python.org build, not the Microsoft Store one:</p>
+<p>radian is a Python program, so it needs Python. I use Python 3.12, the python.org build, not the Microsoft Store one:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>winget install Python<span class="op">.</span><span class="fu">Python</span><span class="op">.</span><span class="dv">3.12</span> <span class="op">--</span>override <span class="st">"/quiet InstallAllUsers=0 PrependPath=1 Include_launcher=1 Include_test=0"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><strong>Python 3.12 is deliberate:</strong> radian and its R bridge rchitect are well tested with it.</li>
 <li><code>PrependPath=1</code> puts <code>Python312\</code> and <code>Python312\Scripts\</code> on your user <code>PATH</code>. <code>Scripts\</code> is where <code>radian.exe</code> will be.</li>
-<li>If another Python is installed (a Store one, or 3.13+), 3.12 must come <strong>first</strong> on <code>PATH</code>. Check in a new terminal: <code>python --version</code> and <code>Get-Command radian</code> must both point to <code>Python312</code>.</li>
-<li>Allow long paths (some packages have deep folders). The installer’s “Disable path length limit” button does it, or set <code>LongPathsEnabled = 1</code> in <code>HKLM\SYSTEM\CurrentControlSet\Control\FileSystem</code>.</li>
+<li>If another Python is installed (a Store one, or 3.13+), 3.12 must come first on <code>PATH</code>. Check in a new terminal: <code>python --version</code> and <code>Get-Command radian</code> must both point to <code>Python312</code>.</li>
 </ul>
 </section>
 <section id="radian" class="level2">
@@ -471,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>python <span class="op">-</span>m pip install <span class="op">-</span>U radian</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>radian <span class="op">--</span>version   <span class="co"># shows the radian, R and Python versions it uses</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>radian --version</code> should report the R version you set with <code>rig default</code>. If it shows another one, see <a href="../../collaboration/vscode_r_setup/troubleshooting.html#radian-or-vs-code-starts-an-old-r-version">Troubleshooting</a>.</p>
-<p>If the install fails while compiling, install the <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">Microsoft C++ Build Tools</a>. It was not needed with Python 3.12.</p>
+<p>If the install fails while compiling, install the <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">Microsoft C++ Build Tools</a>.</p>
 </section>
 <section id="rtools" class="level2">
 <h2 class="anchored" data-anchor-id="rtools">6. Rtools</h2>
@@ -480,12 +478,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Rtools 4.5 covers R 4.5.0 and later, including 4.6.x. There is no separate Rtools 4.6.</li>
 <li>Check in R: <code>pkgbuild::has_build_tools()</code> should be <code>TRUE</code>, and <code>Sys.which("make")</code> should point into <code>C:\rtools45\</code>.</li>
-<li>If winget fails with “Target directory already exists: C:”, Rtools 4.5 is already installed (outside winget). If the check above passes, leave it.</li>
 </ul>
 </section>
 <section id="the-r-packages" class="level2">
 <h2 class="anchored" data-anchor-id="the-r-packages">7. The R packages</h2>
-<p>These are needed <strong>once per R version</strong>: each R version has its own package library, and a new version starts empty.</p>
+<p>These are needed once per R version: each R version has its own package library, and a new version starts empty.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"languageserver"</span>, <span class="st">"remotes"</span>, <span class="st">"httpgd"</span>, <span class="st">"devtools"</span>, <span class="st">"lintr"</span>, <span class="st">"styler"</span>, <span class="st">"btw"</span>))</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"ManuelHentschel/vscDebugger"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
@@ -514,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><code>lintr</code></td>
-<td>Linting in the editor. vscode-R 3.3 needs <strong>lintr ≥ 3.3.0-1</strong>; with an older one the R terminal shows “Backend ‘lintr’ requires lintr &gt;= 3.3.0-1”.</td>
+<td>Linting in the editor. Needs lintr 3.3.0-1 or newer.</td>
 </tr>
 <tr class="even">
 <td><code>styler</code></td>
@@ -530,14 +527,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="quarto" class="level2">
 <h2 class="anchored" data-anchor-id="quarto">8. Quarto</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>winget install Posit<span class="op">.</span><span class="fu">Quarto</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This installs Quarto for all users in <code>C:\Program Files\Quarto</code>. If an older per-user copy exists (<code>%LOCALAPPDATA%\Programs\Quarto</code>), make sure nothing points to it, then uninstall it. <code>quarto --version</code> in a new terminal shows which one wins.</p>
+<p>This installs Quarto for all users in <code>C:\Program Files\Quarto</code>.</p>
 </section>
 <section id="restart-vs-code-and-test" class="level2">
 <h2 class="anchored" data-anchor-id="restart-vs-code-and-test">9. Restart VS Code and test</h2>
-<p><strong>Quit every VS Code window and start it again.</strong> VS Code and all its terminals keep the <code>PATH</code> they were started with, and <em>Developer: Reload Window</em> does <strong>not</strong> refresh it.</p>
+<p><strong>Quit every VS Code window and start it again.</strong> VS Code and all its terminals keep the <code>PATH</code> they were started with, and <em>Developer: Reload Window</em> does not refresh it.</p>
 <p>Then:</p>
 <ol type="1">
-<li>Open an R file, then <em>Command Palette</em> → <strong>Terminal: Create New Terminal</strong>. With the <a href="../../collaboration/vscode_r_setup/settings.html">settings</a> in place, it opens <strong>radian</strong> (the default terminal profile is “R Terminal”).</li>
+<li>Open an R file, then <em>Command Palette</em> → <strong>Terminal: Create New Terminal</strong>. With the <a href="../../collaboration/vscode_r_setup/settings.html">settings</a> in place, it opens radian (the default terminal profile is “R Terminal”).</li>
 <li>Run <code>plot(1:10)</code>. The plot opens in the httpgd viewer beside the editor.</li>
 <li>Run <code>R.version.string</code>. It shows rig’s default version.</li>
 </ol>

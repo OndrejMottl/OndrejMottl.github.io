@@ -41,7 +41,6 @@ gitlens.ai.vscode.model
 gitlens.views.remotes.branches.layout
 grammarly.config.suggestionCategories.oxfordComma
 hediet.vscode-drawio.resizeImages
-multiCommand.commands
 notebook.defaultFormatter
 quarto.render.previewReveal
 quarto.render.previewType

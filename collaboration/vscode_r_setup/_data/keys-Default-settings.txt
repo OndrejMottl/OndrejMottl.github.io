@@ -29,10 +29,8 @@ grammarly.config.documentDomain
 grammarly.config.suggestions.OxfordComma
 grammarly.files.include
 grammarly.startTextCheckInPausedState
-hediet.vscode-drawio.resizeImages
 markdown.extension.toc.updateOnSave
 mssql.enableRichExperiences
-multiCommand.commands
 quarto.mathjax.theme
 quarto.render.previewReveal
 r.alwaysUseActiveTerminal

@@ -10,10 +10,10 @@ date-modified: last-modified
 Nothing in my synced settings names an R version or a path:
 
 - `r.consolePath` is `"radian"`, found on `PATH`.
-- `r.executablePath` is **not set**. vscode-R then uses `R.exe` on `PATH`, which is rig's shortcut in `C:\Program Files\R\bin`. Failing that, it reads the Windows registry (`HKLM\Software\R-Core\R\InstallPath`).
-- radian looks for R the same way: `--r-binary`, `R_BINARY` or `R_HOME` if set, then `R` on `PATH`, then the registry.
+- `r.executablePath` is not set, so vscode-R uses `R.exe` on `PATH`, which is rig's shortcut in `C:\Program Files\R\bin`.
+- radian also starts the R on `PATH`, unless `R_HOME` is set or `--r-binary` is given.
 
-**Result:** the R version is whatever `rig default` says on that machine. The settings stay identical everywhere, which is what lets [Settings Sync](profiles_sync.qmd) carry them.
+So the R version is whatever `rig default` says on that machine. The settings stay identical everywhere, which is what lets [Settings Sync](profiles_sync.qmd) carry them.
 
 ## Switch R for the whole machine
 
@@ -23,7 +23,7 @@ rig add release       # install the newest release (or: rig add 4.5)
 rig default 4.6.2     # use it everywhere
 ```
 
-Then open a **new** R terminal. No VS Code change is needed. Remember that a new R version starts with an empty package library: install the [R packages](install.qmd#the-r-packages) for it.
+Then open a new R terminal. No VS Code change is needed. Remember that a new R version starts with an empty package library: install the [R packages](install.qmd#the-r-packages) for it.
 
 ## Pin one project to a version
 
@@ -42,9 +42,9 @@ I wrote (well, vibe-coded) a small extension for this: [**R Version Switcher**](
 | **R: Set System Default Version** | `rig default`, without touching the workspace. |
 | **R: Install Rtools** | Installs the Rtools versions your R versions need but do not have. |
 
-A **status bar item** shows the workspace's R version and turns yellow when it differs from `renv.lock`. Click it to switch. That pairs well with the [project template](https://github.com/OndrejMottl/Project_template), which uses renv.
+A status bar item shows the workspace's R version and turns yellow when it differs from `renv.lock`. Click it to switch. That pairs well with the [project template](https://github.com/OndrejMottl/Project_template), which uses renv.
 
-As the extension's README says: it was written by an AI coding assistant and can install and remove R versions, so read what a command will do before you confirm it.
+
 
 Restart the R terminal after switching.
 
@@ -66,12 +66,8 @@ Then in the project's `.vscode/settings.json`:
 ```
 
 - `r.executablePath` is the R that vscode-R uses for the language server, help and the workspace viewer.
-- `r.consoleArgs` is passed to radian. `--r-binary` makes radian start that R. radian does not save or restore the workspace by default (`--save` / `--restore-data` turn that on), so `--no-save --no-restore` are not needed.
-- `R-4.5.1` is found on `PATH`, so the file contains **no user name and no install path**. It works on every machine that has R 4.5.1 through rig, so the file can be committed.
+- `r.consoleArgs` is passed to radian. `--r-binary` makes radian start that R.
+- `R-4.5.1` is found on `PATH`, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.
 - A full path such as `C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe` also works and contains no user name, but it is Windows-only.
 
 To check which R a terminal really runs: `R.version.string` in the console, or `radian --r-binary=R-4.5.1 --version` in PowerShell.
-
-### Old setting names
-
-Older guides (and older versions of tools) write `r.rpath.windows`, `r.rterm.windows` and `r.rterm.option`. vscode-R 3.x renamed them to `r.executablePath`, `r.consolePath` and `r.consoleArgs` ([full list](troubleshooting.qmd#old-r-setting-names)). The old names still work but VS Code shows them struck through.

@@ -1,15 +1,15 @@
 ---
 title: "Install, in order"
-description: "Everything to install on a clean Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto."
+description: "What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto."
 date-format: long
 date-modified: last-modified
 ---
 
-Tested on a clean Windows 11 install on 2026-11-08 and repeated on a second machine the same day. Everything can be done from PowerShell with [`winget`](https://learn.microsoft.com/windows/package-manager/winget/), which comes with Windows 11.
+Everything can be done from PowerShell with [`winget`](https://learn.microsoft.com/windows/package-manager/winget/), which comes with Windows 11.
 
-**The order matters:** R before Rtools and the R packages, Python before radian. And after changing `PATH`, programs only see the change when they are started again (see [step 9](#restart-vs-code-and-test)).
+Install R before Rtools and the R packages, and Python before radian. After changing `PATH`, programs only see the change when they are started again (see [step 9](#restart-vs-code-and-test)).
 
-## Versions this was tested with
+## Versions I use
 
 | Software | Version |
 |---|---|
@@ -33,13 +33,13 @@ Or download it from <https://code.visualstudio.com/Download> (the *User Installe
 
 ## 2. rig, then R
 
-[rig](https://github.com/r-lib/rig) installs and switches R versions. It is what makes the whole set-up free of machine-specific paths: VS Code and radian just use "the `R` on `PATH`", and rig decides which version that is.
+[rig](https://github.com/r-lib/rig) installs and switches R versions. It keeps the set-up free of machine-specific paths: VS Code and radian use "the `R` on `PATH`", and rig decides which version that is.
 
 ```powershell
 winget install Posit.rig
 ```
 
-Open a **new** terminal (so it sees rig on `PATH`), then:
+Open a new terminal (so it sees rig on `PATH`), then:
 
 ```powershell
 rig add release          # the current R release; accept the UAC prompt
@@ -51,7 +51,7 @@ rig system fix-r-alias   # make `R` start R in PowerShell
 - `rig add release` looks stuck with no output when it is waiting for the UAC prompt, which can be hidden behind other windows.
 - `rig add 4.5.1` (or `rig add 4.5`) installs an older version next to it.
 - In PowerShell, `R` is a built-in alias for `Invoke-History`. `rig system fix-r-alias` removes that alias in your PowerShell profile (see [Outside VS Code](outside_vscode.qmd#powershell)).
-- rig puts its shortcuts (`R.exe`, `Rscript.exe`, `R-4.6.2.exe`, ...) in `C:\Program Files\R\bin`, which must be on `PATH`. **Do not** also add a version folder such as `C:\Program Files\R\R-4.5.0\bin` to `PATH`, and **do not** set `R_HOME`: both pin one version and override rig (see [Troubleshooting](troubleshooting.qmd#radian-or-vs-code-starts-an-old-r-version)).
+- rig puts its shortcuts (`R.exe`, `Rscript.exe`, `R-4.6.2.exe`, ...) in `C:\Program Files\R\bin`, which must be on `PATH`. Do not also add a version folder such as `C:\Program Files\R\R-x.y.z\bin` to `PATH`, and do not set `R_HOME`: both pin one version and override rig (see [Troubleshooting](troubleshooting.qmd#radian-or-vs-code-starts-an-old-r-version)).
 - rig does not install Rtools (step 6).
 
 ## 3. RStudio (optional)
@@ -60,20 +60,18 @@ rig system fix-r-alias   # make `R` start R in PowerShell
 winget install Posit.RStudio
 ```
 
-I keep it for its add-ins and for teaching. rig registers its R versions with RStudio, so there is nothing else to set up. Its bundled pandoc is also used by my `.Rprofile` ([Outside VS Code](outside_vscode.qmd#rprofile)).
+rig registers its R versions with RStudio, so there is nothing else to set up. Its bundled pandoc is also used by my `.Rprofile` ([Outside VS Code](outside_vscode.qmd#rprofile)).
 
 ## 4. Python (python.org build)
 
-radian is a Python program, so it needs Python. Use the python.org build, not the Microsoft Store one:
+radian is a Python program, so it needs Python. I use Python 3.12, the python.org build, not the Microsoft Store one:
 
 ```powershell
 winget install Python.Python.3.12 --override "/quiet InstallAllUsers=0 PrependPath=1 Include_launcher=1 Include_test=0"
 ```
 
-- **Python 3.12 is deliberate:** radian and its R bridge rchitect are well tested with it.
 - `PrependPath=1` puts `Python312\` and `Python312\Scripts\` on your user `PATH`. `Scripts\` is where `radian.exe` will be.
-- If another Python is installed (a Store one, or 3.13+), 3.12 must come **first** on `PATH`. Check in a new terminal: `python --version` and `Get-Command radian` must both point to `Python312`.
-- Allow long paths (some packages have deep folders). The installer's "Disable path length limit" button does it, or set `LongPathsEnabled = 1` in `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem`.
+- If another Python is installed (a Store one, or 3.13+), 3.12 must come first on `PATH`. Check in a new terminal: `python --version` and `Get-Command radian` must both point to `Python312`.
 
 ## 5. radian
 
@@ -86,7 +84,7 @@ radian --version   # shows the radian, R and Python versions it uses
 
 `radian --version` should report the R version you set with `rig default`. If it shows another one, see [Troubleshooting](troubleshooting.qmd#radian-or-vs-code-starts-an-old-r-version).
 
-If the install fails while compiling, install the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). It was not needed with Python 3.12.
+If the install fails while compiling, install the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
 ## 6. Rtools
 
@@ -98,11 +96,10 @@ winget install RProject.Rtools
 
 - Rtools 4.5 covers R 4.5.0 and later, including 4.6.x. There is no separate Rtools 4.6.
 - Check in R: `pkgbuild::has_build_tools()` should be `TRUE`, and `Sys.which("make")` should point into `C:\rtools45\`.
-- If winget fails with "Target directory already exists: C:\rtools45", Rtools 4.5 is already installed (outside winget). If the check above passes, leave it.
 
 ## 7. The R packages
 
-These are needed **once per R version**: each R version has its own package library, and a new version starts empty.
+These are needed once per R version: each R version has its own package library, and a new version starts empty.
 
 ```r
 install.packages(c("languageserver", "remotes", "httpgd", "devtools", "lintr", "styler", "btw"))
@@ -115,7 +112,7 @@ remotes::install_github("ManuelHentschel/vscDebugger")
 | `vscDebugger` | The R debugger behind the R Debugger extension. Only on GitHub, so it needs Rtools. |
 | `httpgd` | The plot viewer. VS Code shows plots from it (`r.plot.backend: "httpgd"`). |
 | `devtools` | Package development; brings `usethis` (used by the [scratch project task](snippets_tasks.qmd#r-new-scratch-project)). |
-| `lintr` | Linting in the editor. vscode-R 3.3 needs **lintr ≥ 3.3.0-1**; with an older one the R terminal shows "Backend 'lintr' requires lintr >= 3.3.0-1". |
+| `lintr` | Linting in the editor. Needs lintr 3.3.0-1 or newer. |
 | `styler` | Formatting, used by `languageserver` for "Format Document". |
 | `btw` | Exposes the R session to coding assistants (MCP). My `.Rprofile` starts it when installed. Optional. |
 
@@ -125,15 +122,15 @@ remotes::install_github("ManuelHentschel/vscDebugger")
 winget install Posit.Quarto
 ```
 
-This installs Quarto for all users in `C:\Program Files\Quarto`. If an older per-user copy exists (`%LOCALAPPDATA%\Programs\Quarto`), make sure nothing points to it, then uninstall it. `quarto --version` in a new terminal shows which one wins.
+This installs Quarto for all users in `C:\Program Files\Quarto`.
 
 ## 9. Restart VS Code and test {#restart-vs-code-and-test}
 
-**Quit every VS Code window and start it again.** VS Code and all its terminals keep the `PATH` they were started with, and *Developer: Reload Window* does **not** refresh it.
+**Quit every VS Code window and start it again.** VS Code and all its terminals keep the `PATH` they were started with, and *Developer: Reload Window* does not refresh it.
 
 Then:
 
-1. Open an R file, then *Command Palette* → **Terminal: Create New Terminal**. With the [settings](settings.qmd) in place, it opens **radian** (the default terminal profile is "R Terminal").
+1. Open an R file, then *Command Palette* → **Terminal: Create New Terminal**. With the [settings](settings.qmd) in place, it opens radian (the default terminal profile is "R Terminal").
 2. Run `plot(1:10)`. The plot opens in the httpgd viewer beside the editor.
 3. Run `R.version.string`. It shows rig's default version.
 

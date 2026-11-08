@@ -24,7 +24,6 @@ if (interactive() && requireNamespace("btw", quietly = TRUE)) {
 options(radian.auto_match = FALSE)
 options(radian.auto_indentation = FALSE)
 
-# Quarto is not set here: the quarto package and rmarkdown find it on PATH.
 local({
   # Pandoc bundled with RStudio, for rmarkdown outside RStudio.
   rstudio_pandoc <- "C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools"

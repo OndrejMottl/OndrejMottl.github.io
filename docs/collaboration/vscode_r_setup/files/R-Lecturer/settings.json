@@ -62,59 +62,6 @@
   },
   "quarto.render.previewReveal": false,
   // mutlicommand setting
-  "multiCommand.commands": [
-    {
-      "command": "multiCommand.r.go.previous.chunk.center",
-      "sequence": [
-        "r.goToPreviousChunk"
-      ]
-    },
-    {
-      "command": "multiCommand.r.go.next.chunk.center",
-      "sequence": [
-        "r.goToNextChunk"
-      ]
-    },
-    {
-      "command": "multicmd.r.go.beginning.chunk.center",
-      "sequence": [
-        "r.selectCurrentChunk",
-        "cursorLeft",
-        "cursorDown"
-      ]
-    },
-    {
-      "command": "multicmd.r.go.end.chunk.center",
-      "sequence": [
-        "r.selectCurrentChunk",
-        "cursorRight",
-        "cursorLineStart",
-        "cursorUp"
-      ]
-    },
-    {
-      "command": "multicmd.r.run.previous.chunk.center",
-      "sequence": [
-        "r.goToPreviousChunk",
-        "r.runCurrentChunk"
-      ]
-    },
-    {
-      "command": "multicmd.r.run.chunk.move.end",
-      "sequence": [
-        "r.runCurrentChunk",
-        "multicmd.r.go.end.chunk.center"
-      ]
-    },
-    {
-      "command": "multicmd.r.run.next.chunk.move.end",
-      "sequence": [
-        "r.goToNextChunk",
-        "multicmd.r.go.end.chunk.center",
-        "r.runCurrentChunk"
-      ]
-    }
-  ],
   "editor.accessibilitySupport": "off",
   "hediet.vscode-drawio.resizeImages": null,
   "editor.minimap.autohide": "mouseover",

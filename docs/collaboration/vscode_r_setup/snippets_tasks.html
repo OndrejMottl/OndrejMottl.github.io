@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Every Quarto snippet and VS Code task in my R profile, and the helper scripts the tasks run.">
+<meta name="description" content="The Quarto snippets and VS Code tasks in my R profile, and the scripts the tasks run.">
 
 <title>Snippets and tasks – Ondřej Mottl</title>
 <style>
@@ -344,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Every Quarto snippet and VS Code task in my R profile, and the helper scripts the tasks run.
+    The Quarto snippets and VS Code tasks in my R profile, and the scripts the tasks run.
   </div>
 </div>
 
@@ -367,11 +367,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Snippets and tasks travel with the VS Code profile through Settings Sync. The <strong>scripts that the tasks run do not</strong>: they live in <code>~/.vscode-scripts/</code> and have to be copied to each machine by hand (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html#what-settings-sync-does-not-carry">Profiles and Settings Sync</a>).</p>
+<p>Snippets and tasks travel with the VS Code profile through Settings Sync. The scripts that the tasks run do not: they live in <code>~/.vscode-scripts/</code> and have to be copied to each machine by hand (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html#what-settings-sync-does-not-carry">Profiles and Settings Sync</a>).</p>
 <section id="snippets" class="level2">
 <h2 class="anchored" data-anchor-id="snippets">Snippets</h2>
-<p>Type the prefix in a Quarto document and press <code>Tab</code> (or pick it from the suggestion list). <code>$0</code> marks where the cursor ends up; <code>${1:50}</code> is a placeholder you can overwrite, then <code>Tab</code> to the next one.</p>
-<p>All snippets are for <strong>Quarto</strong> (<code>.qmd</code>) files, most of them for <a href="https://quarto.org/docs/presentations/revealjs/">reveal.js</a> slides, which I use for teaching and talks.</p>
+<p>Type the prefix in a Quarto document and press <code>Tab</code> (or pick it from the suggestion list).</p>
+<p>All snippets are for Quarto (<code>.qmd</code>) files, most of them for <a href="https://quarto.org/docs/presentations/revealjs/">reveal.js</a> slides, which I use for teaching and talks.</p>
 <section id="layout-and-structure-quarto.json" class="level3">
 <h3 class="anchored" data-anchor-id="layout-and-structure-quarto.json">Layout and structure (<code>quarto.json</code>)</h3>
 <p><code>quarto.json</code> is a language snippet file: VS Code applies it to the <code>quarto</code> language only, because of its name.</p>
@@ -664,7 +664,7 @@ Show the full file: <code>R/snippets/quarto.code-snippets</code>
 <td><code>Git: Return to updated main</code></td>
 <td><code>Ctrl+Alt+Shift+M</code></td>
 <td><code>return-to-main.ps1</code></td>
-<td>After a PR is merged, gets you onto an up-to-date <code>main</code> with <strong>one</strong> checkout (details below).</td>
+<td>After a PR is merged, gets you onto an up-to-date <code>main</code> with one checkout (details below).</td>
 </tr>
 <tr class="even">
 <td><code>R: New scratch project</code></td>
@@ -674,16 +674,16 @@ Show the full file: <code>R/snippets/quarto.code-snippets</code>
 </tr>
 </tbody>
 </table>
-<p>Both are <code>"type": "process"</code> tasks that start <code>pwsh -NoProfile -File "${env:USERPROFILE}/.vscode-scripts/&lt;script&gt;.ps1"</code>. Using <code>${env:USERPROFILE}</code> keeps <code>tasks.json</code> free of user names, so the same file works on every machine.</p>
+<p>Both are <code>"type": "process"</code> tasks that start <code>pwsh -NoProfile -File "${env:USERPROFILE}/.vscode-scripts/&lt;script&gt;.ps1"</code>. Using <code>${env:USERPROFILE}</code> keeps <code>tasks.json</code> free of user names, so the file works on any machine.</p>
 <section id="git-return-to-updated-main" class="level3">
 <h3 class="anchored" data-anchor-id="git-return-to-updated-main">Git: Return to updated main</h3>
-<p>The usual way back after a large PR is merged (<code>git switch main</code>, then <code>git pull</code>) updates the working tree <strong>twice</strong>: first to the old <code>main</code>, then to the new one. On a big repository both steps are slow.</p>
+<p>The usual way back after a large PR is merged (<code>git switch main</code>, then <code>git pull</code>) updates the working tree twice: first to the old <code>main</code>, then to the new one. On a big repository both steps are slow.</p>
 <p>The script avoids the first one:</p>
 <ol type="1">
 <li>Stops if there are uncommitted changes.</li>
 <li>Finds the remote’s default branch (<code>main</code>, <code>master</code>, …).</li>
 <li>Fetches only that branch (<code>git fetch --no-tags origin main</code>).</li>
-<li>Moves the local <code>main</code> to the fetched commit <strong>without checking it out</strong> (<code>git update-ref</code>, only if it is a fast-forward).</li>
+<li>Moves the local <code>main</code> to the fetched commit without checking it out (<code>git update-ref</code>, only if it is a fast-forward).</li>
 <li>Checks out <code>main</code> once, straight into the new state.</li>
 <li>Deletes the branch you came from with <code>git branch -d</code>, which only succeeds when git sees it as merged into <code>main</code> or identical to what was pushed. Otherwise it tells you and keeps the branch.</li>
 </ol>
@@ -693,9 +693,7 @@ Show the full file: <code>R/snippets/quarto.code-snippets</code>
 <h3 class="anchored" data-anchor-id="r-new-scratch-project">R: New scratch project</h3>
 <p>For quick experiments that deserve their own folder but not a repository.</p>
 <ul>
-<li>The project name is checked against Windows rules (forbidden characters, reserved names such as <code>CON</code>, trailing dots).</li>
 <li><code>Rscript</code> is taken from <code>PATH</code>, i.e.&nbsp;rig’s default R version (<code>rig default &lt;version&gt;</code>). Pass <code>-RScriptPath</code> to use another one.</li>
-<li>R runs with <code>--vanilla</code> and without locale variables, so a user <code>.Rprofile</code> cannot interfere.</li>
 <li>Needs the <code>usethis</code> package in the default R version (it comes with <code>devtools</code>).</li>
 <li>The task input <code>rScratchProjectName</code> is a <code>promptString</code>: VS Code asks for the name when the task starts.</li>
 </ul>

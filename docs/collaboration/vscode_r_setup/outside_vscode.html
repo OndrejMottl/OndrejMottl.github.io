@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and the PATH rules that keep it machine-neutral.">
+<meta name="description" content="The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and my PATH rules.">
 
 <title>Outside VS Code – Ondřej Mottl</title>
 <style>
@@ -348,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and the PATH rules that keep it machine-neutral.
+    The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and my PATH rules.
   </div>
 </div>
 
@@ -371,16 +371,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Settings Sync only carries what is inside VS Code (<a href="../../collaboration/vscode_r_setup/profiles_sync.html#what-settings-sync-does-not-carry">what it does not carry</a>). The rest lives in a few small files. I keep them in the OneDrive <code>Documents</code> folder, so OneDrive shares them between my machines. Because they are shared, they follow the same rule as the VS Code settings: <strong>no user names, and nothing that exists on only one machine unless it is checked first.</strong></p>
+<p>Settings Sync only carries what is inside VS Code (<a href="../../collaboration/vscode_r_setup/profiles_sync.html#what-settings-sync-does-not-carry">what it does not carry</a>). The rest lives in a few small files. I keep them in the OneDrive <code>Documents</code> folder, so OneDrive shares them between my machines. Because they are shared, they follow the same rule as the VS Code settings. So they contain no user names, and anything only one machine has (a <code>D:</code> drive, TinyTeX) is checked before use.</p>
 <section id="rprofile" class="level2">
 <h2 class="anchored" data-anchor-id="rprofile"><code>.Rprofile</code></h2>
-<p>R runs a user <code>.Rprofile</code> at start-up. Which file R reads is subtle:</p>
+<p>R runs a user <code>.Rprofile</code> at start-up. It reads:</p>
 <ol type="1">
-<li>A <code>.Rprofile</code> in the <strong>current folder</strong>, if there is one. Otherwise:</li>
-<li>the one in <code>R_USER</code>, which on Windows is the <code>Documents</code> folder (with OneDrive folder backup, that is <code>OneDrive\Documents</code>).</li>
-<li>In <strong>renv projects</strong>, the project’s own <code>.Rprofile</code> activates renv, and renv does <strong>not</strong> load the user <code>.Rprofile</code> unless you set <code>renv.config.user.profile = TRUE</code>. So none of the below applies inside renv projects (which includes projects from my <a href="https://github.com/OndrejMottl/Project_template">project template</a>).</li>
+<li>a <code>.Rprofile</code> in the current folder, if there is one;</li>
+<li>otherwise, the one in <code>R_USER</code>, which on Windows is the <code>Documents</code> folder (with OneDrive folder backup, that is <code>OneDrive\Documents</code>).</li>
 </ol>
-<p>Point 1 bit me: old copies of <code>.Rprofile</code> in my home folder and in <code>C:\Users\&lt;me&gt;\Documents</code> silently replaced the real one whenever R started in those folders (and the home folder is a VS Code workspace). Keep <strong>one</strong> user <code>.Rprofile</code>. Check which one wins with <code>Sys.getenv("R_USER")</code> and <code>file.exists(".Rprofile")</code>.</p>
+<p>In renv projects, the project’s own <code>.Rprofile</code> activates renv, and renv does not load the user <code>.Rprofile</code> unless you set <code>renv.config.user.profile = TRUE</code>. So none of the below applies inside renv projects (which includes projects from my <a href="https://github.com/OndrejMottl/Project_template">project template</a>).</p>
+<p>A stray <code>.Rprofile</code> in a project or home folder silently replaces the user one; keep one. Check which one wins with <code>Sys.getenv("R_USER")</code> and <code>file.exists(".Rprofile")</code>.</p>
 <section id="what-it-does-block-by-block" class="level3">
 <h3 class="anchored" data-anchor-id="what-it-does-block-by-block">What it does, block by block</h3>
 <table class="caption-top table">
@@ -400,17 +400,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>httpgd in VS Code</td>
 <td>Only when interactive and inside VS Code (<code>TERM_PROGRAM == "vscode"</code>) and if httpgd is installed: sets <code>vsc.rstudioapi</code>, <code>vsc.use_httpgd</code>, <code>vsc.plot = FALSE</code>, and makes httpgd the default graphics device.</td>
-<td>Every plot goes to the httpgd viewer in VS Code. <code>vsc.rstudioapi</code> lets packages that call <code>rstudioapi</code> (add-ins, <code>usethis</code>) work in VS Code.</td>
+<td>Plots go to the httpgd viewer in VS Code. <code>vsc.rstudioapi</code> lets packages that call <code>rstudioapi</code> (add-ins, <code>usethis</code>) work in VS Code.</td>
 </tr>
 <tr class="even">
 <td>btw</td>
-<td>Starts <code>btw::btw_mcp_session()</code> when interactive <strong>and</strong> btw is installed for this R version.</td>
-<td>Lets coding assistants (through MCP) see the live R session: objects, help, installed packages. The check matters because each R version has its own library: on a fresh R version without btw, an unconditional call fails at every start-up.</td>
+<td>Starts <code>btw::btw_mcp_session()</code> when interactive, only if btw is installed for this R version.</td>
+<td>Lets coding assistants (through MCP) see the live R session: objects, help, installed packages.</td>
 </tr>
 <tr class="odd">
 <td>radian options</td>
 <td><code>radian.auto_match = FALSE</code>, <code>radian.auto_indentation = FALSE</code>.</td>
-<td>radian would otherwise insert closing brackets and indent as you type. Code sent from the editor is already complete and formatted, so the console should take it as it is.</td>
+<td>radian would otherwise insert closing brackets and indent as you type.</td>
 </tr>
 <tr class="even">
 <td>RStudio’s pandoc</td>
@@ -419,7 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>Temporary folder</td>
-<td>Sets <code>TEMP</code>/<code>TMP</code> to <code>D:/Temp</code>, <strong>only if</strong> that folder exists.</td>
+<td>Sets <code>TEMP</code>/<code>TMP</code> to <code>D:/Temp</code>, only if that folder exists.</td>
 <td>Big temporary files go to a second drive on the machine that has one. On other machines nothing changes.</td>
 </tr>
 <tr class="even">
@@ -429,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Quarto is deliberately <strong>not</strong> set here (no <code>QUARTO_PATH</code>). The quarto R package and rmarkdown find Quarto on <code>PATH</code>, which is the <a href="../../collaboration/vscode_r_setup/install.html#quarto">all-users install</a>. An earlier version of this file forced an old per-user Quarto through <code>QUARTO_PATH</code> and quietly kept using it after an upgrade.</p>
+<p>The quarto R package and rmarkdown find Quarto on <code>PATH</code>, which is the <a href="../../collaboration/vscode_r_setup/install.html#quarto">all-users install</a>.</p>
 <details>
 <summary>
 Show the full file: <code>.Rprofile</code>
@@ -460,34 +460,33 @@ Show the full file: <code>.Rprofile</code>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">radian.auto_match =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">radian.auto_indentation =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Quarto is not set here: the quarto package and rmarkdown find it on PATH.</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">local</span>({</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Pandoc bundled with RStudio, for rmarkdown outside RStudio.</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  rstudio_pandoc <span class="ot">&lt;-</span> <span class="st">"C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools"</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(rstudio_pandoc)) {</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">RSTUDIO_PANDOC =</span> rstudio_pandoc)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Large temporary files on a second drive, where the machine has one.</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  temp_dir <span class="ot">&lt;-</span> <span class="st">"D:/Temp"</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(temp_dir)) {</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">TEMP =</span> temp_dir, <span class="at">TMP =</span> temp_dir)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="co"># TinyTeX (LaTeX for PDF output), if installed and not already on PATH.</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  tinytex_bin <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">Sys.getenv</span>(<span class="st">"APPDATA"</span>), <span class="st">"TinyTeX"</span>, <span class="st">"bin"</span>, <span class="st">"windows"</span>)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  path_entries <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">strsplit</span>(<span class="fu">Sys.getenv</span>(<span class="st">"PATH"</span>), <span class="st">";"</span>, <span class="at">fixed =</span> <span class="cn">TRUE</span>)[[<span class="dv">1</span>]],</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">winslash =</span> <span class="st">"/"</span>,</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">mustWork =</span> <span class="cn">FALSE</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.exists</span>(tinytex_bin) <span class="sc">&amp;&amp;</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="sc">!</span><span class="fu">normalizePath</span>(tinytex_bin, <span class="at">winslash =</span> <span class="st">"/"</span>) <span class="sc">%in%</span> path_entries</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  ) {</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">PATH =</span> <span class="fu">paste</span>(<span class="fu">Sys.getenv</span>(<span class="st">"PATH"</span>), tinytex_bin, <span class="at">sep =</span> <span class="st">";"</span>))</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">local</span>({</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Pandoc bundled with RStudio, for rmarkdown outside RStudio.</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  rstudio_pandoc <span class="ot">&lt;-</span> <span class="st">"C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools"</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(rstudio_pandoc)) {</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">RSTUDIO_PANDOC =</span> rstudio_pandoc)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Large temporary files on a second drive, where the machine has one.</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  temp_dir <span class="ot">&lt;-</span> <span class="st">"D:/Temp"</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">dir.exists</span>(temp_dir)) {</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">TEMP =</span> temp_dir, <span class="at">TMP =</span> temp_dir)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="co"># TinyTeX (LaTeX for PDF output), if installed and not already on PATH.</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  tinytex_bin <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">Sys.getenv</span>(<span class="st">"APPDATA"</span>), <span class="st">"TinyTeX"</span>, <span class="st">"bin"</span>, <span class="st">"windows"</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  path_entries <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">strsplit</span>(<span class="fu">Sys.getenv</span>(<span class="st">"PATH"</span>), <span class="st">";"</span>, <span class="at">fixed =</span> <span class="cn">TRUE</span>)[[<span class="dv">1</span>]],</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">winslash =</span> <span class="st">"/"</span>,</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">mustWork =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.exists</span>(tinytex_bin) <span class="sc">&amp;&amp;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="sc">!</span><span class="fu">normalizePath</span>(tinytex_bin, <span class="at">winslash =</span> <span class="st">"/"</span>) <span class="sc">%in%</span> path_entries</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  ) {</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.setenv</span>(<span class="at">PATH =</span> <span class="fu">paste</span>(<span class="fu">Sys.getenv</span>(<span class="st">"PATH"</span>), tinytex_bin, <span class="at">sep =</span> <span class="st">";"</span>))</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <p><a href="files/Rprofile.R" download="Rprofile.R">Download <code>Rprofile.R</code></a></p>
 <p>(Published as <code>Rprofile.R</code> so that browsers show it; save it as <code>.Rprofile</code> in your <code>Documents</code> folder.)</p>
@@ -495,18 +494,13 @@ Show the full file: <code>.Rprofile</code>
 </section>
 <section id="radian" class="level2">
 <h2 class="anchored" data-anchor-id="radian">radian</h2>
-<p>radian has its own profile file (<code>~/.radian_profile</code>), but I do not use one: the two options I change are R options, so they are in <code>.Rprofile</code> above. radian finds R in this order:</p>
-<ol type="1">
-<li><code>--r-binary</code>, <code>R_BINARY</code> or <code>R_HOME</code>, if set;</li>
-<li><code>R</code> on <code>PATH</code>, which is rig’s default version;</li>
-<li>the Windows registry (<code>HKLM\Software\R-Core\R\InstallPath</code>).</li>
-</ol>
-<p>So <code>R_HOME</code> must <strong>not</strong> be set globally (<a href="#path-rules">PATH rules</a>).</p>
+<p>radian has its own profile file (<code>~/.radian_profile</code>), but I do not use one: the two options I change are R options, so they are in <code>.Rprofile</code> above.</p>
+<p>radian uses the R on <code>PATH</code> unless <code>R_HOME</code> is set (<a href="../../collaboration/vscode_r_setup/r_versions.html#how-vs-code-finds-r">R versions</a>), so I do not set <code>R_HOME</code> (<a href="#path-rules">PATH rules</a>).</p>
 </section>
 <section id="powershell" class="level2">
 <h2 class="anchored" data-anchor-id="powershell">PowerShell</h2>
 <p>PowerShell 7 reads two profile files from <code>Documents\PowerShell\</code>. Both are shared through OneDrive.</p>
-<p><code>profile.ps1</code> (all PowerShell hosts) was written by <code>rig system fix-r-alias</code>. It removes the built-in <code>r</code> alias (<code>Invoke-History</code>), so that typing <code>R</code> starts R:</p>
+<p><code>profile.ps1</code> (all PowerShell hosts) is created by <code>rig system fix-r-alias</code>. It removes the built-in <code>r</code> alias (<code>Invoke-History</code>), so that typing <code>R</code> starts R:</p>
 <details>
 <summary>
 Show the full file: <code>powershell/profile.ps1</code>
@@ -543,7 +537,7 @@ Show the full file: <code>powershell/Microsoft.PowerShell_profile.ps1</code>
 </section>
 <section id="path-rules" class="level2">
 <h2 class="anchored" data-anchor-id="path-rules">PATH rules</h2>
-<p>Most problems in this set-up came from <code>PATH</code>. The rules:</p>
+<p>Most of my R-in-VS-Code problems have come from <code>PATH</code>. The rules:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -561,20 +555,20 @@ Show the full file: <code>powershell/Microsoft.PowerShell_profile.ps1</code>
 <td><code>R</code>, <code>Rscript</code> and radian then use rig’s default version.</td>
 </tr>
 <tr class="even">
-<td><strong>No</strong> version folder such as <code>C:\Program Files\R\R-4.5.0\bin</code> on <code>PATH</code>.</td>
+<td>No version folder such as <code>C:\Program Files\R\R-x.y.z\bin</code> on <code>PATH</code>.</td>
 <td>It pins one R version and overrides rig.</td>
 </tr>
 <tr class="odd">
-<td><strong>No</strong> <code>R_HOME</code> environment variable (check both user and system).</td>
+<td>No <code>R_HOME</code> environment variable (check both user and system).</td>
 <td>Same: radian and R use it before anything else.</td>
 </tr>
 <tr class="even">
-<td><code>Python312\</code> and <code>Python312\Scripts\</code> come <strong>before</strong> any other Python.</td>
-<td><code>python</code> and <code>radian</code> must be the 3.12 ones. Per-user folders (<code>C:\Users\...</code>) do not belong in the <em>system</em> <code>PATH</code>, where they win over the user <code>PATH</code>.</td>
+<td><code>Python312\</code> and <code>Python312\Scripts\</code> come before any other Python.</td>
+<td><code>python</code> and <code>radian</code> must be the 3.12 ones.</td>
 </tr>
 <tr class="odd">
-<td><code>C:\Program Files\Quarto\bin</code> comes before any per-user Quarto.</td>
-<td>One Quarto, the current one.</td>
+<td><code>C:\Program Files\Quarto\bin</code> is the only Quarto on <code>PATH</code>.</td>
+<td>R, VS Code and the terminal then use the same Quarto.</td>
 </tr>
 <tr class="even">
 <td>After any change: quit and restart VS Code.</td>
@@ -582,7 +576,7 @@ Show the full file: <code>powershell/Microsoft.PowerShell_profile.ps1</code>
 </tr>
 </tbody>
 </table>
-<p>To check what a <strong>new</strong> process will see, without restarting anything:</p>
+<p>To check what a new process will see, without restarting anything:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">$env</span><span class="op">:</span><span class="va">Path</span> <span class="op">=</span> <span class="op">[</span>Environment<span class="op">]::</span>GetEnvironmentVariable<span class="op">(</span><span class="st">"Path"</span><span class="op">,</span> <span class="st">"Machine"</span><span class="op">)</span> <span class="op">+</span> <span class="st">";"</span> <span class="op">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>            <span class="op">[</span>Environment<span class="op">]::</span>GetEnvironmentVariable<span class="op">(</span><span class="st">"Path"</span><span class="op">,</span> <span class="st">"User"</span><span class="op">)</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Get-Command</span> <span class="fu">R</span><span class="op">.</span><span class="fu">exe</span><span class="op">,</span> python<span class="op">,</span> radian<span class="op">,</span> quarto <span class="op">|</span> <span class="fu">Select-Object</span> Name<span class="op">,</span> Source</span>
@@ -592,7 +586,7 @@ Show the full file: <code>powershell/Microsoft.PowerShell_profile.ps1</code>
 </section>
 <section id="package-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="package-libraries">Package libraries</h2>
-<p>Each R version (major.minor) has its own user library, <code>%LOCALAPPDATA%\R\win-library\&lt;x.y&gt;</code>. R creates it on first use, so <code>rig system setup-user-lib</code> is not needed on Windows. R 4.5.0, 4.5.1 and 4.5.2 share <code>win-library\4.5</code>; R 4.6.x starts with an empty <code>win-library\4.6</code>. That is why the <a href="../../collaboration/vscode_r_setup/install.html#the-r-packages">R packages</a> are installed once per R version.</p>
+<p>Each R version (major.minor) has its own user library, <code>%LOCALAPPDATA%\R\win-library\&lt;x.y&gt;</code>. R 4.5.x versions share <code>win-library\4.5</code>; a new minor version starts with an empty library. That is why the <a href="../../collaboration/vscode_r_setup/install.html#the-r-packages">R packages</a> are installed once per R version.</p>
 
 
 </section>

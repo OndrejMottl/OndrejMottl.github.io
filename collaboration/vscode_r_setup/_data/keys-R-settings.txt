@@ -35,7 +35,6 @@ editor.tabSize
 editor.unicodeHighlight.nonBasicASCII
 errorLens.enabledDiagnosticLevels
 explorer.confirmDragAndDrop
-explorer.fileNesting.patterns
 files.associations
 git-graph.commitDetailsView.location
 git-graph.date.type
@@ -48,15 +47,12 @@ github.copilot.chat.commitMessageGeneration.instructions
 github.copilot.editor.enableAutoCompletions
 github.copilot.enable
 github.copilot.nextEditSuggestions.enabled
-githubIssues.ignoreMilestones
 githubPullRequests.fileListLayout
 githubPullRequests.pullBranch
 githubPullRequests.queries
 gitlens.views.branches.branches.layout
-hediet.vscode-drawio.resizeImages
 markdown.extension.toc.updateOnSave
 mssql.connectionGroups
-multiCommand.commands
 notebook.defaultFormatter
 quarto.mathjax.theme
 quarto.render.previewReveal

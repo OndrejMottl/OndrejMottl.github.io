@@ -1,6 +1,6 @@
 ---
 title: "Outside VS Code"
-description: "The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and the PATH rules that keep it machine-neutral."
+description: "The files outside VS Code that shape the R environment: .Rprofile, radian options, PowerShell profiles, git, and my PATH rules."
 date-format: long
 date-modified: last-modified
 ---
@@ -10,30 +10,31 @@ date-modified: last-modified
 source("_helpers.R")
 ```
 
-Settings Sync only carries what is inside VS Code ([what it does not carry](profiles_sync.qmd#what-settings-sync-does-not-carry)). The rest lives in a few small files. I keep them in the OneDrive `Documents` folder, so OneDrive shares them between my machines. Because they are shared, they follow the same rule as the VS Code settings: **no user names, and nothing that exists on only one machine unless it is checked first.**
+Settings Sync only carries what is inside VS Code ([what it does not carry](profiles_sync.qmd#what-settings-sync-does-not-carry)). The rest lives in a few small files. I keep them in the OneDrive `Documents` folder, so OneDrive shares them between my machines. Because they are shared, they follow the same rule as the VS Code settings. So they contain no user names, and anything only one machine has (a `D:` drive, TinyTeX) is checked before use.
 
 ## `.Rprofile` {#rprofile}
 
-R runs a user `.Rprofile` at start-up. Which file R reads is subtle:
+R runs a user `.Rprofile` at start-up. It reads:
 
-1. A `.Rprofile` in the **current folder**, if there is one. Otherwise:
-2. the one in `R_USER`, which on Windows is the `Documents` folder (with OneDrive folder backup, that is `OneDrive\Documents`).
-3. In **renv projects**, the project's own `.Rprofile` activates renv, and renv does **not** load the user `.Rprofile` unless you set `renv.config.user.profile = TRUE`. So none of the below applies inside renv projects (which includes projects from my [project template](https://github.com/OndrejMottl/Project_template)).
+1. a `.Rprofile` in the current folder, if there is one;
+2. otherwise, the one in `R_USER`, which on Windows is the `Documents` folder (with OneDrive folder backup, that is `OneDrive\Documents`).
 
-Point 1 bit me: old copies of `.Rprofile` in my home folder and in `C:\Users\<me>\Documents` silently replaced the real one whenever R started in those folders (and the home folder is a VS Code workspace). Keep **one** user `.Rprofile`. Check which one wins with `Sys.getenv("R_USER")` and `file.exists(".Rprofile")`.
+In renv projects, the project's own `.Rprofile` activates renv, and renv does not load the user `.Rprofile` unless you set `renv.config.user.profile = TRUE`. So none of the below applies inside renv projects (which includes projects from my [project template](https://github.com/OndrejMottl/Project_template)).
+
+A stray `.Rprofile` in a project or home folder silently replaces the user one; keep one. Check which one wins with `Sys.getenv("R_USER")` and `file.exists(".Rprofile")`.
 
 ### What it does, block by block
 
 | Block | What it does | Why |
 |---|---|---|
-| httpgd in VS Code | Only when interactive and inside VS Code (`TERM_PROGRAM == "vscode"`) and if httpgd is installed: sets `vsc.rstudioapi`, `vsc.use_httpgd`, `vsc.plot = FALSE`, and makes httpgd the default graphics device. | Every plot goes to the httpgd viewer in VS Code. `vsc.rstudioapi` lets packages that call `rstudioapi` (add-ins, `usethis`) work in VS Code. |
-| btw | Starts `btw::btw_mcp_session()` when interactive **and** btw is installed for this R version. | Lets coding assistants (through MCP) see the live R session: objects, help, installed packages. The check matters because each R version has its own library: on a fresh R version without btw, an unconditional call fails at every start-up. |
-| radian options | `radian.auto_match = FALSE`, `radian.auto_indentation = FALSE`. | radian would otherwise insert closing brackets and indent as you type. Code sent from the editor is already complete and formatted, so the console should take it as it is. |
+| httpgd in VS Code | Only when interactive and inside VS Code (`TERM_PROGRAM == "vscode"`) and if httpgd is installed: sets `vsc.rstudioapi`, `vsc.use_httpgd`, `vsc.plot = FALSE`, and makes httpgd the default graphics device. | Plots go to the httpgd viewer in VS Code. `vsc.rstudioapi` lets packages that call `rstudioapi` (add-ins, `usethis`) work in VS Code. |
+| btw | Starts `btw::btw_mcp_session()` when interactive, only if btw is installed for this R version. | Lets coding assistants (through MCP) see the live R session: objects, help, installed packages. |
+| radian options | `radian.auto_match = FALSE`, `radian.auto_indentation = FALSE`. | radian would otherwise insert closing brackets and indent as you type. |
 | RStudio's pandoc | Sets `RSTUDIO_PANDOC` to RStudio's bundled pandoc folder, if it exists. | rmarkdown outside RStudio then finds pandoc without a separate install. |
-| Temporary folder | Sets `TEMP`/`TMP` to `D:/Temp`, **only if** that folder exists. | Big temporary files go to a second drive on the machine that has one. On other machines nothing changes. |
+| Temporary folder | Sets `TEMP`/`TMP` to `D:/Temp`, only if that folder exists. | Big temporary files go to a second drive on the machine that has one. On other machines nothing changes. |
 | TinyTeX | Appends TinyTeX's `bin\windows` to `PATH`, if installed and not there yet. | PDF output from R Markdown / Quarto started from R. |
 
-Quarto is deliberately **not** set here (no `QUARTO_PATH`). The quarto R package and rmarkdown find Quarto on `PATH`, which is the [all-users install](install.qmd#quarto). An earlier version of this file forced an old per-user Quarto through `QUARTO_PATH` and quietly kept using it after an upgrade.
+The quarto R package and rmarkdown find Quarto on `PATH`, which is the [all-users install](install.qmd#quarto).
 
 ```{r}
 #| echo: false
@@ -45,19 +46,15 @@ show_file("Rprofile.R", "r", label = ".Rprofile")
 
 ## radian
 
-radian has its own profile file (`~/.radian_profile`), but I do not use one: the two options I change are R options, so they are in `.Rprofile` above. radian finds R in this order:
+radian has its own profile file (`~/.radian_profile`), but I do not use one: the two options I change are R options, so they are in `.Rprofile` above.
 
-1. `--r-binary`, `R_BINARY` or `R_HOME`, if set;
-2. `R` on `PATH`, which is rig's default version;
-3. the Windows registry (`HKLM\Software\R-Core\R\InstallPath`).
-
-So `R_HOME` must **not** be set globally ([PATH rules](#path-rules)).
+radian uses the R on `PATH` unless `R_HOME` is set ([R versions](r_versions.qmd#how-vs-code-finds-r)), so I do not set `R_HOME` ([PATH rules](#path-rules)).
 
 ## PowerShell {#powershell}
 
 PowerShell 7 reads two profile files from `Documents\PowerShell\`. Both are shared through OneDrive.
 
-`profile.ps1` (all PowerShell hosts) was written by `rig system fix-r-alias`. It removes the built-in `r` alias (`Invoke-History`), so that typing `R` starts R:
+`profile.ps1` (all PowerShell hosts) is created by `rig system fix-r-alias`. It removes the built-in `r` alias (`Invoke-History`), so that typing `R` starts R:
 
 ```{r}
 #| echo: false
@@ -94,18 +91,18 @@ Everything else about git (autofetch, no sync confirmation, PR branches) is in t
 
 ## PATH rules {#path-rules}
 
-Most problems in this set-up came from `PATH`. The rules:
+Most of my R-in-VS-Code problems have come from `PATH`. The rules:
 
 | Rule | Why |
 |---|---|
 | `C:\Program Files\R\bin` (rig's shortcuts) is on `PATH`. | `R`, `Rscript` and radian then use rig's default version. |
-| **No** version folder such as `C:\Program Files\R\R-4.5.0\bin` on `PATH`. | It pins one R version and overrides rig. |
-| **No** `R_HOME` environment variable (check both user and system). | Same: radian and R use it before anything else. |
-| `Python312\` and `Python312\Scripts\` come **before** any other Python. | `python` and `radian` must be the 3.12 ones. Per-user folders (`C:\Users\...`) do not belong in the *system* `PATH`, where they win over the user `PATH`. |
-| `C:\Program Files\Quarto\bin` comes before any per-user Quarto. | One Quarto, the current one. |
+| No version folder such as `C:\Program Files\R\R-x.y.z\bin` on `PATH`. | It pins one R version and overrides rig. |
+| No `R_HOME` environment variable (check both user and system). | Same: radian and R use it before anything else. |
+| `Python312\` and `Python312\Scripts\` come before any other Python. | `python` and `radian` must be the 3.12 ones. |
+| `C:\Program Files\Quarto\bin` is the only Quarto on `PATH`. | R, VS Code and the terminal then use the same Quarto. |
 | After any change: quit and restart VS Code. | VS Code and its terminals keep the `PATH` they started with. |
 
-To check what a **new** process will see, without restarting anything:
+To check what a new process will see, without restarting anything:
 
 ```powershell
 $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
@@ -118,4 +115,4 @@ radian --version
 
 ## Package libraries
 
-Each R version (major.minor) has its own user library, `%LOCALAPPDATA%\R\win-library\<x.y>`. R creates it on first use, so `rig system setup-user-lib` is not needed on Windows. R 4.5.0, 4.5.1 and 4.5.2 share `win-library\4.5`; R 4.6.x starts with an empty `win-library\4.6`. That is why the [R packages](install.qmd#the-r-packages) are installed once per R version.
+Each R version (major.minor) has its own user library, `%LOCALAPPDATA%\R\win-library\<x.y>`. R 4.5.x versions share `win-library\4.5`; a new minor version starts with an empty library. That is why the [R packages](install.qmd#the-r-packages) are installed once per R version.

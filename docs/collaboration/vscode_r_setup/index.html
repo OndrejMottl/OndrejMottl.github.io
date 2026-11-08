@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-11-08">
-<meta name="description" content="My complete VS Code environment for R on Windows: install steps, every setting, keybinding and extension, and the files to rebuild it from scratch.">
+<meta name="description" content="My VS Code environment for R on Windows: install steps, settings, keybindings, extensions, and the files to rebuild it.">
 
 <title>VS Code for R – Ondřej Mottl</title>
 <style>
@@ -304,7 +304,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-the-pieces-fit" id="toc-how-the-pieces-fit" class="nav-link" data-scroll-target="#how-the-pieces-fit">How the pieces fit</a></li>
   <li><a href="#the-pages" id="toc-the-pages" class="nav-link" data-scroll-target="#the-pages">The pages</a></li>
   <li><a href="#rebuild-from-scratch" id="toc-rebuild-from-scratch" class="nav-link" data-scroll-target="#rebuild-from-scratch">Rebuild from scratch</a></li>
-  <li><a href="#keeping-this-page-current" id="toc-keeping-this-page-current" class="nav-link" data-scroll-target="#keeping-this-page-current">Keeping this page current</a></li>
   </ul>
 </nav>
     </div>
@@ -318,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    My complete VS Code environment for R on Windows: install steps, every setting, keybinding and extension, and the files to rebuild it from scratch.
+    My VS Code environment for R on Windows: install steps, settings, keybindings, extensions, and the files to rebuild it.
   </div>
 </div>
 
@@ -347,10 +346,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I write R in <a href="https://code.visualstudio.com/">VS Code</a>, on more than one Windows machine. This section documents the whole environment, in enough detail that I (or you) can rebuild it from scratch, and it publishes every configuration file in full.</p>
+<p>I write R in <a href="https://code.visualstudio.com/">VS Code</a>, on more than one Windows machine. These pages describe the set-up in enough detail that I (or you) can rebuild it, and include my configuration files.</p>
 <section id="in-short" class="level2">
 <h2 class="anchored" data-anchor-id="in-short">My set-up in short</h2>
-<p>I use <strong>VS Code with the <a href="https://github.com/REditorSupport/vscode-R">vscode-R</a> extension</strong> for all my R work, on Windows. R runs in <strong><a href="https://github.com/randy3k/radian">radian</a></strong>, a modern R console with syntax highlighting and multi-line editing, opened in a terminal panel docked on the right. Plots go to the <strong><a href="https://github.com/nx10/httpgd">httpgd</a></strong> viewer inside VS Code. The <strong><code>languageserver</code></strong> package gives autocompletion, hover help and go to definition; <strong><code>lintr</code></strong> and <strong><code>styler</code></strong> check and format the code as I type. I write documents, slides and this website in <strong><a href="https://quarto.org/">Quarto</a></strong>, with the Quarto extension for preview and code-chunk execution. <strong><a href="https://github.com/r-lib/rig">rig</a></strong> manages several R versions side by side, and <strong><a href="https://rstudio.github.io/renv/">renv</a></strong> with <strong><a href="https://docs.ropensci.org/targets/">targets</a></strong> keeps each project reproducible (<a href="https://github.com/OndrejMottl/Project_template">project template</a>). Git work happens in the built-in Source Control view, with <strong>GitLens</strong>, <strong>Git Graph</strong> and the <strong>GitHub Pull Requests</strong> extension. For AI help I use <strong>GitHub Copilot</strong> and <strong>Claude Code</strong>. The look is the built-in <strong>Visual Studio Dark</strong> theme with <strong>vscode-icons</strong>, and a set of <a href="../../collaboration/vscode_r_setup/keybindings.html">custom keybindings</a> (for example <code>Ctrl+Shift+M</code> for the pipe) makes the common R actions one keystroke. Everything is kept in one VS Code profile called <code>R</code>, synced between my machines.</p>
+<p>I use <strong>VS Code with the <a href="https://github.com/REditorSupport/vscode-R">vscode-R</a> extension</strong> for all my R work, on Windows. R runs in <strong><a href="https://github.com/randy3k/radian">radian</a></strong>, a modern R console with syntax highlighting and multi-line editing, opened in a terminal panel docked on the right. Plots go to the <strong><a href="https://github.com/nx10/httpgd">httpgd</a></strong> viewer inside VS Code. The <strong><code>languageserver</code></strong> package gives autocompletion, hover help and go to definition; <strong><code>lintr</code></strong> checks the code as I type, and <strong><code>styler</code></strong> formats it when I ask. I write documents, slides and this website in <strong><a href="https://quarto.org/">Quarto</a></strong>, with the Quarto extension for preview and code-chunk execution. <strong><a href="https://github.com/r-lib/rig">rig</a></strong> manages several R versions side by side, and <strong><a href="https://rstudio.github.io/renv/">renv</a></strong> with <strong><a href="https://docs.ropensci.org/targets/">targets</a></strong> keeps each project reproducible (<a href="https://github.com/OndrejMottl/Project_template">project template</a>). Git work happens in the built-in Source Control view, with <strong>GitLens</strong>, <strong>Git Graph</strong> and the <strong>GitHub Pull Requests</strong> extension. For AI help I use <strong>GitHub Copilot</strong> and <strong>Claude Code</strong>. The look is the built-in <strong>Visual Studio Dark</strong> theme with <strong>vscode-icons</strong>, and a set of <a href="../../collaboration/vscode_r_setup/keybindings.html">custom keybindings</a> (for example <code>Ctrl+Shift+M</code> for the pipe) makes the common R actions one keystroke. Everything is kept in one VS Code profile called <code>R</code>, synced between my machines.</p>
 <p>It pairs with two other things I use daily:</p>
 <ul>
 <li>my <a href="https://github.com/OndrejMottl/Project_template"><strong>project template</strong></a> for reproducible R projects (renv, targets, tests, instructions for coding assistants);</li>
@@ -364,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 <li>VS Code’s <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Settings Sync</a> carries settings, keybindings, snippets, tasks and extensions between machines.</li>
 <li>That only works if the synced files contain no user names and no install paths. So nothing in them says <em>where</em> R is or <em>which</em> version: VS Code starts <code>radian</code>, radian starts <code>R</code>, and both are found on <code>PATH</code>.</li>
 <li><a href="https://github.com/r-lib/rig">rig</a> decides which R that is, per machine, with <code>rig default</code>. Changing the R version never touches VS Code.</li>
-<li>The few things Sync cannot carry (<a href="../../collaboration/vscode_r_setup/outside_vscode.html">task scripts, <code>.Rprofile</code>, PowerShell profiles</a>) follow the same rule and are shared through OneDrive.</li>
+<li>The few things Sync cannot carry (<a href="../../collaboration/vscode_r_setup/outside_vscode.html">task scripts, <code>.Rprofile</code>, PowerShell profiles</a>) follow the same rule. <code>.Rprofile</code> and the PowerShell profiles are shared through OneDrive; the task scripts I copy by hand.</li>
 </ul>
 </section>
 <section id="how-the-pieces-fit" class="level2">
@@ -414,19 +413,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><a href="../../collaboration/vscode_r_setup/install.html">Install, in order</a></td>
-<td>VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, with winget commands and tested versions.</td>
+<td>VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, with winget commands and the versions I use.</td>
 </tr>
 <tr class="even">
 <td><a href="../../collaboration/vscode_r_setup/settings.html">Settings</a></td>
-<td>Every setting of the <code>R</code> profile: what it does and why.</td>
+<td>The settings of the <code>R</code> profile and what they do.</td>
 </tr>
 <tr class="odd">
 <td><a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a></td>
-<td>Every keybinding, what it replaces, and the layout presets.</td>
+<td>My keybindings, what they replace, and the layout presets.</td>
 </tr>
 <tr class="even">
 <td><a href="../../collaboration/vscode_r_setup/extensions.html">Extensions</a></td>
-<td>All installed extensions, grouped, with the minimum set for R and an install script.</td>
+<td>My extensions, grouped, with the minimum set for R and an install script.</td>
 </tr>
 <tr class="odd">
 <td><a href="../../collaboration/vscode_r_setup/snippets_tasks.html">Snippets and tasks</a></td>
@@ -446,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><a href="../../collaboration/vscode_r_setup/troubleshooting.html">Troubleshooting</a></td>
-<td>Every problem I hit, with cause and fix.</td>
+<td>Problems I have run into, with fixes.</td>
 </tr>
 </tbody>
 </table>
@@ -468,10 +467,6 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Check <code>PATH</code></strong> against the <a href="../../collaboration/vscode_r_setup/outside_vscode.html#path-rules">rules</a>: no <code>R_HOME</code>, no <code>R-x.y.z\bin</code>, Python 3.12 first.</li>
 <li><strong>Restart VS Code completely</strong>, open an R terminal, and run <code>plot(1:10)</code> (<a href="../../collaboration/vscode_r_setup/install.html#restart-vs-code-and-test">test</a>).</li>
 </ol>
-</section>
-<section id="keeping-this-page-current" class="level2">
-<h2 class="anchored" data-anchor-id="keeping-this-page-current">Keeping this page current</h2>
-<p>The configuration files here are exported from my live set-up by a script, which also refuses to publish anything that contains a user name, an e-mail address or a server name. The pages check, when the site is built, that every setting and every extension in the exported files is documented, so this reference cannot silently fall behind.</p>
 
 
 </section>

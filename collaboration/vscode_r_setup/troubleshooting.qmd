@@ -1,28 +1,25 @@
 ---
 title: "Troubleshooting"
-description: "Every problem I hit while setting up R in VS Code on two Windows machines, with the cause and the fix."
+description: "Problems I've run into with R in VS Code on Windows, with cause and fix."
 date-format: long
 date-modified: last-modified
 ---
 
-Each entry: the symptom as you see it, the cause, the fix.
-
 ## The R terminal closes with exit code -1, or `radian` "is not recognized"
 
-> The terminal process "...\\python.exe -m radian ..." terminated with exit code: -1.
 
-**Cause:** VS Code, and every terminal it opens, keeps the `PATH` from when VS Code was started. If you installed Python, radian or R (or changed `PATH`) while VS Code was running, it does not see them yet. *Developer: Reload Window* does **not** refresh `PATH`.
+**Cause:** VS Code, and every terminal it opens, keeps the `PATH` from when VS Code was started. If you installed Python, radian or R (or changed `PATH`) while VS Code was running, it does not see them yet. *Developer: Reload Window* does not refresh `PATH`.
 
-**Fix:** quit **every** VS Code window, then start VS Code again. Check in a new terminal with `Get-Command radian`.
+**Fix:** quit every VS Code window, then start VS Code again. Check in a new terminal with `Get-Command radian`.
 
 ## radian or VS Code starts an old R version {#radian-or-vs-code-starts-an-old-r-version}
 
-`rig default` says 4.6.2, but `radian --version` or `R.version.string` shows an older R.
+`radian --version` or `R.version.string` shows an older R than your `rig default` version.
 
-**Cause:** something pins R before rig gets a say. In order of how often I met them:
+**Cause:** something pins R before rig gets a say:
 
-1. an `R_HOME` environment variable. It can be a **user** variable as well as a system one;
-2. a version folder such as `C:\Program Files\R\R-4.5.0\bin` on `PATH`, usually left by an old installer or a tutorial;
+1. an `R_HOME` environment variable. It can be a user variable as well as a system one;
+2. a version folder such as `C:\Program Files\R\R-x.y.z\bin` on `PATH`;
 3. a workspace `.vscode/settings.json` with `r.executablePath` or `--r-binary` (that one is on purpose, see [R versions](r_versions.qmd#pin-one-project-to-a-version)).
 
 **Fix:** remove `R_HOME` (*System Properties → Environment Variables*, check both lists), remove the version folder from `PATH`, restart VS Code. The [PATH check](outside_vscode.qmd#path-rules) shows what a new process will see.
@@ -33,13 +30,13 @@ Each entry: the symptom as you see it, the cause, the fix.
 
 The R terminal may also not finish loading.
 
-**Cause:** vscode-R 3.3 lints through lintr and needs a recent version. Packages are per R version, so a version you have not used for a while still has the old lintr.
+**Cause:** linting needs lintr 3.3.0-1 or newer. Packages are per R version, so a version you have not used for a while still has the old lintr.
 
-**Fix:** `install.packages("lintr")` **in the R version that is active**, then restart VS Code (or the R language server).
+**Fix:** `install.packages("lintr")` in the R version that is active, then restart VS Code (or the R language server).
 
 ## Red or struck-through R settings {#old-r-setting-names}
 
-**Cause:** vscode-R 3.x renamed several settings. The old names still work but are deprecated:
+vscode-R 3.x renamed these settings:
 
 | Old | New |
 |---|---|
@@ -48,8 +45,6 @@ The R terminal may also not finish loading.
 | `r.rpath.windows` | `r.executablePath` |
 | `r.rtermSendDelay` | `r.consoleSendDelay` |
 | `r.plot.useHttpgd` | `r.plot.backend` (`"httpgd"`) |
-
-**Fix:** rename them, and take the chance to remove absolute paths: see [How VS Code finds R](r_versions.qmd#how-vs-code-finds-r). Check **every** profile, including Default: profiles do not inherit, so an old entry can hide in one of them.
 
 ## A setting changed on one machine never arrives on the other
 
@@ -61,7 +56,7 @@ The R terminal may also not finish loading.
 
 **Cause:** it waits for the Windows administrator (UAC) prompt, which may be behind other windows.
 
-**Fix:** find and accept the prompt. If rig fails at once with "The operation was canceled by the user", it could not show the prompt (this happens when it is started from a non-interactive shell, such as a coding agent's terminal): run it in a normal or elevated PowerShell window.
+**Fix:** find and accept the prompt. If rig fails at once with "The operation was canceled by the user", it could not show the prompt: run it in a normal or elevated PowerShell window.
 
 ## `rig` is not found right after installing it
 
@@ -69,21 +64,13 @@ The R terminal may also not finish loading.
 
 **Fix:** open a new terminal.
 
-## winget fails to install Rtools: "Target directory already exists"
-
-> Target directory already exists: C:\\rtools45. Please remove previous installation or select another location.
-
-**Cause:** Rtools 4.5 is already installed, just not through winget, so winget does not know about it.
-
-**Fix:** none needed if R finds it: `pkgbuild::has_build_tools()` is `TRUE` and `Sys.which("make")` points into `C:\rtools45`.
-
 ## R uses an old Quarto after upgrading Quarto
 
 `quarto --version` in PowerShell shows the new version, but rendering from R uses the old one.
 
-**Cause:** `QUARTO_PATH`, or a `PATH` entry for an older per-user Quarto, set in a `.Rprofile`.
+**Cause:** R finds another Quarto first: `QUARTO_PATH` is set (for example in a `.Rprofile`), or an older copy comes earlier on `PATH`.
 
-**Fix:** remove them, so that R finds Quarto on `PATH` (see [.Rprofile](outside_vscode.qmd#rprofile)). Then uninstall the old copy.
+**Fix:** remove `QUARTO_PATH` and the old `PATH` entry, so that R finds the current Quarto (see [.Rprofile](outside_vscode.qmd#rprofile)).
 
 ## Errors at every R start-up, or settings from the wrong `.Rprofile`
 

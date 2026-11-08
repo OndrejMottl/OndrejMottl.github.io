@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Every problem I hit while setting up R in VS Code on two Windows machines, with the cause and the fix.">
+<meta name="description" content="Problems I’ve run into with R in VS Code on Windows, with cause and fix.">
 
 <title>Troubleshooting – Ondřej Mottl</title>
 <style>
@@ -301,7 +301,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#a-setting-changed-on-one-machine-never-arrives-on-the-other" id="toc-a-setting-changed-on-one-machine-never-arrives-on-the-other" class="nav-link" data-scroll-target="#a-setting-changed-on-one-machine-never-arrives-on-the-other">A setting changed on one machine never arrives on the other</a></li>
   <li><a href="#rig-add-release-hangs-with-no-output" id="toc-rig-add-release-hangs-with-no-output" class="nav-link" data-scroll-target="#rig-add-release-hangs-with-no-output"><code>rig add release</code> hangs with no output</a></li>
   <li><a href="#rig-is-not-found-right-after-installing-it" id="toc-rig-is-not-found-right-after-installing-it" class="nav-link" data-scroll-target="#rig-is-not-found-right-after-installing-it"><code>rig</code> is not found right after installing it</a></li>
-  <li><a href="#winget-fails-to-install-rtools-target-directory-already-exists" id="toc-winget-fails-to-install-rtools-target-directory-already-exists" class="nav-link" data-scroll-target="#winget-fails-to-install-rtools-target-directory-already-exists">winget fails to install Rtools: “Target directory already exists”</a></li>
   <li><a href="#r-uses-an-old-quarto-after-upgrading-quarto" id="toc-r-uses-an-old-quarto-after-upgrading-quarto" class="nav-link" data-scroll-target="#r-uses-an-old-quarto-after-upgrading-quarto">R uses an old Quarto after upgrading Quarto</a></li>
   <li><a href="#errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" id="toc-errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" class="nav-link" data-scroll-target="#errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile">Errors at every R start-up, or settings from the wrong <code>.Rprofile</code></a></li>
   <li><a href="#radian-installs-but-crashes-or-will-not-start" id="toc-radian-installs-but-crashes-or-will-not-start" class="nav-link" data-scroll-target="#radian-installs-but-crashes-or-will-not-start"><code>radian</code> installs but crashes or will not start</a></li>
@@ -319,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Every problem I hit while setting up R in VS Code on two Windows machines, with the cause and the fix.
+    Problems I’ve run into with R in VS Code on Windows, with cause and fix.
   </div>
 </div>
 
@@ -342,22 +341,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Each entry: the symptom as you see it, the cause, the fix.</p>
 <section id="the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized" class="level2">
 <h2 class="anchored" data-anchor-id="the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized">The R terminal closes with exit code -1, or <code>radian</code> “is not recognized”</h2>
-<blockquote class="blockquote">
-<p>The terminal process “…\python.exe -m radian …” terminated with exit code: -1.</p>
-</blockquote>
-<p><strong>Cause:</strong> VS Code, and every terminal it opens, keeps the <code>PATH</code> from when VS Code was started. If you installed Python, radian or R (or changed <code>PATH</code>) while VS Code was running, it does not see them yet. <em>Developer: Reload Window</em> does <strong>not</strong> refresh <code>PATH</code>.</p>
-<p><strong>Fix:</strong> quit <strong>every</strong> VS Code window, then start VS Code again. Check in a new terminal with <code>Get-Command radian</code>.</p>
+<p><strong>Cause:</strong> VS Code, and every terminal it opens, keeps the <code>PATH</code> from when VS Code was started. If you installed Python, radian or R (or changed <code>PATH</code>) while VS Code was running, it does not see them yet. <em>Developer: Reload Window</em> does not refresh <code>PATH</code>.</p>
+<p><strong>Fix:</strong> quit every VS Code window, then start VS Code again. Check in a new terminal with <code>Get-Command radian</code>.</p>
 </section>
 <section id="radian-or-vs-code-starts-an-old-r-version" class="level2">
 <h2 class="anchored" data-anchor-id="radian-or-vs-code-starts-an-old-r-version">radian or VS Code starts an old R version</h2>
-<p><code>rig default</code> says 4.6.2, but <code>radian --version</code> or <code>R.version.string</code> shows an older R.</p>
-<p><strong>Cause:</strong> something pins R before rig gets a say. In order of how often I met them:</p>
+<p><code>radian --version</code> or <code>R.version.string</code> shows an older R than your <code>rig default</code> version.</p>
+<p><strong>Cause:</strong> something pins R before rig gets a say:</p>
 <ol type="1">
-<li>an <code>R_HOME</code> environment variable. It can be a <strong>user</strong> variable as well as a system one;</li>
-<li>a version folder such as <code>C:\Program Files\R\R-4.5.0\bin</code> on <code>PATH</code>, usually left by an old installer or a tutorial;</li>
+<li>an <code>R_HOME</code> environment variable. It can be a user variable as well as a system one;</li>
+<li>a version folder such as <code>C:\Program Files\R\R-x.y.z\bin</code> on <code>PATH</code>;</li>
 <li>a workspace <code>.vscode/settings.json</code> with <code>r.executablePath</code> or <code>--r-binary</code> (that one is on purpose, see <a href="../../collaboration/vscode_r_setup/r_versions.html#pin-one-project-to-a-version">R versions</a>).</li>
 </ol>
 <p><strong>Fix:</strong> remove <code>R_HOME</code> (<em>System Properties → Environment Variables</em>, check both lists), remove the version folder from <code>PATH</code>, restart VS Code. The <a href="../../collaboration/vscode_r_setup/outside_vscode.html#path-rules">PATH check</a> shows what a new process will see.</p>
@@ -368,12 +363,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Backend ‘lintr’ requires lintr &gt;= 3.3.0-1. Install it or select another backend.</p>
 </blockquote>
 <p>The R terminal may also not finish loading.</p>
-<p><strong>Cause:</strong> vscode-R 3.3 lints through lintr and needs a recent version. Packages are per R version, so a version you have not used for a while still has the old lintr.</p>
-<p><strong>Fix:</strong> <code>install.packages("lintr")</code> <strong>in the R version that is active</strong>, then restart VS Code (or the R language server).</p>
+<p><strong>Cause:</strong> linting needs lintr 3.3.0-1 or newer. Packages are per R version, so a version you have not used for a while still has the old lintr.</p>
+<p><strong>Fix:</strong> <code>install.packages("lintr")</code> in the R version that is active, then restart VS Code (or the R language server).</p>
 </section>
 <section id="old-r-setting-names" class="level2">
 <h2 class="anchored" data-anchor-id="old-r-setting-names">Red or struck-through R settings</h2>
-<p><strong>Cause:</strong> vscode-R 3.x renamed several settings. The old names still work but are deprecated:</p>
+<p>vscode-R 3.x renamed these settings:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -404,7 +399,6 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p><strong>Fix:</strong> rename them, and take the chance to remove absolute paths: see <a href="../../collaboration/vscode_r_setup/r_versions.html#how-vs-code-finds-r">How VS Code finds R</a>. Check <strong>every</strong> profile, including Default: profiles do not inherit, so an old entry can hide in one of them.</p>
 </section>
 <section id="a-setting-changed-on-one-machine-never-arrives-on-the-other" class="level2">
 <h2 class="anchored" data-anchor-id="a-setting-changed-on-one-machine-never-arrives-on-the-other">A setting changed on one machine never arrives on the other</h2>
@@ -414,26 +408,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="rig-add-release-hangs-with-no-output" class="level2">
 <h2 class="anchored" data-anchor-id="rig-add-release-hangs-with-no-output"><code>rig add release</code> hangs with no output</h2>
 <p><strong>Cause:</strong> it waits for the Windows administrator (UAC) prompt, which may be behind other windows.</p>
-<p><strong>Fix:</strong> find and accept the prompt. If rig fails at once with “The operation was canceled by the user”, it could not show the prompt (this happens when it is started from a non-interactive shell, such as a coding agent’s terminal): run it in a normal or elevated PowerShell window.</p>
+<p><strong>Fix:</strong> find and accept the prompt. If rig fails at once with “The operation was canceled by the user”, it could not show the prompt: run it in a normal or elevated PowerShell window.</p>
 </section>
 <section id="rig-is-not-found-right-after-installing-it" class="level2">
 <h2 class="anchored" data-anchor-id="rig-is-not-found-right-after-installing-it"><code>rig</code> is not found right after installing it</h2>
 <p><strong>Cause:</strong> the terminal was opened before rig was added to <code>PATH</code>.</p>
 <p><strong>Fix:</strong> open a new terminal.</p>
 </section>
-<section id="winget-fails-to-install-rtools-target-directory-already-exists" class="level2">
-<h2 class="anchored" data-anchor-id="winget-fails-to-install-rtools-target-directory-already-exists">winget fails to install Rtools: “Target directory already exists”</h2>
-<blockquote class="blockquote">
-<p>Target directory already exists: C:\rtools45. Please remove previous installation or select another location.</p>
-</blockquote>
-<p><strong>Cause:</strong> Rtools 4.5 is already installed, just not through winget, so winget does not know about it.</p>
-<p><strong>Fix:</strong> none needed if R finds it: <code>pkgbuild::has_build_tools()</code> is <code>TRUE</code> and <code>Sys.which("make")</code> points into <code>C:\rtools45</code>.</p>
-</section>
 <section id="r-uses-an-old-quarto-after-upgrading-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="r-uses-an-old-quarto-after-upgrading-quarto">R uses an old Quarto after upgrading Quarto</h2>
 <p><code>quarto --version</code> in PowerShell shows the new version, but rendering from R uses the old one.</p>
-<p><strong>Cause:</strong> <code>QUARTO_PATH</code>, or a <code>PATH</code> entry for an older per-user Quarto, set in a <code>.Rprofile</code>.</p>
-<p><strong>Fix:</strong> remove them, so that R finds Quarto on <code>PATH</code> (see <a href="../../collaboration/vscode_r_setup/outside_vscode.html#rprofile">.Rprofile</a>). Then uninstall the old copy.</p>
+<p><strong>Cause:</strong> R finds another Quarto first: <code>QUARTO_PATH</code> is set (for example in a <code>.Rprofile</code>), or an older copy comes earlier on <code>PATH</code>.</p>
+<p><strong>Fix:</strong> remove <code>QUARTO_PATH</code> and the old <code>PATH</code> entry, so that R finds the current Quarto (see <a href="../../collaboration/vscode_r_setup/outside_vscode.html#rprofile">.Rprofile</a>).</p>
 </section>
 <section id="errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" class="level2">
 <h2 class="anchored" data-anchor-id="errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile">Errors at every R start-up, or settings from the wrong <code>.Rprofile</code></h2>

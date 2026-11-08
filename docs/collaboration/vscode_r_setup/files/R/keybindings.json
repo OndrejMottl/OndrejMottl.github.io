@@ -78,7 +78,7 @@
         "command": "workbench.view.extension.workspaceViewer"
     },
     {
-        "description": "R Switch Panel Position",
+        "description": "R Show Plot Viewer Beside Editor",
         "key": "ctrl+alt+p",
         "command": "r.runCommand",
         "when": "editorTextFocus && editorLangId == 'r'",
@@ -162,12 +162,6 @@
         "description": "New Terminal in Active Workspace",
         "key": "ctrl+shift+oem_3",
         "command": "workbench.action.terminal.newInActiveWorkspace",
-        "when": "!terminalFocus"
-    },
-    {
-        "description": "Open R Terminal (radian)",
-        "key": "ctrl+shift+`",
-        "command": "-workbench.action.terminal.new",
         "when": "!terminalFocus"
     },
     {

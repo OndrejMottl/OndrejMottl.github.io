@@ -11,7 +11,7 @@ source("_helpers.R")
 check_documented("keys-R-keybindings.txt")
 ```
 
-These are the 39 entries in the `keybindings.json` of my `R` profile (see [Profiles and Settings Sync](profiles_sync.qmd)). Many of them bring back RStudio shortcuts. The teaching profile `R-Lecturer` has its own, smaller set; see [R-Lecturer profile differences](#r-lecturer-profile-differences). Both files are published in full at [the end of the page](#the-full-file).
+These are the 38 entries in the `keybindings.json` of my `R` profile (see [Profiles and Settings Sync](profiles_sync.qmd)). Many of them bring back RStudio shortcuts. The teaching profile `R-Lecturer` has its own, smaller set; see [R-Lecturer profile differences](#r-lecturer-profile-differences). Both files are published in full at [the end of the page](#the-full-file).
 
 I use a **Czech keyboard layout**. The tables give the keys as I press them on it, plus the US equivalent where it differs.
 
@@ -65,19 +65,19 @@ The rule has no `when`, but `type` only does something when the cursor is in a t
 | Keys (as pressed) | Action | When | Replaces default? | Why |
 |---|---|---|---|---|
 | `Ctrl+Shift+D` | Document the package (`r.document`) | `resourceLangId == 'r'` | Run and Debug view | RStudio's *Document* shortcut. |
-| `F1` | R help for the word under the cursor (`r.helpPanel.openForSelection`) | R files; R Markdown text (see below) | Show All Commands | RStudio's `F1` help. |
+| `F1` | R help for the word under the cursor (`r.helpPanel.openForSelection`) | R files; R Markdown and Quarto text (see below) | Show All Commands | RStudio's `F1` help. |
 
 `r.document` runs the vscode-R task *R: Document*, which calls `devtools::document()`. It needs devtools (see [Install](install.qmd)). In any other file, `Ctrl+Shift+D` still opens Run and Debug.
 
 The full `when` of the `F1` rule is:
 
 ```
-editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'qmd'
+editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'quarto'
 ```
 
-So `F1` opens R help whenever an R file is focused, and in R Markdown only when the cursor is in the text. Everywhere else `F1` still opens the Command Palette, which is also on `Ctrl+Shift+P`.
+So `F1` opens R help whenever an R file is focused, and in R Markdown and Quarto documents when the cursor is in the text. Everywhere else `F1` still opens the Command Palette, which is also on `Ctrl+Shift+P`.
 
-The last part never matches: the Quarto extension's language id is `quarto`, not `qmd`. In a Quarto document, `F1` opens the Command Palette. To get R help in Quarto files, change `'qmd'` to `'quarto'`.
+Use the language id `quarto` for Quarto files, not `qmd` (the file extension). An earlier version of this rule used `'qmd'` and so never matched in Quarto documents.
 
 ### Operators
 
@@ -85,23 +85,12 @@ The last part never matches: the Quarto extension's language id is `quarto`, not
 |---|---|---|---|---|
 | `Ctrl+Shift+M` | Insert the native pipe in the editor (`type`) | `editorTextFocus` | Problems panel | RStudio's pipe shortcut. |
 | `Ctrl+Shift+M` | Send the native pipe to the terminal (`workbench.action.terminal.sendSequence`) | `terminalFocus` | Problems panel | The same key in the R console. |
-| `Ctrl+Shift+,` (US: `Ctrl+<`) | Insert the assignment arrow (`type`) | editor or terminal (see below) | Replace with Previous Value (editor only) | RStudio uses `Alt+-`; this key sits next to `M`. |
+| `Ctrl+Shift+,` (US: `Ctrl+<`) | Insert the assignment arrow in the editor (`type`) | `editorTextFocus` | Replace with Previous Value | RStudio uses `Alt+-`; this key sits next to `M`. |
+| `Ctrl+Shift+,` (US: `Ctrl+<`) | Send the assignment arrow to the terminal (`workbench.action.terminal.sendSequence`) | `terminalFocus` | none | The same key in the R console. |
 
-Both texts include a space on each side: the pipe rules insert ` |> ` and the arrow rule inserts ` <- `. The pipe is R's native pipe (R 4.1 or later), not magrittr's `%>%`.
+Both texts include a space on each side: the pipe rules insert ` |> ` and the arrow rules insert ` <- `. The pipe is R's native pipe (R 4.1 or later), not magrittr's `%>%`.
 
-**Why the pipe is there twice.** `type` types into the focused text editor. The terminal is not a text editor, so `type` does nothing there. `workbench.action.terminal.sendSequence` writes the text straight into the terminal's process (radian). The two `when` clauses split the key: `editorTextFocus` gets the first rule, `terminalFocus` the second. Outside both, `Ctrl+Shift+M` still opens the Problems panel.
-
-**The arrow has only one rule.** Its `when` is `editorTextFocus || terminalFocus`, but it uses `type`, so it has the same limit: it does not insert the arrow in the terminal. To fix it, add a terminal rule like the pipe's:
-
-```json
-{
-    "description": "R Assignment Arrow (terminal)",
-    "key": "ctrl+shift+,",
-    "command": "workbench.action.terminal.sendSequence",
-    "args": { "text": " <- " },
-    "when": "terminalFocus"
-}
-```
+**Why each operator is there twice.** `type` types into the focused text editor. The terminal is not a text editor, so `type` does nothing there. `workbench.action.terminal.sendSequence` writes the text straight into the terminal's process (radian). The two `when` clauses split the key: `editorTextFocus` gets the first rule, `terminalFocus` the second. Outside both, `Ctrl+Shift+M` still opens the Problems panel. A single rule with `type` and `editorTextFocus || terminalFocus` looks right but silently does nothing in the terminal.
 
 ### Tools
 
@@ -225,17 +214,15 @@ So the Source Control view must be open in the primary sidebar, and the cursor m
 
 The task and its script are described on [Snippets and tasks](snippets_tasks.qmd#git-return-to-updated-main). The binding passes the task's label as `args`, so the label in `tasks.json` and here must stay identical.
 
-The `ctrl+up` → `git.stage` rule appears three times in the file: once here and twice more under the disabled defaults. All three are identical, so it is harmless, but the two later copies can be deleted.
-
 ## Quarto and Markdown
 
 | Keys (as pressed) | Action | When | Replaces default? | Why |
 |---|---|---|---|---|
-| `Ctrl+Alt+L` | Quarto preview shortcut (`quarto.previewShortcut`) | Quarto, Mermaid or Graphviz (`dot`) files | none | Preview a diagram or the document. |
+| `Ctrl+Alt+L` | Quarto: Preview Content (`quarto.previewContentShortcut`) | Quarto, Mermaid or Graphviz (`dot`) files | none | Preview the diagram, equation or cell under the cursor. |
 
 The `when` is `editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'`. The REST Client extension also uses `Ctrl+Alt+L`, but only in `.http` and plain-text files, so they do not clash.
 
-**This binding is probably dead.** The current Quarto extension (1.139) has no command `quarto.previewShortcut`. The closest is `quarto.previewContentShortcut` (*Quarto: Preview Content*: preview the diagram or equation under the cursor), which Quarto already binds to `Ctrl+Shift+L` for the same three languages. Previewing the whole document is `quarto.preview` on `Ctrl+Shift+K`. Either delete this rule and use those keys, or change the command to `quarto.previewContentShortcut`. Check with the troubleshooting log (see [above](#reusing-the-file-on-another-layout)): an unknown command shows up as an error there.
+Quarto itself binds the same command to `Ctrl+Shift+L`; this rule adds a second key for it. Previewing the whole document is `quarto.preview` on `Ctrl+Shift+K`. An earlier version of this rule called `quarto.previewShortcut`, which newer Quarto extensions no longer have. A binding to an unknown command fails silently; the troubleshooting log (see [above](#reusing-the-file-on-another-layout)) shows it as an error.
 
 ## Layout presets
 
@@ -292,8 +279,6 @@ The presets override the default Fold Level 1 and Fold Level 2 (`Ctrl+K Ctrl+1`,
 | `Ctrl+W` | Remove `workbench.action.closeActiveEditor` | always | Close Editor | Re-added with `!terminalFocus`. |
 | `Ctrl+N` | Remove `workbench.action.files.newUntitledFile` | always | New Untitled Text File | `Ctrl+N` becomes new R file / new terminal. |
 | `Ctrl+Shift+;` (US: `` Ctrl+Shift+` ``) | Remove `workbench.action.terminal.new` | the default's (see below) | New Terminal | Key reused for a new terminal in the active folder. |
-| `Ctrl+Up` | Stage (`git.stage`), second copy | Source Control view | as above | Duplicate, can be deleted. |
-| `Ctrl+Up` | Stage (`git.stage`), third copy | Source Control view | as above | Duplicate, can be deleted. |
 | `Ctrl+Alt+I` | Remove `editor.action.insertSnippet` | `editorTextFocus && !editorReadonly` | an extension's insert-snippet binding | Free the key for inline suggestions. |
 | `Ctrl+Shift+B` | Remove `workbench.action.tasks.build` | `taskCommandsRegistered` | Run Build Task | Key reused below. |
 | `Ctrl+Shift+B` | Toggle the primary sidebar (`workbench.action.toggleSidebarVisibility`) | always | Run Build Task | The sidebar toggle moves here. |
@@ -310,17 +295,17 @@ Notes:
 
 ### Not bound: the multi-command sequences
 
-`settings.json` defines a few command sequences for the multi-command extension under `multiCommand.commands` (moving between and running R chunks). No rule in this file calls them, so they have no keys. They are described on [Settings](settings.qmd). One of them, `multicmd.r.go.end.chunk.center`, is defined twice there. The layout presets do not need that extension; they use the built-in `runCommands`.
+`settings.json` defines a few command sequences for the multi-command extension under `multiCommand.commands` (moving between and running R chunks). No rule in this file calls them, so they have no keys. They are described on [Settings](settings.qmd). The layout presets do not need that extension; they use the built-in `runCommands`.
 
 ## R-Lecturer profile differences
 
-The teaching profile `R-Lecturer` ([Profiles and Settings Sync](profiles_sync.qmd)) has 22 entries, mostly a subset of the R ones, without descriptions on most of them.
+The teaching profile `R-Lecturer` ([Profiles and Settings Sync](profiles_sync.qmd)) has 24 entries, mostly a subset of the R ones, without descriptions on most of them.
 
-**The same in both profiles:** `Ctrl+Shift+D` document, `F1` help (with the same `qmd` issue), the `Ctrl+Shift+,` arrow, `Ctrl+Shift+X` reprex, `Ctrl+Shift+W` R view, `Ctrl+.` symbols, `Ctrl+Alt+P` httpgd viewer, `Shift+Alt+Up`/`Shift+Alt+Down` 10 lines, `Ctrl+Alt+L` Quarto preview, and in the terminal `Ctrl+L`, `Ctrl+N` and the `Ctrl+Shift+;` (US: `` Ctrl+Shift+` ``) handling. `Ctrl+N` in the editor also opens a new R file.
+**The same in both profiles:** `Ctrl+Shift+D` document, `F1` help, the `Ctrl+Shift+,` arrow (editor and terminal rules), `Ctrl+Shift+X` reprex, `Ctrl+Shift+W` R view, `Ctrl+.` symbols, `Ctrl+Alt+P` httpgd viewer, `Shift+Alt+Up`/`Shift+Alt+Down` 10 lines, `Ctrl+Alt+L` Quarto preview, and in the terminal `Ctrl+L`, `Ctrl+N` and the `Ctrl+Shift+;` (US: `` Ctrl+Shift+` ``) handling. `Ctrl+N` in the editor also opens a new R file.
 
 **Different:**
 
-- **Pipe**: `Ctrl+Shift+M` inserts magrittr's ` %>% ` instead of the native ` |> `. It is a single `type` rule with `editorTextFocus || terminalFocus`, without the `sendSequence` twin, so the pipe does not work in the terminal there.
+- **Pipe**: `Ctrl+Shift+M` inserts magrittr's ` %>% ` instead of the native ` |> `, in the editor and in the terminal.
 - **`Ctrl+W`**: the same result in a longer way. There are five rules: a `workbench.action.terminal.killEditor` rule for `terminalFocus`, the two removals, `workbench.action.closeActiveEditor` without any `when`, and finally `workbench.action.terminal.kill` for `terminalFocus`. Because the last matching rule wins, `Ctrl+W` kills the terminal in the terminal and closes the file elsewhere; the `killEditor` rule never runs.
 
 **Missing in R-Lecturer** (so the defaults apply there):
@@ -338,7 +323,7 @@ The teaching profile `R-Lecturer` ([Profiles and Settings Sync](profiles_sync.qm
 #| echo: false
 #| output: asis
 show_file("R/keybindings.json", "json")
-show_file("R-Lecturer/keybindings.json", "json", label = "R-Lecturer/keybindings.json")
+show_file("R-Lecturer/keybindings.json", "json")
 ```
 
 To use a file: switch to the target profile first (the profile is part of the keybindings), then *Command Palette* → **Preferences: Open Keyboard Shortcuts (JSON)**, and paste the content (or merge it with what is there). Settings Sync then carries it to the other machines. If you are not on a Czech layout, check the `oem_*` keys and `ctrl+shift+,` as described in [Reusing the file on another layout](#reusing-the-file-on-another-layout).

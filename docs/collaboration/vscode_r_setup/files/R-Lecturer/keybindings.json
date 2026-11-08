@@ -12,23 +12,41 @@
     },
     // Insert pipe-operator
     {
-        "description": "R Pipe Operator",
+        "description": "R Pipe Operator (editor)",
         "key": "ctrl+shift+m",
         "command": "type",
         "args": {
             "text": " %>% "
         },
-        "when": "editorTextFocus || terminalFocus",
+        "when": "editorTextFocus",
+    },
+    {
+        "description": "R Pipe Operator (terminal)",
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": " %>% "
+        },
+        "when": "terminalFocus"
     },
     // Insert <- assignment
     {
-        "description": "R Assignment Arrow",
+        "description": "R Assignment Arrow (editor)",
         "key": "ctrl+shift+,",
         "command": "type",
         "args": {
             "text": " <- "
         },
-        "when": "editorTextFocus || terminalFocus",
+        "when": "editorTextFocus",
+    },
+    {
+        "description": "R Assignment Arrow (terminal)",
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": " <- "
+        },
+        "when": "terminalFocus"
     },
     // Create reprex (must be in clipboard)
     {
@@ -43,7 +61,7 @@
         "description": "R Show Documentation",
         "key": "f1",
         "command": "r.helpPanel.openForSelection",
-        "when": "editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'qmd'"
+        "when": "editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'quarto'"
     },
     /*
       Editor-specific keybindings -----------------------------------------------
@@ -96,7 +114,7 @@
     // other stuff
     {
         "key": "ctrl+alt+l",
-        "command": "quarto.previewShortcut",
+        "command": "quarto.previewContentShortcut",
         "when": "editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'"
     },
     {

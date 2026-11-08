@@ -175,8 +175,7 @@
     "markdown": true,
     "scminput": false,
     "quarto": true,
-    "R": true,
-    "Markdown": true
+    "r": true
   },
   "github.copilot.editor.enableAutoCompletions": false,
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -225,7 +224,8 @@
     "xlim",
     "ylim"
   ],
-  "cSpell.language": "en-GB, cz",
+  // Czech needs the dictionary extension streetsidesoftware.code-spell-checker-czech.
+  "cSpell.language": "en-GB,cs",
   // ============================================================================
   // MULTI-COMMAND CONFIGURATIONS
   // ============================================================================
@@ -248,15 +248,6 @@
         "r.selectCurrentChunk",
         "cursorLeft",
         "cursorDown"
-      ]
-    },
-    {
-      "command": "multicmd.r.go.end.chunk.center",
-      "sequence": [
-        "r.selectCurrentChunk",
-        "cursorRight",
-        "cursorLineStart",
-        "cursorUp"
       ]
     },
     {
@@ -313,9 +304,6 @@
     }
   ],
   "chat.mcp.gallery.enabled": true,
-  "resourceLens.showMemory": false,
-  "resourceLens.showCpu": false,
-  "resourceLens.showGpu": false,
   "chat.tools.urls.autoApprove": {
     "https://cran.r-project.org": true,
     "https://besjournals.onlinelibrary.wiley.com": {

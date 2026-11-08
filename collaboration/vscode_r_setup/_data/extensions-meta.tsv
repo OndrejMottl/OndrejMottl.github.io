@@ -71,7 +71,8 @@ repreng.csv	CSV	View and edit CSV, TSV, TAB, and PSV files as tables.
 ryuta46.multi-command	multi-command	Invoke multiple commands as one command.
 shd101wyy.markdown-preview-enhanced	Markdown Preview Enhanced	Markdown Preview Enhanced ported to vscode
 sibiraj-s.vscode-scss-formatter	SCSS Formatter	A Visual Studio Code Extension to format SCSS
-streetsidesoftware.code-spell-checker	Code Spell Checker	Spelling checker for source code
+streetsidesoftware.code-spell-checker	Czech - Code Spell Checker	Adds Czech (čeština) spell checking to Code Spell Checker.
+streetsidesoftware.code-spell-checker-czech	Czech - Code Spell Checker	Adds Czech (čeština) spell checking to Code Spell Checker.
 sumneko.lua	Lua	Lua Language Server coded by Lua
 tianyishi.rmarkdown	R Markdown All in One	R Markdown, Bookdown and Blogdown Support
 tomoki1207.pdf	vscode-pdf	Display pdf file in VSCode.

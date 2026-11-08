@@ -12,9 +12,6 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.windows": "R Terminal",
   "terminal.integrated.fontWeightBold": "normal",
-  "terminal.integrated.env.windows": {
-    "PATH": "${env:PATH};C:\\Program Files\\nodejs"
-  },
   // editor
   "editor.stickyScroll.enabled": true,
   "editor.formatOnPaste": true,
@@ -98,15 +95,6 @@
       ]
     },
     {
-      "command": "multicmd.r.go.end.chunk.center",
-      "sequence": [
-        "r.selectCurrentChunk",
-        "cursorRight",
-        "cursorLineStart",
-        "cursorUp"
-      ]
-    },
-    {
       "command": "multicmd.r.run.previous.chunk.center",
       "sequence": [
         "r.goToPreviousChunk",
@@ -143,16 +131,8 @@
   ],
   "grammarly.config.suggestions.OxfordComma": true,
   "grammarly.config.documentDialect": "british",
-  "chatgpt.authenticationType": "Google Authentication",
-  "chatgpt.emailAddress": "",
   "grammarly.config.documentDomain": "academic",
   "grammarly.startTextCheckInPausedState": true,
-  "aws.telemetry": false,
-  "codeium.enableConfig": {
-    "*": true,
-    "markdown": true,
-    "quarto": true
-  },
   "editor.minimap.autohide": "mouseover",
   "editor.minimap.maxColumn": 80,
   "editor.minimap.renderCharacters": false,
@@ -162,7 +142,6 @@
   },
   "markdown.extension.toc.updateOnSave": false,
   "window.menuBarVisibility": "classic",
-  "workbench.experimental.enableNewProfilesUI": true,
   "mssql.enableRichExperiences": true,
   "update.mode": "start",
   "update.enableWindowsBackgroundUpdates": false,

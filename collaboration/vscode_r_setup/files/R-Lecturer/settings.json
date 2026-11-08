@@ -46,7 +46,6 @@
   "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
   "r.source.focus": "editor",
   "r.sessionWatcher": true,
-  "r.plot.useHttpgd": true,
   "r.plot.backend": "httpgd",
   "r.plot.defaults.fullWindowMode": true,
   "r.lsp.debug": true,
@@ -82,15 +81,6 @@
         "r.selectCurrentChunk",
         "cursorLeft",
         "cursorDown"
-      ]
-    },
-    {
-      "command": "multicmd.r.go.end.chunk.center",
-      "sequence": [
-        "r.selectCurrentChunk",
-        "cursorRight",
-        "cursorLineStart",
-        "cursorUp"
       ]
     },
     {

@@ -340,10 +340,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In VS Code, extensions belong to a <strong>profile</strong>: each profile has its own set. Settings Sync carries the lists between machines together with the rest of the profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>).</p>
 <p>I use two profiles:</p>
 <ul>
-<li><strong><code>R</code></strong> is my daily profile: analysis, R packages, Quarto websites and everything else. It has 72 extensions.</li>
+<li><strong><code>R</code></strong> is my daily profile: analysis, R packages, Quarto websites and everything else. It has 73 extensions.</li>
 <li><strong><code>R-Lecturer</code></strong> mirrors what students see in my courses (light theme, Material icons, <code>%&gt;%</code> as the pipe shortcut). It has 65 extensions.</li>
 </ul>
-<p>Together that is 85 extensions: 52 in both profiles, 20 only in <code>R</code> and 13 only in <code>R-Lecturer</code>. The “In profile” column in the tables below says which.</p>
+<p>Together that is 86 extensions: 52 in both profiles, 21 only in <code>R</code> and 13 only in <code>R-Lecturer</code>. The “In profile” column in the tables below says which.</p>
 <p>Ids are written in lower case, as <code>code --list-extensions</code> prints them. VS Code ignores the case of ids.</p>
 <section id="minimum-for-r" class="level3">
 <h3 class="anchored" data-anchor-id="minimum-for-r">Minimum for R</h3>
@@ -429,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>quarto.quarto</code></td>
 <td>both</td>
 <td>Render and preview Quarto documents, visual editor, run cells.</td>
-<td>Needed. <code>[quarto]</code> formatter and <code>quarto.*</code> settings; in <code>R-Lecturer</code> also the <code>[yaml]</code> and notebook formatter (<a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>). <code>Ctrl+Alt+L</code> runs <code>quarto.previewShortcut</code> (<a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a>).</td>
+<td>Needed. <code>[quarto]</code> formatter and <code>quarto.*</code> settings; in <code>R-Lecturer</code> also the <code>[yaml]</code> and notebook formatter (<a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>). <code>Ctrl+Alt+L</code> runs <code>quarto.previewContentShortcut</code> (<a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings</a>).</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=tianyishi.rmarkdown">R Markdown All in One</a></td>
@@ -513,20 +513,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>cSpell.userWords</code> in both, <code>cSpell.language</code> in <code>R</code> (<a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>).</td>
 </tr>
 <tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-czech">Czech - Code Spell Checker</a></td>
+<td><code>streetsidesoftware.code-spell-checker-czech</code></td>
+<td>R</td>
+<td>Czech dictionary for Code Spell Checker.</td>
+<td>Needed for <code>cs</code> in <code>cSpell.language</code>; without it Czech is silently not checked (<a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>).</td>
+</tr>
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Grammarly</a></td>
 <td><code>znck.grammarly</code></td>
 <td>R</td>
 <td>Grammarly checks in Markdown, Quarto and text files.</td>
 <td>Its settings sit in the Default profile, and one in <code>R-Lecturer</code>, where the extension is not installed.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex">LTeX</a></td>
 <td><code>valentjn.vscode-ltex</code></td>
 <td>R-Lecturer</td>
 <td>Grammar and spelling with LanguageTool, for LaTeX, Markdown and more.</td>
 <td>Overlaps with Code Spell Checker. The original LTeX is no longer updated; a community fork (LTeX+) exists.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=mblode.zotero">Citation Picker for Zotero</a></td>
 <td><code>mblode.zotero</code></td>
 <td>R-Lecturer</td>
@@ -1497,6 +1504,7 @@ ryuta46.multi-command
 shd101wyy.markdown-preview-enhanced
 sibiraj-s.vscode-scss-formatter
 streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-czech
 tianyishi.rmarkdown
 tomoki1207.pdf
 usernamehw.errorlens

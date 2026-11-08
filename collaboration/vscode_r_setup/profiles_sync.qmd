@@ -98,30 +98,27 @@ These 49 keys have exactly the same values as in the `R` profile and are explain
 | `editor.unicodeHighlight.nonBasicASCII` | `true` | Highlights non-ASCII characters. | `R` turns it off, because Czech names (`Ondřej`) would light up everywhere. |
 | `[markdown]` | markdownlint as formatter | Formats Markdown with markdownlint. | `R` additionally shows whitespace changes in diffs of Markdown files. |
 | `editor.formatOnPaste` | `true` | Formats pasted code. | Not set in `R`. |
-| `terminal.integrated.env.windows` | `PATH` + `C:\Program Files\nodejs` | Adds Node.js to the terminal `PATH`. | A leftover: Node.js is on the system `PATH` already. |
 | `remote.SSH.remotePlatform` | 4 hosts → `"linux"` | Tells Remote - SSH the OS of each server, so it does not ask. | Host names replaced with `server-N.example.org` here. |
 | `update.mode` | `"start"` | Checks for VS Code updates only at start-up. | Application-scoped, so it belongs here. |
 | `update.enableWindowsBackgroundUpdates` | `false` | Does not download and install updates in the background. | Updates happen when I restart, not mid-session. |
 | `window.menuBarVisibility` | `"classic"` | Always shows the menu bar. | |
-| `workbench.experimental.enableNewProfilesUI` | `true` | Was needed for the Profiles editor in older VS Code. | Leftover; the Profiles editor is standard now. |
 | `grammarly.files.include` | Markdown, text, R, Quarto, R Markdown | Files Grammarly checks. | Grammarly is installed in the `R` profile; these settings only apply when using Default. |
 | `grammarly.config.documentDialect` | `"british"` | British English. | |
 | `grammarly.config.documentDomain` | `"academic"` | Academic writing style. | |
 | `grammarly.config.suggestions.OxfordComma` | `true` | Suggests the Oxford comma. | |
 | `grammarly.startTextCheckInPausedState` | `true` | Grammarly starts paused; turn it on when writing. | Keeps it quiet while coding. |
-| `chatgpt.authenticationType` | `"Google Authentication"` | Sign-in method of an older ChatGPT extension. | Leftover. |
-| `chatgpt.emailAddress` | `""` | Same extension. | Leftover, empty. |
-| `chatgpt.localeOverride` | `"en-US"` | Same extension. | Leftover. |
-| `codeium.enableConfig` | on for all, Markdown, Quarto | Languages for Codeium (an AI autocomplete). | Leftover: Codeium is not installed. |
-| `aws.telemetry` | `false` | Turns off AWS Toolkit telemetry. | Leftover: AWS Toolkit is not installed. |
+| `chatgpt.localeOverride` | `"en-US"` | Codex extension (`openai.chatgpt`): the language of its interface. | English UI regardless of the Windows language. |
 | `mssql.enableRichExperiences` | `true` | Newer UI of the SQL Server extension. | |
 
-The leftovers are harmless (settings of extensions that are not installed do nothing).
+I removed leftovers from this profile: settings of extensions that are no longer installed (Codeium, AWS Toolkit, an older ChatGPT extension), an experimental flag that is now standard (`workbench.experimental.enableNewProfilesUI`), and a terminal `PATH` addition for Node.js, which is on the system `PATH` already. They did nothing, which is exactly why they are easy to keep by accident.
 
 ```{r}
 #| echo: false
 #| output: asis
-show_file("Default/settings.json", "json", label = "Default profile settings.json")
+show_file(
+  "Default/settings.json", "json",
+  label = "Default profile settings.json"
+)
 ```
 
 ## The R-Lecturer profile
@@ -138,16 +135,19 @@ A copy of `R` that I trimmed towards VS Code's defaults, so that what I show in 
 | Unicode highlighting | off | on (the default) | |
 | Paste | | `editor.formatOnPaste: true` | |
 | Quarto | `previewReveal: true` | preview in an external browser; visual editor wraps at 80 columns, spell-checks in en-GB | Slides are shown full-screen in the browser. |
-| R | | `r.removeLeadingComments`, `r.session.levelOfObjectDetail: "Normal"`; still has the deprecated `r.plot.useHttpgd` | Cleaner code sent to the console in demos. |
+| R | | `r.removeLeadingComments`, `r.session.levelOfObjectDetail: "Normal"` | Cleaner code sent to the console in demos. |
 | Formatters | YAML: Red Hat YAML; SCSS: built-in; SQL: SQL Server | YAML: Quarto; SCSS: SCSS Formatter; SQL: SQLTools | Different extension set. |
 | File handling | panel on the right, empty-editor hint hidden, wrapped tabs, ... | VS Code defaults | Closer to the default layout. |
-| Extensions | 72 | 65: no AI agents except Copilot Chat, no Docker, no CSV table editor; adds LaTeX, Zotero, LTeX, SQLTools, PostgreSQL, Excel/OOXML viewers | Matches the course content. See [Extensions](extensions.qmd) for the exact lists. |
+| Extensions | 73 | 65: no AI agents except Copilot Chat, no Docker, no CSV table editor; adds LaTeX, Zotero, LTeX, SQLTools, PostgreSQL, Excel/OOXML viewers | Matches the course content. See [Extensions](extensions.qmd) for the exact lists. |
 | Keybindings | the [R set](keybindings.qmd) | its own set (see [Keybindings](keybindings.qmd)) | |
 | Tasks | 2 | only *R: New scratch project* | |
 
 ```{r}
 #| echo: false
 #| output: asis
-show_file("R-Lecturer/settings.json", "json", label = "R-Lecturer settings.json")
+show_file(
+  "R-Lecturer/settings.json", "json",
+  label = "R-Lecturer settings.json"
+)
 show_file("R-Lecturer/tasks.json", "json", label = "R-Lecturer tasks.json")
 ```

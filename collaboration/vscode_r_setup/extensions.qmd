@@ -15,10 +15,10 @@ In VS Code, extensions belong to a **profile**: each profile has its own set. Se
 
 I use two profiles:
 
-- **`R`** is my daily profile: analysis, R packages, Quarto websites and everything else. It has 72 extensions.
+- **`R`** is my daily profile: analysis, R packages, Quarto websites and everything else. It has 73 extensions.
 - **`R-Lecturer`** mirrors what students see in my courses (light theme, Material icons, `%>%` as the pipe shortcut). It has 65 extensions.
 
-Together that is 85 extensions: 52 in both profiles, 20 only in `R` and 13 only in `R-Lecturer`. The "In profile" column in the tables below says which.
+Together that is 86 extensions: 52 in both profiles, 21 only in `R` and 13 only in `R-Lecturer`. The "In profile" column in the tables below says which.
 
 Ids are written in lower case, as `code --list-extensions` prints them. VS Code ignores the case of ids.
 
@@ -51,7 +51,7 @@ The R side (R itself, radian and R packages such as `languageserver`, `httpgd` a
 
 | Extension | ID | In profile | What it's for | Notes |
 |---|---|---|---|---|
-| [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) | `quarto.quarto` | both | Render and preview Quarto documents, visual editor, run cells. | Needed. `[quarto]` formatter and `quarto.*` settings; in `R-Lecturer` also the `[yaml]` and notebook formatter ([Settings](settings.qmd)). `Ctrl+Alt+L` runs `quarto.previewShortcut` ([Keybindings](keybindings.qmd)). |
+| [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) | `quarto.quarto` | both | Render and preview Quarto documents, visual editor, run cells. | Needed. `[quarto]` formatter and `quarto.*` settings; in `R-Lecturer` also the `[yaml]` and notebook formatter ([Settings](settings.qmd)). `Ctrl+Alt+L` runs `quarto.previewContentShortcut` ([Keybindings](keybindings.qmd)). |
 | [R Markdown All in One](https://marketplace.visualstudio.com/items?itemName=tianyishi.rmarkdown) | `tianyishi.rmarkdown` | both | R Markdown, bookdown and blogdown support. | Overlaps with vscode-R and Quarto, see [Overlaps](#overlaps). |
 
 ### Markdown
@@ -69,6 +69,7 @@ The R side (R itself, radian and R packages such as `languageserver`, `httpgd` a
 | Extension | ID | In profile | What it's for | Notes |
 |---|---|---|---|---|
 | [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | `streetsidesoftware.code-spell-checker` | both | Spell checking in code and prose. | `cSpell.userWords` in both, `cSpell.language` in `R` ([Settings](settings.qmd)). |
+| [Czech - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-czech) | `streetsidesoftware.code-spell-checker-czech` | R | Czech dictionary for Code Spell Checker. | Needed for `cs` in `cSpell.language`; without it Czech is silently not checked ([Settings](settings.qmd)). |
 | [Grammarly](https://marketplace.visualstudio.com/items?itemName=znck.grammarly) | `znck.grammarly` | R | Grammarly checks in Markdown, Quarto and text files. | Its settings sit in the Default profile, and one in `R-Lecturer`, where the extension is not installed. |
 | [LTeX](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) | `valentjn.vscode-ltex` | R-Lecturer | Grammar and spelling with LanguageTool, for LaTeX, Markdown and more. | Overlaps with Code Spell Checker. The original LTeX is no longer updated; a community fork (LTeX+) exists. |
 | [Citation Picker for Zotero](https://marketplace.visualstudio.com/items?itemName=mblode.zotero) | `mblode.zotero` | R-Lecturer | Inserts citation keys from Zotero. | Needs Zotero with the Better BibTeX plug-in. Quarto's visual editor can also insert Zotero citations. |
@@ -269,5 +270,5 @@ Both lists are written by `code --list-extensions --profile <name>` when I expor
 #| echo: false
 #| output: asis
 show_file("extensions-R.txt", "text")
-show_file("extensions-R-Lecturer.txt", "text", label = "extensions-R-Lecturer.txt")
+show_file("extensions-R-Lecturer.txt", "text")
 ```

@@ -226,12 +226,11 @@ These belong to the GitHub Pull Requests extension.
   "markdown": true,
   "scminput": false,
   "quarto": true,
-  "R": true,
-  "Markdown": true
+  "r": true
 },
 ```
 
-**Per language.** `"*": true` turns Copilot on everywhere, and the other keys are exceptions or confirmations. `plaintext` (`.txt` files) and `scminput` (the commit message box in Source Control) are off. `markdown` and `quarto` are on explicitly, which `*` already covers. `R` and `Markdown` with capitals are not VS Code language ids (those are lower-case), so these two keys most likely match nothing; R files are covered by `*` anyway.
+**Per language.** `"*": true` turns Copilot on everywhere, and the other keys are exceptions or confirmations. `plaintext` (`.txt` files) and `scminput` (the commit message box in Source Control) are off. `markdown`, `quarto` and `r` are on explicitly, which `*` already covers; they keep them on if `*` is ever switched off. The keys are VS Code language ids, which are lower-case: an earlier version had `R` and `Markdown`, which match nothing.
 
 **Edits, not autocomplete.** With `github.copilot.editor.enableAutoCompletions: false` and `github.copilot.nextEditSuggestions.enabled: true`, Copilot does not complete code as I type. Instead it suggests edits: after a change it proposes the matching next change nearby (for example, renaming the other uses of a variable), which I accept with `Tab`. When I do want an inline suggestion, `Ctrl+Alt+I` asks for one on demand ([Keybindings](keybindings.qmd)).
 
@@ -271,7 +270,7 @@ These belong to Code Spell Checker (`streetsidesoftware.code-spell-checker`).
 | Setting | Value | What it does | Why |
 |---|---|---|---|
 | `cSpell.userWords` | 15 words, see below | Words accepted as correct in every file and project. | R package names and project names are not flagged. |
-| `cSpell.language` | `"en-GB, cz"` | Languages to check spelling in. | British English for writing, plus Czech (see below). |
+| `cSpell.language` | `"en-GB,cs"` | Languages to check spelling in. | British English for writing, plus Czech (see below). |
 
 The user words are:
 
@@ -279,7 +278,7 @@ The user words are:
 - Projects and databases: `vegvault`, `Neotoma`.
 - Names and identifiers: `Ondřej`, `Mottl`, `ORCID`.
 
-`cSpell.language` takes a comma-separated list. British English is built into Code Spell Checker. Czech is not: it needs the separate Czech dictionary extension, which is not in this profile's [extension list](extensions.qmd), and that dictionary uses the code `cs`, not `cz`. As the file stands, only British English is checked.
+`cSpell.language` takes a comma-separated list of language codes. British English is built into Code Spell Checker. Czech is not: it needs the separate Czech dictionary extension (`streetsidesoftware.code-spell-checker-czech`, see [Extensions](extensions.qmd)), and its code is `cs` (the ISO code), not `cz` (the country). Without the extension, or with `cz`, Czech is silently not checked. A word counts as correct if it is in any of the listed languages.
 
 ## Multi-command
 
@@ -287,14 +286,13 @@ The user words are:
 
 | Setting | Value | What it does | Why |
 |---|---|---|---|
-| `multiCommand.commands` | 8 entries (7 different), see below | Defines commands that run a sequence of other commands. | Chunk navigation and "run chunk and move" in R Markdown and Quarto. |
+| `multiCommand.commands` | 7 entries, see below | Defines commands that run a sequence of other commands. | Chunk navigation and "run chunk and move" in R Markdown and Quarto. |
 
 ```json
 "multiCommand.commands": [
   { "command": "multiCommand.r.go.previous.chunk.center", "sequence": ["r.goToPreviousChunk"] },
   { "command": "multiCommand.r.go.next.chunk.center",     "sequence": ["r.goToNextChunk"] },
   { "command": "multicmd.r.go.beginning.chunk.center",    "sequence": ["r.selectCurrentChunk", "cursorLeft", "cursorDown"] },
-  { "command": "multicmd.r.go.end.chunk.center",          "sequence": ["r.selectCurrentChunk", "cursorRight", "cursorLineStart", "cursorUp"] },
   { "command": "multicmd.r.go.end.chunk.center",          "sequence": ["r.selectCurrentChunk", "cursorRight", "cursorLineStart", "cursorUp"] },
   { "command": "multicmd.r.run.previous.chunk.center",    "sequence": ["r.goToPreviousChunk", "r.runCurrentChunk"] },
   { "command": "multicmd.r.run.chunk.move.end",           "sequence": ["r.runCurrentChunk", "multicmd.r.go.end.chunk.center"] },
@@ -316,7 +314,6 @@ The user words are:
 
 Points to know:
 
-- **Duplicate.** `multicmd.r.go.end.chunk.center` is defined twice with an identical sequence. That is harmless, and one copy could be removed.
 - **Wrappers.** The two `multiCommand.r.go.*.chunk.center` entries each run a single command, so they do exactly what `r.goToPreviousChunk` and `r.goToNextChunk` do on their own.
 - **Nesting.** Two sequences call `multicmd.r.go.end.chunk.center`, so one multi-command can be a step in another.
 - **"center".** Despite the names, no sequence scrolls or centres the view; they only move the cursor and run code.
@@ -413,14 +410,11 @@ The trade-off: every approved command runs without me seeing it first. `Test-Pat
 
 The YAML extension normally detects a schema for a YAML file (from its file name, via the JSON Schema Store) and uses it for validation and completion. For Docker Compose files and for GitHub, Gitea and Forgejo workflow files, this list turns that automatic detection off. A schema you set yourself, for example with `yaml.schemas`, still applies. The patterns are the extension's own default compose and workflow patterns, so the line keeps the default behaviour.
 
-## Written by extensions or left over
+## Written by extensions
 
 | Setting | Value | What it does | Why |
 |---|---|---|---|
 | `mssql.connectionGroups` | one group, `ROOT` | SQL Server extension: the groups saved connections are sorted into. | Written by the extension itself. |
-| `resourceLens.showMemory` | `false` | Hides memory use in a resource-monitor extension. | No effect, leftover (see below). |
-| `resourceLens.showCpu` | `false` | Hides CPU use in the same extension. | No effect, leftover. |
-| `resourceLens.showGpu` | `false` | Hides GPU use in the same extension. | No effect, leftover. |
 | `githubIssues.ignoreMilestones` | `[]` | GitHub Pull Requests extension: milestones to leave out of the Issues view. | Empty list, so nothing is left out. |
 
 ```json
@@ -430,9 +424,9 @@ The YAML extension normally detects a schema for a YAML file (from its file name
 ```
 
 - `mssql.connectionGroups` is created by the SQL Server extension (`ms-mssql.mssql`) when it first stores its connection list. The single `ROOT` group holds no connection details; the extension recreates it if it is missing.
-- The `resourceLens.*` settings belong to a resource-monitor extension that is **not installed** in this profile (it is not in the [extension list](extensions.qmd)). They have no effect and are leftovers that can be removed. The installed resource monitor is Resource Monitor Graphical (the `resmongraphical.*` settings above).
 - `githubIssues.ignoreMilestones: []` is the empty default and changes nothing.
-- Similar leftovers in the sections above: `vsicons.dontShowNewVersionMessage` only silences a message, `redhat.telemetry.enabled` was written by a prompt, and `hediet.vscode-drawio.resizeImages: null` is the default.
+- Settings of extensions that are not installed have no effect, so they are easy to miss. I removed such leftovers (for example `resourceLens.*` settings for an extension that was not installed); the export script's key list makes new ones visible.
+- Similar low-impact lines in the sections above: `vsicons.dontShowNewVersionMessage` only silences a message, `redhat.telemetry.enabled` was written by a prompt, and `hediet.vscode-drawio.resizeImages: null` is the default.
 
 ## The full file
 

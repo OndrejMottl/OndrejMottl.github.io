@@ -25,7 +25,7 @@
         "description": "R Show Documentation",
         "key": "f1",
         "command": "r.helpPanel.openForSelection",
-        "when": "editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'qmd'"
+        "when": "editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'quarto'"
     },
     // R Code Snippets and Operators
     {
@@ -47,13 +47,22 @@
         "when": "terminalFocus"
     },
     {
-        "description": "R Assignment Arrow",
+        "description": "R Assignment Arrow (editor)",
         "key": "ctrl+shift+,",
         "command": "type",
         "args": {
             "text": " <- "
         },
-        "when": "editorTextFocus || terminalFocus"
+        "when": "editorTextFocus"
+    },
+    {
+        "description": "R Assignment Arrow (terminal)",
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": " <- "
+        },
+        "when": "terminalFocus"
     },
     // R Tools and Utilities
     {
@@ -203,9 +212,9 @@
     // QUARTO/MARKDOWN KEYBINDINGS
     // ========================================================================
     {
-        "description": "Quarto Preview",
+        "description": "Quarto Preview Content (diagram, math or cell at the cursor)",
         "key": "ctrl+alt+l",
-        "command": "quarto.previewShortcut",
+        "command": "quarto.previewContentShortcut",
         "when": "editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'"
     },
     // ========================================================================
@@ -368,16 +377,6 @@
         "key": "ctrl+shift+oem_3",
         "command": "-workbench.action.terminal.new",
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "git.stage",
-        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "git.stage",
-        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus"
     },
     {
         "key": "ctrl+alt+i",

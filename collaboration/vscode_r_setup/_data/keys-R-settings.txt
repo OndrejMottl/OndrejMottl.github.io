@@ -78,9 +78,6 @@ resmongraphical.cpuusage.style
 resmongraphical.disk.style
 resmongraphical.mem.style
 resmongraphical.network.style
-resourceLens.showCpu
-resourceLens.showGpu
-resourceLens.showMemory
 scm.defaultViewMode
 security.workspace.trust.untrustedFiles
 settingsSync.ignoredSettings

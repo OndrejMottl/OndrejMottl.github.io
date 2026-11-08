@@ -57,7 +57,6 @@ r.lsp.debug
 r.lsp.diagnostics
 r.plot.backend
 r.plot.defaults.fullWindowMode
-r.plot.useHttpgd
 r.removeLeadingComments
 r.session.levelOfObjectDetail
 r.sessionWatcher

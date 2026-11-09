@@ -91,5 +91,5 @@ On a new Windows machine:
 3. **Sync gotcha.** Make sure `settingsSync.ignoredSettings` is also in the **Default** profile ([why](profiles_sync.qmd#the-gotcha)).
 4. **Outside VS Code**: put `.Rprofile` in `Documents`, the task scripts in `%USERPROFILE%\.vscode-scripts\`, and run `rig system fix-r-alias` ([details](outside_vscode.qmd)).
 5. **Check `PATH`** against the [rules](outside_vscode.qmd#path-rules): no `R_HOME`, no `R-x.y.z\bin`, Python 3.12 first.
-6. **Restart VS Code completely**, open an R terminal, and run `plot(1:10)` ([test](install.qmd#restart-vs-code-and-test)).
+6. **Restart VS Code completely**, open an R terminal, approve the `sess` installation it asks for, and run `plot(1:10)` ([test](install.qmd#restart-vs-code-and-test)).
 

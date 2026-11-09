@@ -140,8 +140,9 @@ For the Todo Tree extension. Installed for all users, winget links it as `C:\Pro
 Then:
 
 1. Open an R file, then *Command Palette* → **Terminal: Create New Terminal**. With the [settings](settings.qmd) in place, it opens radian (the default terminal profile is "R Terminal").
-2. Run `plot(1:10)`. The plot opens in the httpgd viewer beside the editor.
-3. Run `R.version.string`. It shows rig's default version.
+2. **Approve the `sess` installation.** The first R terminal for each R version shows a pop-up asking to install `sess`, a small helper package of vscode-R that connects the console to VS Code: the workspace view, help, plots, and `R: attached` in the status bar. It goes into vscode-R's own library, not your package library, and vscode-R asks again when it updates its copy. Approve it and wait for the R prompt; do not reload the window while the pop-up is open ([why](troubleshooting.qmd#r-terminal-hangs-at-start)).
+3. Run `plot(1:10)`. The plot opens in the httpgd viewer beside the editor.
+4. Run `R.version.string`. It shows rig's default version.
 
 If something fails, see [Troubleshooting](troubleshooting.qmd).
 

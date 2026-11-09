@@ -12,6 +12,25 @@ date-modified: last-modified
 
 **Fix:** quit every VS Code window, then start VS Code again. Check in a new terminal with `Get-Command radian`.
 
+## The R terminal hangs at start, and the status bar says `R: (not attached)` {#r-terminal-hangs-at-start}
+
+The terminal starts radian but never shows the R prompt, also after reloading the window.
+
+**Cause:** a lock left over from vscode-R's first-time `sess` setup ([step 10](install.qmd#restart-vs-code-and-test)). Before it installs `sess` for an R version, vscode-R creates a `.setup-lock` folder and asks for permission. If that is interrupted, for example by reloading the window while the pop-up is open, the folder stays, and every new R terminal waits for it. vscode-R never removes such a lock on its own.
+
+**Fix:**
+
+1. Make sure no R terminal is still busy installing `sess`.
+2. Delete the `.setup-lock` folders under `%APPDATA%\Code\User\globalStorage\reditorsupport.r\sess` (there is one level per platform, R version and vscode-R revision):
+
+   ```powershell
+   Get-ChildItem "$env:APPDATA\Code\User\globalStorage\reditorsupport.r\sess" -Recurse -Directory -Force -Filter .setup-lock |
+     Remove-Item
+   ```
+
+   A terminal that was waiting then goes on to the R prompt, without `sess`.
+3. Open a new R terminal and approve the `sess` installation.
+
 ## radian or VS Code starts an old R version {#radian-or-vs-code-starts-an-old-r-version}
 
 `radian --version` or `R.version.string` shows an older R than your `rig default` version.

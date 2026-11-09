@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -295,6 +330,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized" id="toc-the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized" class="nav-link active" data-scroll-target="#the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized">The R terminal closes with exit code -1, or <code>radian</code> “is not recognized”</a></li>
+  <li><a href="#r-terminal-hangs-at-start" id="toc-r-terminal-hangs-at-start" class="nav-link" data-scroll-target="#r-terminal-hangs-at-start">The R terminal hangs at start, and the status bar says <code>R: (not attached)</code></a></li>
   <li><a href="#radian-or-vs-code-starts-an-old-r-version" id="toc-radian-or-vs-code-starts-an-old-r-version" class="nav-link" data-scroll-target="#radian-or-vs-code-starts-an-old-r-version">radian or VS Code starts an old R version</a></li>
   <li><a href="#backend-lintr-requires-lintr-3.3.0-1" id="toc-backend-lintr-requires-lintr-3.3.0-1" class="nav-link" data-scroll-target="#backend-lintr-requires-lintr-3.3.0-1">“Backend ‘lintr’ requires lintr &gt;= 3.3.0-1”</a></li>
   <li><a href="#old-r-setting-names" id="toc-old-r-setting-names" class="nav-link" data-scroll-target="#old-r-setting-names">Red or struck-through R settings</a></li>
@@ -345,6 +381,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="the-r-terminal-closes-with-exit-code--1-or-radian-is-not-recognized">The R terminal closes with exit code -1, or <code>radian</code> “is not recognized”</h2>
 <p><strong>Cause:</strong> VS Code, and every terminal it opens, keeps the <code>PATH</code> from when VS Code was started. If you installed Python, radian or R (or changed <code>PATH</code>) while VS Code was running, it does not see them yet. <em>Developer: Reload Window</em> does not refresh <code>PATH</code>.</p>
 <p><strong>Fix:</strong> quit every VS Code window, then start VS Code again. Check in a new terminal with <code>Get-Command radian</code>.</p>
+</section>
+<section id="r-terminal-hangs-at-start" class="level2">
+<h2 class="anchored" data-anchor-id="r-terminal-hangs-at-start">The R terminal hangs at start, and the status bar says <code>R: (not attached)</code></h2>
+<p>The terminal starts radian but never shows the R prompt, also after reloading the window.</p>
+<p><strong>Cause:</strong> a lock left over from vscode-R’s first-time <code>sess</code> setup (<a href="../../collaboration/vscode_r_setup/install.html#restart-vs-code-and-test">step 10</a>). Before it installs <code>sess</code> for an R version, vscode-R creates a <code>.setup-lock</code> folder and asks for permission. If that is interrupted, for example by reloading the window while the pop-up is open, the folder stays, and every new R terminal waits for it. vscode-R never removes such a lock on its own.</p>
+<p><strong>Fix:</strong></p>
+<ol type="1">
+<li><p>Make sure no R terminal is still busy installing <code>sess</code>.</p></li>
+<li><p>Delete the <code>.setup-lock</code> folders under <code>%APPDATA%\Code\User\globalStorage\reditorsupport.r\sess</code> (there is one level per platform, R version and vscode-R revision):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Get-ChildItem</span> <span class="st">"</span><span class="va">$env</span><span class="op">:</span><span class="va">APPDATA</span><span class="st">\Code\User\globalStorage\reditorsupport.r\sess"</span> <span class="op">-</span>Recurse <span class="op">-</span>Directory <span class="op">-</span>Force <span class="op">-</span>Filter <span class="op">.</span><span class="fu">setup</span><span class="op">-</span>lock <span class="op">|</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Remove-Item</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A terminal that was waiting then goes on to the R prompt, without <code>sess</code>.</p></li>
+<li><p>Open a new R terminal and approve the <code>sess</code> installation.</p></li>
+</ol>
 </section>
 <section id="radian-or-vs-code-starts-an-old-r-version" class="level2">
 <h2 class="anchored" data-anchor-id="radian-or-vs-code-starts-an-old-r-version">radian or VS Code starts an old R version</h2>

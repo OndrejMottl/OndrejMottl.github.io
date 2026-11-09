@@ -545,6 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Then:</p>
 <ol type="1">
 <li>Open an R file, then <em>Command Palette</em> → <strong>Terminal: Create New Terminal</strong>. With the <a href="../../collaboration/vscode_r_setup/settings.html">settings</a> in place, it opens radian (the default terminal profile is “R Terminal”).</li>
+<li><strong>Approve the <code>sess</code> installation.</strong> The first R terminal for each R version shows a pop-up asking to install <code>sess</code>, a small helper package of vscode-R that connects the console to VS Code: the workspace view, help, plots, and <code>R: attached</code> in the status bar. It goes into vscode-R’s own library, not your package library, and vscode-R asks again when it updates its copy. Approve it and wait for the R prompt; do not reload the window while the pop-up is open (<a href="../../collaboration/vscode_r_setup/troubleshooting.html#r-terminal-hangs-at-start">why</a>).</li>
 <li>Run <code>plot(1:10)</code>. The plot opens in the httpgd viewer beside the editor.</li>
 <li>Run <code>R.version.string</code>. It shows rig’s default version.</li>
 </ol>

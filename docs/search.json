@@ -574,7 +574,7 @@
     "href": "collaboration/vscode_r_setup/install.html#restart-vs-code-and-test",
     "title": "Install, in order",
     "section": "10. Restart VS Code and test",
-    "text": "10. Restart VS Code and test\nQuit every VS Code window and start it again. VS Code and all its terminals keep the PATH they were started with, and Developer: Reload Window does not refresh it.\nThen:\n\nOpen an R file, then Command Palette → Terminal: Create New Terminal. With the settings in place, it opens radian (the default terminal profile is “R Terminal”).\nRun plot(1:10). The plot opens in the httpgd viewer beside the editor.\nRun R.version.string. It shows rig’s default version.\n\nIf something fails, see Troubleshooting.",
+    "text": "10. Restart VS Code and test\nQuit every VS Code window and start it again. VS Code and all its terminals keep the PATH they were started with, and Developer: Reload Window does not refresh it.\nThen:\n\nOpen an R file, then Command Palette → Terminal: Create New Terminal. With the settings in place, it opens radian (the default terminal profile is “R Terminal”).\nApprove the sess installation. The first R terminal for each R version shows a pop-up asking to install sess, a small helper package of vscode-R that connects the console to VS Code: the workspace view, help, plots, and R: attached in the status bar. It goes into vscode-R’s own library, not your package library, and vscode-R asks again when it updates its copy. Approve it and wait for the R prompt; do not reload the window while the pop-up is open (why).\nRun plot(1:10). The plot opens in the httpgd viewer beside the editor.\nRun R.version.string. It shows rig’s default version.\n\nIf something fails, see Troubleshooting.",
     "crumbs": [
       "Work with me",
       "VS Code for R",
@@ -1334,7 +1334,7 @@
     "href": "collaboration/vscode_r_setup/index.html#rebuild-from-scratch",
     "title": "VS Code for R",
     "section": "Rebuild from scratch",
-    "text": "Rebuild from scratch\nOn a new Windows machine:\n\nInstall everything in the order on Install, in order (steps 1–9).\nVS Code profile. Either sign in to Settings Sync (on my own machines), or create a profile called R and fill it in from the published files:\n\nsettings: settings.json → Preferences: Open User Settings (JSON);\nkeybindings: keybindings.json → Preferences: Open Keyboard Shortcuts (JSON);\nsnippets and tasks: Snippets and tasks;\nextensions: install_extensions.ps1 from Extensions.\n\nSync gotcha. Make sure settingsSync.ignoredSettings is also in the Default profile (why).\nOutside VS Code: put .Rprofile in Documents, the task scripts in %USERPROFILE%\\.vscode-scripts\\, and run rig system fix-r-alias (details).\nCheck PATH against the rules: no R_HOME, no R-x.y.z\\bin, Python 3.12 first.\nRestart VS Code completely, open an R terminal, and run plot(1:10) (test).",
+    "text": "Rebuild from scratch\nOn a new Windows machine:\n\nInstall everything in the order on Install, in order (steps 1–9).\nVS Code profile. Either sign in to Settings Sync (on my own machines), or create a profile called R and fill it in from the published files:\n\nsettings: settings.json → Preferences: Open User Settings (JSON);\nkeybindings: keybindings.json → Preferences: Open Keyboard Shortcuts (JSON);\nsnippets and tasks: Snippets and tasks;\nextensions: install_extensions.ps1 from Extensions.\n\nSync gotcha. Make sure settingsSync.ignoredSettings is also in the Default profile (why).\nOutside VS Code: put .Rprofile in Documents, the task scripts in %USERPROFILE%\\.vscode-scripts\\, and run rig system fix-r-alias (details).\nCheck PATH against the rules: no R_HOME, no R-x.y.z\\bin, Python 3.12 first.\nRestart VS Code completely, open an R terminal, approve the sess installation it asks for, and run plot(1:10) (test).",
     "crumbs": [
       "Work with me",
       "VS Code for R"
@@ -2251,6 +2251,18 @@
       "Work with me",
       "VS Code for R",
       "Install, in order"
+    ]
+  },
+  {
+    "objectID": "collaboration/vscode_r_setup/troubleshooting.html#r-terminal-hangs-at-start",
+    "href": "collaboration/vscode_r_setup/troubleshooting.html#r-terminal-hangs-at-start",
+    "title": "Troubleshooting",
+    "section": "The R terminal hangs at start, and the status bar says R: (not attached)",
+    "text": "The R terminal hangs at start, and the status bar says R: (not attached)\nThe terminal starts radian but never shows the R prompt, also after reloading the window.\nCause: a lock left over from vscode-R’s first-time sess setup (step 10). Before it installs sess for an R version, vscode-R creates a .setup-lock folder and asks for permission. If that is interrupted, for example by reloading the window while the pop-up is open, the folder stays, and every new R terminal waits for it. vscode-R never removes such a lock on its own.\nFix:\n\nMake sure no R terminal is still busy installing sess.\nDelete the .setup-lock folders under %APPDATA%\\Code\\User\\globalStorage\\reditorsupport.r\\sess (there is one level per platform, R version and vscode-R revision):\nGet-ChildItem \"$env:APPDATA\\Code\\User\\globalStorage\\reditorsupport.r\\sess\" -Recurse -Directory -Force -Filter .setup-lock |\n  Remove-Item\nA terminal that was waiting then goes on to the R prompt, without sess.\nOpen a new R terminal and approve the sess installation.",
+    "crumbs": [
+      "Work with me",
+      "VS Code for R",
+      "Troubleshooting"
     ]
   }
 ]

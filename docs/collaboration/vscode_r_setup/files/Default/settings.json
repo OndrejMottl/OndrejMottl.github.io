@@ -1,0 +1,98 @@
+{
+  // workspace, workbench and window settings
+  "workbench.panel.defaultLocation": "right", // if you like 3-column layout
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.commandCenter": true,
+  "workbench.iconTheme": "vscode-icons",
+"workbench.colorTheme": "Visual Studio 2019 Dark",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.list.openMode": "doubleClick",
+  // terminal setting
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "R Terminal",
+  "terminal.integrated.fontWeightBold": "normal",
+  // editor
+  "editor.stickyScroll.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.unicodeHighlight.nonBasicASCII": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "REditorSupport.r",
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.bracketPairs": "active", // adds guides to matching brackets
+  "editor.rulers": [
+    80
+  ],
+  // make sure ".rmd" files are treated as R Markdown
+  "files.associations": {
+    "*.rmd": "rmd"
+  },
+  // git settings
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "git-graph.commitDetailsView.location": "Docked to Bottom",
+  "git-graph.date.type": "Commit Date",
+  "diffEditor.ignoreTrimWhitespace": false,
+  // r settings
+  "r.alwaysUseActiveTerminal": true,
+  "r.bracketedPaste": true,
+  "r.consolePath": "radian", // found on PATH; R comes from rig's default
+  "r.source.focus": "editor",
+  "r.sessionWatcher": true,
+  "r.plot.backend": "httpgd",
+  "r.plot.defaults.fullWindowMode": true,
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.debugger.timeouts.startup": 20000,
+  "quarto.mathjax.theme": "dark",
+  // github settings
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.pullBranch": "never",
+  // remote setting
+  "remote.SSH.remotePlatform": {
+    "server-1.example.org": "linux",
+    "server-2.example.org": "linux",
+    "server-3.example.org": "linux",
+    "server-4.example.org": "linux"
+  },
+  // resource manager
+  "resmongraphical.cpuusage.style": "Vertical",
+  // markdown and qurto
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "quarto.render.previewReveal": true,
+  "editor.accessibilitySupport": "off",
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md",
+    "**/*.R",
+    "**/*.r",
+    "**/*.qmd",
+    "**/*.Rmd"
+  ],
+  "grammarly.config.suggestions.OxfordComma": true,
+  "grammarly.config.documentDialect": "british",
+  "grammarly.config.documentDomain": "academic",
+  "grammarly.startTextCheckInPausedState": true,
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 2,
+  "[quarto]": {
+    "editor.defaultFormatter": "quarto.quarto"
+  },
+  "markdown.extension.toc.updateOnSave": false,
+  "window.menuBarVisibility": "classic",
+  "mssql.enableRichExperiences": true,
+  "update.mode": "start",
+  "update.enableWindowsBackgroundUpdates": false,
+  "chatgpt.localeOverride": "en-US",
+  "claudeCode.hideOnboarding": true,
+  // Settings Sync skips these two by default; "-" makes it sync them.
+  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
+  "todo-tree.ripgrep.ripgrep": "C:\\Program Files\\WinGet\\Links\\rg.exe"
+}

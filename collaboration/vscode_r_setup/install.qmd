@@ -1,0 +1,151 @@
+---
+title: "Install, in order"
+description: "What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, ripgrep."
+date-format: long
+date-modified: last-modified
+---
+
+Everything can be done from PowerShell with [`winget`](https://learn.microsoft.com/windows/package-manager/winget/), which comes with Windows 11.
+
+Install R before Rtools and the R packages, and Python before radian. After changing `PATH`, programs only see the change when they are started again (see [step 10](#restart-vs-code-and-test)).
+
+## Versions I use
+
+| Software | Version |
+|---|---|
+| VS Code | 1.134 |
+| rig | 0.11.1 |
+| R | 4.6.2 (also used: 4.5.x) |
+| Python | 3.12.10 |
+| radian / rchitect | 0.7.1 / 0.5.2 |
+| Rtools | 4.5 |
+| Quarto | 1.11.9 |
+| ripgrep | 15.2.0 |
+| RStudio | 2026.10.1 |
+| vscode-R extension | 3.3 |
+
+## 1. VS Code
+
+```powershell
+winget install Microsoft.VisualStudioCode
+```
+
+Or download it from <https://code.visualstudio.com/Download> (the *User Installer* is fine). Then turn on **Settings Sync** (the account icon, bottom left) and sign in. On a machine that already has a synced set-up, this brings back the profiles, settings, keybindings, snippets, tasks and extensions. Read [Profiles and Settings Sync](profiles_sync.qmd) first: two R settings do not sync unless you tell VS Code to sync them.
+
+## 2. rig, then R
+
+[rig](https://github.com/r-lib/rig) installs and switches R versions. It keeps the set-up free of machine-specific paths: VS Code and radian use "the `R` on `PATH`", and rig decides which version that is.
+
+```powershell
+winget install Posit.rig
+```
+
+Open a new terminal (so it sees rig on `PATH`), then:
+
+```powershell
+rig add release          # the current R release; accept the UAC prompt
+rig default 4.6.2        # the version used everywhere; `rig list` shows what is installed
+rig system make-links    # version-named shortcuts: R-4.6.2, R-4.5.1, ...
+rig system fix-r-alias   # make `R` start R in PowerShell
+```
+
+- `rig add release` looks stuck with no output when it is waiting for the UAC prompt, which can be hidden behind other windows.
+- `rig add 4.5.1` (or `rig add 4.5`) installs an older version next to it.
+- In PowerShell, `R` is a built-in alias for `Invoke-History`. `rig system fix-r-alias` removes that alias in your PowerShell profile (see [Outside VS Code](outside_vscode.qmd#powershell)).
+- rig puts its shortcuts (`R.exe`, `Rscript.exe`, `R-4.6.2.exe`, ...) in `C:\Program Files\R\bin`, which must be on `PATH`. Do not also add a version folder such as `C:\Program Files\R\R-x.y.z\bin` to `PATH`, and do not set `R_HOME`: both pin one version and override rig (see [Troubleshooting](troubleshooting.qmd#radian-or-vs-code-starts-an-old-r-version)).
+- rig does not install Rtools (step 6).
+
+## 3. RStudio (optional)
+
+```powershell
+winget install Posit.RStudio
+```
+
+rig registers its R versions with RStudio, so there is nothing else to set up. Its bundled pandoc is also used by my `.Rprofile` ([Outside VS Code](outside_vscode.qmd#rprofile)).
+
+## 4. Python (python.org build)
+
+radian is a Python program, so it needs Python. I use Python 3.12, the python.org build, not the Microsoft Store one:
+
+```powershell
+winget install Python.Python.3.12 --override "/quiet InstallAllUsers=0 PrependPath=1 Include_launcher=1 Include_test=0"
+```
+
+- `PrependPath=1` puts `Python312\` and `Python312\Scripts\` on your user `PATH`. `Scripts\` is where `radian.exe` will be.
+- If another Python is installed (a Store one, or 3.13+), 3.12 must come first on `PATH`. Check in a new terminal: `python --version` and `Get-Command radian` must both point to `Python312`.
+
+## 5. radian
+
+[radian](https://github.com/randy3k/radian) is a better R console: syntax highlighting, multi-line editing, and autocompletion.
+
+```powershell
+python -m pip install -U radian
+radian --version   # shows the radian, R and Python versions it uses
+```
+
+`radian --version` should report the R version you set with `rig default`. If it shows another one, see [Troubleshooting](troubleshooting.qmd#radian-or-vs-code-starts-an-old-r-version).
+
+If the install fails while compiling, install the [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+
+## 6. Rtools
+
+[Rtools](https://cran.r-project.org/bin/windows/Rtools/) compiles R packages from source (needed for GitHub packages such as vscDebugger, and for your own packages).
+
+```powershell
+winget install RProject.Rtools
+```
+
+- Rtools 4.5 covers R 4.5.0 and later, including 4.6.x. There is no separate Rtools 4.6.
+- Check in R: `pkgbuild::has_build_tools()` should be `TRUE`, and `Sys.which("make")` should point into `C:\rtools45\`.
+
+## 7. The R packages
+
+These are needed once per R version: each R version has its own package library, and a new version starts empty.
+
+```r
+install.packages(c("languageserver", "remotes", "httpgd", "devtools", "lintr", "styler", "btw"))
+remotes::install_github("ManuelHentschel/vscDebugger")
+```
+
+| Package | Why |
+|---|---|
+| `languageserver` | Autocompletion, go to definition, hover help and diagnostics in VS Code. |
+| `vscDebugger` | The R debugger behind the R Debugger extension. Only on GitHub, so it needs Rtools. |
+| `httpgd` | The plot viewer. VS Code shows plots from it (`r.plot.backend: "httpgd"`). |
+| `devtools` | Package development; brings `usethis` (used by the [scratch project task](snippets_tasks.qmd#r-new-scratch-project)). |
+| `lintr` | Linting in the editor. Needs lintr 3.3.0-1 or newer. |
+| `styler` | Formatting, used by `languageserver` for "Format Document". |
+| `btw` | Exposes the R session to coding assistants (MCP). My `.Rprofile` starts it when installed. Optional. |
+
+## 8. Quarto
+
+```powershell
+winget install Posit.Quarto
+```
+
+This installs Quarto for all users in `C:\Program Files\Quarto`.
+
+## 9. ripgrep {#ripgrep}
+
+```powershell
+winget install BurntSushi.ripgrep.MSVC --scope machine
+```
+
+For the Todo Tree extension. Installed for all users, winget links it as `C:\Program Files\WinGet\Links\rg.exe`, the path in my settings (`todo-tree.ripgrep.ripgrep`), so the same setting works on every machine. It needs an administrator prompt.
+
+## 10. Restart VS Code and test {#restart-vs-code-and-test}
+
+**Quit every VS Code window and start it again.** VS Code and all its terminals keep the `PATH` they were started with, and *Developer: Reload Window* does not refresh it.
+
+Then:
+
+1. Open an R file, then *Command Palette* → **Terminal: Create New Terminal**. With the [settings](settings.qmd) in place, it opens radian (the default terminal profile is "R Terminal").
+2. **Approve the `sess` installation.** The first R terminal for each R version shows a pop-up asking to install `sess`, a small helper package of vscode-R that connects the console to VS Code: the workspace view, help, plots, and `R: attached` in the status bar. It goes into vscode-R's own library, not your package library, and vscode-R asks again when it updates its copy. Approve it and wait for the R prompt; do not reload the window while the pop-up is open ([why](troubleshooting.qmd#r-terminal-hangs-at-start)).
+3. Run `plot(1:10)`. The plot opens in the httpgd viewer beside the editor.
+4. Run `R.version.string`. It shows rig's default version.
+
+If something fails, see [Troubleshooting](troubleshooting.qmd).
+
+## Next
+
+The rest of the environment comes from the profile: [settings](settings.qmd), [keybindings](keybindings.qmd), [extensions](extensions.qmd), [snippets and tasks](snippets_tasks.qmd), plus a few files [outside VS Code](outside_vscode.qmd). The [overview](index.qmd#rebuild-from-scratch) has the whole rebuild as one checklist.

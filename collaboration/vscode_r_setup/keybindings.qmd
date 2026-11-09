@@ -1,0 +1,273 @@
+---
+title: "Keybindings reference"
+description: "The keyboard shortcuts in my R profile, many borrowed from RStudio."
+date-format: long
+date-modified: last-modified
+---
+
+```{r}
+#| include: false
+source("_helpers.R")
+check_documented("keys-R-keybindings.txt")
+```
+
+This page lists the keybindings in the `keybindings.json` of my `R` profile (see [Profiles and Settings Sync](profiles_sync.qmd)). Many of them bring back RStudio shortcuts. My teaching profile `R-Lecturer` has none of its own ([R-Lecturer](#r-lecturer)). The file is at [the end of the page](#the-full-file).
+
+## How to read the file
+
+Each rule has a `key`, a `command` and optionally `args` and a `when` condition; a later rule beats an earlier one and the defaults, and a command starting with `-` removes a default binding. The format is described in the [VS Code keybindings documentation](https://code.visualstudio.com/docs/configure/keybindings).
+
+I use a Czech keyboard layout. `oem_*` names depend on the layout, while names in square brackets, such as `[Digit1]`, are scan codes (physical key positions). The tables give the keys as I press them, plus the US equivalent where it differs:
+
+| In the file | Czech layout (what I press) | US layout |
+|---|---|---|
+| `ctrl+shift+oem_2` | `Ctrl+Shift+´` (the `´`/`ˇ` key left of Backspace) | `Ctrl+Shift+/` |
+| `ctrl+oem_period` | `Ctrl+.` | `Ctrl+.` |
+| `ctrl+shift+,` | `Ctrl+Shift+,` | `Ctrl+Shift+,` (that is, `Ctrl+<`) |
+| `ctrl+shift+oem_3` |`Ctrl+Shift+;` (the `;`/`°` key left of `+`) | `` Ctrl+Shift+` `` |
+| `ctrl+alt+oem_3` | `Ctrl+Alt+;` | `` Ctrl+Alt+` `` |
+| `ctrl+k ctrl+[Digit1]` | `Ctrl+K`, then `Ctrl++` | `Ctrl+K`, then `Ctrl+1` |
+| `ctrl+k ctrl+[Digit2]` | `Ctrl+K`, then `Ctrl+ě` | `Ctrl+K`, then `Ctrl+2` |
+
+### Reusing the file on another layout
+
+On a US layout the bindings stay on the same physical keys, except `ctrl+shift+oem_2`, which moves from the key left of Backspace to the `/` key. On other layouts the `oem_*` keys can land anywhere. *Developer: Toggle Keyboard Shortcuts Troubleshooting* logs in the *Output* panel how VS Code reads a key press and which rule it runs.
+
+## General
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Shift+´` (US: `Ctrl+Shift+/`) | Insert `` ``` `` (`type`) | always | none |
+
+The rule has no `when`, but `type` only does something when the cursor is in a text input.
+
+## R language
+
+### Documentation and help
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Shift+D` | Document the package (`r.document`) | `resourceLangId == 'r'` | Run and Debug view |
+| `F1` | R help for the word under the cursor (`r.helpPanel.openForSelection`) | R files; R Markdown and Quarto text (see below) | Show All Commands |
+
+`r.document` runs the vscode-R task *R: Document*, which calls `devtools::document()`. It needs devtools (see [Install](install.qmd)). In any other file, `Ctrl+Shift+D` still opens Run and Debug.
+
+The full `when` of the `F1` rule is:
+
+```
+editorLangId == 'r' || editorTextFocus && editorLangId == 'rmd' || editorTextFocus && editorLangId == 'quarto'
+```
+
+So `F1` opens R help whenever an R file is focused, and in R Markdown and Quarto documents when the cursor is in the text. Everywhere else `F1` still opens the Command Palette, which is also on `Ctrl+Shift+P`.
+
+Quarto's language id is `quarto`, not `qmd`.
+
+### Operators
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Shift+M` | Insert the native pipe in the editor (`type`) | `editorTextFocus` | Problems panel |
+| `Ctrl+Shift+M` | Send the native pipe to the terminal (`workbench.action.terminal.sendSequence`) | `terminalFocus` | Problems panel |
+| `Ctrl+Shift+,` (US: `Ctrl+<`) | Insert the assignment arrow in the editor (`type`) | `editorTextFocus` | Replace with Previous Value |
+| `Ctrl+Shift+,` (US: `Ctrl+<`) | Send the assignment arrow to the terminal (`workbench.action.terminal.sendSequence`) | `terminalFocus` | none |
+
+Both texts include a space on each side: the pipe rules insert ` |> ` and the arrow rules insert ` <- `. The pipe is R's native pipe (R 4.1 or later), not magrittr's `%>%`.
+
+Each operator has two rules because `type` only types into a text editor, not into the terminal. In the terminal, `workbench.action.terminal.sendSequence` writes the text straight to radian. Outside both, `Ctrl+Shift+M` still opens the Problems panel.
+
+### Tools
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Shift+X` | Run `reprex::reprex()` in the R terminal (`r.runCommand`) | `resourceLangId == 'r'` | Extensions view |
+| `Ctrl+Shift+W` | Open the R view: sessions, workspace, help (`workbench.view.extension.workspaceViewer`) | always | Close Window |
+| `Ctrl+Alt+P` | Open the httpgd plot viewer beside the editor (`r.runCommand`) | `editorTextFocus && editorLangId == 'r'` | none |
+
+`r.runCommand` sends its `args` as R code to the active R terminal (`r.alwaysUseActiveTerminal` is on, see [Settings](settings.qmd)).
+
+- **reprex.** `reprex::reprex()` with no arguments takes the code from the clipboard, runs it in a clean R session, and puts the rendered Markdown (code plus output) back on the clipboard, ready to paste into an issue or an e-mail. So copy the code first, then press the key. It needs the reprex package (`install.packages("reprex")`; it also comes with the tidyverse). When the active file is not R, `Ctrl+Shift+X` still opens the Extensions view.
+- **httpgd viewer.** The rule runs `.vsc.browser(httpgd::hgd_url(), viewer = "Beside")`. `httpgd::hgd_url()` returns the address of the running httpgd server; `.vsc.browser()` is a vscode-R helper that opens an address in a VS Code viewer, here in the editor column beside the current one. It needs the httpgd package, a running httpgd device (my [`.Rprofile`](outside_vscode.qmd) makes httpgd the default device, so it starts with the first plot), and an R terminal attached to VS Code (`r.sessionWatcher`).
+- **R view.** `workbench.view.extension.workspaceViewer` opens vscode-R's container in the activity bar, with the attached sessions, the objects in the global environment, and the help pages. The workspace list needs the session watcher too. Close Window still works with `Alt+F4`.
+
+## Editor
+
+### Navigation
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Shift+Alt+Up` | Move the cursor 10 lines up (`cursorMove`) | `editorTextFocus` | Copy Line Up |
+| `Shift+Alt+Down` | Move the cursor 10 lines down (`cursorMove`) | `editorTextFocus` | Copy Line Down |
+
+The `args` are `{"to": "up", "by": "line", "value": 10}` (and `"down"`). Change `value` for a different jump. Copy Line Up/Down is still in the *Selection* menu. In Markdown, R Markdown and Quarto files, the Markdown All in One extension also puts its own copy-line commands on these keys; my rules win there too.
+
+### Symbols
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+.` | Go to Symbol in Workspace (`workbench.action.showAllSymbols`) | always | Quick Fix |
+
+The default key for Go to Symbol in Workspace, `Ctrl+T`, still works. Quick Fix is still available from the light bulb in the editor.
+
+### File operations
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+N` | New untitled R file (`r.newFileDocument`) | `editorTextFocus && !editorReadonly` | New Untitled Text File (removed) |
+| `Ctrl+W` | Close the editor (`workbench.action.closeActiveEditor`) | `!terminalFocus` | Close Editor (removed, re-added here) |
+
+How these two keys share the editor and the terminal is explained [under Terminal](#ctrlw-and-ctrln-in-the-editor-and-the-terminal).
+
+### Autocomplete
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Alt+I` | Trigger an inline suggestion (`editor.action.inlineSuggest.trigger`) | `editorTextFocus && !editorReadonly` | Open Chat; an extension's insert-snippet binding (removed) |
+
+Inline suggestions are the grey "ghost text" completions from Copilot or another provider (`editor.inlineSuggest.enabled` is on). VS Code's own key for this is `Alt+\`. When the cursor is not in an editor, `Ctrl+Alt+I` still opens the Chat view.
+
+## Terminal
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+L` | Clear the terminal (`workbench.action.terminal.clear`) | `terminalFocus` | none (the key would go to radian) |
+| `Ctrl+W` | Kill the terminal (`workbench.action.terminal.kill`) | `terminalFocus` | Close Editor |
+| `Ctrl+N` | New terminal (`workbench.action.terminal.new`) | `terminalFocus` | New Untitled Text File |
+| `Ctrl+Shift+;` (US: `` Ctrl+Shift+` ``) | New terminal in the active folder (`workbench.action.terminal.newInActiveWorkspace`) | `!terminalFocus` | New Terminal (removed) |
+| `Ctrl+Alt+;` (US: `` Ctrl+Alt+` ``) | Split the terminal (`workbench.action.terminal.split`) | `terminalFocus` | none (default split is `Ctrl+Shift+5`) |
+
+Without my rule, `Ctrl+L` in the terminal goes to radian, which clears the screen. `workbench.action.terminal.clear` also clears VS Code's scrollback. In the editor, `Ctrl+L` keeps its other bindings.
+
+My default terminal profile is `R Terminal` (`terminal.integrated.defaultProfile.windows`, see [Settings](settings.qmd)), so every new terminal from these keys is an R terminal running radian. Inside the terminal, `Ctrl+Shift+;` does nothing; `Ctrl+N` opens a new terminal there.
+
+### Ctrl+W and Ctrl+N in the editor and the terminal {#ctrlw-and-ctrln-in-the-editor-and-the-terminal}
+
+The same two keys mean "close" and "new" in both places: for a file in the editor, for a terminal in the terminal. It takes removals plus rules with opposite `when` clauses.
+
+`Ctrl+W`:
+
+1. By default, `Ctrl+W` runs `workbench.action.closeActiveEditor` everywhere, and `workbench.action.terminal.killEditor` in a terminal that is open in the editor area.
+2. Both defaults are removed (see [Disabled default keybindings](#disabled-default-keybindings)).
+3. `workbench.action.closeActiveEditor` comes back with `!terminalFocus`, and `workbench.action.terminal.kill` is added with `terminalFocus`.
+
+Result: in the editor, `Ctrl+W` closes the file. In the terminal (in the panel or the editor area), it kills the terminal. Without this, `Ctrl+W` in the terminal would close the file in the editor, not the terminal.
+
+`Ctrl+N`:
+
+1. By default, `Ctrl+N` runs `workbench.action.files.newUntitledFile` everywhere.
+2. That default is removed.
+3. `r.newFileDocument` is added for a writable editor with the cursor in it, and `workbench.action.terminal.new` for the terminal.
+
+Result: in the editor, `Ctrl+N` opens a new R file; in the terminal, a new terminal. Anywhere else (the Explorer, an empty window, a read-only editor), `Ctrl+N` does nothing; *File* → **New Text File** still works there.
+
+VS Code handles these terminal commands itself instead of passing the key to the shell, so they work while the cursor is in radian.
+
+## Git and source control
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Up` | Stage (`git.stage`) | Source Control view (see below) | List scroll up |
+| `Ctrl+Down` | Unstage (`git.unstage`) | Source Control view | List scroll down |
+| `Ctrl+Shift+Up` | Commit (`git.commit`) | Source Control view | none |
+| `Ctrl+Shift+Down` | Push (`git.push`) | Source Control view | none |
+| `Ctrl+Alt+Shift+M` | Run the task "Git: Return to updated main" (`workbench.action.tasks.runTask`) | always | none |
+
+The four Source Control rules share this `when`:
+
+```
+sideBarVisible && activeViewlet == 'workbench.view.scm' && !editorFocus
+```
+
+So the Source Control view must be open in the primary sidebar, and the cursor must not be in an editor. The commit message box counts as an editor, so the keys do not fire while you type a message; commit from there with the default `Ctrl+Enter`. Select a file under *Changes* and press `Ctrl+Up` to stage it.
+
+`git.commit` commits the staged changes with the message from the box (it asks for one if the box is empty). `git.push` pushes the current branch.
+
+The task and its script are described on [Snippets and tasks](snippets_tasks.qmd#git-return-to-updated-main). The binding passes the task's label as `args`, so the label in `tasks.json` and here must stay identical.
+
+## Quarto and Markdown
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+Alt+L` | Quarto: Preview Content (`quarto.previewContentShortcut`) | Quarto, Mermaid or Graphviz (`dot`) files | none |
+
+The `when` is `editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'`. The REST Client extension also uses `Ctrl+Alt+L`, but only in `.http` and plain-text files, so they do not clash.
+
+Quarto itself binds the same command to `Ctrl+Shift+L`; this rule adds a second key for it. Previewing the whole document is `quarto.preview` on `Ctrl+Shift+K`.
+
+## Layout presets
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+K`, `Ctrl++` (US: `Ctrl+K`, `Ctrl+1`) | Preset 1, laptop: primary sidebar 2 steps, secondary sidebar 4 steps (`runCommands`) | always | Fold Level 1 |
+| `Ctrl+K`, `Ctrl+ě` (US: `Ctrl+K`, `Ctrl+2`) | Preset 2, external monitor: primary 4 steps, secondary 7 steps (`runCommands`) | always | Fold Level 2 |
+
+The key strings are `ctrl+k ctrl+[Digit1]` and `ctrl+k ctrl+[Digit2]`: scan codes, so the same physical keys on every layout.
+
+### How the presets work
+
+VS Code has no command that sets a sidebar to a given width. It can only grow or shrink parts of the window step by step, so each preset is a long list of such steps. `runCommands` is built into VS Code; it runs the commands in `args.commands` one after the other (no extension needed).
+
+Each sidebar ends at about its minimum width (around 170 px) plus N steps of about 60 px. Zoom and display scaling change the pixel values.
+
+Two facts drive the sequence:
+
+- `workbench.action.increaseViewWidth` and `workbench.action.decreaseViewWidth` always resize the editor area. The space comes from, or goes to, the primary sidebar first, then the secondary sidebar.
+- `workbench.action.increaseViewSize` and `workbench.action.decreaseViewSize` resize the focused part. But VS Code does not notice focus inside a webview (such as a chat view in the secondary sidebar), so these cannot size the secondary sidebar directly.
+
+So the secondary sidebar is sized indirectly. Preset 1, step by step:
+
+1. `workbench.action.closeSidebar`: hide the primary sidebar. Hidden, it absorbs nothing.
+2. `workbench.action.increaseViewWidth`, 20 times: grow the editor area. The space comes from the secondary sidebar until it is at its minimum.
+3. `workbench.action.decreaseViewWidth`, 4 times: shrink the editor 4 steps. The secondary sidebar gets them: minimum plus 4 steps.
+4. `workbench.action.focusSideBar`: reopen and focus the primary sidebar. It takes its space from the editor.
+5. `workbench.action.decreaseViewSize`, 20 times: shrink the focused primary sidebar to its minimum.
+6. `workbench.action.increaseViewSize`, 2 times: grow it 2 steps.
+7. `workbench.action.focusActiveEditorGroup`: put the cursor back in the editor.
+
+| Preset | `increaseViewWidth` | `decreaseViewWidth` (secondary N) | `decreaseViewSize` | `increaseViewSize` (primary N) |
+|---|---|---|---|---|
+| 1 (laptop) | 20 | 4 | 20 | 2 |
+| 2 (external monitor) | 20 | 7 | 20 | 4 |
+
+The presets need a single editor group. With split editors, the width commands resize the groups instead of the sidebars. Join the groups first (*View* → *Editor Layout* → *Single*).
+
+### Tuning a preset
+
+- **Secondary sidebar**: change the number of `workbench.action.decreaseViewWidth` lines. N lines give minimum plus N steps.
+- **Primary sidebar**: change the number of `workbench.action.increaseViewSize` lines.
+- **The 20s** only push a part to its limit; extra steps at the limit do nothing. If a sidebar does not reach its minimum on a very wide screen, add more of those lines.
+
+The presets override the default Fold Level 1 and Fold Level 2 (`Ctrl+K Ctrl+1`, `Ctrl+K Ctrl+2`). Those are still in the Command Palette (**Fold Level 1**, **Fold Level 2**), and the other folding keys (such as `Ctrl+K Ctrl+0` fold all and `Ctrl+K Ctrl+J` unfold all) are untouched.
+
+## Disabled default keybindings
+
+| Keys (as pressed) | Action | When | Replaces default? |
+|---|---|---|---|
+| `Ctrl+W` | Remove `workbench.action.terminal.killEditor` | the default's (terminal in the editor area, see below) | Kill terminal editor |
+| `Ctrl+W` | Remove `workbench.action.closeActiveEditor` | always | Close Editor |
+| `Ctrl+N` | Remove `workbench.action.files.newUntitledFile` | always | New Untitled Text File |
+| `Ctrl+Shift+;` (US: `` Ctrl+Shift+` ``) | Remove `workbench.action.terminal.new` | the default's (see below) | New Terminal |
+| `Ctrl+Alt+I` | Remove `editor.action.insertSnippet` | `editorTextFocus && !editorReadonly` | an extension's insert-snippet binding |
+| `Ctrl+Shift+B` | Remove `workbench.action.tasks.build` | `taskCommandsRegistered` | Run Build Task |
+| `Ctrl+Shift+B` | Toggle the primary sidebar (`workbench.action.toggleSidebarVisibility`) | always | Run Build Task |
+| `Ctrl+B` | Remove `workbench.action.toggleSidebarVisibility` | always | Toggle Primary Sidebar |
+
+Notes:
+
+- The full `when` of the `killEditor` removal is `terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'`: a terminal open as a tab in the editor area.
+- The full `when` of the `terminal.new` removal is `terminalProcessSupported || terminalWebExtensionContributedProfile`, the default's own condition.
+- Run Build Task is still in the Command Palette (**Tasks: Run Build Task**).
+- After the removal, `Ctrl+B` does nothing in most places. In Markdown, R Markdown and Quarto files, the Markdown All in One extension uses it for bold.
+
+## R-Lecturer
+
+My teaching profile `R-Lecturer` has no keybindings of its own: VS Code's and the extensions' defaults apply.
+
+## The full file
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("R/keybindings.json", "json")
+```
+
+To use a file, switch to the target profile, run **Preferences: Open Keyboard Shortcuts (JSON)** and paste the content. Settings Sync carries it to the other machines. On a layout other than Czech, see [Reusing the file on another layout](#reusing-the-file-on-another-layout).

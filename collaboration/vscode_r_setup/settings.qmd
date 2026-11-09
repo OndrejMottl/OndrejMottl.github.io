@@ -1,0 +1,333 @@
+---
+title: "Settings reference"
+description: "The settings of my R profile: what each one does, grouped as in the file."
+date-format: long
+date-modified: last-modified
+---
+
+```{r}
+#| include: false
+source("_helpers.R")
+check_documented("keys-R-settings.txt")
+```
+
+This page goes through the `settings.json` of my `R` profile, the one profile I use for all R work. It is synced between my machines with Settings Sync. Profiles do not inherit settings from the Default profile, so copying this file into a new profile gives the same set-up. The exceptions are a few application-wide settings, which VS Code always reads from the Default profile (see [`settingsSync.ignoredSettings`](#r-language) below). How profiles and sync fit together is on [Profiles and Settings Sync](profiles_sync.qmd).
+
+"(default)" in a row means the value is the same as the VS Code or extension default.
+
+## Window and workbench
+
+| Setting | Value | What it does |
+|---|---|---|
+| `workbench.panel.defaultLocation` | `"right"` | Opens the panel (terminal, Problems, Output) to the right of the editor instead of below it. |
+| `security.workspace.trust.untrustedFiles` | `"open"` | Opens files from outside a trusted workspace without asking. |
+| `zenMode.centerLayout` | `true` | Centres the editor in Zen mode (default). |
+| `window.commandCenter` | `true` | Shows the Command Center search box in the title bar (default). |
+| `workbench.iconTheme` | `"vscode-icons"` | Uses the file icon theme from the vscode-icons extension. |
+| `vsicons.dontShowNewVersionMessage` | `true` | Stops vscode-icons from showing a "new version" message after each update. |
+| `workbench.list.openMode` | `"doubleClick"` | In the Explorer and other lists, a single click selects an item and a double click opens it. |
+| `workbench.colorTheme` | `"Visual Studio Dark"` | Uses the built-in "Dark (Visual Studio)" colour theme. |
+| `workbench.editor.pinnedTabsOnSeparateRow` | `true` | Shows pinned tabs on their own row above the other tabs. |
+| `workbench.editor.wrapTabs` | `true` | Wraps tabs onto more rows instead of scrolling them sideways. |
+| `window.title` | `"${rootName}"` | Shows only the workspace or folder name in the window title. |
+
+## Terminal
+
+| Setting | Value | What it does |
+|---|---|---|
+| `terminal.integrated.cursorStyle` | `"underline"` | Draws the terminal cursor as an underline. |
+| `terminal.integrated.cursorBlinking` | `true` | Makes the terminal cursor blink. |
+| `terminal.integrated.defaultProfile.windows` | `"R Terminal"` | Every new terminal uses the "R Terminal" profile. |
+| `terminal.integrated.fontWeightBold` | `"normal"` | Draws bold terminal text in normal weight. |
+
+The "R Terminal" profile comes from the vscode-R extension (`REditorSupport.r`) and starts the R console set in `r.consolePath` (radian), so a new terminal opens an R session; PowerShell is still available from the drop-down next to **+**. The terminal keybindings are on [Keybindings](keybindings.qmd).
+
+## Editor
+
+| Setting | Value | What it does |
+|---|---|---|
+| `editor.stickyScroll.enabled` | `true` | Pins the headers of the current scopes (functions, headings, chunks) at the top of the editor while scrolling (default). |
+| `editor.unicodeHighlight.nonBasicASCII` | `false` | Does not highlight characters outside basic ASCII. |
+| `editor.tabSize` | `2` | One indentation level is 2 spaces. |
+| `editor.defaultFormatter` | `"REditorSupport.r"` | Uses vscode-R as the formatter for every language without its own override. |
+| `editor.inlineSuggest.enabled` | `true` | Allows inline (ghost-text) suggestions in the editor (default). |
+| `editor.guides.bracketPairs` | `"active"` | Draws a vertical guide only for the bracket pair the cursor is in. |
+| `editor.rulers` | `[80]` | Draws a vertical line at column 80. |
+| `editor.accessibilitySupport` | `"off"` | Turns off the screen-reader optimised mode instead of detecting it automatically. |
+
+### Minimap
+
+| Setting | Value | What it does |
+|---|---|---|
+| `editor.minimap.autohide` | `"mouseover"` | Hides the minimap until the mouse is over it. |
+| `editor.minimap.maxColumn` | `80` | Draws at most 80 columns of each line in the minimap. |
+| `editor.minimap.renderCharacters` | `false` | Draws blocks instead of tiny characters. |
+| `editor.minimap.scale` | `2` | Draws the minimap content at twice the normal size. |
+
+`editor.defaultFormatter` is the formatter for **Format Document** (`Shift+Alt+F`) in every language that has no override. vscode-R formats R code through the R language server (the `languageserver` R package, which uses `styler`), so those packages have to be installed in each R version I use. Format on save is not turned on, so formatting only happens when I ask for it.
+
+The vscode-R formatter can only format R, so the other languages get their own formatter in [Language-specific formatters](#language-specific-formatters).
+
+## R language
+
+These settings belong to the vscode-R extension (`REditorSupport.r`), except `r.debugger.timeouts.startup`, which belongs to the R Debugger extension (`rdebugger.r-debugger`).
+
+| Setting | Value | What it does |
+|---|---|---|
+| `r.alwaysUseActiveTerminal` | `true` | Sends code to the active terminal instead of a terminal vscode-R created itself. |
+| `r.bracketedPaste` | `true` | Sends code to the console in bracketed paste mode. |
+| `r.consolePath` | `"radian"` | The R console started in R terminals. |
+| `settingsSync.ignoredSettings` | `["-r.consolePath", "-r.plot.backend"]` | Settings that Settings Sync skips; a leading `-` makes it sync a setting it would skip by default. |
+| `r.source.focus` | `"editor"` | Keeps the focus in the editor after sourcing or running code. |
+| `r.sessionWatcher` | `true` | Connects the R session to VS Code: workspace viewer, plot viewer, data viewer, help (default). |
+| `r.plot.backend` | `"httpgd"` | Shows plots in the httpgd plot viewer inside VS Code. |
+| `r.plot.defaults.fullWindowMode` | `true` | Opens the httpgd plot viewer in full-window mode, with the plot filling the viewer. |
+| `r.lsp.debug` | `true` | Writes debug output of the R language server to its Output channel. |
+| `r.lsp.diagnostics` | `true` | Shows the language server's lint diagnostics (from `lintr`) in the editor (default). |
+| `r.debugger.timeouts.startup` | `20000` | How long (ms) the R Debugger waits for R to start. |
+
+### R console: radian on PATH, no R path
+
+`r.consolePath` is the bare program name `"radian"`, found on `PATH` (see [Installation](install.qmd)), and `r.executablePath` is not set, so the file holds no machine-specific paths. vscode-R then uses the R found on `PATH`, which with rig is the `rig default` version; how it looks for R, and how to pin a version for one project, is on [R versions with rig](r_versions.qmd).
+
+### Settings Sync and the two R settings
+
+Settings Sync skips settings that are scoped `machine` or `machine-overridable`, or marked `ignoreSync`. Two settings this set-up depends on are affected: `r.consolePath` is machine-overridable, and `r.plot.backend` is ignoreSync. Without the line below, a new machine would get the rest of the profile but not radian and not httpgd.
+
+`settingsSync.ignoredSettings` is the list of settings Sync should skip. A leading `-` does the opposite: it opts a setting back in. So `["-r.consolePath", "-r.plot.backend"]` makes Sync carry both.
+
+`settingsSync.ignoredSettings` itself is an application-scoped setting: VS Code reads it from the Default profile only. The same line therefore also has to be in the Default profile's `settings.json`, otherwise it has no effect. See [Profiles and Settings Sync](profiles_sync.qmd).
+
+### Plots: httpgd
+
+With `r.plot.backend: "httpgd"`, plots open in a VS Code tab that resizes the plot with the window and keeps a plot history. It needs the `httpgd` R package in every R version I use; with rig, each version has its own library, so I install it per version ([R versions with rig](r_versions.qmd)).
+
+## File associations
+
+| Setting | Value | What it does |
+|---|---|---|
+| `files.associations` | `{"*.rmd": "rmd"}` | Maps files ending in `.rmd` to the R Markdown language. |
+
+## Language-specific formatters
+
+Each `[language]` block overrides settings for one language. Here they mostly pick the formatter.
+
+| Setting | Value | What it does |
+|---|---|---|
+| `[markdown]` | formatter `DavidAnson.vscode-markdownlint`; whitespace shown in diffs | Formats Markdown with markdownlint (applies its fixes); diffs show whitespace changes. |
+| `[quarto]` | formatter `quarto.quarto` | Formats `.qmd` files with the Quarto extension. |
+| `[jsonc]` | formatter `vscode.json-language-features` | Formats JSON with comments (e.g. VS Code's own settings files) with the built-in JSON formatter. |
+| `[json]` | formatter `vscode.json-language-features` | Same for plain JSON. |
+| `[yaml]` | formatter `redhat.vscode-yaml` | Formats YAML with the Red Hat YAML extension. |
+| `[css]` | formatter `vscode.css-language-features` | Formats CSS with the built-in formatter. |
+| `[scss]` | formatter `vscode.css-language-features` | Same for SCSS. |
+| `[sql]` | formatter `ms-mssql.mssql` | Formats SQL with the SQL Server extension. |
+
+```json
+"[markdown]": {
+  "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  "diffEditor.ignoreTrimWhitespace": false
+},
+```
+
+## Quarto
+
+| Setting | Value | What it does |
+|---|---|---|
+| `quarto.mathjax.theme` | `"dark"` | Renders the Quarto extension's equation previews in the dark style. |
+| `quarto.render.previewReveal` | `true` | Shows reveal.js presentations in the Preview pane after rendering (default). |
+| `notebook.defaultFormatter` | `"REditorSupport.r"` | Formats cells of notebooks (`.ipynb`) with vscode-R, so R cells are formatted like R scripts. `.qmd` files use the `[quarto]` formatter instead. |
+
+## Git and version control
+
+| Setting | Value | What it does |
+|---|---|---|
+| `git.autofetch` | `true` | Fetches from the remotes in the background every few minutes. |
+| `git.confirmSync` | `false` | Runs **Sync Changes** (pull, then push) without a confirmation dialog. |
+| `git.suggestSmartCommit` | `false` | Stops VS Code from offering "smart commit" (commit all changes when nothing is staged). |
+| `git.ignoreLegacyWarning` | `true` | Hides the warning about an old Git installation. |
+| `git-graph.commitDetailsView.location` | `"Docked to Bottom"` | Git Graph shows commit details in a panel docked at the bottom, not inline in the graph. |
+| `git-graph.date.type` | `"Commit Date"` | Git Graph shows and sorts by commit date instead of author date. |
+| `scm.defaultViewMode` | `"tree"` | Shows changed files as a folder tree in Source Control. |
+| `gitlens.views.branches.branches.layout` | `"list"` | GitLens shows branches as a flat list instead of a tree split at `/`. |
+
+## GitHub
+
+These belong to the GitHub Pull Requests extension.
+
+| Setting | Value | What it does |
+|---|---|---|
+| `githubPullRequests.fileListLayout` | `"tree"` | Shows the files of a pull request as a folder tree. |
+| `githubPullRequests.pullBranch` | `"never"` | Never pulls new commits into a checked-out PR branch automatically, and does not ask. |
+| `githubPullRequests.queries` | list of queries, see below | The categories shown in the Pull Requests view. |
+
+```json
+"githubPullRequests.queries": [
+  { "label": "Local Pull Request Branches", "query": "default" },
+  { "label": "Local Pull Request Branches", "query": "repo:${owner}/${repository} default" },
+  { "label": "Waiting For My Review", "query": "repo:${owner}/${repository} is:open review-requested:${user}" },
+  { "label": "Assigned To Me", "query": "repo:${owner}/${repository} is:open assignee:${user}" },
+  { "label": "Created By Me", "query": "repo:${owner}/${repository} is:open author:${user}" },
+  { "label": "All PR", "query": "repo:${owner}/${repository}" },
+  { "label": "All Open", "query": "repo:${owner}/${repository} default" },
+  { "label": "All Open", "query": "default" }
+]
+```
+
+The extension fills in `${owner}`, `${repository}` and `${user}` for the open repository and the signed-in GitHub user, so the same queries work in every project.
+
+## GitHub Copilot
+
+| Setting | Value | What it does |
+|---|---|---|
+| `github.copilot.enable` | on for `*`, off for `plaintext` and `scminput` | Turns Copilot inline suggestions on or off per language. |
+| `github.copilot.editor.enableAutoCompletions` | `false` | Copilot does not show completions automatically while typing. |
+| `github.copilot.nextEditSuggestions.enabled` | `true` | Turns on Next Edit Suggestions: Copilot proposes the next change based on recent edits. |
+| `github.copilot.chat.commitMessageGeneration.instructions` | file `.github/commit-instructions.md` | Extra instructions Copilot follows when generating a commit message. |
+
+```json
+"github.copilot.enable": {
+  "*": true,
+  "plaintext": false,
+  "markdown": true,
+  "scminput": false,
+  "quarto": true,
+  "r": true
+},
+```
+
+`"*": true` turns Copilot on everywhere, and the other keys are exceptions or confirmations. `plaintext` (`.txt` files) and `scminput` (the commit message box in Source Control) are off. `markdown`, `quarto` and `r` are on explicitly, which `*` already covers; listing them keeps them on if `*` is switched off. The keys are VS Code language ids, which are lower-case.
+
+With `github.copilot.editor.enableAutoCompletions: false` and `github.copilot.nextEditSuggestions.enabled: true`, Copilot does not complete code as I type. Instead it suggests edits: after a change it proposes the matching next change nearby (for example, renaming the other uses of a variable), which I accept with `Tab`. When I do want an inline suggestion, `Ctrl+Alt+I` asks for one on demand ([Keybindings](keybindings.qmd)).
+
+The **Generate Commit Message** button in Source Control reads `.github/commit-instructions.md` from the root of the open repository and follows it. The path is relative, so each repository can have its own rules; if the file does not exist, Copilot uses its default style. My [Project_template](https://github.com/OndrejMottl/Project_template) ships this file, so every project made from it has the same commit conventions.
+
+## Extension-specific settings
+
+| Setting | Value | What it does |
+|---|---|---|
+| `resmongraphical.cpuusage.style` | `"Vertical"` | Resource Monitor Graphical (`joshabb.resmongraphical`): draws the CPU usage gauge in the status bar as vertical bars. |
+| `resmongraphical.mem.style` | `"Vertical"` | Same for memory use. |
+| `resmongraphical.battery.style` | `"Vertical"` | Same for battery level. |
+| `resmongraphical.cpufreq.style` | `"Vertical"` | Same for CPU frequency. |
+| `resmongraphical.disk.style` | `"Vertical"` | Same for disk use. |
+| `resmongraphical.cputemp.style` | `"Vertical"` | Same for CPU temperature. |
+| `resmongraphical.network.style` | `"Vertical"` | Same for network traffic. |
+| `redhat.telemetry.enabled` | `true` | Allows Red Hat extensions (here: YAML) to send usage data to Red Hat. |
+| `errorLens.enabledDiagnosticLevels` | `["warning", "info"]` | Error Lens prints warning and info messages inline at the end of the line, but not errors. |
+| `todo-tree.ripgrep.ripgrep` | `"C:\\Program Files\\WinGet\\Links\\rg.exe"` | Todo Tree uses this ripgrep to search for `TODO` and similar tags, instead of looking for the copy inside VS Code. The path is where winget links ripgrep when it is installed for all users ([Install](install.qmd#ripgrep)), so it is the same on every machine. |
+
+## Markdown
+
+| Setting | Value | What it does |
+|---|---|---|
+| `markdown.extension.toc.updateOnSave` | `false` | Markdown All in One does not update a table of contents it created when the file is saved. |
+
+## Spell check
+
+These belong to Code Spell Checker (`streetsidesoftware.code-spell-checker`).
+
+| Setting | Value | What it does |
+|---|---|---|
+| `cSpell.userWords` | list of words, see below | Words accepted as correct in every file and project. |
+| `cSpell.language` | `"en-GB,cs"` | Languages to check spelling in. |
+
+The user words are:
+
+- R packages and R terms: `dplyr`, `purrr`, `tarchetypes`, `tibble`, `tidyverse`, `hmsc`, `xlim`, `ylim`, `agelim`, `timestep`.
+- Projects and databases: `vegvault`, `Neotoma`.
+- Names and identifiers: `Ondřej`, `Mottl`, `ORCID`.
+
+`cSpell.language` takes a comma-separated list of language codes. British English is built into Code Spell Checker. Czech is not: it needs the separate Czech dictionary extension (`streetsidesoftware.code-spell-checker-czech`, see [Extensions](extensions.qmd)), and its code is `cs` (the ISO code), not `cz` (the country). A word counts as correct if it is in any of the listed languages.
+
+## AI assistants and chat
+
+| Setting | Value | What it does |
+|---|---|---|
+| `chat.agent.maxRequests` | `100` | How many requests an agent-mode chat makes before it stops and asks whether to continue. |
+| `chat.tools.terminal.autoApprove` | list of commands, see below | Terminal commands the chat agent can run without asking. |
+| `chat.tools.urls.autoApprove` | list of sites, see below | URLs the agent's fetch tool can use without asking. |
+| `chat.mcp.gallery.enabled` | `true` | Shows the gallery of MCP servers in the Extensions view. |
+| `chat.viewSessions.orientation` | `"stacked"` | Shows the list of chat sessions stacked above the chat instead of side by side. |
+| `chat.sessionSync.enabled` | `true` | Syncs chat sessions between devices. |
+| `github.copilot.chat.agentDebugLog.fileLogging.enabled` | `true` | Writes the Copilot agent's debug log to files. |
+| `chatgpt.reviewDelivery` | `"detached"` | Codex extension (`openai.chatgpt`): delivers code review results separately from the current conversation. |
+| `claudeCode.hideOnboarding` | `true` | Hides the onboarding / welcome content in the Claude Code extension. |
+| `claudeCode.preferredLocation` | `"panel"` | Opens Claude Code as a panel (editor tab) instead of in the sidebar. |
+
+```json
+"chat.tools.terminal.autoApprove": {
+  "Copy-Item": true,
+  "New-Item": true,
+  "Test-Path": true,
+  "robocopy": true,
+  "quarto": true
+},
+"chat.tools.urls.autoApprove": {
+  "https://cran.r-project.org": true,
+  "https://besjournals.onlinelibrary.wiley.com": {
+    "approveRequest": true,
+    "approveResponse": false
+  }
+},
+```
+
+In agent mode, the chat asks before it runs a terminal command. Commands listed in `chat.tools.terminal.autoApprove` with `true` run without asking. Here that is three PowerShell commands to copy files, create files and folders, and test whether a path exists (`Copy-Item`, `New-Item`, `Test-Path`), `robocopy`, and `quarto`. A plain name matches the command whatever arguments follow it, so this includes `robocopy /MIR` and `quarto render`.
+
+`chat.tools.urls.autoApprove` works the same way for web fetches, with two steps per site: sending the request and using the response. I let the agent fetch CRAN pages freely; for the British Ecological Society journals site on Wiley it fetches without asking but asks before using what it fetched.
+
+## Explorer, diff and workbench extras
+
+| Setting | Value | What it does |
+|---|---|---|
+| `explorer.confirmDragAndDrop` | `false` | Moves files dragged in the Explorer without a confirmation dialog. |
+| `workbench.startupEditor` | `"none"` | Opens no Welcome page or editor at start-up. |
+| `workbench.activityBar.location` | `"top"` | Shows the activity bar icons in a row at the top of the sidebar instead of a vertical bar. |
+| `workbench.editor.empty.hint` | `"hidden"` | Hides the hint text shown in a new empty editor. |
+| `diffEditor.ignoreTrimWhitespace` | `false` | Diffs show changes in leading and trailing whitespace. |
+| `diffEditor.renderSideBySide` | `false` | Shows diffs inline (one column) instead of side by side. |
+| `[snippets]` | formatter `vscode.json-language-features` | Formats snippet files with the built-in JSON formatter. |
+| `[instructions]` | `diffEditor.ignoreTrimWhitespace: true` | For Copilot instruction files (`*.instructions.md`), diffs ignore leading and trailing whitespace. |
+
+## YAML
+
+| Setting | Value | What it does |
+|---|---|---|
+| `yaml.disableSchemaDetection` | list of file patterns, see below | The Red Hat YAML extension does not guess a schema for files matching these patterns. |
+
+```json
+"yaml.disableSchemaDetection": [
+  "**/docker-compose.yml",
+  "**/docker-compose.yaml",
+  "**/docker-compose.*.yml",
+  "**/docker-compose.*.yaml",
+  "**/compose.yml",
+  "**/compose.yaml",
+  "**/compose.*.yml",
+  "**/compose.*.yaml",
+  "**/.github/workflows/*.yml",
+  "**/.github/workflows/*.yaml",
+  "**/.gitea/workflows/*.yml",
+  "**/.gitea/workflows/*.yaml",
+  "**/.forgejo/workflows/*.yml",
+  "**/.forgejo/workflows/*.yaml"
+]
+```
+
+The YAML extension normally detects a schema for a YAML file from its file name (via the JSON Schema Store) and uses it for validation and completion. This list turns that automatic detection off for Docker Compose files and for GitHub, Gitea and Forgejo workflow files.
+
+## SQL Server
+
+| Setting | Value | What it does |
+|---|---|---|
+| `mssql.connectionGroups` | one group, `ROOT` | SQL Server extension (`ms-mssql.mssql`): the groups saved connections are sorted into; it writes this entry itself. |
+
+## The full file
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("R/settings.json", "json")
+```
+
+To use it, switch to the target profile, open *Command Palette* → **Preferences: Open User Settings (JSON)** and paste the file in, or import the whole profile as described on [Profiles and Settings Sync](profiles_sync.qmd).

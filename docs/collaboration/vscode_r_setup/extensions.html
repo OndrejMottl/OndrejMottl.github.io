@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="The extensions in my R profile, what they are for, and how I install them.">
+
+<title>Extensions – Ondřej Mottl</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../about_me/img/Ondrej_Mottl-transparent-noshadow.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2a65e1e7e3b548fba08f3e7ec074fd25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+/* Phones: show each table row as a card; the column name is printed before
+   each value (data-label, added by _narrow-tables-body.html). */
+@media (max-width: 767.98px) {
+  main table,
+  main table tbody,
+  main table tr,
+  main table td {
+    display: block;
+    width: 100%;
+  }
+  main table thead {
+    display: none;
+  }
+  main table tr {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+  main table td {
+    border: 0 !important;
+    padding: 0.15rem 0 !important;
+  }
+  main table td:first-child {
+    font-weight: 600;
+  }
+  main table td[data-label]:not(:first-child)::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--bs-secondary-color, #6c757d);
+  }
+  main table td:empty {
+    display: none;
+  }
+  main table code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/extensions.html">Extensions</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Ondřej Mottl</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview of projects</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teaching/teaching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">About me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CV</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List of publications</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Work with me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get in touch!</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaboration guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Convention</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../collaboration/vscode_r_setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">VS Code for R</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: VS Code for R">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Install, in order</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/settings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Settings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/keybindings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Keybindings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/extensions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Extensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/snippets_tasks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Snippets and tasks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/profiles_sync.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Profiles and Settings Sync</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/outside_vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outside VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/r_versions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R versions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">R</a></li>
+  <li><a href="#quarto-r-markdown-markdown-and-writing" id="toc-quarto-r-markdown-markdown-and-writing" class="nav-link" data-scroll-target="#quarto-r-markdown-markdown-and-writing">Quarto, R Markdown, Markdown and writing</a></li>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
+  <li><a href="#ai-assistants" id="toc-ai-assistants" class="nav-link" data-scroll-target="#ai-assistants">AI assistants</a></li>
+  <li><a href="#data-databases-and-files" id="toc-data-databases-and-files" class="nav-link" data-scroll-target="#data-databases-and-files">Data, databases and files</a></li>
+  <li><a href="#remote-and-containers" id="toc-remote-and-containers" class="nav-link" data-scroll-target="#remote-and-containers">Remote and containers</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#web-and-scss" id="toc-web-and-scss" class="nav-link" data-scroll-target="#web-and-scss">Web and SCSS</a></li>
+  <li><a href="#scripts-and-configuration-files" id="toc-scripts-and-configuration-files" class="nav-link" data-scroll-target="#scripts-and-configuration-files">Scripts and configuration files</a></li>
+  <li><a href="#look-and-workspace-ux" id="toc-look-and-workspace-ux" class="nav-link" data-scroll-target="#look-and-workspace-ux">Look and workspace UX</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  <li><a href="#installing-them" id="toc-installing-them" class="nav-link" data-scroll-target="#installing-them">Installing them</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/extensions.html">Extensions</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Extensions</h1>
+</div>
+
+<div>
+  <div class="description">
+    The extensions in my R profile, what they are for, and how I install them.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 9, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In VS Code, extensions belong to a profile: each profile has its own set. Settings Sync carries the lists between machines together with the rest of the profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>).</p>
+<p>The tables below list the extensions in my <code>R</code> profile, which I use for all my R work. My teaching profile <code>R-Lecturer</code> has only vscode-R (<code>reditorsupport.r</code>, <code>reditorsupport.r-syntax</code>) and Quarto (<code>quarto.quarto</code>), plus Copilot Chat, which ships with VS Code (<a href="../../collaboration/vscode_r_setup/profiles_sync.html#the-r-lecturer-profile">Profiles and Settings Sync</a>).</p>
+<section id="what-i-would-install-for-r" class="level3">
+<h3 class="anchored" data-anchor-id="what-i-would-install-for-r">What I would install for R</h3>
+<p>For R scripts, R packages and Quarto documents, I would start with these:</p>
+<ul>
+<li><code>reditorsupport.r</code>: the R extension (console, help, plots, workspace viewer).</li>
+<li><code>reditorsupport.r-syntax</code>: R syntax highlighting (installed together with the R extension).</li>
+<li><code>rdebugger.r-debugger</code>: the R debugger.</li>
+<li><code>quarto.quarto</code>: Quarto rendering, preview and editing.</li>
+</ul>
+<p>The R side (R itself, radian and R packages such as <code>languageserver</code>, <code>httpgd</code> and <code>vscDebugger</code>) is covered in <a href="../../collaboration/vscode_r_setup/install.html">Installation</a>.</p>
+</section>
+<section id="r" class="level2">
+<h2 class="anchored" data-anchor-id="r">R</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=reditorsupport.r">R</a></td>
+<td><code>reditorsupport.r</code></td>
+<td>The main R extension (vscode-R): console, help, plots, workspace viewer, chunk commands.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=reditorsupport.r-syntax">R Syntax</a></td>
+<td><code>reditorsupport.r-syntax</code></td>
+<td>Syntax highlighting for R.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=rdebugger.r-debugger">R Debugger</a></td>
+<td><code>rdebugger.r-debugger</code></td>
+<td>Breakpoints and stepping through R code.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=posit.air-vscode">Air - R Language Support</a></td>
+<td><code>posit.air-vscode</code></td>
+<td>Fast R formatter and language server by Posit.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command">multi-command</a></td>
+<td><code>ryuta46.multi-command</code></td>
+<td>Runs a sequence of commands as one command.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quarto-r-markdown-markdown-and-writing" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-r-markdown-markdown-and-writing">Quarto, R Markdown, Markdown and writing</h2>
+<section id="quarto-and-r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-and-r-markdown">Quarto and R Markdown</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></td>
+<td><code>quarto.quarto</code></td>
+<td>Render and preview Quarto documents, visual editor, run cells.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=tianyishi.rmarkdown">R Markdown All in One</a></td>
+<td><code>tianyishi.rmarkdown</code></td>
+<td>R Markdown, bookdown and blogdown support.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="markdown" class="level3">
+<h3 class="anchored" data-anchor-id="markdown">Markdown</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint">markdownlint</a></td>
+<td><code>davidanson.vscode-markdownlint</code></td>
+<td>Lints Markdown style (headings, lists, spacing).</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></td>
+<td><code>yzhang.markdown-all-in-one</code></td>
+<td>Markdown shortcuts, table of contents, list editing.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">Markdown Preview Mermaid Support</a></td>
+<td><code>bierner.markdown-mermaid</code></td>
+<td>Mermaid diagrams in the built-in Markdown preview.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode">Markmap</a></td>
+<td><code>gera2ld.markmap-vscode</code></td>
+<td>Shows a Markdown file as an interactive mind map.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a></td>
+<td><code>shd101wyy.markdown-preview-enhanced</code></td>
+<td>A richer Markdown preview (maths, diagrams, export).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spelling-grammar-and-references" class="level3">
+<h3 class="anchored" data-anchor-id="spelling-grammar-and-references">Spelling, grammar and references</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a></td>
+<td><code>streetsidesoftware.code-spell-checker</code></td>
+<td>Spell checking in code and prose.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-czech">Czech - Code Spell Checker</a></td>
+<td><code>streetsidesoftware.code-spell-checker-czech</code></td>
+<td>Czech dictionary for Code Spell Checker.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Grammarly</a></td>
+<td><code>znck.grammarly</code></td>
+<td>Grammarly checks in Markdown, Quarto and text files.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="diagrams">Diagrams</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io Integration</a></td>
+<td><code>hediet.vscode-drawio</code></td>
+<td>Edit draw.io diagrams (<code>.drawio</code>, <code>.drawio.svg</code>, <code>.drawio.png</code>) in VS Code.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a></td>
+<td><code>eamodio.gitlens</code></td>
+<td>Blame annotations, file history, branch and commit views.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a></td>
+<td><code>mhutchie.git-graph</code></td>
+<td>A graph of all branches; git actions from the graph.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github">GitHub Pull Requests</a></td>
+<td><code>github.vscode-pull-request-github</code></td>
+<td>Create and review pull requests and issues in VS Code.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions">GitHub Actions</a></td>
+<td><code>github.vscode-github-actions</code></td>
+<td>Workflow runs and logs; checks workflow files.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=luis-domenech.vscode-git-push-progress">Git Push Progress</a></td>
+<td><code>luis-domenech.vscode-git-push-progress</code></td>
+<td>A push command that shows progress in the Output panel.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ai-assistants" class="level2">
+<h2 class="anchored" data-anchor-id="ai-assistants">AI assistants</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=github.copilot-chat">GitHub Copilot Chat</a></td>
+<td><code>github.copilot-chat</code></td>
+<td>Copilot chat, agent mode, inline and next-edit suggestions.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code">Claude Code</a></td>
+<td><code>anthropic.claude-code</code></td>
+<td>Anthropic’s Claude Code agent in a VS Code panel.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=openai.chatgpt">Codex</a></td>
+<td><code>openai.chatgpt</code></td>
+<td>OpenAI’s Codex coding agent.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=openai.codex-audio">Codex Audio</a></td>
+<td><code>openai.codex-audio</code></td>
+<td>Microphone dictation for Codex.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=continue.continue">Continue</a></td>
+<td><code>continue.continue</code></td>
+<td>Open-source AI assistant that works with many model providers, also local models.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=coderabbit.coderabbit-vscode">CodeRabbit</a></td>
+<td><code>coderabbit.coderabbit-vscode</code></td>
+<td>AI review of local commits before a pull request.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-chat-customizations-evaluations">Chat Customizations Evaluations</a></td>
+<td><code>ms-vscode.vscode-chat-customizations-evaluations</code></td>
+<td>Analyses and validates prompt and instruction files for AI chat.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-databases-and-files" class="level2">
+<h2 class="anchored" data-anchor-id="data-databases-and-files">Data, databases and files</h2>
+<section id="databases" class="level3">
+<h3 class="anchored" data-anchor-id="databases">Databases</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql">SQL Server (mssql)</a></td>
+<td><code>ms-mssql.mssql</code></td>
+<td>Connect to and query SQL Server and Azure SQL.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.data-workspace-vscode">Data Workspace</a></td>
+<td><code>ms-mssql.data-workspace-vscode</code></td>
+<td>Shared workspace view for database projects.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode">SQL Database Projects</a></td>
+<td><code>ms-mssql.sql-database-projects-vscode</code></td>
+<td>Develop and publish SQL Server schemas as projects.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode">SQL Bindings</a></td>
+<td><code>ms-mssql.sql-bindings-vscode</code></td>
+<td>Azure Functions with Azure SQL bindings.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime">.NET Install Tool</a></td>
+<td><code>ms-dotnettools.vscode-dotnet-runtime</code></td>
+<td>Installs the .NET runtimes that other extensions need.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite">SQLite</a></td>
+<td><code>alexcvzz.vscode-sqlite</code></td>
+<td>Explore and query SQLite databases.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer">SQLite Viewer</a></td>
+<td><code>qwtel.sqlite-viewer</code></td>
+<td>Opens <code>.sqlite</code> and <code>.db</code> files as tables.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=matt-meyers.vscode-dbml">vscode-dbml</a></td>
+<td><code>matt-meyers.vscode-dbml</code></td>
+<td>Syntax highlighting for DBML (Database Markup Language).</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=nicolas-liger.dbml-viewer">DBML Live Preview</a></td>
+<td><code>nicolas-liger.dbml-viewer</code></td>
+<td>Live diagram of a database schema written in DBML.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode">ERD Editor</a></td>
+<td><code>dineug.vuerd-vscode</code></td>
+<td>Draw entity-relationship diagrams.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tables-and-spreadsheets" class="level3">
+<h3 class="anchored" data-anchor-id="tables-and-spreadsheets">Tables and spreadsheets</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Rainbow CSV</a></td>
+<td><code>mechatroner.rainbow-csv</code></td>
+<td>Colours CSV/TSV columns; SQL-like queries on them.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=repreng.csv">CSV</a></td>
+<td><code>repreng.csv</code></td>
+<td>View and edit CSV files as a table.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=phplasma.csv-to-table">CSV to Table</a></td>
+<td><code>phplasma.csv-to-table</code></td>
+<td>Converts a CSV file to an aligned plain-text table.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viewers-and-http" class="level3">
+<h3 class="anchored" data-anchor-id="viewers-and-http">Viewers and HTTP</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf">vscode-pdf</a></td>
+<td><code>tomoki1207.pdf</code></td>
+<td>Shows PDF files in an editor tab.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=analytic-signal.preview-tiff">TIFF Preview</a></td>
+<td><code>analytic-signal.preview-tiff</code></td>
+<td>Previews TIFF images (for example exported figures).</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client">REST Client</a></td>
+<td><code>humao.rest-client</code></td>
+<td>Send HTTP requests from <code>.http</code> files and see the responses.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="remote-and-containers" class="level2">
+<h2 class="anchored" data-anchor-id="remote-and-containers">Remote and containers</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development</a></td>
+<td><code>ms-vscode-remote.vscode-remote-extensionpack</code></td>
+<td>Extension pack: WSL, Dev Containers, Remote - SSH, Remote - Tunnels.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a></td>
+<td><code>ms-vscode-remote.remote-ssh</code></td>
+<td>Open a folder on a server over SSH and work there.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit">Remote - SSH: Editing Configuration Files</a></td>
+<td><code>ms-vscode-remote.remote-ssh-edit</code></td>
+<td>Language support for SSH config files.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer">Remote Explorer</a></td>
+<td><code>ms-vscode.remote-explorer</code></td>
+<td>Side bar with SSH hosts and tunnels.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server">Remote - Tunnels</a></td>
+<td><code>ms-vscode.remote-server</code></td>
+<td>Connect to a machine through a tunnel, without SSH.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a></td>
+<td><code>ms-vscode-remote.remote-wsl</code></td>
+<td>Open a folder inside the Windows Subsystem for Linux.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a></td>
+<td><code>ms-vscode-remote.remote-containers</code></td>
+<td>Work inside a Docker container (for example a fixed R version).</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers">Container Tools</a></td>
+<td><code>ms-azuretools.vscode-containers</code></td>
+<td>Manage images and containers; Dockerfile and Compose support.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Docker</a></td>
+<td><code>ms-azuretools.vscode-docker</code></td>
+<td>Microsoft’s Docker extension, built on Container Tools.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=docker.docker">Docker DX</a></td>
+<td><code>docker.docker</code></td>
+<td>Dockerfile and Compose editing (linting, completion) by Docker Inc.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>Not needed for R.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></td>
+<td><code>ms-python.python</code></td>
+<td>Python language support.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance</a></td>
+<td><code>ms-python.vscode-pylance</code></td>
+<td>Python language server (completion, type checks).</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy">Python Debugger</a></td>
+<td><code>ms-python.debugpy</code></td>
+<td>Debugging Python with debugpy.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs">Python Environments</a></td>
+<td><code>ms-python.vscode-python-envs</code></td>
+<td>Create and switch Python environments (venv, conda).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="web-and-scss" class="level2">
+<h2 class="anchored" data-anchor-id="web-and-scss">Web and SCSS</h2>
+<p>Quarto themes for websites and slides are written in SCSS.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss">SCSS IntelliSense</a></td>
+<td><code>mrmlnc.vscode-scss</code></td>
+<td>Completion for SCSS variables and mixins.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter">SCSS Formatter</a></td>
+<td><code>sibiraj-s.vscode-scss-formatter</code></td>
+<td>Formats SCSS files.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scripts-and-configuration-files" class="level2">
+<h2 class="anchored" data-anchor-id="scripts-and-configuration-files">Scripts and configuration files</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell">PowerShell</a></td>
+<td><code>ms-vscode.powershell</code></td>
+<td>PowerShell language support, debugging and console.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML</a></td>
+<td><code>redhat.vscode-yaml</code></td>
+<td>YAML validation and completion from schemas, formatting.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="look-and-workspace-ux" class="level2">
+<h2 class="anchored" data-anchor-id="look-and-workspace-ux">Look and workspace UX</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">vscode-icons</a></td>
+<td><code>vscode-icons-team.vscode-icons</code></td>
+<td>File icon theme.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme">Material Icon Theme</a></td>
+<td><code>pkief.material-icon-theme</code></td>
+<td>File icon theme.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</a></td>
+<td><code>usernamehw.errorlens</code></td>
+<td>Shows diagnostics at the end of the line.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock">Peacock</a></td>
+<td><code>johnpapa.vscode-peacock</code></td>
+<td>Colours the window per workspace, to tell windows apart.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize">filesize</a></td>
+<td><code>mkxml.vscode-filesize</code></td>
+<td>Shows the size of the current file in the status bar.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=nemesv.copy-file-name">Copy file name</a></td>
+<td><code>nemesv.copy-file-name</code></td>
+<td>Copies the file name (without the path) to the clipboard.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></td>
+<td><code>christian-kohler.path-intellisense</code></td>
+<td>Completes file paths while you type them.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree">Todo Tree</a></td>
+<td><code>gruntfuggly.todo-tree</code></td>
+<td>Lists <code>TODO</code>, <code>FIXME</code> and similar comments in a tree.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight</a></td>
+<td><code>wayou.vscode-todo-highlight</code></td>
+<td>Highlights <code>TODO</code>, <code>FIXME</code> and similar keywords.</td>
+</tr>
+<tr class="even">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=joshabb.resmongraphical">Resource Monitor Graphical</a></td>
+<td><code>joshabb.resmongraphical</code></td>
+<td>CPU, memory, disk and network use in the status bar.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other" class="level2">
+<h2 class="anchored" data-anchor-id="other">Other</h2>
+<p>Not related to R or teaching.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Extension</th>
+<th>ID</th>
+<th>What it’s for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://marketplace.visualstudio.com/items?itemName=zrachod.mono-snippets">MonoBehaviour Snippets</a></td>
+<td><code>zrachod.mono-snippets</code></td>
+<td>C# snippets for Unity scripts.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="installing-them" class="level2">
+<h2 class="anchored" data-anchor-id="installing-them">Installing them</h2>
+<section id="with-settings-sync" class="level3">
+<h3 class="anchored" data-anchor-id="with-settings-sync">With Settings Sync</h3>
+<p>With Settings Sync on, VS Code installs each profile’s extensions when it downloads the profile on a new machine (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>).</p>
+</section>
+<section id="manual-rebuild" class="level3">
+<h3 class="anchored" data-anchor-id="manual-rebuild">Manual rebuild</h3>
+<p><code>install_extensions.ps1</code> reads a list with one extension id per line and installs it into a named profile:</p>
+<ul>
+<li>It checks that <code>code</code> (the VS Code command-line tool) is on <code>PATH</code>.</li>
+<li>It skips blank lines, lines starting with <code>#</code>, and extensions the profile already has (<code>code --list-extensions --profile &lt;name&gt;</code>).</li>
+<li>It installs the rest with <code>code --install-extension &lt;id&gt; --profile &lt;name&gt;</code>.</li>
+<li>At the end it lists the failures and exits with code 1 if there were any.</li>
+</ul>
+<p>The VS Code command line only installs into a profile that already exists; for a missing one it reports <code>Profile '&lt;name&gt;' not found.</code> The script then opens VS Code once with <code>code --profile &lt;name&gt;</code>, which creates an empty profile, waits until the profile is there, and continues. If that does not work, create the profile in the Profiles editor (<em>File</em> → <em>Preferences</em> → <em>Profiles</em>) and run the script again. Use <code>-Profile Default</code> for the Default profile.</p>
+<p>Put the script and the lists in one folder, then run, for example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">-</span>File install_extensions<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>Profile <span class="fu">R</span> <span class="op">-</span>List extensions-R<span class="op">.</span><span class="fu">txt</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pwsh <span class="op">-</span>File install_extensions<span class="op">.</span><span class="fu">ps1</span> <span class="op">-</span>Profile R-Lecturer</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Without <code>-List</code>, the script uses <code>extensions-&lt;Profile&gt;.txt</code> next to itself. It needs PowerShell 7 (<code>pwsh</code>).</p>
+<details>
+<summary>
+Show the full file: <code>install_extensions.ps1</code>
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Requires -Version 7.0</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;#</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">.SYNOPSIS</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Install the VS Code extensions from a list file into a VS Code profile.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">.DESCRIPTION</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Reads a text file with one extension id per line (as written by</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">    `code --list-extensions`), and installs every id that the profile does not</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">    have yet. Blank lines and lines starting with "#" are ignored. Failures are</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">    listed at the end and the script then exits with code 1.</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">    The VS Code CLI installs extensions only into a profile that already</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">    exists: `code --profile &lt;name&gt; --install-extension &lt;id&gt;` stops with</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">    "Profile '&lt;name&gt;' not found." The only CLI way to create a profile is to</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">    open a window with it (`code --profile &lt;name&gt;`), which creates an empty</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">    one. So when the profile is missing, the script does that once, waits until</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">    the CLI can see the profile, and then installs. If that does not work,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">    create the profile in the Profiles editor (File &gt; Preferences &gt; Profiles)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">    and run the script again.</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Use -Profile Default for the Default profile.</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">.EXAMPLE</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">    pwsh -File install_extensions.ps1</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">    Installs extensions-R.txt (next to the script) into the profile "R".</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co">.EXAMPLE</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">    pwsh -File install_extensions.ps1 -Profile R -List extensions-R.txt</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co">.EXAMPLE</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">    pwsh -File install_extensions.ps1 -Profile R-Lecturer</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">    Installs extensions-R-Lecturer.txt into the profile "R-Lecturer".</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="op">[</span>CmdletBinding<span class="op">()]</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="kw">param</span><span class="op">(</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Name of the VS Code profile. "Profile" is an alias so that the</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># automatic variable $PROFILE is not overwritten.</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>Alias<span class="op">(</span><span class="st">'Profile'</span><span class="op">)]</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="dt">string</span><span class="op">]</span> <span class="va">$ProfileName</span> <span class="op">=</span> <span class="st">'R'</span><span class="op">,</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># List of extension ids. Default: extensions-&lt;Profile&gt;.txt next to the</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># script.</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="dt">string</span><span class="op">]</span> <span class="va">$List</span><span class="op">,</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Seconds to wait for a newly created profile to appear.</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="dt">int</span><span class="op">]</span> <span class="va">$CreateTimeout</span> <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="op">)</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="va">$ErrorActionPreference</span> <span class="op">=</span> <span class="st">'Stop'</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Find the VS Code CLI ----------------------------------------------------</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="va">$codeCmd</span> <span class="op">=</span> <span class="fu">Get-Command</span> code <span class="op">-</span>CommandType Application <span class="op">-</span>ErrorAction SilentlyContinue <span class="op">|</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Select-Object</span> <span class="op">-</span>First <span class="dv">1</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="dt">if</span> <span class="op">(-not</span> <span class="va">$codeCmd</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Error</span> <span class="op">(</span><span class="st">"The VS Code command 'code' is not on PATH. On Windows, tick 'Add to PATH' "</span> <span class="op">+</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        <span class="st">"in the installer; on macOS, run 'Shell Command: Install code command in PATH' "</span> <span class="op">+</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        <span class="st">"from the Command Palette. Then open a new terminal."</span><span class="op">)</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">exit</span> <span class="dv">2</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Invoke-Code <span class="op">{</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Runs the VS Code CLI and returns its exit code and output (stdout and</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># stderr as text), without letting stderr stop the script.</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="kw">param</span><span class="op">([</span><span class="dt">string</span><span class="op">[]]</span> <span class="va">$Arguments</span><span class="op">)</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="va">$ErrorActionPreference</span> <span class="op">=</span> <span class="st">'Continue'</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="va">$PSNativeCommandUseErrorActionPreference</span> <span class="op">=</span> <span class="va">$false</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="va">$output</span> <span class="op">=</span> <span class="op">&amp;</span> <span class="va">$codeCmd</span><span class="op">.</span><span class="fu">Source</span> @Arguments <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="op">|</span> <span class="fu">ForEach-Object</span> <span class="op">{</span> <span class="st">"</span><span class="va">$_</span><span class="st">"</span> <span class="op">}</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>pscustomobject<span class="op">]</span>@<span class="op">{</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        ExitCode <span class="op">=</span> <span class="va">$LASTEXITCODE</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        Output   <span class="op">=</span> <span class="op">@(</span><span class="va">$output</span> <span class="op">|</span> <span class="fu">Where-Object</span> <span class="op">{</span> <span class="va">$_</span> <span class="op">-ne</span> <span class="st">''</span> <span class="op">})</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Find the list -----------------------------------------------------------</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(-not</span> <span class="va">$List</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="va">$List</span> <span class="op">=</span> <span class="fu">Join-Path</span> <span class="va">$PSScriptRoot</span> <span class="st">"extensions-</span><span class="va">$ProfileName</span><span class="st">.txt"</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> <span class="cf">elseif</span> <span class="op">(-not</span> <span class="op">(</span><span class="fu">Test-Path</span> <span class="op">-</span>LiteralPath <span class="va">$List</span><span class="op">)</span> <span class="op">-and</span> <span class="op">-not</span> <span class="op">[</span>System<span class="op">.</span><span class="fu">IO</span><span class="op">.</span><span class="fu">Path</span><span class="op">]::</span>IsPathRooted<span class="op">(</span><span class="va">$List</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A relative path that is not in the current folder: try next to the script.</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    <span class="va">$nextToScript</span> <span class="op">=</span> <span class="fu">Join-Path</span> <span class="va">$PSScriptRoot</span> <span class="va">$List</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="fu">Test-Path</span> <span class="op">-</span>LiteralPath <span class="va">$nextToScript</span><span class="op">)</span> <span class="op">{</span> <span class="va">$List</span> <span class="op">=</span> <span class="va">$nextToScript</span> <span class="op">}</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(-not</span> <span class="op">(</span><span class="fu">Test-Path</span> <span class="op">-</span>LiteralPath <span class="va">$List</span> <span class="op">-</span>PathType Leaf<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Error</span> <span class="st">"List not found: </span><span class="va">$List</span><span class="st">"</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">exit</span> <span class="dv">2</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="va">$ids</span> <span class="op">=</span> <span class="fu">Get-Content</span> <span class="op">-</span>LiteralPath <span class="va">$List</span> <span class="op">-</span>Encoding utf8 <span class="op">|</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ForEach-Object</span> <span class="op">{</span> <span class="va">$_</span><span class="op">.</span><span class="fu">Trim</span><span class="op">()</span> <span class="op">}</span> <span class="op">|</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Where-Object</span> <span class="op">{</span> <span class="va">$_</span> <span class="op">-and</span> <span class="op">-not</span> <span class="va">$_</span><span class="op">.</span><span class="fu">StartsWith</span><span class="op">(</span><span class="st">'#'</span><span class="op">)</span> <span class="op">}</span> <span class="op">|</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sort-Object</span> <span class="op">-</span>Unique</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(-not</span> <span class="va">$ids</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Warning</span> <span class="st">"No extension ids in </span><span class="va">$List</span><span class="st">."</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>    <span class="cf">exit</span> <span class="dv">0</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Make sure the profile exists ---------------------------------------------</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="co"># The Default profile is used when --profile is not given.</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="va">$profileArgs</span> <span class="op">=</span> <span class="cf">if</span> <span class="op">(</span><span class="va">$ProfileName</span> <span class="op">-eq</span> <span class="st">'Default'</span><span class="op">)</span> <span class="op">{</span> <span class="op">@()</span> <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span> <span class="op">@(</span><span class="st">'--profile'</span><span class="op">,</span> <span class="va">$ProfileName</span><span class="op">)</span> <span class="op">}</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Get-InstalledExtensions <span class="op">{</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    <span class="va">$r</span> <span class="op">=</span> Invoke-Code <span class="op">(@(</span><span class="st">'--list-extensions'</span><span class="op">)</span> <span class="op">+</span> <span class="va">$profileArgs</span><span class="op">)</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$r</span><span class="op">.</span><span class="fu">ExitCode</span> <span class="op">-eq</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> <span class="op">,</span> <span class="op">@(</span><span class="va">$r</span><span class="op">.</span><span class="fu">Output</span><span class="op">)</span> <span class="op">}</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$r</span><span class="op">.</span><span class="fu">Output</span> <span class="op">-match</span> <span class="st">'not found'</span><span class="op">)</span> <span class="op">{</span> <span class="cf">return</span> <span class="va">$null</span> <span class="op">}</span>   <span class="co"># profile does not exist</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    <span class="cf">throw</span> <span class="st">"code --list-extensions failed (exit </span><span class="op">$(</span><span class="va">$r</span><span class="op">.</span><span class="fu">ExitCode</span><span class="op">)</span><span class="st">): </span><span class="op">$(</span><span class="va">$r</span><span class="op">.</span><span class="fu">Output</span> <span class="op">-join</span> <span class="st">' '</span><span class="op">)</span><span class="st">"</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="va">$installed</span> <span class="op">=</span> Get-InstalledExtensions</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="va">$null</span> <span class="op">-eq</span> <span class="va">$installed</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">"Profile '</span><span class="va">$ProfileName</span><span class="st">' does not exist. Opening VS Code with it once to create it..."</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>    <span class="va">$null</span> <span class="op">=</span> Invoke-Code <span class="op">@(</span><span class="st">'--new-window'</span><span class="op">,</span> <span class="st">'--profile'</span><span class="op">,</span> <span class="va">$ProfileName</span><span class="op">)</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    <span class="va">$deadline</span> <span class="op">=</span> <span class="op">(</span><span class="fu">Get-Date</span><span class="op">).</span><span class="fu">AddSeconds</span><span class="op">(</span><span class="va">$CreateTimeout</span><span class="op">)</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="va">$null</span> <span class="op">-eq</span> <span class="va">$installed</span> <span class="op">-and</span> <span class="op">(</span><span class="fu">Get-Date</span><span class="op">)</span> <span class="op">-lt</span> <span class="va">$deadline</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Start-Sleep</span> <span class="op">-</span>Seconds <span class="dv">2</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>        <span class="va">$installed</span> <span class="op">=</span> Get-InstalledExtensions</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$null</span> <span class="op">-eq</span> <span class="va">$installed</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Error</span> <span class="op">(</span><span class="st">"Profile '</span><span class="va">$ProfileName</span><span class="st">' still does not exist. Create it in VS Code "</span> <span class="op">+</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>            <span class="st">"(File &gt; Preferences &gt; Profiles &gt; New Profile), then run this script again."</span><span class="op">)</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>        <span class="cf">exit</span> <span class="dv">2</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">"Profile '</span><span class="va">$ProfileName</span><span class="st">' created."</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Install -------------------------------------------------------------------</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">"Profile '</span><span class="va">$ProfileName</span><span class="st">': </span><span class="op">$(</span><span class="va">$ids</span><span class="op">.</span><span class="fu">Count</span><span class="op">)</span><span class="st"> extension(s) in </span><span class="op">$(</span><span class="fu">Split-Path</span> <span class="va">$List</span> <span class="op">-</span>Leaf<span class="op">)</span><span class="st">."</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="va">$done</span> <span class="op">=</span> <span class="op">[</span>System<span class="op">.</span><span class="fu">Collections</span><span class="op">.</span><span class="fu">Generic</span><span class="op">.</span><span class="fu">List</span><span class="op">[</span><span class="dt">string</span><span class="op">]]::</span>new<span class="op">()</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="va">$skipped</span> <span class="op">=</span> <span class="op">[</span>System<span class="op">.</span><span class="fu">Collections</span><span class="op">.</span><span class="fu">Generic</span><span class="op">.</span><span class="fu">List</span><span class="op">[</span><span class="dt">string</span><span class="op">]]::</span>new<span class="op">()</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="va">$failed</span> <span class="op">=</span> <span class="op">[</span>System<span class="op">.</span><span class="fu">Collections</span><span class="op">.</span><span class="fu">Generic</span><span class="op">.</span><span class="fu">List</span><span class="op">[</span><span class="dt">string</span><span class="op">]]::</span>new<span class="op">()</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="cf">foreach</span> <span class="op">(</span><span class="va">$id</span> <span class="kw">in</span> <span class="va">$ids</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extension ids are case-insensitive; -contains compares that way too.</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$installed</span> <span class="op">-contains</span> <span class="va">$id</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>        <span class="va">$skipped</span><span class="op">.</span><span class="fu">Add</span><span class="op">(</span><span class="va">$id</span><span class="op">)</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">"  skip     </span><span class="va">$id</span><span class="st"> (already installed)"</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>    <span class="va">$r</span> <span class="op">=</span> Invoke-Code <span class="op">(@(</span><span class="st">'--install-extension'</span><span class="op">,</span> <span class="va">$id</span><span class="op">)</span> <span class="op">+</span> <span class="va">$profileArgs</span><span class="op">)</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>    <span class="va">$text</span> <span class="op">=</span> <span class="va">$r</span><span class="op">.</span><span class="fu">Output</span> <span class="op">-join</span> <span class="st">' '</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span><span class="va">$text</span> <span class="op">-match</span> <span class="st">'built-?in'</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>        <span class="co"># E.g. GitHub Copilot Chat, which now ships with VS Code.</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>        <span class="va">$skipped</span><span class="op">.</span><span class="fu">Add</span><span class="op">(</span><span class="va">$id</span><span class="op">)</span></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">"  skip     </span><span class="va">$id</span><span class="st"> (built into VS Code)"</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">elseif</span> <span class="op">(</span><span class="va">$r</span><span class="op">.</span><span class="fu">ExitCode</span> <span class="op">-ne</span> <span class="dv">0</span> <span class="op">-or</span> <span class="va">$text</span> <span class="op">-match</span> <span class="st">'Failed Installing|not found'</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>        <span class="va">$failed</span><span class="op">.</span><span class="fu">Add</span><span class="op">(</span><span class="va">$id</span><span class="op">)</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">"  FAILED   </span><span class="va">$id</span><span class="st"> : </span><span class="va">$text</span><span class="st">"</span> <span class="op">-</span>ForegroundColor Red</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>        <span class="va">$done</span><span class="op">.</span><span class="fu">Add</span><span class="op">(</span><span class="va">$id</span><span class="op">)</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>        <span class="fu">Write-Host</span> <span class="st">"  install  </span><span class="va">$id</span><span class="st">"</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Report ----------------------------------------------------------------------</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">''</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="fu">Write-Host</span> <span class="st">"Installed: </span><span class="op">$(</span><span class="va">$done</span><span class="op">.</span><span class="fu">Count</span><span class="op">)</span><span class="st">. Skipped: </span><span class="op">$(</span><span class="va">$skipped</span><span class="op">.</span><span class="fu">Count</span><span class="op">)</span><span class="st">. Failed: </span><span class="op">$(</span><span class="va">$failed</span><span class="op">.</span><span class="fu">Count</span><span class="op">)</span><span class="st">."</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span><span class="va">$failed</span><span class="op">.</span><span class="fu">Count</span> <span class="op">-gt</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Write-Host</span> <span class="st">'Failed extensions:'</span> <span class="op">-</span>ForegroundColor Red</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>    <span class="va">$failed</span> <span class="op">|</span> <span class="fu">ForEach-Object</span> <span class="op">{</span> <span class="fu">Write-Host</span> <span class="st">"  </span><span class="va">$_</span><span class="st">"</span> <span class="op">-</span>ForegroundColor Red <span class="op">}</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="cf">exit</span> <span class="dv">1</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="cf">exit</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p><a href="files/install_extensions.ps1" download="install_extensions.ps1">Download <code>install_extensions.ps1</code></a></p>
+</section>
+<section id="the-lists" class="level3">
+<h3 class="anchored" data-anchor-id="the-lists">The lists</h3>
+<p>Both lists come from <code>code --list-extensions --profile &lt;name&gt;</code>.</p>
+<details>
+<summary>
+Show the full file: <code>extensions-R.txt</code>
+</summary>
+<pre class="text"><code>alexcvzz.vscode-sqlite
+analytic-signal.preview-tiff
+anthropic.claude-code
+bierner.markdown-mermaid
+christian-kohler.path-intellisense
+coderabbit.coderabbit-vscode
+continue.continue
+davidanson.vscode-markdownlint
+dineug.vuerd-vscode
+docker.docker
+eamodio.gitlens
+gera2ld.markmap-vscode
+github.copilot-chat
+github.vscode-github-actions
+github.vscode-pull-request-github
+gruntfuggly.todo-tree
+hediet.vscode-drawio
+humao.rest-client
+johnpapa.vscode-peacock
+joshabb.resmongraphical
+luis-domenech.vscode-git-push-progress
+matt-meyers.vscode-dbml
+mechatroner.rainbow-csv
+mhutchie.git-graph
+mkxml.vscode-filesize
+mrmlnc.vscode-scss
+ms-azuretools.vscode-containers
+ms-azuretools.vscode-docker
+ms-dotnettools.vscode-dotnet-runtime
+ms-mssql.data-workspace-vscode
+ms-mssql.mssql
+ms-mssql.sql-bindings-vscode
+ms-mssql.sql-database-projects-vscode
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
+ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
+ms-vscode-remote.vscode-remote-extensionpack
+ms-vscode.powershell
+ms-vscode.remote-explorer
+ms-vscode.remote-server
+ms-vscode.vscode-chat-customizations-evaluations
+nemesv.copy-file-name
+nicolas-liger.dbml-viewer
+openai.chatgpt
+openai.codex-audio
+phplasma.csv-to-table
+pkief.material-icon-theme
+posit.air-vscode
+quarto.quarto
+qwtel.sqlite-viewer
+rdebugger.r-debugger
+redhat.vscode-yaml
+reditorsupport.r
+reditorsupport.r-syntax
+repreng.csv
+ryuta46.multi-command
+shd101wyy.markdown-preview-enhanced
+sibiraj-s.vscode-scss-formatter
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-czech
+tianyishi.rmarkdown
+tomoki1207.pdf
+usernamehw.errorlens
+vscode-icons-team.vscode-icons
+wayou.vscode-todo-highlight
+yzhang.markdown-all-in-one
+znck.grammarly
+zrachod.mono-snippets</code></pre>
+</details>
+<p><a href="files/extensions-R.txt" download="extensions-R.txt">Download <code>extensions-R.txt</code></a></p>
+<details>
+<summary>
+Show the full file: <code>extensions-R-Lecturer.txt</code>
+</summary>
+<pre class="text"><code>github.copilot-chat
+quarto.quarto
+reditorsupport.r
+reditorsupport.r-syntax</code></pre>
+</details>
+<p><a href="files/extensions-R-Lecturer.txt" download="extensions-R-Lecturer.txt">Download <code>extensions-R-Lecturer.txt</code></a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+// Label each table cell with its column header, for the phone card layout
+// in _narrow-tables-head.html.
+document.querySelectorAll("main table").forEach(function (table) {
+  var headers = Array.prototype.map.call(
+    table.querySelectorAll("thead th"),
+    function (th) { return th.textContent.trim(); }
+  );
+  if (headers.length === 0) return;
+  table.querySelectorAll("tbody tr").forEach(function (row) {
+    Array.prototype.forEach.call(row.children, function (cell, i) {
+      if (headers[i]) cell.setAttribute("data-label", headers[i]);
+    });
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

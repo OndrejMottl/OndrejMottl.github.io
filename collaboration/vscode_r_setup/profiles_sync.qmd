@@ -1,0 +1,144 @@
+---
+title: "Profiles and Settings Sync"
+description: "How I use VS Code profiles across machines, the Settings Sync gotcha that drops R settings, what Sync does not carry, and my Default and R-Lecturer profiles."
+date-format: long
+date-modified: last-modified
+---
+
+```{r}
+#| include: false
+source("_helpers.R")
+check_documented("keys-Default-settings.txt")
+```
+
+## Profiles
+
+A [profile](https://code.visualstudio.com/docs/configure/profiles) is a complete VS Code set-up: settings, keybindings, snippets, tasks, extensions and UI state. Each folder remembers which profile it was last opened with.
+
+| Profile | Used for |
+|---|---|
+| `R` | All daily R work, on every machine. The one documented on [Settings](settings.qmd), [Keybindings](keybindings.qmd) and [Extensions](extensions.qmd). |
+| `R-Lecturer` | Teaching: VS Code's defaults plus what is needed to run R. See [below](#the-r-lecturer-profile). |
+| Default | Folders that are not R projects, and the place for application-wide settings (see below). |
+
+My other profiles are unrelated to R and not covered here.
+
+### Profiles do not inherit
+
+A non-default profile's `settings.json` replaces the Default one; it is not layered on top. Precedence is:
+
+1. VS Code's built-in defaults,
+2. the active profile's settings (Default *or* `R` *or* `R-Lecturer`, never a mix),
+3. the workspace settings (`.vscode/settings.json` in the project).
+
+So every profile must contain everything it needs. That is why the `R` profile repeats most of the Default settings.
+
+The one exception is application-scoped settings, such as `update.mode` and `settingsSync.ignoredSettings`. They apply to the whole VS Code installation and are read only from the Default profile; other profiles show them greyed out.
+
+### Where the files are
+
+| What | Path |
+|---|---|
+| Default profile settings | `%APPDATA%\Code\User\settings.json` |
+| Other profiles | `%APPDATA%\Code\User\profiles\<profile id>\settings.json` (also `keybindings.json`, `tasks.json`, `snippets\`) |
+| Profile names, and which folder uses which profile | `%APPDATA%\Code\User\globalStorage\storage.json` |
+
+To move a folder to another profile, open it and pick the profile in the gear menu (bottom left).
+
+## Settings Sync
+
+[Settings Sync](https://code.visualstudio.com/docs/configure/settings-sync) keeps profiles, settings, keybindings, snippets, tasks, extensions and UI state the same on every machine where you sign in. Change a setting once, on any machine, and it travels. That only works if the synced files contain no machine-specific paths ([How the pieces fit](index.qmd#how-the-pieces-fit)).
+
+### The gotcha: some settings never sync {#the-gotcha}
+
+Sync silently skips three kinds of settings:
+
+- those marked *machine* (they only make sense on one computer),
+- those marked *machine-overridable*,
+- those flagged *never to sync* by their extension.
+
+vscode-R marks several of its settings like that: `r.consolePath`, `r.executablePath`, `r.consoleArgs`, `r.consoleSendDelay` and `r.plot.backend`.
+
+The fix is the `settingsSync.ignoredSettings` list. A leading `-` means "include this after all":
+
+```json
+"settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"]
+```
+
+- It must be in the Default profile, where VS Code reads application-scoped settings. I keep the same line in each synced profile as well.
+- To see what was uploaded: *Settings Sync: Show Synced Data*.
+
+The two settings it opts back in are safe to sync because they hold no paths: `r.consolePath` is just `"radian"` (found on `PATH`), and `r.plot.backend` is `"httpgd"`.
+
+### What Settings Sync does not carry {#what-settings-sync-does-not-carry}
+
+| Not synced | Where it lives | How I keep it in step |
+|---|---|---|
+| R, Rtools, Python, radian, Quarto, R packages | installed per machine | [Install, in order](install.qmd), the same versions everywhere |
+| `PATH` and environment variables | Windows | the [PATH rules](outside_vscode.qmd#path-rules) |
+| Task scripts | `%USERPROFILE%\.vscode-scripts\` | copied by hand ([Snippets and tasks](snippets_tasks.qmd)) |
+| `.Rprofile` | `Documents\.Rprofile` | OneDrive shares the Documents folder ([Outside VS Code](outside_vscode.qmd#rprofile)) |
+| PowerShell profiles | `Documents\PowerShell\` | OneDrive, as above |
+| Which folder uses which profile | `storage.json` | set per machine (gear menu) |
+
+## The Default profile
+
+### Same as in the R profile
+
+These keys have the same values as in the `R` profile and are explained on [Settings](settings.qmd).
+
+<details>
+<summary>Show the keys</summary>
+
+`[quarto]`, `claudeCode.hideOnboarding`, `diffEditor.ignoreTrimWhitespace`, `editor.accessibilitySupport`, `editor.defaultFormatter`, `editor.guides.bracketPairs`, `editor.inlineSuggest.enabled`, `editor.minimap.autohide`, `editor.minimap.maxColumn`, `editor.minimap.renderCharacters`, `editor.minimap.scale`, `editor.rulers`, `editor.stickyScroll.enabled`, `editor.tabSize`, `files.associations`, `git-graph.commitDetailsView.location`, `git-graph.date.type`, `git.autofetch`, `git.confirmSync`, `git.suggestSmartCommit`, `githubPullRequests.fileListLayout`, `githubPullRequests.pullBranch`, `markdown.extension.toc.updateOnSave`, `quarto.mathjax.theme`, `quarto.render.previewReveal`, `r.alwaysUseActiveTerminal`, `r.bracketedPaste`, `r.consolePath`, `r.debugger.timeouts.startup`, `r.lsp.debug`, `r.lsp.diagnostics`, `r.plot.backend`, `r.plot.defaults.fullWindowMode`, `r.sessionWatcher`, `r.source.focus`, `resmongraphical.cpuusage.style`, `security.workspace.trust.untrustedFiles`, `settingsSync.ignoredSettings`, `terminal.integrated.cursorBlinking`, `terminal.integrated.cursorStyle`, `terminal.integrated.defaultProfile.windows`, `terminal.integrated.fontWeightBold`, `todo-tree.ripgrep.ripgrep`, `vsicons.dontShowNewVersionMessage`, `window.commandCenter`, `workbench.iconTheme`, `workbench.list.openMode`, `workbench.panel.defaultLocation`.
+
+</details>
+
+### Different from the R profile, or only here
+
+| Setting | Value | What it does |
+|---|---|---|
+| `workbench.colorTheme` | `"Visual Studio 2019 Dark"` | Colour theme. |
+| `editor.unicodeHighlight.nonBasicASCII` | `true` | Highlights non-ASCII characters. |
+| `[markdown]` | markdownlint as formatter | Formats Markdown with markdownlint. |
+| `editor.formatOnPaste` | `true` | Formats pasted code. |
+| `remote.SSH.remotePlatform` | `"linux"` for each of my servers | Tells Remote - SSH the OS of each server, so it does not ask. |
+| `update.mode` | `"start"` | Checks for VS Code updates only at start-up. |
+| `update.enableWindowsBackgroundUpdates` | `false` | Does not download and install updates in the background. |
+| `window.menuBarVisibility` | `"classic"` | Always shows the menu bar. |
+| `grammarly.files.include` | Markdown, text, R, Quarto, R Markdown | Files Grammarly checks. |
+| `grammarly.config.documentDialect` | `"british"` | British English. |
+| `grammarly.config.documentDomain` | `"academic"` | Academic writing style. |
+| `grammarly.config.suggestions.OxfordComma` | `true` | Suggests the Oxford comma. |
+| `grammarly.startTextCheckInPausedState` | `true` | Grammarly starts paused; turn it on when writing. |
+| `chatgpt.localeOverride` | `"en-US"` | Codex extension (`openai.chatgpt`): the language of its interface. |
+| `mssql.enableRichExperiences` | `true` | Newer UI of the SQL Server extension. |
+
+```{r}
+#| echo: false
+#| output: asis
+show_file(
+  "Default/settings.json", "json",
+  label = "Default profile settings.json"
+)
+```
+
+## The R-Lecturer profile {#the-r-lecturer-profile}
+
+My teaching profile keeps VS Code's defaults and adds only what is needed to run R:
+
+- radian as the R console and httpgd for plots (`r.consolePath`, `r.bracketedPaste`, `r.plot.backend`; needs the `httpgd` R package), with the same `settingsSync.ignoredSettings` line as `R`;
+- the Light Modern theme, for the projector;
+- no Copilot completions;
+- Quarto previews in the browser, and the visual editor wraps at 80 columns and spell-checks in British English.
+
+Its only extensions are vscode-R (`reditorsupport.r`, `reditorsupport.r-syntax`) and Quarto (`quarto.quarto`); Copilot Chat ships with VS Code. It has no keybindings, tasks or snippets of its own.
+
+```{r}
+#| echo: false
+#| output: asis
+show_file(
+  "R-Lecturer/settings.json", "json",
+  label = "R-Lecturer settings.json"
+)
+```

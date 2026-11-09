@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "collaboration/vscode_r_setup/files/**"
 
 website:
   page-navigation: false
@@ -45,6 +47,18 @@ website:
             href: collaboration/collaboration_guide.qmd
           - text: "Code Convention"
             href: collaboration/code_convention.qmd
+          - section: "VS Code for R"
+            href: collaboration/vscode_r_setup/index.qmd
+            contents:
+              - collaboration/vscode_r_setup/install.qmd
+              - collaboration/vscode_r_setup/settings.qmd
+              - collaboration/vscode_r_setup/keybindings.qmd
+              - collaboration/vscode_r_setup/extensions.qmd
+              - collaboration/vscode_r_setup/snippets_tasks.qmd
+              - collaboration/vscode_r_setup/profiles_sync.qmd
+              - collaboration/vscode_r_setup/outside_vscode.qmd
+              - collaboration/vscode_r_setup/r_versions.qmd
+              - collaboration/vscode_r_setup/troubleshooting.qmd
 
 format:
   html:

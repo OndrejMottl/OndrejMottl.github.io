@@ -1,0 +1,16 @@
+<script>
+// Label each table cell with its column header, for the phone card layout
+// in _narrow-tables-head.html.
+document.querySelectorAll("main table").forEach(function (table) {
+  var headers = Array.prototype.map.call(
+    table.querySelectorAll("thead th"),
+    function (th) { return th.textContent.trim(); }
+  );
+  if (headers.length === 0) return;
+  table.querySelectorAll("tbody tr").forEach(function (row) {
+    Array.prototype.forEach.call(row.children, function (cell, i) {
+      if (headers[i]) cell.setAttribute("data-label", headers[i]);
+    });
+  });
+});
+</script>

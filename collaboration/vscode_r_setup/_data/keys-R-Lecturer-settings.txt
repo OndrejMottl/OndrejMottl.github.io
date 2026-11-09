@@ -1,0 +1,12 @@
+github.copilot.enable
+quarto.render.previewReveal
+quarto.render.previewType
+quarto.visualEditor.markdownWrap
+quarto.visualEditor.markdownWrapColumn
+quarto.visualEditor.spelling
+quarto.visualEditor.spellingDictionary
+r.bracketedPaste
+r.consolePath
+r.plot.backend
+settingsSync.ignoredSettings
+workbench.colorTheme

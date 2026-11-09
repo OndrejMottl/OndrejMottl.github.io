@@ -1,0 +1,73 @@
+alexcvzz.vscode-sqlite	SQLite	Explore and query SQLite databases.
+analytic-signal.preview-tiff	TIFF Preview	Preview TIFF (.tiff) files in VSCode
+anthropic.claude-code	Claude Code for VS Code	Claude Code for VS Code: Harness the power of Claude Code without leaving your IDE
+bierner.markdown-mermaid	Markdown Preview Mermaid Support	Adds Mermaid diagram and flowchart support to VS Code's builtin markdown preview
+christian-kohler.path-intellisense	Path Intellisense	Visual Studio Code plugin that autocompletes filenames
+coderabbit.coderabbit-vscode	CodeRabbit	Free AI code reviews that run directly in VS Code. Review each commit immediately without waiting for PR to be raised. Catch more bugs and ship code faster.
+continue.continue	Continue - open-source AI code agent	The leading open-source AI code agent
+davidanson.vscode-markdownlint	markdownlint	Markdown linting and style checking for Visual Studio Code
+dineug.vuerd-vscode	ERD Editor	Entity-Relationship Diagram Editor VSCode Extension
+docker.docker	Docker DX	Edit smarter, ship faster with an enhanced Docker-development experience
+eamodio.gitlens	GitLens — Git supercharged	Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more
+gera2ld.markmap-vscode	Markmap	Visualize your markdown in VSCode
+github.copilot-chat		(built into VS Code or not installed locally)
+github.vscode-github-actions	GitHub Actions	GitHub Actions workflows and runs for github.com hosted repositories in VS Code
+github.vscode-pull-request-github	GitHub Pull Requests	Pull Request and Issue Provider for GitHub
+gruntfuggly.todo-tree	Todo Tree	Show TODO, FIXME, etc. comment tags in a tree view
+hediet.vscode-drawio	Draw.io Integration	This unofficial extension integrates Draw.io into VS Code.
+humao.rest-client	REST Client	REST Client for Visual Studio Code
+johnpapa.vscode-peacock	Peacock	Subtly change the workspace color of your workspace. Ideal when you have multiple VS Code instances and you want to quickly identify which is which.
+joshabb.resmongraphical	Resource Monitor Graphical	Similar to resmon, but new and improved. Displays current CPU stats, memory/disk consumption, network, and battery percentage in a graphical way on the status bar.
+luis-domenech.vscode-git-push-progress	Git Push Progress	Extra git menu option plus command to push all commits and output the progress to output console
+matt-meyers.vscode-dbml	vscode-dbml (deprecated)	Language support for the Database Markup Language
+mechatroner.rainbow-csv	Rainbow CSV	Highlight CSV and TSV files, Run SQL-like queries
+mhutchie.git-graph	Git Graph	View a Git Graph of your repository, and perform Git actions from the graph.
+mkxml.vscode-filesize	filesize	Show the current file size in the status bar
+mrmlnc.vscode-scss	SCSS IntelliSense	Advanced autocompletion and refactoring support for SCSS
+ms-azuretools.vscode-containers	Container Tools	Makes it easy to create, manage, and debug containerized applications.
+ms-azuretools.vscode-docker	Docker	Makes it easy to create, manage, and debug containerized applications.
+ms-dotnettools.vscode-dotnet-runtime	.NET Install Tool	This extension installs and manages different versions of the .NET SDK and Runtime.
+ms-mssql.data-workspace-vscode	Data Workspace	Additional common functionality for database projects
+ms-mssql.mssql	SQL Server (mssql)	Design and optimize schemas for SQL Server, Azure SQL, and SQL Database in Fabric using a modern, lightweight extension built for developers
+ms-mssql.sql-bindings-vscode	SQL Bindings	Enables users to develop and publish Azure Functions with Azure SQL bindings
+ms-mssql.sql-database-projects-vscode	SQL Database Projects	Enables users to develop and publish database schemas for MSSQL Databases
+ms-python.debugpy	Python Debugger	Python Debugger extension using debugpy.
+ms-python.python	Python	Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.
+ms-python.vscode-pylance	Pylance	A performant, feature-rich language server for Python in VS Code
+ms-python.vscode-python-envs	Python Environments	Provides a unified python environment experience
+ms-vscode-remote.remote-containers	Dev Containers	Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set.
+ms-vscode-remote.remote-ssh	Remote - SSH	Open any folder on a remote machine using SSH and take advantage of VS Code's full feature set.
+ms-vscode-remote.remote-ssh-edit	Remote - SSH: Editing Configuration Files	Edit SSH configuration files
+ms-vscode-remote.remote-wsl	WSL	Open any folder in the Windows Subsystem for Linux (WSL) and take advantage of Visual Studio Code's full feature set.
+ms-vscode-remote.vscode-remote-extensionpack	Remote Development	An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
+ms-vscode.powershell	PowerShell	Develop PowerShell modules, commands and scripts in Visual Studio Code!
+ms-vscode.remote-explorer	Remote Explorer	View remote machines for SSH and Tunnels.
+ms-vscode.remote-server	Remote - Tunnels	Connect to a remote machine through a Tunnel
+ms-vscode.vscode-chat-customizations-evaluations	Chat Customizations Evaluations	Extension for analyzing, validating, and improving AI prompts
+nemesv.copy-file-name	Copy file name	Copies the name of the currently opened file to the clipboard.
+nicolas-liger.dbml-viewer	DBML Live Preview	An extension for Visual Studio Code that provides real-time rendering of a database schema from the generated DBML code.
+openai.chatgpt	Codex – OpenAI’s coding agent	Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
+openai.codex-audio	Codex Audio	Local microphone support for Codex dictation, including remote workspaces.
+phplasma.csv-to-table	CSV to Table	Convert a CSV/TSV/PSV file to an ASCII formatted table
+pkief.material-icon-theme	Material Icon Theme	Material Design Icons for Visual Studio Code
+posit.air-vscode	Air - R Language Support	R formatter and language server
+quarto.quarto	Quarto	Extension for the Quarto scientific and technical publishing system.
+qwtel.sqlite-viewer	SQLite Viewer	SQLite Viewer for VS Code
+rdebugger.r-debugger	R Debugger	R Debugger for VS Code
+redhat.vscode-yaml	YAML	YAML Language Support by Red Hat, with built-in Kubernetes syntax support
+reditorsupport.r	R	R Extension for Visual Studio Code
+reditorsupport.r-syntax	R Syntax	R Synxtax Highlight for Visual Studio Code
+repreng.csv	CSV	View and edit CSV, TSV, TAB, and PSV files as tables.
+ryuta46.multi-command	multi-command	Invoke multiple commands as one command.
+shd101wyy.markdown-preview-enhanced	Markdown Preview Enhanced	Markdown Preview Enhanced ported to vscode
+sibiraj-s.vscode-scss-formatter	SCSS Formatter	A Visual Studio Code Extension to format SCSS
+streetsidesoftware.code-spell-checker	Czech - Code Spell Checker	Adds Czech (čeština) spell checking to Code Spell Checker.
+streetsidesoftware.code-spell-checker-czech	Czech - Code Spell Checker	Adds Czech (čeština) spell checking to Code Spell Checker.
+tianyishi.rmarkdown	R Markdown All in One	R Markdown, Bookdown and Blogdown Support
+tomoki1207.pdf	vscode-pdf	Display pdf file in VSCode.
+usernamehw.errorlens	Error Lens	Improve highlighting of errors, warnings and other language diagnostics.
+vscode-icons-team.vscode-icons	vscode-icons	Icons for Visual Studio Code
+wayou.vscode-todo-highlight	TODO Highlight	highlight TODOs, FIXMEs, and any keywords, annotations...
+yzhang.markdown-all-in-one	Markdown All in One	All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
+znck.grammarly	Grammarly	A grammar checking for Visual Studio Code using Grammarly.
+zrachod.mono-snippets	MonoBehaviour Snippets	MonoBehaviour Snippets for Visual Studio Code

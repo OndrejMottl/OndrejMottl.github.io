@@ -1,0 +1,27 @@
+{
+  // Teaching profile: VS Code defaults plus what is needed to run R.
+
+  // R: radian on PATH as the console, plots in the httpgd viewer
+  // (needs the httpgd R package).
+  "r.consolePath": "radian",
+  "r.bracketedPaste": true,
+  "r.plot.backend": "httpgd",
+  // Settings Sync skips these two by default; "-" makes it sync them.
+  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
+
+  // Light theme for the projector.
+  "workbench.colorTheme": "Light Modern",
+
+  // No Copilot completions while teaching.
+  "github.copilot.enable": {
+    "*": false
+  },
+
+  // Quarto: preview in the browser; visual editor wraps at 80 columns.
+  "quarto.render.previewType": "external",
+  "quarto.render.previewReveal": false,
+  "quarto.visualEditor.markdownWrap": "column",
+  "quarto.visualEditor.markdownWrapColumn": 80,
+  "quarto.visualEditor.spelling": true,
+  "quarto.visualEditor.spellingDictionary": "en_GB"
+}

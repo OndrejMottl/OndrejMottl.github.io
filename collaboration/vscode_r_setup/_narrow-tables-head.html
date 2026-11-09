@@ -1,0 +1,41 @@
+<style>
+/* Phones: show each table row as a card; the column name is printed before
+   each value (data-label, added by _narrow-tables-body.html). */
+@media (max-width: 767.98px) {
+  main table,
+  main table tbody,
+  main table tr,
+  main table td {
+    display: block;
+    width: 100%;
+  }
+  main table thead {
+    display: none;
+  }
+  main table tr {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+  main table td {
+    border: 0 !important;
+    padding: 0.15rem 0 !important;
+  }
+  main table td:first-child {
+    font-weight: 600;
+  }
+  main table td[data-label]:not(:first-child)::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--bs-secondary-color, #6c757d);
+  }
+  main table td:empty {
+    display: none;
+  }
+  main table code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+</style>

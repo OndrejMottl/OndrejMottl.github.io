@@ -1,0 +1,4 @@
+github.copilot-chat
+quarto.quarto
+reditorsupport.r
+reditorsupport.r-syntax

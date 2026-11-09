@@ -1,0 +1,101 @@
+---
+title: "Snippets and tasks"
+description: "The Quarto snippets and VS Code tasks in my R profile, and the scripts the tasks run."
+date-format: long
+date-modified: last-modified
+---
+
+```{r}
+#| include: false
+source("_helpers.R")
+```
+
+Snippets and tasks travel with the VS Code profile through Settings Sync. The scripts that the tasks run do not: they live in `~/.vscode-scripts/` and have to be copied to each machine by hand (see [Profiles and Settings Sync](profiles_sync.qmd#what-settings-sync-does-not-carry)).
+
+## Snippets
+
+Type the prefix in a Quarto document and press `Tab` (or pick it from the suggestion list).
+
+All snippets are for Quarto (`.qmd`) files, most of them for [reveal.js](https://quarto.org/docs/presentations/revealjs/) slides, which I use for teaching and talks.
+
+### Layout and structure (`quarto.json`)
+
+`quarto.json` is a language snippet file: VS Code applies it to the `quarto` language only, because of its name.
+
+| Prefix | Name | Inserts | Use |
+|---|---|---|---|
+| `br` | Quarto empty line | `<br>` | Vertical space on a slide. |
+| `qdiv` | Quarto Div | `:::` … `:::` | An empty [div](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans), ready for a class. |
+| `qcolumns` | Quarto Two Column Layout | `:::: {.columns}` with two `::: {.column width="50%"}` | Two columns; both widths are placeholders (`Tab` between them). |
+| `qcol` | Quarto Column Layout | one `::: {.column width="50%"}` | Add another column inside an existing `.columns`. |
+| `qlist` | Quarto Incremental list | `::: {.incremental}` with a `-` item | Bullets that appear one by one. |
+| `qfrag` | Quarto Fragment | `::: {.fragment}` | Any block that appears on the next click. |
+| `qquote` | Quarto Blockquote | `::: {.blockquote}` | A styled quote / call-out block. |
+| `qfooter` | Quarto footer | `::: {.footer}` | Slide footer. |
+| `qcomment` | Quarto comment | `<!-- -->` | An HTML comment (not rendered). |
+
+### Teaching slides (`quarto.code-snippets`)
+
+`quarto.code-snippets` is a global snippet file; each snippet sets `"scope": "quarto"` itself.
+
+| Prefix | Name | Inserts | Use |
+|---|---|---|---|
+| `qexec` | Practical Exercise | A `## Practical Exercise` slide (classes `.exercise .text-center`), a numbered blockquote, and `r knitr::inline_expr("countdown(minutes = 20)")` | Exercise slide with a 20-minute timer. Needs the [countdown](https://pkg.garrickadenbuie.com/countdown/) R package and slide CSS with the `text-size-heading2`, `exercise` classes. |
+| `qdisc` | Discussion | The same with `.discussion` and a 5-minute timer | Discussion slide. |
+
+### The files
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("R/snippets/quarto.json", "json")
+show_file("R/snippets/quarto.code-snippets", "json")
+```
+
+To install them by hand: *Command Palette* → **Snippets: Configure Snippets** → pick `quarto` (for `quarto.json`) or **New Global Snippets file** (for `quarto.code-snippets`), then paste the content. On disk they live in the profile's `snippets/` folder (`%APPDATA%\Code\User\profiles\<profile id>\snippets\`).
+
+## Tasks
+
+Run a task with *Command Palette* → **Tasks: Run Task**, or with its keybinding.
+
+| Task | Keybinding | Script | What it does |
+|---|---|---|---|
+| `Git: Return to updated main` | `Ctrl+Alt+Shift+M` | `return-to-main.ps1` | After a PR is merged, gets you onto an up-to-date `main` with one checkout (details below). |
+| `R: New scratch project` | none | `new-r-scratch-project.ps1` | Asks for a name, creates an RStudio-style R project in `Documents\R-scratch\<name>` with `usethis::create_project()`, and opens it in a new VS Code window. |
+
+Both are `"type": "process"` tasks that start `pwsh -NoProfile -File "${env:USERPROFILE}/.vscode-scripts/<script>.ps1"`. Using `${env:USERPROFILE}` keeps `tasks.json` free of user names, so the file works on any machine.
+
+### Git: Return to updated main
+
+The usual way back after a large PR is merged (`git switch main`, then `git pull`) updates the working tree twice: first to the old `main`, then to the new one. On a big repository both steps are slow.
+
+The script avoids the first one:
+
+1. Stops if there are uncommitted changes.
+2. Finds the remote's default branch (`main`, `master`, …).
+3. Fetches only that branch (`git fetch --no-tags origin main`).
+4. Moves the local `main` to the fetched commit without checking it out (`git update-ref`, only if it is a fast-forward).
+5. Checks out `main` once, straight into the new state.
+6. Deletes the branch you came from with `git branch -d`, which only succeeds when git sees it as merged into `main` or identical to what was pushed. Otherwise it tells you and keeps the branch.
+
+If you are already on `main`, it just fast-forwards (`git merge --ff-only`).
+
+### R: New scratch project
+
+For quick experiments that deserve their own folder but not a repository.
+
+- `Rscript` is taken from `PATH`, i.e. rig's default R version (`rig default <version>`). Pass `-RScriptPath` to use another one.
+- Needs the `usethis` package in the default R version (it comes with `devtools`).
+- The task input `rScratchProjectName` is a `promptString`: VS Code asks for the name when the task starts.
+
+### The files
+
+```{r}
+#| echo: false
+#| output: asis
+show_file("R/tasks.json", "json")
+show_file("vscode-scripts/return-to-main.ps1", "powershell")
+show_file("vscode-scripts/new-r-scratch-project.ps1", "powershell")
+```
+
+To install the scripts on a new machine, put both `.ps1` files in `%USERPROFILE%\.vscode-scripts\`.

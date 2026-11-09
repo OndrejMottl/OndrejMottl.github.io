@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="The keyboard shortcuts in my R profile, many borrowed from RStudio.">
+
+<title>Keybindings reference – Ondřej Mottl</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../about_me/img/Ondrej_Mottl-transparent-noshadow.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2a65e1e7e3b548fba08f3e7ec074fd25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+/* Phones: show each table row as a card; the column name is printed before
+   each value (data-label, added by _narrow-tables-body.html). */
+@media (max-width: 767.98px) {
+  main table,
+  main table tbody,
+  main table tr,
+  main table td {
+    display: block;
+    width: 100%;
+  }
+  main table thead {
+    display: none;
+  }
+  main table tr {
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+  main table td {
+    border: 0 !important;
+    padding: 0.15rem 0 !important;
+  }
+  main table td:first-child {
+    font-weight: 600;
+  }
+  main table td[data-label]:not(:first-child)::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--bs-secondary-color, #6c757d);
+  }
+  main table td:empty {
+    display: none;
+  }
+  main table code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings reference</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Ondřej Mottl</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lab/about_the_lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory of Quantitative Ecology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../projects/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview of projects</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../teaching/teaching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">About me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/cv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CV</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../about_me/list_of_publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">List of publications</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Work with me</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/get_in_touch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get in touch!</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/collaboration_guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaboration guide</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/code_convention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code Convention</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../collaboration/vscode_r_setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">VS Code for R</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: VS Code for R">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Install, in order</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/settings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Settings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/keybindings.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Keybindings reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/extensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Extensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/snippets_tasks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Snippets and tasks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/profiles_sync.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Profiles and Settings Sync</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/outside_vscode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outside VS Code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/r_versions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R versions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../collaboration/vscode_r_setup/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#how-to-read-the-file" id="toc-how-to-read-the-file" class="nav-link active" data-scroll-target="#how-to-read-the-file">How to read the file</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
+  <li><a href="#r-language" id="toc-r-language" class="nav-link" data-scroll-target="#r-language">R language</a></li>
+  <li><a href="#editor" id="toc-editor" class="nav-link" data-scroll-target="#editor">Editor</a></li>
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a></li>
+  <li><a href="#git-and-source-control" id="toc-git-and-source-control" class="nav-link" data-scroll-target="#git-and-source-control">Git and source control</a></li>
+  <li><a href="#quarto-and-markdown" id="toc-quarto-and-markdown" class="nav-link" data-scroll-target="#quarto-and-markdown">Quarto and Markdown</a></li>
+  <li><a href="#layout-presets" id="toc-layout-presets" class="nav-link" data-scroll-target="#layout-presets">Layout presets</a></li>
+  <li><a href="#disabled-default-keybindings" id="toc-disabled-default-keybindings" class="nav-link" data-scroll-target="#disabled-default-keybindings">Disabled default keybindings</a></li>
+  <li><a href="#r-lecturer" id="toc-r-lecturer" class="nav-link" data-scroll-target="#r-lecturer">R-Lecturer</a></li>
+  <li><a href="#the-full-file" id="toc-the-full-file" class="nav-link" data-scroll-target="#the-full-file">The full file</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../collaboration/get_in_touch.html">Work with me</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/index.html">VS Code for R</a></li><li class="breadcrumb-item"><a href="../../collaboration/vscode_r_setup/keybindings.html">Keybindings reference</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Keybindings reference</h1>
+</div>
+
+<div>
+  <div class="description">
+    The keyboard shortcuts in my R profile, many borrowed from RStudio.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 9, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page lists the keybindings in the <code>keybindings.json</code> of my <code>R</code> profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>). Many of them bring back RStudio shortcuts. My teaching profile <code>R-Lecturer</code> has none of its own (<a href="#r-lecturer">R-Lecturer</a>). The file is at <a href="#the-full-file">the end of the page</a>.</p>
+<section id="how-to-read-the-file" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-the-file">How to read the file</h2>
+<p>Each rule has a <code>key</code>, a <code>command</code> and optionally <code>args</code> and a <code>when</code> condition; a later rule beats an earlier one and the defaults, and a command starting with <code>-</code> removes a default binding. The format is described in the <a href="https://code.visualstudio.com/docs/configure/keybindings">VS Code keybindings documentation</a>.</p>
+<p>I use a Czech keyboard layout. <code>oem_*</code> names depend on the layout, while names in square brackets, such as <code>[Digit1]</code>, are scan codes (physical key positions). The tables give the keys as I press them, plus the US equivalent where it differs:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>In the file</th>
+<th>Czech layout (what I press)</th>
+<th>US layout</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ctrl+shift+oem_2</code></td>
+<td><code>Ctrl+Shift+´</code> (the <code>´</code>/<code>ˇ</code> key left of Backspace)</td>
+<td><code>Ctrl+Shift+/</code></td>
+</tr>
+<tr class="even">
+<td><code>ctrl+oem_period</code></td>
+<td><code>Ctrl+.</code></td>
+<td><code>Ctrl+.</code></td>
+</tr>
+<tr class="odd">
+<td><code>ctrl+shift+,</code></td>
+<td><code>Ctrl+Shift+,</code></td>
+<td><code>Ctrl+Shift+,</code> (that is, <code>Ctrl+&lt;</code>)</td>
+</tr>
+<tr class="even">
+<td><code>ctrl+shift+oem_3</code></td>
+<td><code>Ctrl+Shift+;</code> (the <code>;</code>/<code>°</code> key left of <code>+</code>)</td>
+<td><code>Ctrl+Shift+`</code></td>
+</tr>
+<tr class="odd">
+<td><code>ctrl+alt+oem_3</code></td>
+<td><code>Ctrl+Alt+;</code></td>
+<td><code>Ctrl+Alt+`</code></td>
+</tr>
+<tr class="even">
+<td><code>ctrl+k ctrl+[Digit1]</code></td>
+<td><code>Ctrl+K</code>, then <code>Ctrl++</code></td>
+<td><code>Ctrl+K</code>, then <code>Ctrl+1</code></td>
+</tr>
+<tr class="odd">
+<td><code>ctrl+k ctrl+[Digit2]</code></td>
+<td><code>Ctrl+K</code>, then <code>Ctrl+ě</code></td>
+<td><code>Ctrl+K</code>, then <code>Ctrl+2</code></td>
+</tr>
+</tbody>
+</table>
+<section id="reusing-the-file-on-another-layout" class="level3">
+<h3 class="anchored" data-anchor-id="reusing-the-file-on-another-layout">Reusing the file on another layout</h3>
+<p>On a US layout the bindings stay on the same physical keys, except <code>ctrl+shift+oem_2</code>, which moves from the key left of Backspace to the <code>/</code> key. On other layouts the <code>oem_*</code> keys can land anywhere. <em>Developer: Toggle Keyboard Shortcuts Troubleshooting</em> logs in the <em>Output</em> panel how VS Code reads a key press and which rule it runs.</p>
+</section>
+</section>
+<section id="general" class="level2">
+<h2 class="anchored" data-anchor-id="general">General</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Shift+´</code> (US: <code>Ctrl+Shift+/</code>)</td>
+<td>Insert <code>```</code> (<code>type</code>)</td>
+<td>always</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p>The rule has no <code>when</code>, but <code>type</code> only does something when the cursor is in a text input.</p>
+</section>
+<section id="r-language" class="level2">
+<h2 class="anchored" data-anchor-id="r-language">R language</h2>
+<section id="documentation-and-help" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-and-help">Documentation and help</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Shift+D</code></td>
+<td>Document the package (<code>r.document</code>)</td>
+<td><code>resourceLangId == 'r'</code></td>
+<td>Run and Debug view</td>
+</tr>
+<tr class="even">
+<td><code>F1</code></td>
+<td>R help for the word under the cursor (<code>r.helpPanel.openForSelection</code>)</td>
+<td>R files; R Markdown and Quarto text (see below)</td>
+<td>Show All Commands</td>
+</tr>
+</tbody>
+</table>
+<p><code>r.document</code> runs the vscode-R task <em>R: Document</em>, which calls <code>devtools::document()</code>. It needs devtools (see <a href="../../collaboration/vscode_r_setup/install.html">Install</a>). In any other file, <code>Ctrl+Shift+D</code> still opens Run and Debug.</p>
+<p>The full <code>when</code> of the <code>F1</code> rule is:</p>
+<pre><code>editorLangId == 'r' || editorTextFocus &amp;&amp; editorLangId == 'rmd' || editorTextFocus &amp;&amp; editorLangId == 'quarto'</code></pre>
+<p>So <code>F1</code> opens R help whenever an R file is focused, and in R Markdown and Quarto documents when the cursor is in the text. Everywhere else <code>F1</code> still opens the Command Palette, which is also on <code>Ctrl+Shift+P</code>.</p>
+<p>Quarto’s language id is <code>quarto</code>, not <code>qmd</code>.</p>
+</section>
+<section id="operators" class="level3">
+<h3 class="anchored" data-anchor-id="operators">Operators</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Shift+M</code></td>
+<td>Insert the native pipe in the editor (<code>type</code>)</td>
+<td><code>editorTextFocus</code></td>
+<td>Problems panel</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+M</code></td>
+<td>Send the native pipe to the terminal (<code>workbench.action.terminal.sendSequence</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>Problems panel</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Shift+,</code> (US: <code>Ctrl+&lt;</code>)</td>
+<td>Insert the assignment arrow in the editor (<code>type</code>)</td>
+<td><code>editorTextFocus</code></td>
+<td>Replace with Previous Value</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+,</code> (US: <code>Ctrl+&lt;</code>)</td>
+<td>Send the assignment arrow to the terminal (<code>workbench.action.terminal.sendSequence</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p>Both texts include a space on each side: the pipe rules insert <code>|&gt;</code> and the arrow rules insert <code>&lt;-</code>. The pipe is R’s native pipe (R 4.1 or later), not magrittr’s <code>%&gt;%</code>.</p>
+<p>Each operator has two rules because <code>type</code> only types into a text editor, not into the terminal. In the terminal, <code>workbench.action.terminal.sendSequence</code> writes the text straight to radian. Outside both, <code>Ctrl+Shift+M</code> still opens the Problems panel.</p>
+</section>
+<section id="tools" class="level3">
+<h3 class="anchored" data-anchor-id="tools">Tools</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Shift+X</code></td>
+<td>Run <code>reprex::reprex()</code> in the R terminal (<code>r.runCommand</code>)</td>
+<td><code>resourceLangId == 'r'</code></td>
+<td>Extensions view</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+W</code></td>
+<td>Open the R view: sessions, workspace, help (<code>workbench.view.extension.workspaceViewer</code>)</td>
+<td>always</td>
+<td>Close Window</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Alt+P</code></td>
+<td>Open the httpgd plot viewer beside the editor (<code>r.runCommand</code>)</td>
+<td><code>editorTextFocus &amp;&amp; editorLangId == 'r'</code></td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p><code>r.runCommand</code> sends its <code>args</code> as R code to the active R terminal (<code>r.alwaysUseActiveTerminal</code> is on, see <a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>).</p>
+<ul>
+<li><strong>reprex.</strong> <code>reprex::reprex()</code> with no arguments takes the code from the clipboard, runs it in a clean R session, and puts the rendered Markdown (code plus output) back on the clipboard, ready to paste into an issue or an e-mail. So copy the code first, then press the key. It needs the reprex package (<code>install.packages("reprex")</code>; it also comes with the tidyverse). When the active file is not R, <code>Ctrl+Shift+X</code> still opens the Extensions view.</li>
+<li><strong>httpgd viewer.</strong> The rule runs <code>.vsc.browser(httpgd::hgd_url(), viewer = "Beside")</code>. <code>httpgd::hgd_url()</code> returns the address of the running httpgd server; <code>.vsc.browser()</code> is a vscode-R helper that opens an address in a VS Code viewer, here in the editor column beside the current one. It needs the httpgd package, a running httpgd device (my <a href="../../collaboration/vscode_r_setup/outside_vscode.html"><code>.Rprofile</code></a> makes httpgd the default device, so it starts with the first plot), and an R terminal attached to VS Code (<code>r.sessionWatcher</code>).</li>
+<li><strong>R view.</strong> <code>workbench.view.extension.workspaceViewer</code> opens vscode-R’s container in the activity bar, with the attached sessions, the objects in the global environment, and the help pages. The workspace list needs the session watcher too. Close Window still works with <code>Alt+F4</code>.</li>
+</ul>
+</section>
+</section>
+<section id="editor" class="level2">
+<h2 class="anchored" data-anchor-id="editor">Editor</h2>
+<section id="navigation" class="level3">
+<h3 class="anchored" data-anchor-id="navigation">Navigation</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Shift+Alt+Up</code></td>
+<td>Move the cursor 10 lines up (<code>cursorMove</code>)</td>
+<td><code>editorTextFocus</code></td>
+<td>Copy Line Up</td>
+</tr>
+<tr class="even">
+<td><code>Shift+Alt+Down</code></td>
+<td>Move the cursor 10 lines down (<code>cursorMove</code>)</td>
+<td><code>editorTextFocus</code></td>
+<td>Copy Line Down</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>args</code> are <code>{"to": "up", "by": "line", "value": 10}</code> (and <code>"down"</code>). Change <code>value</code> for a different jump. Copy Line Up/Down is still in the <em>Selection</em> menu. In Markdown, R Markdown and Quarto files, the Markdown All in One extension also puts its own copy-line commands on these keys; my rules win there too.</p>
+</section>
+<section id="symbols" class="level3">
+<h3 class="anchored" data-anchor-id="symbols">Symbols</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+.</code></td>
+<td>Go to Symbol in Workspace (<code>workbench.action.showAllSymbols</code>)</td>
+<td>always</td>
+<td>Quick Fix</td>
+</tr>
+</tbody>
+</table>
+<p>The default key for Go to Symbol in Workspace, <code>Ctrl+T</code>, still works. Quick Fix is still available from the light bulb in the editor.</p>
+</section>
+<section id="file-operations" class="level3">
+<h3 class="anchored" data-anchor-id="file-operations">File operations</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+N</code></td>
+<td>New untitled R file (<code>r.newFileDocument</code>)</td>
+<td><code>editorTextFocus &amp;&amp; !editorReadonly</code></td>
+<td>New Untitled Text File (removed)</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+W</code></td>
+<td>Close the editor (<code>workbench.action.closeActiveEditor</code>)</td>
+<td><code>!terminalFocus</code></td>
+<td>Close Editor (removed, re-added here)</td>
+</tr>
+</tbody>
+</table>
+<p>How these two keys share the editor and the terminal is explained <a href="#ctrlw-and-ctrln-in-the-editor-and-the-terminal">under Terminal</a>.</p>
+</section>
+<section id="autocomplete" class="level3">
+<h3 class="anchored" data-anchor-id="autocomplete">Autocomplete</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Alt+I</code></td>
+<td>Trigger an inline suggestion (<code>editor.action.inlineSuggest.trigger</code>)</td>
+<td><code>editorTextFocus &amp;&amp; !editorReadonly</code></td>
+<td>Open Chat; an extension’s insert-snippet binding (removed)</td>
+</tr>
+</tbody>
+</table>
+<p>Inline suggestions are the grey “ghost text” completions from Copilot or another provider (<code>editor.inlineSuggest.enabled</code> is on). VS Code’s own key for this is <code>Alt+\</code>. When the cursor is not in an editor, <code>Ctrl+Alt+I</code> still opens the Chat view.</p>
+</section>
+</section>
+<section id="terminal" class="level2">
+<h2 class="anchored" data-anchor-id="terminal">Terminal</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+L</code></td>
+<td>Clear the terminal (<code>workbench.action.terminal.clear</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>none (the key would go to radian)</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+W</code></td>
+<td>Kill the terminal (<code>workbench.action.terminal.kill</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>Close Editor</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+N</code></td>
+<td>New terminal (<code>workbench.action.terminal.new</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>New Untitled Text File</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+;</code> (US: <code>Ctrl+Shift+`</code>)</td>
+<td>New terminal in the active folder (<code>workbench.action.terminal.newInActiveWorkspace</code>)</td>
+<td><code>!terminalFocus</code></td>
+<td>New Terminal (removed)</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Alt+;</code> (US: <code>Ctrl+Alt+`</code>)</td>
+<td>Split the terminal (<code>workbench.action.terminal.split</code>)</td>
+<td><code>terminalFocus</code></td>
+<td>none (default split is <code>Ctrl+Shift+5</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Without my rule, <code>Ctrl+L</code> in the terminal goes to radian, which clears the screen. <code>workbench.action.terminal.clear</code> also clears VS Code’s scrollback. In the editor, <code>Ctrl+L</code> keeps its other bindings.</p>
+<p>My default terminal profile is <code>R Terminal</code> (<code>terminal.integrated.defaultProfile.windows</code>, see <a href="../../collaboration/vscode_r_setup/settings.html">Settings</a>), so every new terminal from these keys is an R terminal running radian. Inside the terminal, <code>Ctrl+Shift+;</code> does nothing; <code>Ctrl+N</code> opens a new terminal there.</p>
+<section id="ctrlw-and-ctrln-in-the-editor-and-the-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="ctrlw-and-ctrln-in-the-editor-and-the-terminal">Ctrl+W and Ctrl+N in the editor and the terminal</h3>
+<p>The same two keys mean “close” and “new” in both places: for a file in the editor, for a terminal in the terminal. It takes removals plus rules with opposite <code>when</code> clauses.</p>
+<p><code>Ctrl+W</code>:</p>
+<ol type="1">
+<li>By default, <code>Ctrl+W</code> runs <code>workbench.action.closeActiveEditor</code> everywhere, and <code>workbench.action.terminal.killEditor</code> in a terminal that is open in the editor area.</li>
+<li>Both defaults are removed (see <a href="#disabled-default-keybindings">Disabled default keybindings</a>).</li>
+<li><code>workbench.action.closeActiveEditor</code> comes back with <code>!terminalFocus</code>, and <code>workbench.action.terminal.kill</code> is added with <code>terminalFocus</code>.</li>
+</ol>
+<p>Result: in the editor, <code>Ctrl+W</code> closes the file. In the terminal (in the panel or the editor area), it kills the terminal. Without this, <code>Ctrl+W</code> in the terminal would close the file in the editor, not the terminal.</p>
+<p><code>Ctrl+N</code>:</p>
+<ol type="1">
+<li>By default, <code>Ctrl+N</code> runs <code>workbench.action.files.newUntitledFile</code> everywhere.</li>
+<li>That default is removed.</li>
+<li><code>r.newFileDocument</code> is added for a writable editor with the cursor in it, and <code>workbench.action.terminal.new</code> for the terminal.</li>
+</ol>
+<p>Result: in the editor, <code>Ctrl+N</code> opens a new R file; in the terminal, a new terminal. Anywhere else (the Explorer, an empty window, a read-only editor), <code>Ctrl+N</code> does nothing; <em>File</em> → <strong>New Text File</strong> still works there.</p>
+<p>VS Code handles these terminal commands itself instead of passing the key to the shell, so they work while the cursor is in radian.</p>
+</section>
+</section>
+<section id="git-and-source-control" class="level2">
+<h2 class="anchored" data-anchor-id="git-and-source-control">Git and source control</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Up</code></td>
+<td>Stage (<code>git.stage</code>)</td>
+<td>Source Control view (see below)</td>
+<td>List scroll up</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Down</code></td>
+<td>Unstage (<code>git.unstage</code>)</td>
+<td>Source Control view</td>
+<td>List scroll down</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Shift+Up</code></td>
+<td>Commit (<code>git.commit</code>)</td>
+<td>Source Control view</td>
+<td>none</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+Down</code></td>
+<td>Push (<code>git.push</code>)</td>
+<td>Source Control view</td>
+<td>none</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Alt+Shift+M</code></td>
+<td>Run the task “Git: Return to updated main” (<code>workbench.action.tasks.runTask</code>)</td>
+<td>always</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p>The four Source Control rules share this <code>when</code>:</p>
+<pre><code>sideBarVisible &amp;&amp; activeViewlet == 'workbench.view.scm' &amp;&amp; !editorFocus</code></pre>
+<p>So the Source Control view must be open in the primary sidebar, and the cursor must not be in an editor. The commit message box counts as an editor, so the keys do not fire while you type a message; commit from there with the default <code>Ctrl+Enter</code>. Select a file under <em>Changes</em> and press <code>Ctrl+Up</code> to stage it.</p>
+<p><code>git.commit</code> commits the staged changes with the message from the box (it asks for one if the box is empty). <code>git.push</code> pushes the current branch.</p>
+<p>The task and its script are described on <a href="../../collaboration/vscode_r_setup/snippets_tasks.html#git-return-to-updated-main">Snippets and tasks</a>. The binding passes the task’s label as <code>args</code>, so the label in <code>tasks.json</code> and here must stay identical.</p>
+</section>
+<section id="quarto-and-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-and-markdown">Quarto and Markdown</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+Alt+L</code></td>
+<td>Quarto: Preview Content (<code>quarto.previewContentShortcut</code>)</td>
+<td>Quarto, Mermaid or Graphviz (<code>dot</code>) files</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>when</code> is <code>editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'</code>. The REST Client extension also uses <code>Ctrl+Alt+L</code>, but only in <code>.http</code> and plain-text files, so they do not clash.</p>
+<p>Quarto itself binds the same command to <code>Ctrl+Shift+L</code>; this rule adds a second key for it. Previewing the whole document is <code>quarto.preview</code> on <code>Ctrl+Shift+K</code>.</p>
+</section>
+<section id="layout-presets" class="level2">
+<h2 class="anchored" data-anchor-id="layout-presets">Layout presets</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+K</code>, <code>Ctrl++</code> (US: <code>Ctrl+K</code>, <code>Ctrl+1</code>)</td>
+<td>Preset 1, laptop: primary sidebar 2 steps, secondary sidebar 4 steps (<code>runCommands</code>)</td>
+<td>always</td>
+<td>Fold Level 1</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+K</code>, <code>Ctrl+ě</code> (US: <code>Ctrl+K</code>, <code>Ctrl+2</code>)</td>
+<td>Preset 2, external monitor: primary 4 steps, secondary 7 steps (<code>runCommands</code>)</td>
+<td>always</td>
+<td>Fold Level 2</td>
+</tr>
+</tbody>
+</table>
+<p>The key strings are <code>ctrl+k ctrl+[Digit1]</code> and <code>ctrl+k ctrl+[Digit2]</code>: scan codes, so the same physical keys on every layout.</p>
+<section id="how-the-presets-work" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-presets-work">How the presets work</h3>
+<p>VS Code has no command that sets a sidebar to a given width. It can only grow or shrink parts of the window step by step, so each preset is a long list of such steps. <code>runCommands</code> is built into VS Code; it runs the commands in <code>args.commands</code> one after the other (no extension needed).</p>
+<p>Each sidebar ends at about its minimum width (around 170 px) plus N steps of about 60 px. Zoom and display scaling change the pixel values.</p>
+<p>Two facts drive the sequence:</p>
+<ul>
+<li><code>workbench.action.increaseViewWidth</code> and <code>workbench.action.decreaseViewWidth</code> always resize the editor area. The space comes from, or goes to, the primary sidebar first, then the secondary sidebar.</li>
+<li><code>workbench.action.increaseViewSize</code> and <code>workbench.action.decreaseViewSize</code> resize the focused part. But VS Code does not notice focus inside a webview (such as a chat view in the secondary sidebar), so these cannot size the secondary sidebar directly.</li>
+</ul>
+<p>So the secondary sidebar is sized indirectly. Preset 1, step by step:</p>
+<ol type="1">
+<li><code>workbench.action.closeSidebar</code>: hide the primary sidebar. Hidden, it absorbs nothing.</li>
+<li><code>workbench.action.increaseViewWidth</code>, 20 times: grow the editor area. The space comes from the secondary sidebar until it is at its minimum.</li>
+<li><code>workbench.action.decreaseViewWidth</code>, 4 times: shrink the editor 4 steps. The secondary sidebar gets them: minimum plus 4 steps.</li>
+<li><code>workbench.action.focusSideBar</code>: reopen and focus the primary sidebar. It takes its space from the editor.</li>
+<li><code>workbench.action.decreaseViewSize</code>, 20 times: shrink the focused primary sidebar to its minimum.</li>
+<li><code>workbench.action.increaseViewSize</code>, 2 times: grow it 2 steps.</li>
+<li><code>workbench.action.focusActiveEditorGroup</code>: put the cursor back in the editor.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Preset</th>
+<th><code>increaseViewWidth</code></th>
+<th><code>decreaseViewWidth</code> (secondary N)</th>
+<th><code>decreaseViewSize</code></th>
+<th><code>increaseViewSize</code> (primary N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 (laptop)</td>
+<td>20</td>
+<td>4</td>
+<td>20</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>2 (external monitor)</td>
+<td>20</td>
+<td>7</td>
+<td>20</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>The presets need a single editor group. With split editors, the width commands resize the groups instead of the sidebars. Join the groups first (<em>View</em> → <em>Editor Layout</em> → <em>Single</em>).</p>
+</section>
+<section id="tuning-a-preset" class="level3">
+<h3 class="anchored" data-anchor-id="tuning-a-preset">Tuning a preset</h3>
+<ul>
+<li><strong>Secondary sidebar</strong>: change the number of <code>workbench.action.decreaseViewWidth</code> lines. N lines give minimum plus N steps.</li>
+<li><strong>Primary sidebar</strong>: change the number of <code>workbench.action.increaseViewSize</code> lines.</li>
+<li><strong>The 20s</strong> only push a part to its limit; extra steps at the limit do nothing. If a sidebar does not reach its minimum on a very wide screen, add more of those lines.</li>
+</ul>
+<p>The presets override the default Fold Level 1 and Fold Level 2 (<code>Ctrl+K Ctrl+1</code>, <code>Ctrl+K Ctrl+2</code>). Those are still in the Command Palette (<strong>Fold Level 1</strong>, <strong>Fold Level 2</strong>), and the other folding keys (such as <code>Ctrl+K Ctrl+0</code> fold all and <code>Ctrl+K Ctrl+J</code> unfold all) are untouched.</p>
+</section>
+</section>
+<section id="disabled-default-keybindings" class="level2">
+<h2 class="anchored" data-anchor-id="disabled-default-keybindings">Disabled default keybindings</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Keys (as pressed)</th>
+<th>Action</th>
+<th>When</th>
+<th>Replaces default?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl+W</code></td>
+<td>Remove <code>workbench.action.terminal.killEditor</code></td>
+<td>the default’s (terminal in the editor area, see below)</td>
+<td>Kill terminal editor</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+W</code></td>
+<td>Remove <code>workbench.action.closeActiveEditor</code></td>
+<td>always</td>
+<td>Close Editor</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+N</code></td>
+<td>Remove <code>workbench.action.files.newUntitledFile</code></td>
+<td>always</td>
+<td>New Untitled Text File</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+;</code> (US: <code>Ctrl+Shift+`</code>)</td>
+<td>Remove <code>workbench.action.terminal.new</code></td>
+<td>the default’s (see below)</td>
+<td>New Terminal</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Alt+I</code></td>
+<td>Remove <code>editor.action.insertSnippet</code></td>
+<td><code>editorTextFocus &amp;&amp; !editorReadonly</code></td>
+<td>an extension’s insert-snippet binding</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+Shift+B</code></td>
+<td>Remove <code>workbench.action.tasks.build</code></td>
+<td><code>taskCommandsRegistered</code></td>
+<td>Run Build Task</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl+Shift+B</code></td>
+<td>Toggle the primary sidebar (<code>workbench.action.toggleSidebarVisibility</code>)</td>
+<td>always</td>
+<td>Run Build Task</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl+B</code></td>
+<td>Remove <code>workbench.action.toggleSidebarVisibility</code></td>
+<td>always</td>
+<td>Toggle Primary Sidebar</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li>The full <code>when</code> of the <code>killEditor</code> removal is <code>terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalHasBeenCreated &amp;&amp; resourceScheme == 'vscode-terminal' || terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalProcessSupported &amp;&amp; resourceScheme == 'vscode-terminal'</code>: a terminal open as a tab in the editor area.</li>
+<li>The full <code>when</code> of the <code>terminal.new</code> removal is <code>terminalProcessSupported || terminalWebExtensionContributedProfile</code>, the default’s own condition.</li>
+<li>Run Build Task is still in the Command Palette (<strong>Tasks: Run Build Task</strong>).</li>
+<li>After the removal, <code>Ctrl+B</code> does nothing in most places. In Markdown, R Markdown and Quarto files, the Markdown All in One extension uses it for bold.</li>
+</ul>
+</section>
+<section id="r-lecturer" class="level2">
+<h2 class="anchored" data-anchor-id="r-lecturer">R-Lecturer</h2>
+<p>My teaching profile <code>R-Lecturer</code> has no keybindings of its own: VS Code’s and the extensions’ defaults apply.</p>
+</section>
+<section id="the-full-file" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-file">The full file</h2>
+<details>
+<summary>
+Show the full file: <code>R/keybindings.json</code>
+</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">VS</span> <span class="er">Code</span> <span class="er">Keybindings</span> <span class="er">Configuration</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">============================================================================</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Place</span> <span class="er">your</span> <span class="er">key</span> <span class="er">bindings</span> <span class="er">in</span> <span class="er">this</span> <span class="er">file</span> <span class="er">to</span> <span class="er">override</span> <span class="er">the</span> <span class="er">defaults</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Insert Triple Backticks"</span><span class="fu">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+oem_2"</span><span class="fu">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">"```"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">R</span> <span class="er">LANGUAGE</span> <span class="er">SPECIFIC</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">R</span> <span class="er">Documentation</span> <span class="er">and</span> <span class="er">Help</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Build Docs"</span><span class="fu">,</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+d"</span><span class="fu">,</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.document"</span><span class="fu">,</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"resourceLangId == 'r'"</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Show Documentation"</span><span class="fu">,</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"f1"</span><span class="fu">,</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.helpPanel.openForSelection"</span><span class="fu">,</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId == 'r' || editorTextFocus &amp;&amp; editorLangId == 'rmd' || editorTextFocus &amp;&amp; editorLangId == 'quarto'"</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">R</span> <span class="er">Code</span> <span class="er">Snippets</span> <span class="er">and</span> <span class="er">Operators</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Pipe Operator (editor)"</span><span class="fu">,</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" |&gt; "</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Pipe Operator (terminal)"</span><span class="fu">,</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" |&gt; "</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Assignment Arrow (editor)"</span><span class="fu">,</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+,"</span><span class="fu">,</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Assignment Arrow (terminal)"</span><span class="fu">,</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+,"</span><span class="fu">,</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">R</span> <span class="er">Tools</span> <span class="er">and</span> <span class="er">Utilities</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Create Reprex"</span><span class="fu">,</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+x"</span><span class="fu">,</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.runCommand"</span><span class="fu">,</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="st">"reprex::reprex()"</span><span class="fu">,</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"resourceLangId == 'r'"</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"View: Show R Workspace"</span><span class="fu">,</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+w"</span><span class="fu">,</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.view.extension.workspaceViewer"</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Show Plot Viewer Beside Editor"</span><span class="fu">,</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+p"</span><span class="fu">,</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.runCommand"</span><span class="fu">,</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; editorLangId == 'r'"</span><span class="fu">,</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="st">".vsc.browser(httpgd::hgd_url(), viewer = </span><span class="ch">\"</span><span class="st">Beside</span><span class="ch">\"</span><span class="st">)"</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">EDITOR</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Navigation</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Navigate Up 10 Lines"</span><span class="fu">,</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"shift+alt+up"</span><span class="fu">,</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"cursorMove"</span><span class="fu">,</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"to"</span><span class="fu">:</span> <span class="st">"up"</span><span class="fu">,</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"by"</span><span class="fu">:</span> <span class="st">"line"</span><span class="fu">,</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">10</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Navigate Down 10 Lines"</span><span class="fu">,</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"shift+alt+down"</span><span class="fu">,</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"cursorMove"</span><span class="fu">,</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"to"</span><span class="fu">:</span> <span class="st">"down"</span><span class="fu">,</span></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"by"</span><span class="fu">:</span> <span class="st">"line"</span><span class="fu">,</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">10</span></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Symbols</span> <span class="er">and</span> <span class="er">Search</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Show All Symbols"</span><span class="fu">,</span></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+oem_period"</span><span class="fu">,</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.showAllSymbols"</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">File</span> <span class="er">Operations</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"New R File"</span><span class="fu">,</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.newFileDocument"</span><span class="fu">,</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; !editorReadonly"</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Close Active Editor"</span><span class="fu">,</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.closeActiveEditor"</span><span class="fu">,</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"!terminalFocus"</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Autocomplete</span> <span class="er">and</span> <span class="er">Suggestions</span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Force Autocomplete"</span><span class="fu">,</span></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+i"</span><span class="fu">,</span></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"editor.action.inlineSuggest.trigger"</span><span class="fu">,</span></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; !editorReadonly"</span></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">TERMINAL</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Terminal</span> <span class="er">Management</span></span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Clear Terminal"</span><span class="fu">,</span></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+l"</span><span class="fu">,</span></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.clear"</span><span class="fu">,</span></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Kill Terminal"</span><span class="fu">,</span></span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.kill"</span><span class="fu">,</span></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"New Terminal (when in terminal)"</span><span class="fu">,</span></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.new"</span><span class="fu">,</span></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"New Terminal in Active Workspace"</span><span class="fu">,</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+oem_3"</span><span class="fu">,</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.newInActiveWorkspace"</span><span class="fu">,</span></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"!terminalFocus"</span></span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Split Terminal"</span><span class="fu">,</span></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+oem_3"</span><span class="fu">,</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.split"</span><span class="fu">,</span></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">GIT/SCM</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Git Stage"</span><span class="fu">,</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+up"</span><span class="fu">,</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"git.stage"</span><span class="fu">,</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"sideBarVisible &amp;&amp; activeViewlet == 'workbench.view.scm' &amp;&amp; !editorFocus"</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Git Unstage"</span><span class="fu">,</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+down"</span><span class="fu">,</span></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"git.unstage"</span><span class="fu">,</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"sideBarVisible &amp;&amp; activeViewlet == 'workbench.view.scm' &amp;&amp; !editorFocus"</span></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Git Commit"</span><span class="fu">,</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+up"</span><span class="fu">,</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"git.commit"</span><span class="fu">,</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"sideBarVisible &amp;&amp; activeViewlet == 'workbench.view.scm' &amp;&amp; !editorFocus"</span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Git Push"</span><span class="fu">,</span></span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+down"</span><span class="fu">,</span></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"git.push"</span><span class="fu">,</span></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"sideBarVisible &amp;&amp; activeViewlet == 'workbench.view.scm' &amp;&amp; !editorFocus"</span></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+shift+m"</span><span class="fu">,</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.tasks.runTask"</span><span class="fu">,</span></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="st">"Git: Return to updated main"</span></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">QUARTO/MARKDOWN</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Quarto Preview Content (diagram, math or cell at the cursor)"</span><span class="fu">,</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+l"</span><span class="fu">,</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"quarto.previewContentShortcut"</span><span class="fu">,</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'"</span></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">LAYOUT</span> <span class="er">PRESETS</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Sidebar</span> <span class="er">width</span> <span class="er">presets</span> <span class="er">per</span> <span class="er">monitor.</span> <span class="er">Width</span> <span class="er">~=</span> <span class="er">minimum</span> <span class="er">(~</span><span class="dv">170</span> <span class="er">px)</span> <span class="er">+</span> <span class="er">N</span> <span class="er">steps</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">(</span><span class="dv">60</span> <span class="er">px</span><span class="ot">,</span> <span class="er">scaled</span> <span class="er">by</span> <span class="er">zoom/DPI).</span> <span class="er">Tune</span> <span class="er">N</span> <span class="er">via</span> <span class="er">the</span> <span class="er">counts</span> <span class="er">in</span> <span class="er">each</span> <span class="er">description.</span></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Keys</span> <span class="er">use</span> <span class="er">scan</span> <span class="er">codes</span> <span class="er">(</span><span class="ot">[</span><span class="er">Digit1</span><span class="ot">]</span> <span class="er">=</span> <span class="st">"+"</span> <span class="er">key</span><span class="ot">,</span> <span class="ot">[</span><span class="er">Digit2</span><span class="ot">]</span> <span class="er">=</span> <span class="st">"e-caron"</span> <span class="er">key</span> <span class="er">on</span></span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">the</span> <span class="er">CZ</span> <span class="er">layout)</span><span class="ot">,</span> <span class="er">so</span> <span class="er">they</span> <span class="er">work</span> <span class="er">regardless</span> <span class="er">of</span> <span class="er">the</span> <span class="er">active</span> <span class="er">keyboard</span> <span class="er">layout.</span></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">They</span> <span class="er">override</span> <span class="er">the</span> <span class="er">default</span> <span class="er">Fold</span> <span class="er">Level</span> <span class="dv">1</span><span class="er">/</span><span class="dv">2</span> <span class="er">(ctrl+k</span> <span class="er">ctrl+</span><span class="dv">1</span><span class="er">/</span><span class="dv">2</span><span class="er">).</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">How</span> <span class="er">it</span> <span class="er">works</span> <span class="er">(VS</span> <span class="er">Code</span> <span class="fl">1.140</span><span class="er">):</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">-</span> <span class="er">increase/decreaseViewWidth</span> <span class="er">always</span> <span class="er">resize</span> <span class="er">the</span> <span class="er">editor</span> <span class="er">area.</span> <span class="er">Editor</span> <span class="er">size</span></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">changes</span> <span class="er">are</span> <span class="er">absorbed</span> <span class="er">by</span> <span class="er">the</span> <span class="er">primary</span> <span class="er">sidebar</span> <span class="er">first</span><span class="ot">,</span> <span class="er">then</span> <span class="er">the</span> <span class="er">secondary.</span></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">-</span> <span class="er">increase/decreaseViewSize</span> <span class="er">resize</span> <span class="er">the</span> <span class="er">focused</span> <span class="er">part</span><span class="ot">,</span> <span class="er">but</span> <span class="er">focus</span> <span class="er">inside</span> <span class="er">a</span></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">webview</span> <span class="er">(Claude</span> <span class="er">Code)</span> <span class="er">is</span> <span class="er">not</span> <span class="er">detected</span><span class="ot">,</span> <span class="er">so</span> <span class="er">the</span> <span class="er">secondary</span> <span class="er">sidebar</span> <span class="er">is</span> <span class="er">set</span></span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">indirectly:</span> <span class="er">hide</span> <span class="er">the</span> <span class="er">primary</span> <span class="er">sidebar</span> <span class="er">(it</span> <span class="er">then</span> <span class="er">absorbs</span> <span class="er">nothing)</span><span class="ot">,</span> <span class="er">grow</span></span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">the</span> <span class="er">editor</span> <span class="er">to</span> <span class="er">push</span> <span class="er">the</span> <span class="er">secondary</span> <span class="er">sidebar</span> <span class="er">to</span> <span class="er">its</span> <span class="er">minimum</span><span class="ot">,</span> <span class="er">then</span> <span class="er">shrink</span></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">the</span> <span class="er">editor</span> <span class="er">N</span> <span class="er">steps.</span> <span class="er">Reopening</span> <span class="er">the</span> <span class="er">primary</span> <span class="er">sidebar</span> <span class="er">takes</span> <span class="er">space</span> <span class="er">from</span> <span class="er">the</span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">editor</span><span class="ot">,</span> <span class="er">and</span> <span class="er">it</span> <span class="er">is</span> <span class="er">then</span> <span class="er">reset</span> <span class="er">to</span> <span class="er">minimum</span> <span class="er">+</span> <span class="er">N</span> <span class="er">steps</span> <span class="er">via</span> <span class="er">ViewSize.</span></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">-</span> <span class="er">Requires</span> <span class="er">a</span> <span class="er">single</span> <span class="er">editor</span> <span class="er">group;</span> <span class="er">with</span> <span class="er">split</span> <span class="er">editors</span><span class="ot">,</span> <span class="er">editor</span> <span class="er">resizes</span></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span>   <span class="er">change</span> <span class="er">the</span> <span class="er">group</span> <span class="er">sizes</span> <span class="er">instead.</span></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Layout Preset 1 (laptop): primary 2 steps, secondary 4 steps"</span><span class="fu">,</span></span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+k ctrl+[Digit1]"</span><span class="fu">,</span></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"runCommands"</span><span class="fu">,</span></span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"commands"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.closeSidebar"</span><span class="ot">,</span></span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.focusSideBar"</span><span class="ot">,</span></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.focusActiveEditorGroup"</span></span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Layout Preset 2 (external monitor): primary 4 steps, secondary 7 steps"</span><span class="fu">,</span></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+k ctrl+[Digit2]"</span><span class="fu">,</span></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"runCommands"</span><span class="fu">,</span></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"commands"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.closeSidebar"</span><span class="ot">,</span></span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewWidth"</span><span class="ot">,</span></span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.focusSideBar"</span><span class="ot">,</span></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.decreaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.increaseViewSize"</span><span class="ot">,</span></span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a>                <span class="st">"workbench.action.focusActiveEditorGroup"</span></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a>            <span class="ot">]</span></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a>        <span class="fu">}</span></span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">DISABLED</span> <span class="er">DEFAULT</span> <span class="er">KEYBINDINGS</span></span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">========================================================================</span></span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
+<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.terminal.killEditor"</span><span class="fu">,</span></span>
+<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalHasBeenCreated &amp;&amp; resourceScheme == 'vscode-terminal' || terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalProcessSupported &amp;&amp; resourceScheme == 'vscode-terminal'"</span></span>
+<span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
+<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.closeActiveEditor"</span></span>
+<span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-366"><a href="#cb3-366" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-367"><a href="#cb3-367" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.files.newUntitledFile"</span></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+oem_3"</span><span class="fu">,</span></span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.terminal.new"</span><span class="fu">,</span></span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalProcessSupported || terminalWebExtensionContributedProfile"</span></span>
+<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+i"</span><span class="fu">,</span></span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-editor.action.insertSnippet"</span><span class="fu">,</span></span>
+<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; !editorReadonly"</span></span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+b"</span><span class="fu">,</span></span>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.tasks.build"</span><span class="fu">,</span></span>
+<span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"taskCommandsRegistered"</span></span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+b"</span><span class="fu">,</span></span>
+<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.toggleSidebarVisibility"</span></span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+b"</span><span class="fu">,</span></span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.toggleSidebarVisibility"</span></span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<p><a href="files/R/keybindings.json" download="keybindings.json">Download <code>keybindings.json</code></a></p>
+<p>To use a file, switch to the target profile, run <strong>Preferences: Open Keyboard Shortcuts (JSON)</strong> and paste the content. Settings Sync carries it to the other machines. On a layout other than Czech, see <a href="#reusing-the-file-on-another-layout">Reusing the file on another layout</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+// Label each table cell with its column header, for the phone card layout
+// in _narrow-tables-head.html.
+document.querySelectorAll("main table").forEach(function (table) {
+  var headers = Array.prototype.map.call(
+    table.querySelectorAll("thead th"),
+    function (th) { return th.textContent.trim(); }
+  );
+  if (headers.length === 0) return;
+  table.querySelectorAll("tbody tr").forEach(function (row) {
+    Array.prototype.forEach.call(row.children, function (cell, i) {
+      if (headers[i]) cell.setAttribute("data-label", headers[i]);
+    });
+  });
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

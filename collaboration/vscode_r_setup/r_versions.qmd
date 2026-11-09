@@ -11,6 +11,7 @@ Nothing in my synced settings names an R version or a path:
 
 - `r.consolePath` is `"radian"`, found on `PATH`.
 - `r.executablePath` is not set, so vscode-R uses `R.exe` on `PATH`, which is rig's shortcut in `C:\Program Files\R\bin`.
+- The R Debugger extension reads only the old `r.rpath.windows`. That is not set either, so it also uses `R.exe` on `PATH`. vscode-R shows a one-time warning about this whenever R Debugger is installed; without a project pin there is nothing to do.
 - radian also starts the R on `PATH`, unless `R_HOME` is set or `--r-binary` is given.
 
 So the R version is whatever `rig default` says on that machine. The settings stay identical everywhere, which is what lets [Settings Sync](profiles_sync.qmd) carry them.
@@ -44,7 +45,7 @@ I wrote (well, vibe-coded) a small extension for this: [**R Version Switcher**](
 
 A status bar item shows the workspace's R version and turns yellow when it differs from `renv.lock`. Click it to switch. That pairs well with the [project template](https://github.com/OndrejMottl/Project_template), which uses renv.
 
-The extension writes the same two settings as the manual method below, using rig's version link when it exists. Restart the R terminal after switching.
+The extension writes the same settings as the manual method below, using rig's version link when it exists, including `r.rpath.windows` when R Debugger is installed. Restart the R terminal after switching.
 
 ### By hand
 
@@ -59,12 +60,14 @@ Then in the project's `.vscode/settings.json`:
 ```json
 {
   "r.executablePath": "R-4.5.1.exe",
-  "r.consoleArgs": ["--no-save", "--no-restore", "--r-binary=R-4.5.1.exe"]
+  "r.consoleArgs": ["--no-save", "--no-restore", "--r-binary=R-4.5.1.exe"],
+  "r.rpath.windows": "R-4.5.1.exe"
 }
 ```
 
 - `r.executablePath` is the R that vscode-R uses for the language server, help and the workspace viewer.
 - `r.consoleArgs` is passed to radian. `--r-binary` makes radian start that R. The first two arguments are vscode-R's default, which the workspace value would otherwise replace.
+- `r.rpath.windows` is for the R Debugger extension, which reads only this older setting. Without it, the debugger runs the default R instead of the pinned one. vscode-R marks the setting as deprecated, but asks to keep it, with the same value as `r.executablePath`, while R Debugger is installed. Leave it out if you do not use R Debugger.
 - `R-4.5.1.exe` is found on `PATH`, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.
 - Keep the `.exe`. vscode-R adds `.exe` only to names without an extension, and `R-4.5.1` looks like it has one (`.1`), so without it vscode-R does not find R. radian accepts both.
 - A full path such as `C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe` also works and contains no user name, but it is Windows-only.

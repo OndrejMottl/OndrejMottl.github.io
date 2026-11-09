@@ -374,6 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><code>r.consolePath</code> is <code>"radian"</code>, found on <code>PATH</code>.</li>
 <li><code>r.executablePath</code> is not set, so vscode-R uses <code>R.exe</code> on <code>PATH</code>, which is rig’s shortcut in <code>C:\Program Files\R\bin</code>.</li>
+<li>The R Debugger extension reads only the old <code>r.rpath.windows</code>. That is not set either, so it also uses <code>R.exe</code> on <code>PATH</code>. vscode-R shows a one-time warning about this whenever R Debugger is installed; without a project pin there is nothing to do.</li>
 <li>radian also starts the R on <code>PATH</code>, unless <code>R_HOME</code> is set or <code>--r-binary</code> is given.</li>
 </ul>
 <p>So the R version is whatever <code>rig default</code> says on that machine. The settings stay identical everywhere, which is what lets <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Settings Sync</a> carry them.</p>
@@ -430,7 +431,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>A status bar item shows the workspace’s R version and turns yellow when it differs from <code>renv.lock</code>. Click it to switch. That pairs well with the <a href="https://github.com/OndrejMottl/Project_template">project template</a>, which uses renv.</p>
-<p>The extension writes the same two settings as the manual method below, using rig’s version link when it exists. Restart the R terminal after switching.</p>
+<p>The extension writes the same settings as the manual method below, using rig’s version link when it exists, including <code>r.rpath.windows</code> when R Debugger is installed. Restart the R terminal after switching.</p>
 </section>
 <section id="by-hand" class="level3">
 <h3 class="anchored" data-anchor-id="by-hand">By hand</h3>
@@ -439,11 +440,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Then in the project’s <code>.vscode/settings.json</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.executablePath"</span><span class="fu">:</span> <span class="st">"R-4.5.1.exe"</span><span class="fu">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.consoleArgs"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"--no-save"</span><span class="ot">,</span> <span class="st">"--no-restore"</span><span class="ot">,</span> <span class="st">"--r-binary=R-4.5.1.exe"</span><span class="ot">]</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.consoleArgs"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"--no-save"</span><span class="ot">,</span> <span class="st">"--no-restore"</span><span class="ot">,</span> <span class="st">"--r-binary=R-4.5.1.exe"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.rpath.windows"</span><span class="fu">:</span> <span class="st">"R-4.5.1.exe"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>r.executablePath</code> is the R that vscode-R uses for the language server, help and the workspace viewer.</li>
 <li><code>r.consoleArgs</code> is passed to radian. <code>--r-binary</code> makes radian start that R. The first two arguments are vscode-R’s default, which the workspace value would otherwise replace.</li>
+<li><code>r.rpath.windows</code> is for the R Debugger extension, which reads only this older setting. Without it, the debugger runs the default R instead of the pinned one. vscode-R marks the setting as deprecated, but asks to keep it, with the same value as <code>r.executablePath</code>, while R Debugger is installed. Leave it out if you do not use R Debugger.</li>
 <li><code>R-4.5.1.exe</code> is found on <code>PATH</code>, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.</li>
 <li>Keep the <code>.exe</code>. vscode-R adds <code>.exe</code> only to names without an extension, and <code>R-4.5.1</code> looks like it has one (<code>.1</code>), so without it vscode-R does not find R. radian accepts both.</li>
 <li>A full path such as <code>C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe</code> also works and contains no user name, but it is Windows-only.</li>

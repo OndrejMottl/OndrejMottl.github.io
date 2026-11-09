@@ -46,6 +46,8 @@ vscode-R 3.x renamed these settings:
 | `r.rtermSendDelay` | `r.consoleSendDelay` |
 | `r.plot.useHttpgd` | `r.plot.backend` (`"httpgd"`) |
 
+One exception: the R Debugger extension still reads only `r.rpath.windows`. Where `r.executablePath` is set, for example in a [project pin](r_versions.qmd#by-hand), keep `r.rpath.windows` with the same value.
+
 ## A setting changed on one machine never arrives on the other
 
 **Cause:** Settings Sync silently skips machine-scoped settings, and several vscode-R settings are machine-scoped.

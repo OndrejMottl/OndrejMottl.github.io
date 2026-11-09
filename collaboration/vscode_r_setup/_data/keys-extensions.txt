@@ -46,6 +46,7 @@ ms-vscode.remote-server
 ms-vscode.vscode-chat-customizations-evaluations
 nemesv.copy-file-name
 nicolas-liger.dbml-viewer
+ondrejmottl.r-version-switcher
 openai.chatgpt
 openai.codex-audio
 phplasma.csv-to-table

@@ -46,6 +46,7 @@ ms-vscode.remote-server	Remote - Tunnels	Connect to a remote machine through a T
 ms-vscode.vscode-chat-customizations-evaluations	Chat Customizations Evaluations	Extension for analyzing, validating, and improving AI prompts
 nemesv.copy-file-name	Copy file name	Copies the name of the currently opened file to the clipboard.
 nicolas-liger.dbml-viewer	DBML Live Preview	An extension for Visual Studio Code that provides real-time rendering of a database schema from the generated DBML code.
+ondrejmottl.r-version-switcher	R Version Switcher	⚠️ Purely vibe-coded (AI-written), use at your own risk. Switch, install and remove R versions managed by rig (R Installation Manager)
 openai.chatgpt	Codex – OpenAI’s coding agent	Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.
 openai.codex-audio	Codex Audio	Local microphone support for Codex dictation, including remote workspaces.
 phplasma.csv-to-table	CSV to Table	Convert a CSV/TSV/PSV file to an ASCII formatted table

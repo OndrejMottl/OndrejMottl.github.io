@@ -18,7 +18,7 @@ A [profile](https://code.visualstudio.com/docs/configure/profiles) is a complete
 | Profile | Used for |
 |---|---|
 | `R` | All daily R work, on every machine. The one documented on [Settings](settings.qmd), [Keybindings](keybindings.qmd) and [Extensions](extensions.qmd). |
-| `R-Lecturer` | Teaching: light theme, Material icons, Copilot mostly off. See [below](#the-r-lecturer-profile). |
+| `R-Lecturer` | Teaching: VS Code's defaults plus what is needed to run R. See [below](#the-r-lecturer-profile). |
 | Default | Folders that are not R projects, and the place for application-wide settings (see below). |
 
 My other profiles are unrelated to R and not covered here.
@@ -123,26 +123,16 @@ show_file(
 )
 ```
 
-## The R-Lecturer profile
+## The R-Lecturer profile {#the-r-lecturer-profile}
 
-Based on `R`, but closer to VS Code's defaults. The differences:
+My teaching profile keeps VS Code's defaults and adds only what is needed to run R:
 
-| Area | `R` | `R-Lecturer` |
-|---|---|---|
-| Theme | Visual Studio Dark | Light Modern |
-| Icons | vscode-icons | Material Icon Theme |
-| Terminal cursor | underline | line |
-| Copilot | on for most languages, no autocompletion as you type | off, except Quarto (slides) |
-| AI agent settings | Claude Code, Codex, chat auto-approve lists, ... | none |
-| Unicode highlighting | off | on |
-| Paste | | `editor.formatOnPaste: true` |
-| Quarto | `previewReveal: true` | preview in an external browser; visual editor wraps at 80 columns, spell-checks in en-GB |
-| R | | `r.removeLeadingComments`, `r.session.levelOfObjectDetail: "Normal"` |
-| Formatters | YAML: Red Hat YAML; SCSS: built-in; SQL: SQL Server | YAML: Quarto; SCSS: SCSS Formatter; SQL: SQLTools |
-| File handling | panel on the right, empty-editor hint hidden, wrapped tabs, ... | VS Code defaults |
-| Extensions | the [R set](extensions.qmd) | no AI agents except Copilot Chat, no Docker, no CSV table editor; adds LaTeX, Zotero, LTeX, SQLTools, PostgreSQL, Excel/OOXML viewers |
-| Keybindings | the [R set](keybindings.qmd) | its own set (see [Keybindings](keybindings.qmd)) |
-| Tasks | both [tasks](snippets_tasks.qmd#tasks) | only *R: New scratch project* |
+- radian as the R console and httpgd for plots (`r.consolePath`, `r.bracketedPaste`, `r.plot.backend`; needs the `httpgd` R package), with the same `settingsSync.ignoredSettings` line as `R`;
+- the Light Modern theme, for the projector;
+- no Copilot completions;
+- Quarto previews in the browser, and the visual editor wraps at 80 columns and spell-checks in British English.
+
+Its only extensions are vscode-R (`reditorsupport.r`, `reditorsupport.r-syntax`) and Quarto (`quarto.quarto`); Copilot Chat ships with VS Code. It has no keybindings, tasks or snippets of its own.
 
 ```{r}
 #| echo: false
@@ -151,5 +141,4 @@ show_file(
   "R-Lecturer/settings.json", "json",
   label = "R-Lecturer settings.json"
 )
-show_file("R-Lecturer/tasks.json", "json", label = "R-Lecturer tasks.json")
 ```

@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#quarto-and-markdown" id="toc-quarto-and-markdown" class="nav-link" data-scroll-target="#quarto-and-markdown">Quarto and Markdown</a></li>
   <li><a href="#layout-presets" id="toc-layout-presets" class="nav-link" data-scroll-target="#layout-presets">Layout presets</a></li>
   <li><a href="#disabled-default-keybindings" id="toc-disabled-default-keybindings" class="nav-link" data-scroll-target="#disabled-default-keybindings">Disabled default keybindings</a></li>
-  <li><a href="#r-lecturer-profile-differences" id="toc-r-lecturer-profile-differences" class="nav-link" data-scroll-target="#r-lecturer-profile-differences">R-Lecturer profile differences</a></li>
+  <li><a href="#r-lecturer" id="toc-r-lecturer" class="nav-link" data-scroll-target="#r-lecturer">R-Lecturer</a></li>
   <li><a href="#the-full-file" id="toc-the-full-file" class="nav-link" data-scroll-target="#the-full-file">The full file</a></li>
   </ul>
 </nav>
@@ -365,7 +365,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -376,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This page lists the keybindings in the <code>keybindings.json</code> of my <code>R</code> profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>). Many of them bring back RStudio shortcuts. The teaching profile <code>R-Lecturer</code> has a smaller set; see <a href="#r-lecturer-profile-differences">R-Lecturer profile differences</a>. Both files are at <a href="#the-full-file">the end of the page</a>.</p>
+<p>This page lists the keybindings in the <code>keybindings.json</code> of my <code>R</code> profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>). Many of them bring back RStudio shortcuts. My teaching profile <code>R-Lecturer</code> has none of its own (<a href="#r-lecturer">R-Lecturer</a>). The file is at <a href="#the-full-file">the end of the page</a>.</p>
 <section id="how-to-read-the-file" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-read-the-file">How to read the file</h2>
 <p>Each rule has a <code>key</code>, a <code>command</code> and optionally <code>args</code> and a <code>when</code> condition; a later rule beats an earlier one and the defaults, and a command starting with <code>-</code> removes a default binding. The format is described in the <a href="https://code.visualstudio.com/docs/configure/keybindings">VS Code keybindings documentation</a>.</p>
@@ -1056,20 +1056,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>After the removal, <code>Ctrl+B</code> does nothing in most places. In Markdown, R Markdown and Quarto files, the Markdown All in One extension uses it for bold.</li>
 </ul>
 </section>
-<section id="r-lecturer-profile-differences" class="level2">
-<h2 class="anchored" data-anchor-id="r-lecturer-profile-differences">R-Lecturer profile differences</h2>
-<p>The teaching profile <code>R-Lecturer</code> (<a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>) has a smaller set, mostly a subset of the R one.</p>
-<p><strong>The same in both profiles:</strong> <code>Ctrl+Shift+D</code> document, <code>F1</code> help, the <code>Ctrl+Shift+,</code> arrow (editor and terminal), <code>Ctrl+Shift+X</code> reprex, <code>Ctrl+Shift+W</code> R view, <code>Ctrl+.</code> symbols, <code>Ctrl+Alt+P</code> httpgd viewer, <code>Shift+Alt+Up</code>/<code>Shift+Alt+Down</code> 10 lines, <code>Ctrl+Alt+L</code> Quarto preview, <code>Ctrl+W</code> and <code>Ctrl+N</code> in the editor and the terminal, and in the terminal <code>Ctrl+L</code> and the <code>Ctrl+Shift+;</code> (US: <code>Ctrl+Shift+`</code>) handling.</p>
-<p><strong>Different:</strong> <code>Ctrl+Shift+M</code> inserts magrittr’s <code>%&gt;%</code> instead of the native <code>|&gt;</code>, in the editor and in the terminal.</p>
-<p><strong>Missing in R-Lecturer</strong> (so the defaults apply there):</p>
-<ul>
-<li>the triple backticks (<code>Ctrl+Shift+´</code>);</li>
-<li><code>Ctrl+Alt+I</code> inline suggestion and its removal rule (<code>Ctrl+Alt+I</code> keeps its defaults, such as Open Chat);</li>
-<li><code>Ctrl+Alt+;</code> split terminal;</li>
-<li>all Git keys and the <code>Ctrl+Alt+Shift+M</code> task;</li>
-<li>the layout presets (<code>Ctrl+K Ctrl+1</code>/<code>Ctrl+K Ctrl+2</code> fold as usual);</li>
-<li>the <code>Ctrl+B</code> / <code>Ctrl+Shift+B</code> swap (<code>Ctrl+B</code> toggles the sidebar, <code>Ctrl+Shift+B</code> runs the build task).</li>
-</ul>
+<section id="r-lecturer" class="level2">
+<h2 class="anchored" data-anchor-id="r-lecturer">R-Lecturer</h2>
+<p>My teaching profile <code>R-Lecturer</code> has no keybindings of its own: VS Code’s and the extensions’ defaults apply.</p>
 </section>
 <section id="the-full-file" class="level2">
 <h2 class="anchored" data-anchor-id="the-full-file">The full file</h2>
@@ -1472,179 +1461,6 @@ Show the full file: <code>R/keybindings.json</code>
 <span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <p><a href="files/R/keybindings.json" download="keybindings.json">Download <code>keybindings.json</code></a></p>
-<details>
-<summary>
-Show the full file: <code>R-Lecturer/keybindings.json</code>
-</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="er">//</span> <span class="er">Place</span> <span class="er">your</span> <span class="er">key</span> <span class="er">bindings</span> <span class="er">in</span> <span class="er">this</span> <span class="er">file</span> <span class="er">to</span> <span class="er">override</span> <span class="er">the</span> <span class="er">defaults</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="er">/*</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="er">Keybindings</span> <span class="er">for</span> <span class="er">R</span> <span class="er">Language</span> <span class="er">------------------------------------------------</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="er">*/</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Build</span> <span class="er">RD</span> <span class="er">files</span> <span class="er">for</span> <span class="er">R</span> <span class="er">functions</span> <span class="er">/</span> <span class="er">packages</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Build Docs"</span><span class="fu">,</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+d"</span><span class="fu">,</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.document"</span><span class="fu">,</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"resourceLangId == 'r'"</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Insert</span> <span class="er">pipe-operator</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Pipe Operator (editor)"</span><span class="fu">,</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" %&gt;% "</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span><span class="fu">,</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Pipe Operator (terminal)"</span><span class="fu">,</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+m"</span><span class="fu">,</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" %&gt;% "</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Insert</span> <span class="er">&lt;-</span> <span class="er">assignment</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Assignment Arrow (editor)"</span><span class="fu">,</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+,"</span><span class="fu">,</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"type"</span><span class="fu">,</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span><span class="fu">,</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Assignment Arrow (terminal)"</span><span class="fu">,</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+,"</span><span class="fu">,</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.sendSequence"</span><span class="fu">,</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"text"</span><span class="fu">:</span> <span class="st">" &lt;- "</span></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Create</span> <span class="er">reprex</span> <span class="er">(must</span> <span class="er">be</span> <span class="er">in</span> <span class="er">clipboard)</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Create Reprex"</span><span class="fu">,</span></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+x"</span><span class="fu">,</span></span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.runCommand"</span><span class="fu">,</span></span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="st">"reprex::reprex()"</span><span class="fu">,</span></span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"resourceLangId == 'r'"</span></span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Show</span> <span class="er">help</span> <span class="er">for</span> <span class="er">function</span> <span class="er">at</span> <span class="er">cursor</span> <span class="er">position</span></span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"R Show Documentation"</span><span class="fu">,</span></span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"f1"</span><span class="fu">,</span></span>
-<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.helpPanel.openForSelection"</span><span class="fu">,</span></span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId == 'r' || editorTextFocus &amp;&amp; editorLangId == 'rmd' || editorTextFocus &amp;&amp; editorLangId == 'quarto'"</span></span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    <span class="er">/*</span></span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>      <span class="er">Editor-specific</span> <span class="er">keybindings</span> <span class="er">-----------------------------------------------</span></span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    <span class="er">*/</span></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">View</span> <span class="er">R</span> <span class="er">workspace</span></span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"View: Show R Workspace"</span><span class="fu">,</span></span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+w"</span><span class="fu">,</span></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.view.extension.workspaceViewer"</span></span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Show</span> <span class="er">all</span> <span class="er">symbols</span> <span class="er">(objects</span><span class="ot">,</span> <span class="er">...)</span></span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+oem_period"</span><span class="fu">,</span></span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.showAllSymbols"</span></span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">new</span> <span class="er">R</span> <span class="er">file</span></span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.newFileDocument"</span><span class="fu">,</span></span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; !editorReadonly"</span></span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">switch</span> <span class="er">position</span> <span class="er">of</span> <span class="er">panel</span></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+p"</span><span class="fu">,</span></span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"r.runCommand"</span><span class="fu">,</span></span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus &amp;&amp; editorLangId == 'r'"</span><span class="fu">,</span></span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="st">".vsc.browser(httpgd::hgd_url(), viewer = </span><span class="ch">\"</span><span class="st">Beside</span><span class="ch">\"</span><span class="st">)"</span></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Editor</span> <span class="er">nabigation</span></span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"shift+alt+up"</span><span class="fu">,</span></span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"cursorMove"</span><span class="fu">,</span></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"to"</span><span class="fu">:</span> <span class="st">"up"</span><span class="fu">,</span></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"by"</span><span class="fu">:</span> <span class="st">"line"</span><span class="fu">,</span></span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">10</span></span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"shift+alt+down"</span><span class="fu">,</span></span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"cursorMove"</span><span class="fu">,</span></span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"to"</span><span class="fu">:</span> <span class="st">"down"</span><span class="fu">,</span></span>
-<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"by"</span><span class="fu">:</span> <span class="st">"line"</span><span class="fu">,</span></span>
-<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>            <span class="dt">"value"</span><span class="fu">:</span> <span class="dv">10</span></span>
-<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>        <span class="fu">},</span></span>
-<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorTextFocus"</span></span>
-<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">other</span> <span class="er">stuff</span></span>
-<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+alt+l"</span><span class="fu">,</span></span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"quarto.previewContentShortcut"</span><span class="fu">,</span></span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"editorLangId == 'dot' || editorLangId == 'mermaid' || editorLangId == 'quarto'"</span></span>
-<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+l"</span><span class="fu">,</span></span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.clear"</span><span class="fu">,</span></span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
-<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.killEditor"</span><span class="fu">,</span></span>
-<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.terminal.killEditor"</span><span class="fu">,</span></span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalHasBeenCreated &amp;&amp; resourceScheme == 'vscode-terminal' || terminalEditorFocus &amp;&amp; terminalFocus &amp;&amp; terminalProcessSupported &amp;&amp; resourceScheme == 'vscode-terminal'"</span></span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
-<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.closeActiveEditor"</span></span>
-<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
-<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.closeActiveEditor"</span></span>
-<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+w"</span><span class="fu">,</span></span>
-<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.kill"</span><span class="fu">,</span></span>
-<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
-<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.files.newUntitledFile"</span></span>
-<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+n"</span><span class="fu">,</span></span>
-<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.new"</span><span class="fu">,</span></span>
-<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalFocus"</span></span>
-<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+oem_3"</span><span class="fu">,</span></span>
-<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"-workbench.action.terminal.new"</span><span class="fu">,</span></span>
-<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminalProcessSupported || terminalWebExtensionContributedProfile"</span></span>
-<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
-<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"ctrl+shift+oem_3"</span><span class="fu">,</span></span>
-<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"workbench.action.terminal.newInActiveWorkspace"</span><span class="fu">,</span></span>
-<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"!terminalFocus"</span></span>
-<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<p><a href="files/R-Lecturer/keybindings.json" download="keybindings.json">Download <code>keybindings.json</code></a></p>
 <p>To use a file, switch to the target profile, run <strong>Preferences: Open Keyboard Shortcuts (JSON)</strong> and paste the content. Settings Sync carries it to the other machines. On a layout other than Czech, see <a href="#reusing-the-file-on-another-layout">Reusing the file on another layout</a>.</p>
 
 

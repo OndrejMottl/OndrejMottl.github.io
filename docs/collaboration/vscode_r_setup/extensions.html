@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="The extensions in my two VS Code profiles, R and R-Lecturer, what they are for, and how I install them.">
+<meta name="description" content="The extensions in my R profile, what they are for, and how I install them.">
 
 <title>Extensions – Ondřej Mottl</title>
 <style>
@@ -354,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    The extensions in my two VS Code profiles, R and R-Lecturer, what they are for, and how I install them.
+    The extensions in my R profile, what they are for, and how I install them.
   </div>
 </div>
 
@@ -366,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -378,12 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>In VS Code, extensions belong to a profile: each profile has its own set. Settings Sync carries the lists between machines together with the rest of the profile (see <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>).</p>
-<p>I use two profiles:</p>
-<ul>
-<li><strong><code>R</code></strong> is my daily profile: analysis, R packages, Quarto websites and everything else.</li>
-<li><strong><code>R-Lecturer</code></strong> is my teaching profile (light theme, Material icons, <code>%&gt;%</code> as the pipe shortcut).</li>
-</ul>
-<p>The “In profile” column in the tables below says which profile has each extension.</p>
+<p>The tables below list the extensions in my <code>R</code> profile, which I use for all my R work. My teaching profile <code>R-Lecturer</code> has only vscode-R (<code>reditorsupport.r</code>, <code>reditorsupport.r-syntax</code>) and Quarto (<code>quarto.quarto</code>), plus Copilot Chat, which ships with VS Code (<a href="../../collaboration/vscode_r_setup/profiles_sync.html#the-r-lecturer-profile">Profiles and Settings Sync</a>).</p>
 <section id="what-i-would-install-for-r" class="level3">
 <h3 class="anchored" data-anchor-id="what-i-would-install-for-r">What I would install for R</h3>
 <p>For R scripts, R packages and Quarto documents, I would start with these:</p>
@@ -402,7 +397,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -410,31 +404,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=reditorsupport.r">R</a></td>
 <td><code>reditorsupport.r</code></td>
-<td>both</td>
 <td>The main R extension (vscode-R): console, help, plots, workspace viewer, chunk commands.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=reditorsupport.r-syntax">R Syntax</a></td>
 <td><code>reditorsupport.r-syntax</code></td>
-<td>both</td>
 <td>Syntax highlighting for R.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=rdebugger.r-debugger">R Debugger</a></td>
 <td><code>rdebugger.r-debugger</code></td>
-<td>both</td>
 <td>Breakpoints and stepping through R code.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=posit.air-vscode">Air - R Language Support</a></td>
 <td><code>posit.air-vscode</code></td>
-<td>R</td>
 <td>Fast R formatter and language server by Posit.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command">multi-command</a></td>
 <td><code>ryuta46.multi-command</code></td>
-<td>both</td>
 <td>Runs a sequence of commands as one command.</td>
 </tr>
 </tbody>
@@ -449,7 +438,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -457,13 +445,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></td>
 <td><code>quarto.quarto</code></td>
-<td>both</td>
 <td>Render and preview Quarto documents, visual editor, run cells.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=tianyishi.rmarkdown">R Markdown All in One</a></td>
 <td><code>tianyishi.rmarkdown</code></td>
-<td>both</td>
 <td>R Markdown, bookdown and blogdown support.</td>
 </tr>
 </tbody>
@@ -476,7 +462,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -484,31 +469,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=davidanson.vscode-markdownlint">markdownlint</a></td>
 <td><code>davidanson.vscode-markdownlint</code></td>
-<td>both</td>
 <td>Lints Markdown style (headings, lists, spacing).</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></td>
 <td><code>yzhang.markdown-all-in-one</code></td>
-<td>both</td>
 <td>Markdown shortcuts, table of contents, list editing.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">Markdown Preview Mermaid Support</a></td>
 <td><code>bierner.markdown-mermaid</code></td>
-<td>both</td>
 <td>Mermaid diagrams in the built-in Markdown preview.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode">Markmap</a></td>
 <td><code>gera2ld.markmap-vscode</code></td>
-<td>both</td>
 <td>Shows a Markdown file as an interactive mind map.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a></td>
 <td><code>shd101wyy.markdown-preview-enhanced</code></td>
-<td>R</td>
 <td>A richer Markdown preview (maths, diagrams, export).</td>
 </tr>
 </tbody>
@@ -521,7 +501,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -529,64 +508,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a></td>
 <td><code>streetsidesoftware.code-spell-checker</code></td>
-<td>both</td>
 <td>Spell checking in code and prose.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-czech">Czech - Code Spell Checker</a></td>
 <td><code>streetsidesoftware.code-spell-checker-czech</code></td>
-<td>R</td>
 <td>Czech dictionary for Code Spell Checker.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Grammarly</a></td>
 <td><code>znck.grammarly</code></td>
-<td>R</td>
 <td>Grammarly checks in Markdown, Quarto and text files.</td>
-</tr>
-<tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex">LTeX</a></td>
-<td><code>valentjn.vscode-ltex</code></td>
-<td>R-Lecturer</td>
-<td>Grammar and spelling with LanguageTool, for LaTeX, Markdown and more.</td>
-</tr>
-<tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=mblode.zotero">Citation Picker for Zotero</a></td>
-<td><code>mblode.zotero</code></td>
-<td>R-Lecturer</td>
-<td>Inserts citation keys from Zotero.</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="latex-and-diagrams" class="level3">
-<h3 class="anchored" data-anchor-id="latex-and-diagrams">LaTeX and diagrams</h3>
+<section id="diagrams" class="level3">
+<h3 class="anchored" data-anchor-id="diagrams">Diagrams</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=james-yu.latex-workshop">LaTeX Workshop</a></td>
-<td><code>james-yu.latex-workshop</code></td>
-<td>R-Lecturer</td>
-<td>Compile and preview LaTeX documents.</td>
-</tr>
-<tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-latex">LaTeX</a></td>
-<td><code>mathematic.vscode-latex</code></td>
-<td>R-Lecturer</td>
-<td>LaTeX language support (highlighting).</td>
-</tr>
-<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io Integration</a></td>
 <td><code>hediet.vscode-drawio</code></td>
-<td>both</td>
 <td>Edit draw.io diagrams (<code>.drawio</code>, <code>.drawio.svg</code>, <code>.drawio.png</code>) in VS Code.</td>
 </tr>
 </tbody>
@@ -600,7 +550,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -608,31 +557,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a></td>
 <td><code>eamodio.gitlens</code></td>
-<td>both</td>
 <td>Blame annotations, file history, branch and commit views.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a></td>
 <td><code>mhutchie.git-graph</code></td>
-<td>both</td>
 <td>A graph of all branches; git actions from the graph.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github">GitHub Pull Requests</a></td>
 <td><code>github.vscode-pull-request-github</code></td>
-<td>both</td>
 <td>Create and review pull requests and issues in VS Code.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions">GitHub Actions</a></td>
 <td><code>github.vscode-github-actions</code></td>
-<td>both</td>
 <td>Workflow runs and logs; checks workflow files.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=luis-domenech.vscode-git-push-progress">Git Push Progress</a></td>
 <td><code>luis-domenech.vscode-git-push-progress</code></td>
-<td>both</td>
 <td>A push command that shows progress in the Output panel.</td>
 </tr>
 </tbody>
@@ -645,7 +589,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -653,43 +596,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=github.copilot-chat">GitHub Copilot Chat</a></td>
 <td><code>github.copilot-chat</code></td>
-<td>both</td>
 <td>Copilot chat, agent mode, inline and next-edit suggestions.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code">Claude Code</a></td>
 <td><code>anthropic.claude-code</code></td>
-<td>R</td>
 <td>Anthropic’s Claude Code agent in a VS Code panel.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=openai.chatgpt">Codex</a></td>
 <td><code>openai.chatgpt</code></td>
-<td>R</td>
 <td>OpenAI’s Codex coding agent.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=openai.codex-audio">Codex Audio</a></td>
 <td><code>openai.codex-audio</code></td>
-<td>R</td>
 <td>Microphone dictation for Codex.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=continue.continue">Continue</a></td>
 <td><code>continue.continue</code></td>
-<td>R</td>
 <td>Open-source AI assistant that works with many model providers, also local models.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=coderabbit.coderabbit-vscode">CodeRabbit</a></td>
 <td><code>coderabbit.coderabbit-vscode</code></td>
-<td>R</td>
 <td>AI review of local commits before a pull request.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-chat-customizations-evaluations">Chat Customizations Evaluations</a></td>
 <td><code>ms-vscode.vscode-chat-customizations-evaluations</code></td>
-<td>R</td>
 <td>Analyses and validates prompt and instruction files for AI chat.</td>
 </tr>
 </tbody>
@@ -704,7 +640,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -712,79 +647,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql">SQL Server (mssql)</a></td>
 <td><code>ms-mssql.mssql</code></td>
-<td>both</td>
 <td>Connect to and query SQL Server and Azure SQL.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.data-workspace-vscode">Data Workspace</a></td>
 <td><code>ms-mssql.data-workspace-vscode</code></td>
-<td>both</td>
 <td>Shared workspace view for database projects.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode">SQL Database Projects</a></td>
 <td><code>ms-mssql.sql-database-projects-vscode</code></td>
-<td>both</td>
 <td>Develop and publish SQL Server schemas as projects.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode">SQL Bindings</a></td>
 <td><code>ms-mssql.sql-bindings-vscode</code></td>
-<td>both</td>
 <td>Azure Functions with Azure SQL bindings.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime">.NET Install Tool</a></td>
 <td><code>ms-dotnettools.vscode-dotnet-runtime</code></td>
-<td>both</td>
 <td>Installs the .NET runtimes that other extensions need.</td>
 </tr>
 <tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql">PostgreSQL</a></td>
-<td><code>ms-ossdata.vscode-postgresql</code></td>
-<td>R-Lecturer</td>
-<td>Connect to and query PostgreSQL databases.</td>
-</tr>
-<tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools">SQLTools</a></td>
-<td><code>mtxr.sqltools</code></td>
-<td>R-Lecturer</td>
-<td>General database client: connections, queries, SQL formatting.</td>
-</tr>
-<tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-sqlite">SQLTools SQLite</a></td>
-<td><code>mtxr.sqltools-driver-sqlite</code></td>
-<td>R-Lecturer</td>
-<td>SQLite driver for SQLTools.</td>
-</tr>
-<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite">SQLite</a></td>
 <td><code>alexcvzz.vscode-sqlite</code></td>
-<td>both</td>
 <td>Explore and query SQLite databases.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer">SQLite Viewer</a></td>
 <td><code>qwtel.sqlite-viewer</code></td>
-<td>both</td>
 <td>Opens <code>.sqlite</code> and <code>.db</code> files as tables.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=matt-meyers.vscode-dbml">vscode-dbml</a></td>
 <td><code>matt-meyers.vscode-dbml</code></td>
-<td>both</td>
 <td>Syntax highlighting for DBML (Database Markup Language).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=nicolas-liger.dbml-viewer">DBML Live Preview</a></td>
 <td><code>nicolas-liger.dbml-viewer</code></td>
-<td>both</td>
 <td>Live diagram of a database schema written in DBML.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode">ERD Editor</a></td>
 <td><code>dineug.vuerd-vscode</code></td>
-<td>R</td>
 <td>Draw entity-relationship diagrams.</td>
 </tr>
 </tbody>
@@ -797,7 +704,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -805,26 +711,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Rainbow CSV</a></td>
 <td><code>mechatroner.rainbow-csv</code></td>
-<td>both</td>
 <td>Colours CSV/TSV columns; SQL-like queries on them.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=repreng.csv">CSV</a></td>
 <td><code>repreng.csv</code></td>
-<td>R</td>
 <td>View and edit CSV files as a table.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=phplasma.csv-to-table">CSV to Table</a></td>
 <td><code>phplasma.csv-to-table</code></td>
-<td>R</td>
 <td>Converts a CSV file to an aligned plain-text table.</td>
-</tr>
-<tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=grapecity.gc-excelviewer">Spreadsheet Viewer</a></td>
-<td><code>grapecity.gc-excelviewer</code></td>
-<td>R-Lecturer</td>
-<td>View and edit <code>.xlsx</code> and CSV files.</td>
 </tr>
 </tbody>
 </table>
@@ -836,7 +733,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -844,25 +740,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf">vscode-pdf</a></td>
 <td><code>tomoki1207.pdf</code></td>
-<td>both</td>
 <td>Shows PDF files in an editor tab.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=analytic-signal.preview-tiff">TIFF Preview</a></td>
 <td><code>analytic-signal.preview-tiff</code></td>
-<td>R</td>
 <td>Previews TIFF images (for example exported figures).</td>
 </tr>
 <tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer">OOXML Viewer</a></td>
-<td><code>yuenm18.ooxml-viewer</code></td>
-<td>R-Lecturer</td>
-<td>Shows the XML inside <code>.docx</code>, <code>.xlsx</code> and <code>.pptx</code> files.</td>
-</tr>
-<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client">REST Client</a></td>
 <td><code>humao.rest-client</code></td>
-<td>R</td>
 <td>Send HTTP requests from <code>.http</code> files and see the responses.</td>
 </tr>
 </tbody>
@@ -876,7 +763,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -884,61 +770,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development</a></td>
 <td><code>ms-vscode-remote.vscode-remote-extensionpack</code></td>
-<td>both</td>
 <td>Extension pack: WSL, Dev Containers, Remote - SSH, Remote - Tunnels.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a></td>
 <td><code>ms-vscode-remote.remote-ssh</code></td>
-<td>both</td>
 <td>Open a folder on a server over SSH and work there.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit">Remote - SSH: Editing Configuration Files</a></td>
 <td><code>ms-vscode-remote.remote-ssh-edit</code></td>
-<td>both</td>
 <td>Language support for SSH config files.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer">Remote Explorer</a></td>
 <td><code>ms-vscode.remote-explorer</code></td>
-<td>both</td>
 <td>Side bar with SSH hosts and tunnels.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server">Remote - Tunnels</a></td>
 <td><code>ms-vscode.remote-server</code></td>
-<td>both</td>
 <td>Connect to a machine through a tunnel, without SSH.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a></td>
 <td><code>ms-vscode-remote.remote-wsl</code></td>
-<td>both</td>
 <td>Open a folder inside the Windows Subsystem for Linux.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a></td>
 <td><code>ms-vscode-remote.remote-containers</code></td>
-<td>both</td>
 <td>Work inside a Docker container (for example a fixed R version).</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers">Container Tools</a></td>
 <td><code>ms-azuretools.vscode-containers</code></td>
-<td>R</td>
 <td>Manage images and containers; Dockerfile and Compose support.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Docker</a></td>
 <td><code>ms-azuretools.vscode-docker</code></td>
-<td>R</td>
 <td>Microsoft’s Docker extension, built on Container Tools.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=docker.docker">Docker DX</a></td>
 <td><code>docker.docker</code></td>
-<td>R</td>
 <td>Dockerfile and Compose editing (linting, completion) by Docker Inc.</td>
 </tr>
 </tbody>
@@ -952,7 +828,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -960,25 +835,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></td>
 <td><code>ms-python.python</code></td>
-<td>both</td>
 <td>Python language support.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance</a></td>
 <td><code>ms-python.vscode-pylance</code></td>
-<td>both</td>
 <td>Python language server (completion, type checks).</td>
 </tr>
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy">Python Debugger</a></td>
 <td><code>ms-python.debugpy</code></td>
-<td>both</td>
 <td>Debugging Python with debugpy.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs">Python Environments</a></td>
 <td><code>ms-python.vscode-python-envs</code></td>
-<td>both</td>
 <td>Create and switch Python environments (venv, conda).</td>
 </tr>
 </tbody>
@@ -992,7 +863,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -1000,26 +870,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss">SCSS IntelliSense</a></td>
 <td><code>mrmlnc.vscode-scss</code></td>
-<td>both</td>
 <td>Completion for SCSS variables and mixins.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter">SCSS Formatter</a></td>
 <td><code>sibiraj-s.vscode-scss-formatter</code></td>
-<td>both</td>
 <td>Formats SCSS files.</td>
-</tr>
-<tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=michelemelluso.code-beautifier">Beautify css/sass/scss/less</a></td>
-<td><code>michelemelluso.code-beautifier</code></td>
-<td>R-Lecturer</td>
-<td>Formats CSS, Sass, SCSS and Less.</td>
-</tr>
-<tr class="even">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=peakchen90.open-html-in-browser">Open In Default Browser</a></td>
-<td><code>peakchen90.open-html-in-browser</code></td>
-<td>R-Lecturer</td>
-<td>Opens an HTML file in the default browser.</td>
 </tr>
 </tbody>
 </table>
@@ -1031,7 +887,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -1039,13 +894,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell">PowerShell</a></td>
 <td><code>ms-vscode.powershell</code></td>
-<td>R</td>
 <td>PowerShell language support, debugging and console.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML</a></td>
 <td><code>redhat.vscode-yaml</code></td>
-<td>R</td>
 <td>YAML validation and completion from schemas, formatting.</td>
 </tr>
 </tbody>
@@ -1058,7 +911,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
@@ -1066,67 +918,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">vscode-icons</a></td>
 <td><code>vscode-icons-team.vscode-icons</code></td>
-<td>R</td>
 <td>File icon theme.</td>
 </tr>
 <tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme">Material Icon Theme</a></td>
 <td><code>pkief.material-icon-theme</code></td>
-<td>both</td>
 <td>File icon theme.</td>
 </tr>
 <tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=pkief.material-product-icons">Material Product Icons</a></td>
-<td><code>pkief.material-product-icons</code></td>
-<td>R-Lecturer</td>
-<td>Material style for VS Code’s own UI icons.</td>
-</tr>
-<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">Error Lens</a></td>
 <td><code>usernamehw.errorlens</code></td>
-<td>both</td>
 <td>Shows diagnostics at the end of the line.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock">Peacock</a></td>
 <td><code>johnpapa.vscode-peacock</code></td>
-<td>both</td>
 <td>Colours the window per workspace, to tell windows apart.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize">filesize</a></td>
 <td><code>mkxml.vscode-filesize</code></td>
-<td>both</td>
 <td>Shows the size of the current file in the status bar.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=nemesv.copy-file-name">Copy file name</a></td>
 <td><code>nemesv.copy-file-name</code></td>
-<td>both</td>
 <td>Copies the file name (without the path) to the clipboard.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></td>
 <td><code>christian-kohler.path-intellisense</code></td>
-<td>both</td>
 <td>Completes file paths while you type them.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree">Todo Tree</a></td>
 <td><code>gruntfuggly.todo-tree</code></td>
-<td>both</td>
 <td>Lists <code>TODO</code>, <code>FIXME</code> and similar comments in a tree.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight</a></td>
 <td><code>wayou.vscode-todo-highlight</code></td>
-<td>both</td>
 <td>Highlights <code>TODO</code>, <code>FIXME</code> and similar keywords.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=joshabb.resmongraphical">Resource Monitor Graphical</a></td>
 <td><code>joshabb.resmongraphical</code></td>
-<td>both</td>
 <td>CPU, memory, disk and network use in the status bar.</td>
 </tr>
 </tbody>
@@ -1140,21 +976,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Extension</th>
 <th>ID</th>
-<th>In profile</th>
 <th>What it’s for</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://marketplace.visualstudio.com/items?itemName=sumneko.lua">Lua</a></td>
-<td><code>sumneko.lua</code></td>
-<td>R-Lecturer</td>
-<td>Lua language server.</td>
-</tr>
-<tr class="even">
 <td><a href="https://marketplace.visualstudio.com/items?itemName=zrachod.mono-snippets">MonoBehaviour Snippets</a></td>
 <td><code>zrachod.mono-snippets</code></td>
-<td>both</td>
 <td>C# snippets for Unity scripts.</td>
 </tr>
 </tbody>
@@ -1350,7 +1178,7 @@ Show the full file: <code>install_extensions.ps1</code>
 </section>
 <section id="the-lists" class="level3">
 <h3 class="anchored" data-anchor-id="the-lists">The lists</h3>
-<p>Both lists are written by <code>code --list-extensions --profile &lt;name&gt;</code> when I export the configuration.</p>
+<p>Both lists come from <code>code --list-extensions --profile &lt;name&gt;</code>.</p>
 <details>
 <summary>
 Show the full file: <code>extensions-R.txt</code>
@@ -1434,71 +1262,10 @@ zrachod.mono-snippets</code></pre>
 <summary>
 Show the full file: <code>extensions-R-Lecturer.txt</code>
 </summary>
-<pre class="text"><code>alexcvzz.vscode-sqlite
-bierner.markdown-mermaid
-christian-kohler.path-intellisense
-davidanson.vscode-markdownlint
-eamodio.gitlens
-gera2ld.markmap-vscode
-github.copilot-chat
-github.vscode-github-actions
-github.vscode-pull-request-github
-grapecity.gc-excelviewer
-gruntfuggly.todo-tree
-hediet.vscode-drawio
-james-yu.latex-workshop
-johnpapa.vscode-peacock
-joshabb.resmongraphical
-luis-domenech.vscode-git-push-progress
-mathematic.vscode-latex
-matt-meyers.vscode-dbml
-mblode.zotero
-mechatroner.rainbow-csv
-mhutchie.git-graph
-michelemelluso.code-beautifier
-mkxml.vscode-filesize
-mrmlnc.vscode-scss
-ms-dotnettools.vscode-dotnet-runtime
-ms-mssql.data-workspace-vscode
-ms-mssql.mssql
-ms-mssql.sql-bindings-vscode
-ms-mssql.sql-database-projects-vscode
-ms-ossdata.vscode-postgresql
-ms-python.debugpy
-ms-python.python
-ms-python.vscode-pylance
-ms-python.vscode-python-envs
-ms-vscode-remote.remote-containers
-ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-ssh-edit
-ms-vscode-remote.remote-wsl
-ms-vscode-remote.vscode-remote-extensionpack
-ms-vscode.remote-explorer
-ms-vscode.remote-server
-mtxr.sqltools
-mtxr.sqltools-driver-sqlite
-nemesv.copy-file-name
-nicolas-liger.dbml-viewer
-peakchen90.open-html-in-browser
-pkief.material-icon-theme
-pkief.material-product-icons
+<pre class="text"><code>github.copilot-chat
 quarto.quarto
-qwtel.sqlite-viewer
-rdebugger.r-debugger
 reditorsupport.r
-reditorsupport.r-syntax
-ryuta46.multi-command
-sibiraj-s.vscode-scss-formatter
-streetsidesoftware.code-spell-checker
-sumneko.lua
-tianyishi.rmarkdown
-tomoki1207.pdf
-usernamehw.errorlens
-valentjn.vscode-ltex
-wayou.vscode-todo-highlight
-yuenm18.ooxml-viewer
-yzhang.markdown-all-in-one
-zrachod.mono-snippets</code></pre>
+reditorsupport.r-syntax</code></pre>
 </details>
 <p><a href="files/extensions-R-Lecturer.txt" download="extensions-R-Lecturer.txt">Download <code>extensions-R-Lecturer.txt</code></a></p>
 

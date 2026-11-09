@@ -44,9 +44,7 @@ I wrote (well, vibe-coded) a small extension for this: [**R Version Switcher**](
 
 A status bar item shows the workspace's R version and turns yellow when it differs from `renv.lock`. Click it to switch. That pairs well with the [project template](https://github.com/OndrejMottl/Project_template), which uses renv.
 
-
-
-Restart the R terminal after switching.
+The extension writes the same two settings as the manual method below, using rig's version link when it exists. Restart the R terminal after switching.
 
 ### By hand
 
@@ -60,14 +58,15 @@ Then in the project's `.vscode/settings.json`:
 
 ```json
 {
-  "r.executablePath": "R-4.5.1",
-  "r.consoleArgs": ["--r-binary=R-4.5.1"]
+  "r.executablePath": "R-4.5.1.exe",
+  "r.consoleArgs": ["--no-save", "--no-restore", "--r-binary=R-4.5.1.exe"]
 }
 ```
 
 - `r.executablePath` is the R that vscode-R uses for the language server, help and the workspace viewer.
-- `r.consoleArgs` is passed to radian. `--r-binary` makes radian start that R.
-- `R-4.5.1` is found on `PATH`, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.
+- `r.consoleArgs` is passed to radian. `--r-binary` makes radian start that R. The first two arguments are vscode-R's default, which the workspace value would otherwise replace.
+- `R-4.5.1.exe` is found on `PATH`, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.
+- Keep the `.exe`. vscode-R adds `.exe` only to names without an extension, and `R-4.5.1` looks like it has one (`.1`), so without it vscode-R does not find R. radian accepts both.
 - A full path such as `C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe` also works and contains no user name, but it is Windows-only.
 
 To check which R a terminal really runs: `R.version.string` in the console, or `radian --r-binary=R-4.5.1 --version` in PowerShell.

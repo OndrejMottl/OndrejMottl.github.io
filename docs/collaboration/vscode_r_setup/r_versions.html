@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -430,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>A status bar item shows the workspace’s R version and turns yellow when it differs from <code>renv.lock</code>. Click it to switch. That pairs well with the <a href="https://github.com/OndrejMottl/Project_template">project template</a>, which uses renv.</p>
-<p>Restart the R terminal after switching.</p>
+<p>The extension writes the same two settings as the manual method below, using rig’s version link when it exists. Restart the R terminal after switching.</p>
 </section>
 <section id="by-hand" class="level3">
 <h3 class="anchored" data-anchor-id="by-hand">By hand</h3>
@@ -438,13 +438,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rig system make-links   <span class="co"># creates R-4.6.2.exe, R-4.5.1.exe, ... in C:\Program Files\R\bin</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then in the project’s <code>.vscode/settings.json</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.executablePath"</span><span class="fu">:</span> <span class="st">"R-4.5.1"</span><span class="fu">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.consoleArgs"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"--r-binary=R-4.5.1"</span><span class="ot">]</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.executablePath"</span><span class="fu">:</span> <span class="st">"R-4.5.1.exe"</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"r.consoleArgs"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"--no-save"</span><span class="ot">,</span> <span class="st">"--no-restore"</span><span class="ot">,</span> <span class="st">"--r-binary=R-4.5.1.exe"</span><span class="ot">]</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>r.executablePath</code> is the R that vscode-R uses for the language server, help and the workspace viewer.</li>
-<li><code>r.consoleArgs</code> is passed to radian. <code>--r-binary</code> makes radian start that R.</li>
-<li><code>R-4.5.1</code> is found on <code>PATH</code>, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.</li>
+<li><code>r.consoleArgs</code> is passed to radian. <code>--r-binary</code> makes radian start that R. The first two arguments are vscode-R’s default, which the workspace value would otherwise replace.</li>
+<li><code>R-4.5.1.exe</code> is found on <code>PATH</code>, so the file contains no user name and no install path. It works on every machine that has R 4.5.1 through rig, so the file can be committed.</li>
+<li>Keep the <code>.exe</code>. vscode-R adds <code>.exe</code> only to names without an extension, and <code>R-4.5.1</code> looks like it has one (<code>.1</code>), so without it vscode-R does not find R. radian accepts both.</li>
 <li>A full path such as <code>C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe</code> also works and contains no user name, but it is Windows-only.</li>
 </ul>
 <p>To check which R a terminal really runs: <code>R.version.string</code> in the console, or <code>radian --r-binary=R-4.5.1 --version</code> in PowerShell.</p>

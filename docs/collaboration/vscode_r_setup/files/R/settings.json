@@ -260,5 +260,6 @@
     "**/.forgejo/workflows/*.yaml"
   ],
   "claudeCode.hideOnboarding": true,
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "todo-tree.ripgrep.ripgrep": "C:\\Program Files\\WinGet\\Links\\rg.exe"
 }

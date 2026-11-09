@@ -68,7 +68,7 @@ flowchart TB
 
 | Page | What is in it |
 |---|---|
-| [Install, in order](install.qmd) | VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, with winget commands and the versions I use. |
+| [Install, in order](install.qmd) | VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, ripgrep, with winget commands and the versions I use. |
 | [Settings](settings.qmd) | The settings of the `R` profile and what they do. |
 | [Keybindings](keybindings.qmd) | My keybindings, what they replace, and the layout presets. |
 | [Extensions](extensions.qmd) | My extensions, grouped, with the minimum set for R and an install script. |
@@ -82,7 +82,7 @@ flowchart TB
 
 On a new Windows machine:
 
-1. **Install** everything in the order on [Install, in order](install.qmd) (steps 1–8).
+1. **Install** everything in the order on [Install, in order](install.qmd) (steps 1–9).
 2. **VS Code profile.** Either sign in to Settings Sync (on my own machines), or create a profile called `R` and fill it in from the published files:
    - settings: [settings.json](settings.qmd#the-full-file) → *Preferences: Open User Settings (JSON)*;
    - keybindings: [keybindings.json](keybindings.qmd#the-full-file) → *Preferences: Open Keyboard Shortcuts (JSON)*;

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.">
+<meta name="description" content="What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, ripgrep.">
 
 <title>Install, in order – Ondřej Mottl</title>
 <style>
@@ -338,7 +338,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#rtools" id="toc-rtools" class="nav-link" data-scroll-target="#rtools">6. Rtools</a></li>
   <li><a href="#the-r-packages" id="toc-the-r-packages" class="nav-link" data-scroll-target="#the-r-packages">7. The R packages</a></li>
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">8. Quarto</a></li>
-  <li><a href="#restart-vs-code-and-test" id="toc-restart-vs-code-and-test" class="nav-link" data-scroll-target="#restart-vs-code-and-test">9. Restart VS Code and test</a></li>
+  <li><a href="#ripgrep" id="toc-ripgrep" class="nav-link" data-scroll-target="#ripgrep">9. ripgrep</a></li>
+  <li><a href="#restart-vs-code-and-test" id="toc-restart-vs-code-and-test" class="nav-link" data-scroll-target="#restart-vs-code-and-test">10. Restart VS Code and test</a></li>
   <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
   </ul>
 </nav>
@@ -353,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto.
+    What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, ripgrep.
   </div>
 </div>
 
@@ -365,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -377,7 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Everything can be done from PowerShell with <a href="https://learn.microsoft.com/windows/package-manager/winget/"><code>winget</code></a>, which comes with Windows 11.</p>
-<p>Install R before Rtools and the R packages, and Python before radian. After changing <code>PATH</code>, programs only see the change when they are started again (see <a href="#restart-vs-code-and-test">step 9</a>).</p>
+<p>Install R before Rtools and the R packages, and Python before radian. After changing <code>PATH</code>, programs only see the change when they are started again (see <a href="#restart-vs-code-and-test">step 10</a>).</p>
 <section id="versions-i-use" class="level2">
 <h2 class="anchored" data-anchor-id="versions-i-use">Versions I use</h2>
 <table class="caption-top table">
@@ -417,10 +418,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1.11.9</td>
 </tr>
 <tr class="even">
+<td>ripgrep</td>
+<td>15.2.0</td>
+</tr>
+<tr class="odd">
 <td>RStudio</td>
 <td>2026.10.1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>vscode-R extension</td>
 <td>3.3</td>
 </tr>
@@ -529,8 +534,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>winget install Posit<span class="op">.</span><span class="fu">Quarto</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This installs Quarto for all users in <code>C:\Program Files\Quarto</code>.</p>
 </section>
+<section id="ripgrep" class="level2">
+<h2 class="anchored" data-anchor-id="ripgrep">9. ripgrep</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>winget install BurntSushi<span class="op">.</span><span class="fu">ripgrep</span><span class="op">.</span><span class="fu">MSVC</span> <span class="op">--</span>scope machine</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For the Todo Tree extension. Installed for all users, winget links it as <code>C:\Program Files\WinGet\Links\rg.exe</code>, the path in my settings (<code>todo-tree.ripgrep.ripgrep</code>), so the same setting works on every machine. It needs an administrator prompt.</p>
+</section>
 <section id="restart-vs-code-and-test" class="level2">
-<h2 class="anchored" data-anchor-id="restart-vs-code-and-test">9. Restart VS Code and test</h2>
+<h2 class="anchored" data-anchor-id="restart-vs-code-and-test">10. Restart VS Code and test</h2>
 <p><strong>Quit every VS Code window and start it again.</strong> VS Code and all its terminals keep the <code>PATH</code> they were started with, and <em>Developer: Reload Window</em> does not refresh it.</p>
 <p>Then:</p>
 <ol type="1">

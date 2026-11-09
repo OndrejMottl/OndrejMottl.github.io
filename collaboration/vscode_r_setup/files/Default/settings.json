@@ -93,5 +93,6 @@
   "chatgpt.localeOverride": "en-US",
   "claudeCode.hideOnboarding": true,
   // Settings Sync skips these two by default; "-" makes it sync them.
-  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"]
+  "settingsSync.ignoredSettings": ["-r.consolePath", "-r.plot.backend"],
+  "todo-tree.ripgrep.ripgrep": "C:\\Program Files\\WinGet\\Links\\rg.exe"
 }

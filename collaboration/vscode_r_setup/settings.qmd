@@ -215,6 +215,7 @@ The **Generate Commit Message** button in Source Control reads `.github/commit-i
 | `resmongraphical.network.style` | `"Vertical"` | Same for network traffic. |
 | `redhat.telemetry.enabled` | `true` | Allows Red Hat extensions (here: YAML) to send usage data to Red Hat. |
 | `errorLens.enabledDiagnosticLevels` | `["warning", "info"]` | Error Lens prints warning and info messages inline at the end of the line, but not errors. |
+| `todo-tree.ripgrep.ripgrep` | `"C:\\Program Files\\WinGet\\Links\\rg.exe"` | Todo Tree uses this ripgrep to search for `TODO` and similar tags, instead of looking for the copy inside VS Code. The path is where winget links ripgrep when it is installed for all users ([Install](install.qmd#ripgrep)), so it is the same on every machine. |
 
 ## Markdown
 

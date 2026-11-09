@@ -1,13 +1,13 @@
 ---
 title: "Install, in order"
-description: "What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto."
+description: "What I install on a Windows 11 machine for R in VS Code: VS Code, rig and R, Python and radian, Rtools, the R packages, Quarto, ripgrep."
 date-format: long
 date-modified: last-modified
 ---
 
 Everything can be done from PowerShell with [`winget`](https://learn.microsoft.com/windows/package-manager/winget/), which comes with Windows 11.
 
-Install R before Rtools and the R packages, and Python before radian. After changing `PATH`, programs only see the change when they are started again (see [step 9](#restart-vs-code-and-test)).
+Install R before Rtools and the R packages, and Python before radian. After changing `PATH`, programs only see the change when they are started again (see [step 10](#restart-vs-code-and-test)).
 
 ## Versions I use
 
@@ -20,6 +20,7 @@ Install R before Rtools and the R packages, and Python before radian. After chan
 | radian / rchitect | 0.7.1 / 0.5.2 |
 | Rtools | 4.5 |
 | Quarto | 1.11.9 |
+| ripgrep | 15.2.0 |
 | RStudio | 2026.10.1 |
 | vscode-R extension | 3.3 |
 
@@ -124,7 +125,15 @@ winget install Posit.Quarto
 
 This installs Quarto for all users in `C:\Program Files\Quarto`.
 
-## 9. Restart VS Code and test {#restart-vs-code-and-test}
+## 9. ripgrep {#ripgrep}
+
+```powershell
+winget install BurntSushi.ripgrep.MSVC --scope machine
+```
+
+For the Todo Tree extension. Installed for all users, winget links it as `C:\Program Files\WinGet\Links\rg.exe`, the path in my settings (`todo-tree.ripgrep.ripgrep`), so the same setting works on every machine. It needs an administrator prompt.
+
+## 10. Restart VS Code and test {#restart-vs-code-and-test}
 
 **Quit every VS Code window and start it again.** VS Code and all its terminals keep the `PATH` they were started with, and *Developer: Reload Window* does not refresh it.
 

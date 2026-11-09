@@ -372,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 8, 2026</p>
+      <p class="date-modified">November 9, 2026</p>
     </div>
   </div>
     
@@ -968,11 +968,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="extension-specific-settings" class="level2">
 <h2 class="anchored" data-anchor-id="extension-specific-settings">Extension-specific settings</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Setting</th>
@@ -1025,6 +1020,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>errorLens.enabledDiagnosticLevels</code></td>
 <td><code>["warning", "info"]</code></td>
 <td>Error Lens prints warning and info messages inline at the end of the line, but not errors.</td>
+</tr>
+<tr class="even">
+<td><code>todo-tree.ripgrep.ripgrep</code></td>
+<td><code>"C:\\Program Files\\WinGet\\Links\\rg.exe"</code></td>
+<td>Todo Tree uses this ripgrep to search for <code>TODO</code> and similar tags, instead of looking for the copy inside VS Code. The path is where winget links ripgrep when it is installed for all users (<a href="../../collaboration/vscode_r_setup/install.html#ripgrep">Install</a>), so it is the same on every machine.</td>
 </tr>
 </tbody>
 </table>
@@ -1567,8 +1567,9 @@ Show the full file: <code>R/settings.json</code>
 <span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a>    <span class="st">"**/.forgejo/workflows/*.yaml"</span></span>
 <span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
 <span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"claudeCode.hideOnboarding"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
-<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"claudeCode.preferredLocation"</span><span class="fu">:</span> <span class="st">"panel"</span></span>
-<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"claudeCode.preferredLocation"</span><span class="fu">:</span> <span class="st">"panel"</span><span class="fu">,</span></span>
+<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"todo-tree.ripgrep.ripgrep"</span><span class="fu">:</span> <span class="st">"C:</span><span class="ch">\\</span><span class="st">Program Files</span><span class="ch">\\</span><span class="st">WinGet</span><span class="ch">\\</span><span class="st">Links</span><span class="ch">\\</span><span class="st">rg.exe"</span></span>
+<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <p><a href="files/R/settings.json" download="settings.json">Download <code>settings.json</code></a></p>
 <p>To use it, switch to the target profile, open <em>Command Palette</em> → <strong>Preferences: Open User Settings (JSON)</strong> and paste the file in, or import the whole profile as described on <a href="../../collaboration/vscode_r_setup/profiles_sync.html">Profiles and Settings Sync</a>.</p>

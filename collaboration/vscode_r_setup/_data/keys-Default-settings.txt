@@ -51,6 +51,7 @@ terminal.integrated.cursorBlinking
 terminal.integrated.cursorStyle
 terminal.integrated.defaultProfile.windows
 terminal.integrated.fontWeightBold
+todo-tree.ripgrep.ripgrep
 update.enableWindowsBackgroundUpdates
 update.mode
 vsicons.dontShowNewVersionMessage

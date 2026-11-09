@@ -33,6 +33,7 @@ The R side (R itself, radian and R packages such as `languageserver`, `httpgd` a
 | [R](https://marketplace.visualstudio.com/items?itemName=reditorsupport.r) | `reditorsupport.r` | The main R extension (vscode-R): console, help, plots, workspace viewer, chunk commands. |
 | [R Syntax](https://marketplace.visualstudio.com/items?itemName=reditorsupport.r-syntax) | `reditorsupport.r-syntax` | Syntax highlighting for R. |
 | [R Debugger](https://marketplace.visualstudio.com/items?itemName=rdebugger.r-debugger) | `rdebugger.r-debugger` | Breakpoints and stepping through R code. |
+| [R Version Switcher](https://github.com/OndrejMottl/r-version-switcher) | `ondrejmottl.r-version-switcher` | My own extension: sets the R version for a workspace, from the versions rig manages or from `renv.lock` ([R versions](r_versions.qmd#with-the-r-version-switcher-extension)). Not on the Marketplace: installed from the `.vsix` of a [GitHub release](https://github.com/OndrejMottl/r-version-switcher/releases) ([how](#not-on-the-marketplace)). |
 | [Air - R Language Support](https://marketplace.visualstudio.com/items?itemName=posit.air-vscode) | `posit.air-vscode` | Fast R formatter and language server by Posit. |
 | [multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) | `ryuta46.multi-command` | Runs a sequence of commands as one command. |
 
@@ -194,6 +195,14 @@ Not related to R or teaching.
 ### With Settings Sync
 
 With Settings Sync on, VS Code installs each profile's extensions when it downloads the profile on a new machine (see [Profiles and Settings Sync](profiles_sync.qmd)).
+
+### Not on the Marketplace {#not-on-the-marketplace}
+
+Settings Sync and `install_extensions.ps1` install extensions from the Marketplace, so neither can install the R Version Switcher. On each machine, download the `.vsix` from its [latest release](https://github.com/OndrejMottl/r-version-switcher/releases/latest) and run:
+
+```powershell
+code --install-extension r-version-switcher-1.2.0.vsix --profile R
+```
 
 ### Manual rebuild
 

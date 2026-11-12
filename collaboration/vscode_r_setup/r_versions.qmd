@@ -45,7 +45,7 @@ I wrote (well, vibe-coded) a small extension for this: [**R Version Switcher**](
 
 A status bar item shows the workspace's R version and turns yellow when it differs from `renv.lock`. Click it to switch. That pairs well with the [project template](https://github.com/OndrejMottl/Project_template), which uses renv.
 
-The extension writes the same settings as the manual method below, using rig's version link when it exists, including `r.rpath.windows` when R Debugger is installed. Restart the R terminal after switching.
+The extension writes the same settings as the manual method below, using rig's version link when it exists, including `r.rpath.windows` when R Debugger is installed. Restart the R terminal after switching. It does not set `QUARTO_R` (version 1.2.0), so `quarto render` needs the [separate step for Quarto](#quarto-render).
 
 ### By hand
 
@@ -73,3 +73,23 @@ Then in the project's `.vscode/settings.json`:
 - A full path such as `C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe` also works and contains no user name, but it is Windows-only.
 
 To check which R a terminal really runs: `R.version.string` in the console, or `radian --r-binary=R-4.5.1 --version` in PowerShell.
+
+### Quarto projects {#quarto-render}
+
+The `.vscode/settings.json` pin reaches only vscode-R and radian. `quarto render` does not read it: it uses the `Rscript` on `PATH`, which is rig's default. In a project with renv that shows up as missing packages, because renv keeps a separate project library for each R version (`renv/library/windows/R-4.x/...`), and the default R looks in the wrong one ([symptom](troubleshooting.qmd#quarto-render-cannot-find-installed-packages)).
+
+To pin Quarto as well, set `QUARTO_R` in a file called `_environment.local` at the root of the Quarto project:
+
+```
+QUARTO_R="C:/Program Files/R/R-4.5.1/bin"
+```
+
+and keep the file out of git, because the path is machine-specific. In `.gitignore`:
+
+```
+_environment.local
+```
+
+- The value is the R install's `bin` folder, not rig's `R-4.5.1.exe` shortcut. Quarto looks for `Rscript.exe` in the folder it is given, and next to the shortcut, in `C:\Program Files\R\bin`, that is rig's default again. (I have not tried the shortcut; I expect it to fail for that reason.)
+- `QUARTO_R` set in the shell, or in a committed `_environment`, works too, but `_environment.local` keeps the path out of the repository.
+- Lines starting with `#` are comments, so the file can say why it is there.

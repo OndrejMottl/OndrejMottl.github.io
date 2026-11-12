@@ -111,46 +111,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
+
 /* Phones: show each table row as a card; the column name is printed before
+
    each value (data-label, added by _narrow-tables-body.html). */
+
 @media (max-width: 767.98px) {
+
   main table,
+
   main table tbody,
+
   main table tr,
+
   main table td {
+
     display: block;
+
     width: 100%;
+
   }
+
   main table thead {
+
     display: none;
+
   }
+
   main table tr {
+
     border: 1px solid var(--bs-border-color, #dee2e6);
+
     border-radius: 0.375rem;
+
     margin-bottom: 0.75rem;
+
     padding: 0.4rem 0.75rem;
+
   }
+
   main table td {
+
     border: 0 !important;
+
     padding: 0.15rem 0 !important;
+
   }
+
   main table td:first-child {
+
     font-weight: 600;
+
   }
+
   main table td[data-label]:not(:first-child)::before {
+
     content: attr(data-label) ": ";
+
     font-weight: 600;
+
     color: var(--bs-secondary-color, #6c757d);
+
   }
+
   main table td:empty {
+
     display: none;
+
   }
+
   main table code {
+
     white-space: normal;
+
     overflow-wrap: anywhere;
+
   }
+
 }
+
 </style>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -338,6 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#rig-add-release-hangs-with-no-output" id="toc-rig-add-release-hangs-with-no-output" class="nav-link" data-scroll-target="#rig-add-release-hangs-with-no-output"><code>rig add release</code> hangs with no output</a></li>
   <li><a href="#rig-is-not-found-right-after-installing-it" id="toc-rig-is-not-found-right-after-installing-it" class="nav-link" data-scroll-target="#rig-is-not-found-right-after-installing-it"><code>rig</code> is not found right after installing it</a></li>
   <li><a href="#r-uses-an-old-quarto-after-upgrading-quarto" id="toc-r-uses-an-old-quarto-after-upgrading-quarto" class="nav-link" data-scroll-target="#r-uses-an-old-quarto-after-upgrading-quarto">R uses an old Quarto after upgrading Quarto</a></li>
+  <li><a href="#quarto-render-cannot-find-installed-packages" id="toc-quarto-render-cannot-find-installed-packages" class="nav-link" data-scroll-target="#quarto-render-cannot-find-installed-packages"><code>quarto render</code> cannot find a package that is installed</a></li>
   <li><a href="#errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" id="toc-errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" class="nav-link" data-scroll-target="#errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile">Errors at every R start-up, or settings from the wrong <code>.Rprofile</code></a></li>
   <li><a href="#radian-installs-but-crashes-or-will-not-start" id="toc-radian-installs-but-crashes-or-will-not-start" class="nav-link" data-scroll-target="#radian-installs-but-crashes-or-will-not-start"><code>radian</code> installs but crashes or will not start</a></li>
   <li><a href="#plots-open-in-a-separate-window-not-in-vs-code" id="toc-plots-open-in-a-separate-window-not-in-vs-code" class="nav-link" data-scroll-target="#plots-open-in-a-separate-window-not-in-vs-code">Plots open in a separate window, not in VS Code</a></li>
@@ -366,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 9, 2026</p>
+      <p class="date-modified">November 12, 2026</p>
     </div>
   </div>
     
@@ -472,6 +514,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Cause:</strong> R finds another Quarto first: <code>QUARTO_PATH</code> is set (for example in a <code>.Rprofile</code>), or an older copy comes earlier on <code>PATH</code>.</p>
 <p><strong>Fix:</strong> remove <code>QUARTO_PATH</code> and the old <code>PATH</code> entry, so that R finds the current Quarto (see <a href="../../collaboration/vscode_r_setup/outside_vscode.html#rprofile">.Rprofile</a>).</p>
 </section>
+<section id="quarto-render-cannot-find-installed-packages" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-render-cannot-find-installed-packages"><code>quarto render</code> cannot find a package that is installed</h2>
+<blockquote class="blockquote">
+<p>Error in loadNamespace(x) : there is no package called ‘rmarkdown’</p>
+</blockquote>
+<p>The package is installed, but the error’s “R installation” block shows a different R version than the project uses, and a <code>LibPaths</code> entry such as <code>renv/library/windows/R-4.6/...</code>.</p>
+<p><strong>Cause:</strong> the project is pinned to an older R in <code>.vscode/settings.json</code>, but that pin does not reach the Quarto CLI. Quarto uses the R on <code>PATH</code>, which is rig’s default. renv keeps a separate library for each R version, so under the default R the project’s packages look missing.</p>
+<p><strong>Fix:</strong> point Quarto at the project’s R with <code>QUARTO_R</code> in a git-ignored <code>_environment.local</code> (<a href="../../collaboration/vscode_r_setup/r_versions.html#quarto-render">how</a>). Or, if the project should move to the newer R, install the packages for that version.</p>
+</section>
 <section id="errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile" class="level2">
 <h2 class="anchored" data-anchor-id="errors-at-every-r-start-up-or-settings-from-the-wrong-.rprofile">Errors at every R start-up, or settings from the wrong <code>.Rprofile</code></h2>
 <blockquote class="blockquote">
@@ -495,21 +546,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script>
+
 // Label each table cell with its column header, for the phone card layout
+
 // in _narrow-tables-head.html.
+
 document.querySelectorAll("main table").forEach(function (table) {
+
   var headers = Array.prototype.map.call(
+
     table.querySelectorAll("thead th"),
+
     function (th) { return th.textContent.trim(); }
+
   );
+
   if (headers.length === 0) return;
+
   table.querySelectorAll("tbody tr").forEach(function (row) {
+
     Array.prototype.forEach.call(row.children, function (cell, i) {
+
       if (headers[i]) cell.setAttribute("data-label", headers[i]);
+
     });
+
   });
+
 });
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -64,6 +64,8 @@ flowchart TB
   r --> rprofile
 ```
 
+The Quarto CLI also finds R through `PATH`, so `quarto render` uses rig's default R unless `QUARTO_R` is set ([pinning it per project](r_versions.qmd#quarto-render)).
+
 ## The pages
 
 | Page | What is in it |

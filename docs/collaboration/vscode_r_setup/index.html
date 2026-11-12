@@ -77,46 +77,87 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+
 /* Phones: show each table row as a card; the column name is printed before
+
    each value (data-label, added by _narrow-tables-body.html). */
+
 @media (max-width: 767.98px) {
+
   main table,
+
   main table tbody,
+
   main table tr,
+
   main table td {
+
     display: block;
+
     width: 100%;
+
   }
+
   main table thead {
+
     display: none;
+
   }
+
   main table tr {
+
     border: 1px solid var(--bs-border-color, #dee2e6);
+
     border-radius: 0.375rem;
+
     margin-bottom: 0.75rem;
+
     padding: 0.4rem 0.75rem;
+
   }
+
   main table td {
+
     border: 0 !important;
+
     padding: 0.15rem 0 !important;
+
   }
+
   main table td:first-child {
+
     font-weight: 600;
+
   }
+
   main table td[data-label]:not(:first-child)::before {
+
     content: attr(data-label) ": ";
+
     font-weight: 600;
+
     color: var(--bs-secondary-color, #6c757d);
+
   }
+
   main table td:empty {
+
     display: none;
+
   }
+
   main table code {
+
     white-space: normal;
+
     overflow-wrap: anywhere;
+
   }
+
 }
+
 </style>
+
 <meta name="mermaid-theme" content="neutral">
 <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
@@ -335,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 9, 2026</p>
+      <p class="date-modified">November 12, 2026</p>
     </div>
   </div>
     
@@ -400,6 +441,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p>The Quarto CLI also finds R through <code>PATH</code>, so <code>quarto render</code> uses rig’s default R unless <code>QUARTO_R</code> is set (<a href="../../collaboration/vscode_r_setup/r_versions.html#quarto-render">pinning it per project</a>).</p>
 </section>
 <section id="the-pages" class="level2">
 <h2 class="anchored" data-anchor-id="the-pages">The pages</h2>
@@ -473,21 +515,37 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script>
+
 // Label each table cell with its column header, for the phone card layout
+
 // in _narrow-tables-head.html.
+
 document.querySelectorAll("main table").forEach(function (table) {
+
   var headers = Array.prototype.map.call(
+
     table.querySelectorAll("thead th"),
+
     function (th) { return th.textContent.trim(); }
+
   );
+
   if (headers.length === 0) return;
+
   table.querySelectorAll("tbody tr").forEach(function (row) {
+
     Array.prototype.forEach.call(row.children, function (cell, i) {
+
       if (headers[i]) cell.setAttribute("data-label", headers[i]);
+
     });
+
   });
+
 });
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

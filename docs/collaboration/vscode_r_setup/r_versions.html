@@ -111,46 +111,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>
+
 /* Phones: show each table row as a card; the column name is printed before
+
    each value (data-label, added by _narrow-tables-body.html). */
+
 @media (max-width: 767.98px) {
+
   main table,
+
   main table tbody,
+
   main table tr,
+
   main table td {
+
     display: block;
+
     width: 100%;
+
   }
+
   main table thead {
+
     display: none;
+
   }
+
   main table tr {
+
     border: 1px solid var(--bs-border-color, #dee2e6);
+
     border-radius: 0.375rem;
+
     margin-bottom: 0.75rem;
+
     padding: 0.4rem 0.75rem;
+
   }
+
   main table td {
+
     border: 0 !important;
+
     padding: 0.15rem 0 !important;
+
   }
+
   main table td:first-child {
+
     font-weight: 600;
+
   }
+
   main table td[data-label]:not(:first-child)::before {
+
     content: attr(data-label) ": ";
+
     font-weight: 600;
+
     color: var(--bs-secondary-color, #6c757d);
+
   }
+
   main table td:empty {
+
     display: none;
+
   }
+
   main table code {
+
     white-space: normal;
+
     overflow-wrap: anywhere;
+
   }
+
 }
+
 </style>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -357,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 9, 2026</p>
+      <p class="date-modified">November 12, 2026</p>
     </div>
   </div>
     
@@ -431,7 +472,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>A status bar item shows the workspace’s R version and turns yellow when it differs from <code>renv.lock</code>. Click it to switch. That pairs well with the <a href="https://github.com/OndrejMottl/Project_template">project template</a>, which uses renv.</p>
-<p>The extension writes the same settings as the manual method below, using rig’s version link when it exists, including <code>r.rpath.windows</code> when R Debugger is installed. Restart the R terminal after switching.</p>
+<p>The extension writes the same settings as the manual method below, using rig’s version link when it exists, including <code>r.rpath.windows</code> when R Debugger is installed. Restart the R terminal after switching. It does not set <code>QUARTO_R</code> (version 1.2.0), so <code>quarto render</code> needs the <a href="#quarto-render">separate step for Quarto</a>.</p>
 </section>
 <section id="by-hand" class="level3">
 <h3 class="anchored" data-anchor-id="by-hand">By hand</h3>
@@ -452,6 +493,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A full path such as <code>C:\\Program Files\\R\\R-4.5.1\\bin\\R.exe</code> also works and contains no user name, but it is Windows-only.</li>
 </ul>
 <p>To check which R a terminal really runs: <code>R.version.string</code> in the console, or <code>radian --r-binary=R-4.5.1 --version</code> in PowerShell.</p>
+</section>
+<section id="quarto-render" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-render">Quarto projects</h3>
+<p>The <code>.vscode/settings.json</code> pin reaches only vscode-R and radian. <code>quarto render</code> does not read it: it uses the <code>Rscript</code> on <code>PATH</code>, which is rig’s default. In a project with renv that shows up as missing packages, because renv keeps a separate project library for each R version (<code>renv/library/windows/R-4.x/...</code>), and the default R looks in the wrong one (<a href="../../collaboration/vscode_r_setup/troubleshooting.html#quarto-render-cannot-find-installed-packages">symptom</a>).</p>
+<p>To pin Quarto as well, set <code>QUARTO_R</code> in a file called <code>_environment.local</code> at the root of the Quarto project:</p>
+<pre><code>QUARTO_R="C:/Program Files/R/R-4.5.1/bin"</code></pre>
+<p>and keep the file out of git, because the path is machine-specific. In <code>.gitignore</code>:</p>
+<pre><code>_environment.local</code></pre>
+<ul>
+<li>The value is the R install’s <code>bin</code> folder, not rig’s <code>R-4.5.1.exe</code> shortcut. Quarto looks for <code>Rscript.exe</code> in the folder it is given, and next to the shortcut, in <code>C:\Program Files\R\bin</code>, that is rig’s default again. (I have not tried the shortcut; I expect it to fail for that reason.)</li>
+<li><code>QUARTO_R</code> set in the shell, or in a committed <code>_environment</code>, works too, but <code>_environment.local</code> keeps the path out of the repository.</li>
+<li>Lines starting with <code>#</code> are comments, so the file can say why it is there.</li>
+</ul>
 
 
 </section>
@@ -459,21 +513,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script>
+
 // Label each table cell with its column header, for the phone card layout
+
 // in _narrow-tables-head.html.
+
 document.querySelectorAll("main table").forEach(function (table) {
+
   var headers = Array.prototype.map.call(
+
     table.querySelectorAll("thead th"),
+
     function (th) { return th.textContent.trim(); }
+
   );
+
   if (headers.length === 0) return;
+
   table.querySelectorAll("tbody tr").forEach(function (row) {
+
     Array.prototype.forEach.call(row.children, function (cell, i) {
+
       if (headers[i]) cell.setAttribute("data-label", headers[i]);
+
     });
+
   });
+
 });
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

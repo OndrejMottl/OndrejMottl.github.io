@@ -93,6 +93,16 @@ One exception: the R Debugger extension still reads only `r.rpath.windows`. Wher
 
 **Fix:** remove `QUARTO_PATH` and the old `PATH` entry, so that R finds the current Quarto (see [.Rprofile](outside_vscode.qmd#rprofile)).
 
+## `quarto render` cannot find a package that is installed {#quarto-render-cannot-find-installed-packages}
+
+> Error in loadNamespace(x) : there is no package called 'rmarkdown'
+
+The package is installed, but the error's "R installation" block shows a different R version than the project uses, and a `LibPaths` entry such as `renv/library/windows/R-4.6/...`.
+
+**Cause:** the project is pinned to an older R in `.vscode/settings.json`, but that pin does not reach the Quarto CLI. Quarto uses the R on `PATH`, which is rig's default. renv keeps a separate library for each R version, so under the default R the project's packages look missing.
+
+**Fix:** point Quarto at the project's R with `QUARTO_R` in a git-ignored `_environment.local` ([how](r_versions.qmd#quarto-render)). Or, if the project should move to the newer R, install the packages for that version.
+
 ## Errors at every R start-up, or settings from the wrong `.Rprofile`
 
 > Error in loadNamespace(x) : there is no package called 'btw'
